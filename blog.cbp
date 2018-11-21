@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="blog" />
+		<Option execution_dir="D:/CPP/blog/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/blog" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/blog" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="source/_posts/codeblocks/block_selection.md" />
+		<Unit filename="source/_posts/codeblocks/cb_git_bash.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/chm_help.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/codeblocks_cfg.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/codeblocks_msdn.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/codeblocks_split.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/codeblocks_theme.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/codeblocks_tips.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/doxyblocks.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/hello_codeblocks.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/kill_cb_console.md">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="source/_posts/codeblocks/plugin_disable.md">
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
