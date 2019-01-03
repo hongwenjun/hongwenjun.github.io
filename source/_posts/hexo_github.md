@@ -24,8 +24,6 @@ git remote add origin https://github.com/hongwenjun/hongwenjun.github.io.git
 git push origin hexo
 ```
 
-
-
 2. ssh 登陆 vps，进入webroot目录，把博客从github上拉到vps
 
 ```
@@ -36,7 +34,7 @@ git clone https://github.com/hongwenjun/hongwenjun.github.io.git   html
 cd /var/www/html  && git pull
 
 ```
-[![](https://github.com/hongwenjun/hongwenjun.github.io/raw/hexo/source/img/hexo_github_1.jpg)](https://youtu.be/KF6dalUw5Eg)
+[![](https://github.com/hongwenjun/hongwenjun.github.io/raw/hexo/source/img/hexo_github_1.jpg)](https://youtu.be/KF6dalUw5Eg)]
 
 
 3. 在新的环境克隆仓库
