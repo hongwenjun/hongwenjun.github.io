@@ -1,7 +1,7 @@
 ---
 title: IPTABLES设置防火墙规则脚本 By 蘭雅sRGB
 date: 2018-12-24
-tags:  [vps,linux]
+tags:  [vps,linux,iptables]
 ---
 
 蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
