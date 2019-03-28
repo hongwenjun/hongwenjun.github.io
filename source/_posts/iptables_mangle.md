@@ -8,8 +8,8 @@ tags:  [iptables]
 
 ### 路由器使用 iptables 限制 玩客云上传数据流量
 ```
-### 限制玩客云设备  192.168.1.90 每秒钟通过 20×1.5=30K ；超过的流量都丢弃
-iptables -t mangle -I FORWARD 1 -s 192.168.1.90  -m limit --limit 20/s --limit-burst 100 -j ACCEPT
+### 限制玩客云设备  192.168.1.90 每秒钟通过 200×1.5=300K ；超过的流量都丢弃 (设置的太少，会导致无法开机)
+iptables -t mangle -I FORWARD 1 -s 192.168.1.90  -m limit --limit 200/s --limit-burst 1000 -j ACCEPT
 iptables -t mangle -A FORWARD -s 192.168.1.90 -j DROP
 
 # 查询限速命令是否生效
@@ -44,12 +44,12 @@ iptables -t mangle -I FORWARD 1 -s 192.168.31.23 -m limit --limit 1000/s --limit
 
 iptables -t mangle -A FORWARD -s 192.168.31.23 -j DROP
 
---limit 1000/s ：这个是说每秒种只允许通过1000个IP包，一个IP包大约在1.5KB， 1000个也就是1.5M，具体限速多少，可以根据这个来计算，比如我想限速4.5MB/S, 那就是设置 --limit 3000/S 
+--limit 1000/s ：这个是说每秒种只允许通过1000个IP包，一个IP包大约在1.5KB， 1000个也就是1.5M，具体限速多少，可以根据这个来计算，比如我想限速4.5MB/S, 那就是设置 --limit 3000/S
 
 --limit-burst 1500： 这个是初始值，开始有1500包可以直接通过，后续就每秒1000个包。
 
 执行命令后，可以查询一下是否正常写入了。
 
-iptables -t mangle  -n -v -L  FORWARD   
+iptables -t mangle  -n -v -L  FORWARD
 
 限速是时实生效的，命令执行成功后，限速就生效了，这个限速策略是保存在内存里的，重启会消失的，需要保存指令。
