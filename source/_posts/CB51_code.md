@@ -4,7 +4,7 @@ date: 2019-8-17
 tags:  [CodeBlocks]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 
 # stc89c52  :+1: 我的征途是星辰大海！

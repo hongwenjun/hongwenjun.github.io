@@ -4,7 +4,7 @@ date: 2018-6-4
 tags:  [frp]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 # 修改开机脚本
 	# 龙芯8089D debian版的开机脚本

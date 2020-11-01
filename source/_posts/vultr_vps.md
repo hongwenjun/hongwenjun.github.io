@@ -4,7 +4,7 @@ date: 2018-5-17
 tags:  [vps]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 	
 ### 选择便宜的vps
 新注册Vultr用户赠送25美元，不要用使用支付宝充值，使用信用卡或者paypal
@@ -28,8 +28,8 @@ tags:  [vps]
 	wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 ### vim和控制台高亮
-	wget -O .vimrc http://srgb.vicp.net/srgb/vim/_vimrc
-	wget -O .bashrc http://srgb.vicp.net/srgb/vim/_bashrc
+	wget -O .vimrc https://262235.xyz/srgb/vim/_vimrc
+	wget -O .bashrc https://262235.xyz/srgb/vim/_bashrc
 
 ### 安装 监控软件htop 和网页服务器 nginx
 	apt-get install htop

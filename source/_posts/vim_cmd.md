@@ -5,7 +5,7 @@ tags:  [vim,linux]
 ---
 
 ## VIM 常用用法和linux常用命令
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 ----   
 ### VIM 常用用法 

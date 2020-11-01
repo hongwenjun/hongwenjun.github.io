@@ -4,7 +4,7 @@ date: 2018-7-2
 tags:  [vps]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 
 ### 本地电脑开启ipv6支持，可以使用XX-Net的 enable_ipv6.bat

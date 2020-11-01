@@ -4,7 +4,7 @@ date: 2018-8-3
 tags:  [cpp]
 ---
 
-蘭雅sRGB 龙芯小本服务器  http://sRGB.vicp.net
+蘭雅sRGB 个人博客  https://262235.xyz
 	
 https://github.com/hongwenjun/psdda
 
@@ -132,7 +132,7 @@ int main(int argc, char* argv[])
 
 void helpinfo(void)
 {
-    printf("本工具清除PSD文件中垃圾数据 by 蘭公子 sRGB.vicp.net\n");
+    printf("本工具清除PSD文件中垃圾数据 by 蘭公子 https://262235.xyz\n");
     printf("开源代码    https://github.com/hongwenjun/psdda\n\n");
     printf("Usage: psdda.exe  test.psd  [fix_psd.psd] \n\n");
     printf("可以 只一个文件名参数,自动加前缀Fix_; 如果2个文件名相同,覆盖文件!\n\n");

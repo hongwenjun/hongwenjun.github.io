@@ -4,7 +4,7 @@ date: 2018-7-2
 tags:  [linux,vps]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 ### Debian远程SSH汉字utf-8乱码解决
 	aptitude install locales

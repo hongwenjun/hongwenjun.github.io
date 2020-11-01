@@ -4,7 +4,7 @@ date: 2019-02-24
 tags:  [ipv6]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 ### K2路由器如下设置，启用ipv6，可以获取ipv6地址
 ![](/img/k2ipv6.png)

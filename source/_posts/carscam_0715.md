@@ -6,7 +6,7 @@ tags:  [carscam]
 
 ### 以后会把行车和视频也放博客，以前的行车视频URL入口
 
-[http://srgb.vicp.net/CARSCAM.html](http://srgb.vicp.net/CARSCAM.html)
+[https://262235.xyz/CARSCAM.html](https://262235.xyz/CARSCAM.html)
 
 ### 遇到危险的逆向超车，让速不让道
 

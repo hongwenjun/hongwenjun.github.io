@@ -4,7 +4,7 @@ date: 2018-6-15
 tags:  [vps]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 	
 ### Virmach 低价屠夫，$0.7/月,一年7.5美元，有促销可能更加便宜

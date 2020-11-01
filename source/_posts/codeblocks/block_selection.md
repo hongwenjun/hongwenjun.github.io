@@ -5,7 +5,7 @@ tags:  CodeBlocks
 ---
 https://github.com/hongwenjun/CodeBlocks
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 ---
 
 CodeBlocks支持在代码编辑器中块选文本(Block Selection)
@@ -16,6 +16,6 @@ CodeBlocks支持在代码编辑器中块选文本(Block Selection)
 ![](/webp/cb/block_selection.webp)
 
 例,复制有行号的代码
-[last_line.cpp.html](http://srgb.vicp.net/srgb/last_line/last_line.cpp.html)
+[last_line.cpp.html](https://262235.xyz/srgb/last_line/last_line.cpp.html)
 
 复制粘贴到CB编辑器中，按住Alt键的同时按住鼠标左键，可以把所有的行号一起删除

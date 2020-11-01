@@ -4,7 +4,7 @@ date: 2018-10-10
 tags:  [vim]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 # tmux_for_windows
 tmux是一个开源工具，用于在一个终端窗口中运行多个终端会话。本工具从msys2里提取，可以在Git for Windows的Git Bash (MingW64)下正常使用。

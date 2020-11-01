@@ -4,7 +4,7 @@ date: 2018-5-18
 tags:  [git]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 
 网上有把MINGW64环境改成GBK的方法，但是哪样使用习惯不太好，毕竟网络世界utf-8是主宰。

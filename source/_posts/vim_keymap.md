@@ -5,7 +5,7 @@ tags:  [vim]
 ---
 
 ## VIM 命令键盘全图-中文清晰
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 
 ![](https://raw.githubusercontent.com/hongwenjun/img/master/VIM_KEY_CN.png)

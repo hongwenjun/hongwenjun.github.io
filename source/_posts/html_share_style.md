@@ -4,7 +4,7 @@ date: 2018-03-18
 tags:  [cpp]
 ---
 
-蘭雅sRGB 龙芯小本服务器  http://sRGB.vicp.net
+蘭雅sRGB 个人博客  https://262235.xyz
 	
 https://github.com/hongwenjun/tohtml_style
 

@@ -4,7 +4,7 @@ date: 2019-3-28
 tags:  [iptables]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 ### 路由器使用 iptables 限制 玩客云上传数据流量
 ```

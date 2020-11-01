@@ -4,7 +4,7 @@ date: 2018-10-13
 tags:  CodeBlocks
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 ## Code::Blocks 2018 增强版 By 蘭雅sRGB
 **百度盘下载**  https://pan.baidu.com/s/1osEHZZPBXh_AppKblTHD4A
@@ -42,6 +42,6 @@ tags:  CodeBlocks
 ![](/webp/cb/help.webp)
 
 ### CodeBlocks 更多使用技巧
-http://srgb.vicp.net/tags/CodeBlocks/
+https://262235.xyz/tags/CodeBlocks/
 
 **github项目**   https://github.com/hongwenjun/CodeBlocks

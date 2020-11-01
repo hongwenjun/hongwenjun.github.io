@@ -4,7 +4,7 @@ date: 2018-6-4
 tags:  [frp]
 ---
 
-蘭雅sRGB 龙芯小本服务器 [http://sRGB.vicp.net](http://srgb.vicp.net)
+蘭雅sRGB 个人博客 [https://262235.xyz](https://262235.xyz)
 
 ### frps服务端 一键安装脚本
 

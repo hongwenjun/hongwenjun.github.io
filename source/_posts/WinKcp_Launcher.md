@@ -4,7 +4,7 @@ date: 2019-01-03
 tags:  [vps,linux]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 ![](https://raw.githubusercontent.com/hongwenjun/WinKcp_Launcher/master/gui.png)
 
@@ -42,7 +42,7 @@ IDB_BITMAP4        BITMAP         ".\\bk.bmp"
 LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
 DLG_MAIN DIALOG 0, 0, 361, 168
 STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP | WS_SYSMENU
-CAPTION "Windows KcpTun  Udp2Raw 启动管理器       By sRGB.vicp.net 蘭雅sRGB"
+CAPTION "Windows KcpTun  Udp2Raw 启动管理器       By https://262235.xyz 蘭雅sRGB"
 FONT 8, "Ms Shell Dlg"
 {
     CONTROL         IDB_BITMAP1, DONATE_PIC, WC_STATIC, SS_BITMAP, 197, 6, 161, 158, WS_EX_CLIENTEDGE | WS_EX_TRANSPARENT

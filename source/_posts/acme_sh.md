@@ -11,7 +11,7 @@ tags:  [vps]
 # https://github.com/Neilpang/acme.sh/wiki/说明
 
 # 设置域名
-DOMAIN=srgb.vicp.net
+DOMAIN=https://262235.xyz
 
 
 # 安装ssl依赖 和 acme.sh工具

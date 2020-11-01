@@ -4,7 +4,7 @@ date: 2018-6-4
 tags:  [vps]
 ---
 
-蘭雅sRGB 龙芯小本服务器  http://sRGB.vicp.net
+蘭雅sRGB 个人博客  https://262235.xyz
 	
 
 ### 一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本

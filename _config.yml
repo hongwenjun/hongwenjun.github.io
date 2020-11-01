@@ -5,14 +5,14 @@
 # Site
 title: 蘭雅sRGB 龙芯2F服务器
 subtitle:
-description: 蘭雅sRGB的主页,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video
+description: 蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video
 author: hongwenjun
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://sRGB.vicp.net
+url: https://262235.xyz/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

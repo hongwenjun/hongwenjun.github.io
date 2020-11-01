@@ -6,7 +6,7 @@ tags:  Markdown
 
 # 欢迎使用 Cmd Markdown 编辑阅读器
 
-    蘭雅sRGB 龙芯小本服务器 http://sRGB.vicp.net
+    蘭雅sRGB 个人博客 https://262235.xyz
     模版转至 https://www.zybuluo.com  在线写MD模版，方便多了
 
 ------

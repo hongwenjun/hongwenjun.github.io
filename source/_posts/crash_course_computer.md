@@ -4,7 +4,7 @@ date: 2018-5-21
 tags:  [video]
 ---
 
-蘭雅sRGB 龙芯小本服务器 | [sRGB.vicp.net](http://sRGB.vicp.net)
+蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 
 ## 计算机科学速成课 :fire: 40集完结撒花(转)
