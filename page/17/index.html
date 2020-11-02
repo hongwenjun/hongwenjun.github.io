@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>蘭雅sRGB 龙芯2F服务器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
+<meta property="og:type" content="website">
+<meta property="og:title" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:url" content="https://262235.xyz/page/17/index.html">
+<meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hongwenjun">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../index.html" id="logo">蘭雅sRGB 龙芯2F服务器</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
+        
+          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+        
+          <a class="main-nav-link" href="../../index.html">博客</a>
+        
+          <a class="main-nav-link" href="../../archives">归档</a>
+        
+          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
+        
+          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+        
+          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://262235.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Windows_KCP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="../../2018/11/17/Windows_KCP/" class="article-date">
+  <time datetime="2018-11-17T05:00:00.000Z" itemprop="datePublished">2018-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="../../2018/11/17/Windows_KCP/">Windows udp2raw+kcptun 加速tcp流量 简易工具  by 蘭雅sRGB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="♦-最新资讯-♦Vultr-限时优惠，充值10美元送10美元，3-5美元-月，IP被墙免费换，支持微信、支付宝。"><a href="#♦-最新资讯-♦Vultr-限时优惠，充值10美元送10美元，3-5美元-月，IP被墙免费换，支持微信、支付宝。" class="headerlink" title="♦ 最新资讯 ♦Vultr 限时优惠，充值10美元送10美元，3.5美元/月，IP被墙免费换，支持微信、支付宝。"></a>♦ 最新资讯 ♦Vultr 限时优惠，充值10美元送10美元，3.5美元/月，IP被墙免费换，支持微信、支付宝。</h3><ul>
+<li>点击这个链接注册，也算是对本项目作者的支持鼓励</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=7591742">https://www.vultr.com/?ref=7591742</a></p>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/WinKcp_Launcher/master/gui.png"></p>
+<h2 id="Wireguard-手机和PC客户端设置技巧"><a href="#Wireguard-手机和PC客户端设置技巧" class="headerlink" title="Wireguard 手机和PC客户端设置技巧"></a>Wireguard 手机和PC客户端设置技巧</h2><p><a target="_blank" rel="noopener" href="https://youtu.be/O__RsZewA60"><img src="https://raw.githubusercontent.com/hongwenjun/vps_setup/master/Wireguard/tel_pc.jpg" alt="ScreenShot"></a></p>
+<h2 id="Shadowsocks-Kcp-Udp2Raw加速-和-Udp2Raw服务TCP伪装-WireGuard-Windows-Kcp-Udp2Raw-启动器"><a href="#Shadowsocks-Kcp-Udp2Raw加速-和-Udp2Raw服务TCP伪装-WireGuard-Windows-Kcp-Udp2Raw-启动器" class="headerlink" title="Shadowsocks + Kcp+Udp2Raw加速 和 Udp2Raw服务TCP伪装 WireGuard Windows Kcp+Udp2Raw 启动器"></a>Shadowsocks + Kcp+Udp2Raw加速 和 Udp2Raw服务TCP伪装 WireGuard Windows Kcp+Udp2Raw 启动器</h2><p>使用视频链接.1   <a target="_blank" rel="noopener" href="https://youtu.be/A4edsGXQdIc">https://youtu.be/A4edsGXQdIc</a></p>
+<p>使用视频链接.2   <a target="_blank" rel="noopener" href="https://youtu.be/BvF6jQo_ZAo">https://youtu.be/BvF6jQo_ZAo</a></p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明:"></a>使用说明:</h3><ol>
+<li>需要先安装 WinPcap_4_1_3.exe (已经包含和其他windows客户端)</li>
+<li>修改 Windows_KCP.cmd 里的服务器IP参数，双击启动调试</li>
+<li>双击 WinKcp_Launcher 管理 Windows_KCP.cmd 启动关闭 </li>
+<li>电脑$$客户端设置  127.0.0.1:3322     密码:<strong>**</strong>  加密 aes-256-gcm</li>
+<li>手机$$填PC电脑IP  192.168.1.188:3322 密码:<strong>**</strong>   加密 aes-256-gcm</li>
+</ol>
+<h3 id="参数参考-udp2raw-kcptun-加速tcp流量-Step-by-Step-教程"><a href="#参数参考-udp2raw-kcptun-加速tcp流量-Step-by-Step-教程" class="headerlink" title="参数参考  udp2raw+kcptun 加速tcp流量 Step by Step 教程"></a>参数参考  udp2raw+kcptun 加速tcp流量 Step by Step 教程</h3><p><a target="_blank" rel="noopener" href="https://github.com/wangyu-/udp2raw-tunnel/blob/master/doc/kcptun_step_by_step.md">https://github.com/wangyu-/udp2raw-tunnel/blob/master/doc/kcptun_step_by_step.md</a></p>
+<h3 id="详细见"><a href="#详细见" class="headerlink" title="详细见"></a>详细见</h3><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/hongwenjun/WinKcp_Launcher/master/Windows_KCP%E5%8A%A0%E9%80%9F%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.txt">Windows_KCP加速使用说明.txt</a></p>
+<h3 id="Shadowsocks-Kcp-Udp2Raw加速-服务端-debian-9-Ubuntu"><a href="#Shadowsocks-Kcp-Udp2Raw加速-服务端-debian-9-Ubuntu" class="headerlink" title="Shadowsocks+Kcp+Udp2Raw加速 服务端  debian 9  Ubuntu"></a>Shadowsocks+Kcp+Udp2Raw加速 服务端  debian 9  Ubuntu</h3><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># 一键安装 SS+Kcp+Udp2Raw 脚本 快速安装 for debian 9</span></span><br><span class="line">wget -qO- git.io/fpZIW <span class="string">| bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 一键安装 SS+Kcp+Udp2Raw 脚本 for debian 9  Ubuntu (编译安装)</span></span><br><span class="line">wget -qO- git.io/fx6UQ <span class="string">| bash</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="本地电脑端-SS-导入配置，有默认的-SS密码"><a href="#本地电脑端-SS-导入配置，有默认的-SS密码" class="headerlink" title="本地电脑端 SS 导入配置，有默认的 SS密码"></a>本地电脑端 SS 导入配置，有默认的 SS密码</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ss</span>://YWVzLTI<span class="number">1</span>Ni<span class="number">1</span>nY<span class="number">206</span>c<span class="number">3</span>JnYi<span class="number">54</span>eXpAMTI<span class="number">3</span>LjAuMC<span class="number">4</span>xOjMzMjI=</span><br></pre></td></tr></table></figure>
+
+<h3 id="一键安装wireguard-脚本-For-Debian-9-Ubuntu-Centos-7"><a href="#一键安装wireguard-脚本-For-Debian-9-Ubuntu-Centos-7" class="headerlink" title="一键安装wireguard 脚本 For Debian_9  Ubuntu  Centos_7"></a>一键安装wireguard 脚本 For Debian_9  Ubuntu  Centos_7</h3><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># 一键安装wireguard 脚本 Debian 9 (源:逗比网安装笔记)</span></span><br><span class="line">wget -qO- git.io/fptwc <span class="string">| bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 一键安装wireguard 脚本 Ubuntu 18(源:逗比网安装笔记)</span></span><br><span class="line">wget -qO- git.io/fpcnL <span class="string">| bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># CentOS7一键脚本安装WireGuard   (https:<span class="comment">//atrandys.com/2018/886.html)</span></span></span><br><span class="line">yum install -y wget <span class="meta">&amp;&amp; \</span></span><br><span class="line">wget https:<span class="comment">//raw.githubusercontent.com/yobabyshark/wireguard/master/wireguard_install.sh \</span></span><br><span class="line"><span class="meta">&amp;&amp; chmod +x wireguard_install.sh &amp;&amp; ./wireguard_install.sh</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/-cfuQSaJb5w"><img src="https://raw.githubusercontent.com/hongwenjun/vps_setup/master/Wireguard/ss_wg.jpg" alt="ScreenShot"></a></p>
+<h3 id="一键-WireGuard-多用户配置共享脚本"><a href="#一键-WireGuard-多用户配置共享脚本" class="headerlink" title="一键 WireGuard 多用户配置共享脚本"></a>一键 WireGuard 多用户配置共享脚本</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一键 WireGuard 多用户配置共享脚本 </span></span><br><span class="line">wget -qO- https:<span class="regexp">//gi</span>t.io/fpnQt | bash</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/TOaihmhrYQY"><img src="https://raw.githubusercontent.com/hongwenjun/vps_setup/master/Wireguard/wg5clients.jpg" alt="ScreenShot"></a></p>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/vps_setup/master/Wireguard/bash_wg5.gif"></p>
+<h4 id="导出到客户端配置，修改实际的IP，不要修改默认9009端口"><a href="#导出到客户端配置，修改实际的IP，不要修改默认9009端口" class="headerlink" title="导出到客户端配置，修改实际的IP，不要修改默认9009端口"></a>导出到客户端配置，修改实际的IP，不要修改默认9009端口</h4><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询WireGuard状态</span></span><br><span class="line">wg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示配置文件，修改实际的IP，不要修改默认9009端口</span></span><br><span class="line">cat <span class="regexp">/etc/</span>wireguard/client.conf</span><br></pre></td></tr></table></figure>
+<h3 id="遇到wg连接主机而没有流量，使用-Ip-addr-命令检查vps网卡是否是ensx，参考下面修改配置重启"><a href="#遇到wg连接主机而没有流量，使用-Ip-addr-命令检查vps网卡是否是ensx，参考下面修改配置重启" class="headerlink" title="遇到wg连接主机而没有流量，使用 Ip addr 命令检查vps网卡是否是ensx，参考下面修改配置重启"></a>遇到wg连接主机而没有流量，使用 Ip addr 命令检查vps网卡是否是ensx，参考下面修改配置重启</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment">#  一键脚本已经检查出vultr主机，自动修改配置，不用再手工运行</span></span><br><span class="line"><span class="comment">#  vultr 服务商的主机默认网卡是 ens3，使用下面命令修改配置</span></span><br><span class="line">sed -i <span class="string">&quot;s/eth0/ens3/g&quot;</span>  <span class="regexp">/etc/</span>wireguard/wg0.conf</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line"><span class="comment">#  GCP 香港 Ubuntu系统 默认网卡是 ens4，使用下面命令修改配置</span></span><br><span class="line"><span class="comment">#  GCP 香港 Ubuntu系统 没带python，不能开启临时web下载，可以 apt install -y python 安装</span></span><br><span class="line">sed -i <span class="string">&quot;s/eth0/ens4/g&quot;</span>  <span class="regexp">/etc/</span>wireguard/wg0.conf</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h3 id="Udp2Raw服务TCP伪装-WireGuard-服务端设置脚本"><a href="#Udp2Raw服务TCP伪装-WireGuard-服务端设置脚本" class="headerlink" title="Udp2Raw服务TCP伪装 WireGuard 服务端设置脚本"></a>Udp2Raw服务TCP伪装 WireGuard 服务端设置脚本</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/hongwenjun/</span>WinKcp_Launcher<span class="regexp">/master/</span>wg_udp2raw.sh </span><br><span class="line">chmod +x wg_udp2raw.sh  &amp;&amp; ./wg_udp2raw.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://262235.xyz/2018/11/17/Windows_KCP/" data-id="ckgyy8p08000alwusfibm9usu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="../16/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../15/">15</a><a class="page-number" href="../16/">16</a><span class="page-number current">17</span><a class="page-number" href="../18/">18</a><a class="page-number" href="../19/">19</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../18/">下一页 &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../tags/git/" style="font-size: 14px;">git</a> <a href="../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2017/">2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
+          </li>
+        
+          <li>
+            <a href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
+          </li>
+        
+          <li>
+            <a href="../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hongwenjun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+  
+    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+  
+    <a href="../../index.html" class="mobile-nav-link">博客</a>
+  
+    <a href="../../archives" class="mobile-nav-link">归档</a>
+  
+    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+  
+    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+  
+    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+  
+</nav>
+    
+
+<script src="js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

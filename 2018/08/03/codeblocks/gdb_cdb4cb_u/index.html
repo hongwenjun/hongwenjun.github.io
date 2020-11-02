@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>CodeBlocks 调试器设置 更新 | 蘭雅sRGB 龙芯2F服务器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;hongwenjun&#x2F;CodeBlocks 蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz安装调试器gdb或cdb tdmgcc编译器已经自带gdb调试器  cdb调试器 百度搜索 WinDbg  WinDbg最新官方版下载_百度软件中心  点击 普通下载, 千万不要点高速下载   gdb和cdb 分别建立配置 编译器中选择对应调试器设置以下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeBlocks 调试器设置 更新">
+<meta property="og:url" content="https://262235.xyz/2018/08/03/codeblocks/gdb_cdb4cb_u/index.html">
+<meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;hongwenjun&#x2F;CodeBlocks 蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz安装调试器gdb或cdb tdmgcc编译器已经自带gdb调试器  cdb调试器 百度搜索 WinDbg  WinDbg最新官方版下载_百度软件中心  点击 普通下载, 千万不要点高速下载   gdb和cdb 分别建立配置 编译器中选择对应调试器设置以下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://262235.xyz/webp/cb/gdb_cdb_gcc_vc.webp">
+<meta property="article:published_time" content="2018-08-03T04:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-02T03:40:09.105Z">
+<meta property="article:author" content="hongwenjun">
+<meta property="article:tag" content="CodeBlocks">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://262235.xyz/webp/cb/gdb_cdb_gcc_vc.webp">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../../../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../../index.html" id="logo">蘭雅sRGB 龙芯2F服务器</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../../https:/262235.xyz/">主页</a>
+        
+          <a class="main-nav-link" href="../../../../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+        
+          <a class="main-nav-link" href="../../../../../index.html">博客</a>
+        
+          <a class="main-nav-link" href="../../../../../archives">归档</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/github.com/hongwenjun">GitHub</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/space.bilibili.com/320303690/">B站频道</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://262235.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-codeblocks/gdb_cdb4cb_u" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2018-08-03T04:00:00.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CodeBlocks 调试器设置 更新
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/CodeBlocks">https://github.com/hongwenjun/CodeBlocks</a></p>
+<h2 id="蘭雅sRGB-个人博客-https-262235-xyz"><a href="#蘭雅sRGB-个人博客-https-262235-xyz" class="headerlink" title="蘭雅sRGB 个人博客 | https://262235.xyz"></a>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></h2><h2 id="安装调试器gdb或cdb"><a href="#安装调试器gdb或cdb" class="headerlink" title="安装调试器gdb或cdb"></a>安装调试器gdb或cdb</h2><ul>
+<li><p>tdmgcc编译器已经自带gdb调试器</p>
+</li>
+<li><p>cdb调试器 百度搜索 WinDbg</p>
+</li>
+<li><p>WinDbg最新官方版下载_百度软件中心  点击 普通下载, 千万不要点高速下载</p>
+</li>
+</ul>
+<h2 id="gdb和cdb-分别建立配置"><a href="#gdb和cdb-分别建立配置" class="headerlink" title="gdb和cdb 分别建立配置"></a>gdb和cdb 分别建立配置</h2><p><img src="/webp/cb/gdb_cdb_gcc_vc.webp" alt="如果看不到图片，请用chrome或者安卓手机浏览器"></p>
+<h2 id="编译器中选择对应调试器设置"><a href="#编译器中选择对应调试器设置" class="headerlink" title="编译器中选择对应调试器设置"></a>编译器中选择对应调试器设置</h2><p>以下文本保存成  gdb.xml 再使用 cb_share_config.exe 工具导入到配置里</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot; ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">CodeBlocksConfig</span> <span class="attr">version</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">debugger_common</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sets</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">gdb_debugger</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">conf1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">NAME</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">        &lt;![CDATA[Default]]&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">NAME</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">values</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[$(CODEBLOCKS)\MinGW\bin\gdb32.exe]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISABLE_INIT</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TYPE</span> <span class="attr">int</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[source $(TARGET_COMPILER_DIR)gdb32\bin\gdbinit</span><br><span class="line">]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_ARGS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_LOCALS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">CATCH_EXCEPTIONS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EVAL_TOOLTIP</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ADD_OTHER_SEARCH_DIRS</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DO_NOT_RUN</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISASSEMBLY_FLAVOR</span> <span class="attr">int</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">values</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">conf1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">conf2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">NAME</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">        &lt;![CDATA[cdb]]&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">NAME</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">values</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[C:\CodeBlocks\tool\windbg\cdb.exe]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISABLE_INIT</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TYPE</span> <span class="attr">int</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_ARGS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_LOCALS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">CATCH_EXCEPTIONS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EVAL_TOOLTIP</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ADD_OTHER_SEARCH_DIRS</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DO_NOT_RUN</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISASSEMBLY_FLAVOR</span> <span class="attr">int</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">values</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">conf2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">conf3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">NAME</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">        &lt;![CDATA[MinGW64_GDB]]&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">NAME</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">values</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[$(CODEBLOCKS)\MinGW64\bin\gdb64.exe]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">EXECUTABLE_PATH</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISABLE_INIT</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">USER_ARGUMENTS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TYPE</span> <span class="attr">int</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[source $(TARGET_COMPILER_DIR)gdb64\bin\gdbinit</span><br><span class="line">]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INIT_COMMANDS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_ARGS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WATCH_LOCALS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">CATCH_EXCEPTIONS</span> <span class="attr">bool</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">EVAL_TOOLTIP</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ADD_OTHER_SEARCH_DIRS</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DO_NOT_RUN</span> <span class="attr">bool</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DISASSEMBLY_FLAVOR</span> <span class="attr">int</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">str</span>&gt;</span></span><br><span class="line">            &lt;![CDATA[]]&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">str</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">INSTRUCTION_SET</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">values</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">conf3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">gdb_debugger</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sets</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">debugger_common</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">CodeBlocksConfig</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试包含中文的调试用示例代码"><a href="#测试包含中文的调试用示例代码" class="headerlink" title="测试包含中文的调试用示例代码"></a>测试包含中文的调试用示例代码</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; mymap = &#123;</span><br><span class="line">        &#123;<span class="string">&quot;张三&quot;</span>, <span class="number">60</span>&#125;,   &#123;<span class="string">&quot;李四&quot;</span>, <span class="number">65</span>&#125;, &#123;<span class="string">&quot;王五&quot;</span>, <span class="number">75</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> admiral[<span class="number">3</span>] = &#123; <span class="string">&quot;张飞&quot;</span>,  <span class="string">&quot;关羽&quot;</span>,  <span class="string">&quot;吕布&quot;</span> &#125;;</span><br><span class="line"></span><br><span class="line">    mymap.insert(<span class="built_in">pair</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;(admiral[<span class="number">0</span>], <span class="number">98</span>));</span><br><span class="line">    mymap.insert(<span class="built_in">pair</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;(admiral[<span class="number">1</span>], <span class="number">97</span>));</span><br><span class="line">    mymap.insert(<span class="built_in">pair</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt;(admiral[<span class="number">2</span>], <span class="number">99</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = mymap.begin(); it != mymap.end(); ++it)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; it-&gt;first &lt;&lt; <span class="string">&quot; =&gt; &quot;</span> &lt;&lt; it-&gt;second &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://262235.xyz/2018/08/03/codeblocks/gdb_cdb4cb_u/" data-id="ckgyy8p570045lwus5k9499oe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../../code/gui_psdda/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          图形界面_PSD大文件垃圾数据清理工具
+        
+      </div>
+    </a>
+  
+  
+    <a href="../chm_help_u/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CodeBlocks 帮助手册设置更新</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="../../../../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../../../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../../../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../../../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../../../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../../../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../../../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../../../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../../../../tags/git/" style="font-size: 14px;">git</a> <a href="../../../../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../../../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../../../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../../../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../../../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../../../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../../../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../../../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../../../../tags/video/" style="font-size: 10px;">video</a> <a href="../../../../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../../../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../../../../tags/vps/" style="font-size: 18px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2017/">2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../../../../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
+          </li>
+        
+          <li>
+            <a href="../../../../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
+          </li>
+        
+          <li>
+            <a href="../../../../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
+          </li>
+        
+          <li>
+            <a href="../../../../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
+          </li>
+        
+          <li>
+            <a href="../../../../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hongwenjun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+  
+    <a href="../../../../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+  
+    <a href="../../../../../index.html" class="mobile-nav-link">博客</a>
+  
+    <a href="../../../../../archives" class="mobile-nav-link">归档</a>
+  
+    <a href="../../../../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+  
+    <a href="../../../../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+  
+    <a href="../../../../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+  
+</nav>
+    
+
+<script src="js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="../../../../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="../../../../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

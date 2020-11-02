@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>tohtml_style 共享样式工具 | 蘭雅sRGB 龙芯2F服务器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="蘭雅sRGB 个人博客  https:&#x2F;&#x2F;262235.xyz https:&#x2F;&#x2F;github.com&#x2F;hongwenjun&#x2F;tohtml_style tohtml_style 先使用 VIM 的 TOhtml 把文本转换成 html vim -c :TOhtml -c :wqa  mycode.cppvim -c :TOhtml -c :wqa  mydoc.txt  再使用本工具 html_sh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tohtml_style 共享样式工具">
+<meta property="og:url" content="https://262235.xyz/2018/03/18/html_share_style/index.html">
+<meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:description" content="蘭雅sRGB 个人博客  https:&#x2F;&#x2F;262235.xyz https:&#x2F;&#x2F;github.com&#x2F;hongwenjun&#x2F;tohtml_style tohtml_style 先使用 VIM 的 TOhtml 把文本转换成 html vim -c :TOhtml -c :wqa  mycode.cppvim -c :TOhtml -c :wqa  mydoc.txt  再使用本工具 html_sh">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/usage.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/git-bash_gcc.png">
+<meta property="article:published_time" content="2018-03-18T04:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-02T03:40:09.109Z">
+<meta property="article:author" content="hongwenjun">
+<meta property="article:tag" content="cpp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/usage.webp">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../index.html" id="logo">蘭雅sRGB 龙芯2F服务器</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../https:/262235.xyz/">主页</a>
+        
+          <a class="main-nav-link" href="../../../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+        
+          <a class="main-nav-link" href="../../../../index.html">博客</a>
+        
+          <a class="main-nav-link" href="../../../../archives">归档</a>
+        
+          <a class="main-nav-link" href="../../../../https:/github.com/hongwenjun">GitHub</a>
+        
+          <a class="main-nav-link" href="../../../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+        
+          <a class="main-nav-link" href="../../../../https:/space.bilibili.com/320303690/">B站频道</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://262235.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-html_share_style" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2018-03-18T04:00:00.000Z" itemprop="datePublished">2018-03-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      tohtml_style 共享样式工具
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/tohtml_style">https://github.com/hongwenjun/tohtml_style</a></p>
+<h1 id="tohtml-style"><a href="#tohtml-style" class="headerlink" title="tohtml_style"></a>tohtml_style</h1><ol>
+<li><p>先使用 VIM 的 TOhtml 把文本转换成 html</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">vim</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:TOhtml</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:wqa</span>  <span class="selector-tag">mycode</span><span class="selector-class">.cpp</span></span><br><span class="line"><span class="selector-tag">vim</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:TOhtml</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:wqa</span>  <span class="selector-tag">mydoc</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再使用本工具 html_share_style 把编辑好的样式共享给 html文件</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Usage:</span> html_share_style  <span class="params">&lt;file.html&gt;</span>  <span class="params">&lt;from.html&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/usage.webp"></p>
+</li>
+</ol>
+<h1 id="附送-git-bash环境设置使用TDM-GCC-64"><a href="#附送-git-bash环境设置使用TDM-GCC-64" class="headerlink" title="附送  git-bash环境设置使用TDM-GCC 64"></a>附送  git-bash环境设置使用TDM-GCC 64</h1><figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">编辑 Git\etc\fstab</span><br><span class="line">添加一行<span class="comment">(填入对应GCC路径)</span></span><br><span class="line">C:/CodeBlocks/Mi<span class="symbol">nGW64</span>       /mi<span class="symbol">ngw64</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/git-bash_gcc.png"></p>
+<h1 id="附送-vimrc"><a href="#附送-vimrc" class="headerlink" title="附送 .vimrc"></a>附送 .vimrc</h1><p>“ .vimrc   请把本文件 _vimrc 改成 .vimrc 放到 ~目录</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://262235.xyz/2018/03/18/html_share_style/" data-id="ckgyy8p1s001llwusb2ok2a50" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/cpp/" rel="tag">cpp</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../visitor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SSH访问兼留言簿URL入口
+        
+      </div>
+    </a>
+  
+  
+    <a href="../../../../2017/11/11/alarmclock/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">alarmclock 定时闹钟</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="../../../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../../../tags/git/" style="font-size: 14px;">git</a> <a href="../../../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../../../tags/video/" style="font-size: 10px;">video</a> <a href="../../../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../../../tags/vps/" style="font-size: 18px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2017/">2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../../../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hongwenjun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+  
+    <a href="../../../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+  
+    <a href="../../../../index.html" class="mobile-nav-link">博客</a>
+  
+    <a href="../../../../archives" class="mobile-nav-link">归档</a>
+  
+    <a href="../../../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+  
+    <a href="../../../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+  
+    <a href="../../../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+  
+</nav>
+    
+
+<script src="js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="../../../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
