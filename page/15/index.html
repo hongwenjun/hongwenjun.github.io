@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
 
@@ -13,9 +13,10 @@
 <meta property="og:url" content="https://262235.xyz/page/15/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongwenjun">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
+<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
     <link rel="icon" href="/favicon.png">
@@ -23,11 +24,9 @@
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  
-<link rel="stylesheet" href="../../css/style.css">
-
-<meta name="generator" content="Hexo 5.2.0"></head>
-
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -44,19 +43,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
+          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -94,17 +93,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="linux下golang环境搭建自动脚本"><a href="#linux下golang环境搭建自动脚本" class="headerlink" title="linux下golang环境搭建自动脚本"></a>linux下golang环境搭建自动脚本</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># linux下golang环境搭建自动脚本  by 蘭雅sRGB</span></span><br><span class="line">wget -qO- https:<span class="regexp">//gi</span>t.io/fp4jf | bash</span><br></pre></td></tr></table></figure>
-
-<h3 id="脚本源码"><a href="#脚本源码" class="headerlink" title="脚本源码"></a>脚本源码</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env bash</span><br><span class="line"></span><br><span class="line"># linux下golang环境搭建自动脚本  <span class="keyword">by</span> 蘭雅sRGB</span><br><span class="line"></span><br><span class="line"># 下载释放go语言安装包</span><br><span class="line"></span><br><span class="line">go_tar_gz=&quot;go1.11.2.linux-amd64.tar.gz&quot;</span><br><span class="line"></span><br><span class="line">go_url=&quot;https://dl.google.com/go/$&#123;go_tar_gz&#125;&quot;</span><br><span class="line"></span><br><span class="line">wget <span class="comment">--no-check-certificate -O $&#123;go_tar_gz&#125;  $&#123;go_url&#125;</span></span><br><span class="line">tar -xvf  $&#123;go_tar_gz&#125;</span><br><span class="line">rm  $&#123;go_tar_gz&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># go语言 添加环境变量</span><br><span class="line"></span><br><span class="line">cat <span class="symbol">&lt;&lt;EOF &gt;&gt;</span> ~/.profile</span><br><span class="line">export GOROOT=/root/go</span><br><span class="line">export GOPATH=/root/go/<span class="keyword">work</span></span><br><span class="line">export <span class="type">PATH</span>=$<span class="type">PATH</span>:/root/go/bin</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">source ~/.profile</span><br><span class="line">mkdir -p /root/go/<span class="keyword">work</span></span><br><span class="line"></span><br><span class="line"># 测试go语言安装</span><br><span class="line"></span><br><span class="line">mkdir -p ~/helloworld</span><br><span class="line">cd ~/helloworld</span><br><span class="line"></span><br><span class="line">cat <span class="symbol">&lt;&lt;EOF &gt;&gt;</span> helloworld.go</span><br><span class="line"></span><br><span class="line">// Test that we can <span class="keyword">do</span> page <span class="number">1</span> <span class="keyword">of</span> the C book.</span><br><span class="line"></span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    print(&quot;hello, world\n&quot;)</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">go build</span><br><span class="line"></span><br><span class="line">./helloworld</span><br></pre></td></tr></table></figure>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz">https://262235.xyz</a></p>
+<h3 id="linux下golang环境搭建自动脚本"><a href="#linux下golang环境搭建自动脚本" class="headerlink" title="linux下golang环境搭建自动脚本"></a>linux下golang环境搭建自动脚本</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># linux下golang环境搭建自动脚本  by 蘭雅sRGB</span></span><br><span class="line"><span class="attribute">wget</span> -qO- https://git.io/fp4jf | bash</span><br></pre></td></tr></table></figure>
+<h3 id="脚本源码"><a href="#脚本源码" class="headerlink" title="脚本源码"></a>脚本源码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># linux下golang环境搭建自动脚本  by 蘭雅sRGB</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载释放go语言安装包</span></span><br><span class="line"></span><br><span class="line">go_tar_gz=<span class="string">"go1.11.2.linux-amd64.tar.gz"</span></span><br><span class="line"></span><br><span class="line">go_url=<span class="string">"https://dl.google.com/go/<span class="variable">$&#123;go_tar_gz&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">wget --no-check-certificate -O <span class="variable">$&#123;go_tar_gz&#125;</span>  <span class="variable">$&#123;go_url&#125;</span></span><br><span class="line">tar -xvf  <span class="variable">$&#123;go_tar_gz&#125;</span></span><br><span class="line">rm  <span class="variable">$&#123;go_tar_gz&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># go语言 添加环境变量</span></span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF &gt;&gt; ~/.profile</span><br><span class="line"><span class="built_in">export</span> GOROOT=/root/go</span><br><span class="line"><span class="built_in">export</span> GOPATH=/root/go/work</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/root/go/bin</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.profile</span><br><span class="line">mkdir -p /root/go/work</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试go语言安装</span></span><br><span class="line"></span><br><span class="line">mkdir -p ~/helloworld</span><br><span class="line"><span class="built_in">cd</span> ~/helloworld</span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF &gt;&gt; helloworld.go</span><br><span class="line"></span><br><span class="line">// Test that we can <span class="keyword">do</span> page 1 of the C book.</span><br><span class="line"></span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">func <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"hello, world\n"</span>)</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">go build</span><br><span class="line"></span><br><span class="line">./helloworld</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/12/23/golang_install/" data-id="ckgyy8p1i001dlwushafv0pi6" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/12/23/golang_install/" data-id="ckh01kthp001a9wuszroq13na" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/">linux</a></li></ul>
 
     </footer>
   </div>
@@ -117,7 +115,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../14/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../13/">13</a><a class="page-number" href="../14/">14</a><span class="page-number current">15</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../16/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../14/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../13/">13</a><a class="page-number" href="../14/">14</a><span class="page-number current">15</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../16/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -131,7 +129,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
     </div>
   </div>
 
@@ -202,19 +200,19 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -222,17 +220,11 @@
 <script src="js/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-
-  
-<script src="../../fancybox/jquery.fancybox.pack.js"></script>
-
-
+  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="../../js/script.js"></script>
-
 
 
 

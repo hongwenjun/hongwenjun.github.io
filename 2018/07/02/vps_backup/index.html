@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
 
   
   <title>Vultr_IPV6 机器安装设置，备份和恢复 | 蘭雅sRGB 龙芯2F服务器</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="蘭雅sRGB 个人博客 https:&#x2F;&#x2F;262235.xyz 获取自己所需服务软件的信息ps aux 可以得到软件的安装目录和配置文件目录 &#x2F;usr&#x2F;bin&#x2F;shadowsocks-server -c &#x2F;etc&#x2F;shadowsocks-go&#x2F;config.json&#x2F;usr&#x2F;local&#x2F;frps&#x2F;frps -c &#x2F;usr&#x2F;local&#x2F;frps&#x2F;frps.ini&#x2F;bin&#x2F;bash &#x2F;etc&#x2F;init.">
+  <meta name="description" content="蘭雅sRGB 个人博客 https://262235.xyz 获取自己所需服务软件的信息ps aux 可以得到软件的安装目录和配置文件目录 /usr/bin/shadowsocks-server -c /etc/shadowsocks-go/config.json/usr/local/frps/frps -c /usr/local/frps/frps.ini/bin/bash /etc/init.">
+<meta name="keywords" content="vps">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vultr_IPV6 机器安装设置，备份和恢复">
 <meta property="og:url" content="https://262235.xyz/2018/07/02/vps_backup/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
-<meta property="og:description" content="蘭雅sRGB 个人博客 https:&#x2F;&#x2F;262235.xyz 获取自己所需服务软件的信息ps aux 可以得到软件的安装目录和配置文件目录 &#x2F;usr&#x2F;bin&#x2F;shadowsocks-server -c &#x2F;etc&#x2F;shadowsocks-go&#x2F;config.json&#x2F;usr&#x2F;local&#x2F;frps&#x2F;frps -c &#x2F;usr&#x2F;local&#x2F;frps&#x2F;frps.ini&#x2F;bin&#x2F;bash &#x2F;etc&#x2F;init.">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-07-02T04:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-02T03:40:09.117Z">
-<meta property="article:author" content="hongwenjun">
-<meta property="article:tag" content="vps">
+<meta property="og:description" content="蘭雅sRGB 个人博客 https://262235.xyz 获取自己所需服务软件的信息ps aux 可以得到软件的安装目录和配置文件目录 /usr/bin/shadowsocks-server -c /etc/shadowsocks-go/config.json/usr/local/frps/frps -c /usr/local/frps/frps.ini/bin/bash /etc/init.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-11-02T03:40:09.117Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vultr_IPV6 机器安装设置，备份和恢复">
+<meta name="twitter:description" content="蘭雅sRGB 个人博客 https://262235.xyz 获取自己所需服务软件的信息ps aux 可以得到软件的安装目录和配置文件目录 /usr/bin/shadowsocks-server -c /etc/shadowsocks-go/config.json/usr/local/frps/frps -c /usr/local/frps/frps.ini/bin/bash /etc/init.">
   
   
     <link rel="icon" href="/favicon.png">
@@ -26,11 +26,9 @@
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  
-<link rel="stylesheet" href="../../../../css/style.css">
-
-<meta name="generator" content="Hexo 5.2.0"></head>
-
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -47,19 +45,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="../../../../https:/262235.xyz/">主页</a>
+          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="../../../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../../../archives">归档</a>
         
-          <a class="main-nav-link" href="../../../../https:/github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="../../../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="../../../../https:/space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -75,7 +73,7 @@
       <div class="outer">
         <section id="main"><article id="post-vps_backup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="" class="article-date">
+    <a href class="article-date">
   <time datetime="2018-07-02T04:00:00.000Z" itemprop="datePublished">2018-07-02</time>
 </a>
     
@@ -95,30 +93,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="获取自己所需服务软件的信息"><a href="#获取自己所需服务软件的信息" class="headerlink" title="获取自己所需服务软件的信息"></a>获取自己所需服务软件的信息</h3><pre><code>ps aux</code></pre>
-<p>可以得到软件的安装目录和配置文件目录</p>
+        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz">https://262235.xyz</a></p>
+<h3 id="获取自己所需服务软件的信息"><a href="#获取自己所需服务软件的信息" class="headerlink" title="获取自己所需服务软件的信息"></a>获取自己所需服务软件的信息</h3><pre><code>ps aux
+</code></pre><p>可以得到软件的安装目录和配置文件目录</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">/usr/bin/shadowsocks-server -c /etc/shadowsocks-go/config.json</span><br><span class="line">/usr/local/frps/frps -c /usr/local/frps/frps.ini</span><br><span class="line">/bin/bash /etc/init.d/brook start</span><br><span class="line">./brook servers -l :2333 srgb.xyz</span><br><span class="line">screen ./fuck_net</span><br><span class="line">screen iperf3 -s</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="打包程序和配置"><a href="#打包程序和配置" class="headerlink" title="打包程序和配置"></a>打包程序和配置</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">tar -czvf  ss_frp.tar.gz  <span class="regexp">/etc/i</span>nit.d<span class="regexp">/brook  /u</span>sr<span class="regexp">/local/</span>brook<span class="regexp">/brook  /u</span>sr<span class="regexp">/local/</span>brook/brook.conf   \</span><br><span class="line">    <span class="regexp">/usr/</span>bin<span class="regexp">/shadowsocks-server   /</span>etc<span class="regexp">/shadowsocks-go/</span>config.json   <span class="regexp">/etc/i</span>nit.d/shadowsocks-go  \</span><br><span class="line">    <span class="regexp">/usr/</span>local<span class="regexp">/frps/</span>frps   <span class="regexp">/usr/</span>local<span class="regexp">/frps/</span>frps.ini  <span class="regexp">/etc/i</span>nit.d<span class="regexp">/frps  /</span>root/fuck_net</span><br></pre></td></tr></table></figure>
-
-<p>个人备份的 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/vps_setup">ss_frp.tar.gz</a></p>
+<h3 id="打包程序和配置"><a href="#打包程序和配置" class="headerlink" title="打包程序和配置"></a>打包程序和配置</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">tar -czvf  ss_frp.tar.gz  <span class="regexp">/etc/i</span>nit.d<span class="regexp">/brook  /u</span>sr<span class="regexp">/local/</span>brook<span class="regexp">/brook  /u</span>sr<span class="regexp">/local/</span>brook<span class="regexp">/brook.conf   \</span></span><br><span class="line"><span class="regexp">    /u</span>sr<span class="regexp">/bin/</span>shadowsocks-server   <span class="regexp">/etc/</span>shadowsocks-go<span class="regexp">/config.json   /</span>etc<span class="regexp">/init.d/</span>shadowsocks-go  \</span><br><span class="line">    <span class="regexp">/usr/</span>local<span class="regexp">/frps/</span>frps   <span class="regexp">/usr/</span>local<span class="regexp">/frps/</span>frps.ini  <span class="regexp">/etc/i</span>nit.d<span class="regexp">/frps  /</span>root<span class="regexp">/fuck_net</span></span><br></pre></td></tr></table></figure>
+<p>个人备份的 <a href="https://github.com/hongwenjun/vps_setup" target="_blank" rel="noopener">ss_frp.tar.gz</a></p>
 <h2 id="搬迁备份文件，使用wget"><a href="#搬迁备份文件，使用wget" class="headerlink" title="搬迁备份文件，使用wget"></a>搬迁备份文件，使用wget</h2><ul>
 <li>可以先不删除原来机器，新建立机器使用wget把备份文件挪过去</li>
 <li>本笔记，由于使用Vultr_IPV6的机器，所以使用wget先下载到本地电脑了</li>
 </ul>
-<h3 id="本地上传到服务器-tmp"><a href="#本地上传到服务器-tmp" class="headerlink" title="本地上传到服务器/tmp"></a>本地上传到服务器/tmp</h3><pre><code>$ scp /c/Users/vip/Desktop/ss_frp/ss_frp.tar.gz root@[2001:19f0:8001:c85:5400:01ff:fe91:7ed8]:/tmp/ss_frp.tar.gz</code></pre>
-<h3 id="服务器上解压和开启服务"><a href="#服务器上解压和开启服务" class="headerlink" title="服务器上解压和开启服务"></a>服务器上解压和开启服务</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cd <span class="regexp">/ &amp;&amp; tar -xvf /</span>tmp/ss_frp.tar.gz</span><br><span class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/frps  start &amp;&amp; /</span>etc<span class="regexp">/init.d/</span>brook start &amp;&amp; <span class="regexp">/etc/i</span>nit.d/shadowsocks-go start</span><br></pre></td></tr></table></figure>
-
+<h3 id="本地上传到服务器-tmp"><a href="#本地上传到服务器-tmp" class="headerlink" title="本地上传到服务器/tmp"></a>本地上传到服务器/tmp</h3><pre><code>$ scp /c/Users/vip/Desktop/ss_frp/ss_frp.tar.gz root@[2001:19f0:8001:c85:5400:01ff:fe91:7ed8]:/tmp/ss_frp.tar.gz
+</code></pre><h3 id="服务器上解压和开启服务"><a href="#服务器上解压和开启服务" class="headerlink" title="服务器上解压和开启服务"></a>服务器上解压和开启服务</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">cd <span class="regexp">/ &amp;&amp; tar -xvf /</span>tmp/ss_frp.tar.gz</span><br><span class="line"><span class="regexp">/etc/</span>init.d<span class="regexp">/frps  start &amp;&amp; /</span>etc<span class="regexp">/init.d/</span>brook start &amp;&amp; <span class="regexp">/etc/</span>init.d/shadowsocks-go start</span><br></pre></td></tr></table></figure>
 <h3 id="注册服务，禁止服务"><a href="#注册服务，禁止服务" class="headerlink" title="注册服务，禁止服务"></a>注册服务，禁止服务</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo systemctl <span class="builtin-name">enable</span> frps</span><br><span class="line">sudo systemctl <span class="builtin-name">enable</span> brook </span><br><span class="line">sudo systemctl <span class="builtin-name">enable</span> shadowsocks-go</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="builtin-name">disable</span> frps #禁止的脚本</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/07/02/vps_backup/" data-id="ckgyy8p3w002vlwusfnqc7gte" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/07/02/vps_backup/" data-id="ckh01ktjl002r9wusd1v410lc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/vps/">vps</a></li></ul>
 
     </footer>
   </div>
@@ -126,19 +120,19 @@
     
 <nav id="article-nav">
   
-    <a href="../vultr_ipv6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../Debian_utf-8/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Vultr_IPV6 机器安装设置，添加 IPv4 教程
+          Debian远程SSH汉字utf-8乱码解决等
         
       </div>
     </a>
   
   
-    <a href="../../../06/15/vps_virmach/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../vultr_ipv6/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">VirMach 最便宜的主机折腾</div>
+      <div class="article-nav-title">Vultr_IPV6 机器安装设置，添加 IPv4 教程</div>
     </a>
   
 </nav>
@@ -157,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/vps/">vps</a></li></ul>
     </div>
   </div>
 
@@ -228,19 +222,19 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="../../../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="../../../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="../../../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="../../../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="../../../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -248,17 +242,11 @@
 <script src="js/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
-
-  
-<script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
-
-
+  <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
+  <script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="../../../../js/script.js"></script>
-
 
 
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
 
@@ -13,9 +13,10 @@
 <meta property="og:url" content="https://262235.xyz/page/67/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongwenjun">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
+<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
     <link rel="icon" href="/favicon.png">
@@ -23,11 +24,9 @@
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  
-<link rel="stylesheet" href="../../css/style.css">
-
-<meta name="generator" content="Hexo 5.2.0"></head>
-
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -44,19 +43,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
+          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -94,64 +93,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="体验腾讯云-开发者实验-搭建-Git-服务器"><a href="#体验腾讯云-开发者实验-搭建-Git-服务器" class="headerlink" title="体验腾讯云-开发者实验  搭建 Git 服务器"></a>体验腾讯云-开发者实验  搭建 Git 服务器</h2><p><img src="https://share-10039692.file.myqcloud.com/lab/ac197229e6/logo/svyp4cez8d/git.svg"><br>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>此实验以 CentOS 7.2 x64 的系统为环境，搭建 git 服务器。</p>
-<h3 id="腾讯云-开发者实验室"><a href="#腾讯云-开发者实验室" class="headerlink" title="腾讯云-开发者实验室"></a>腾讯云-开发者实验室</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/labs/gallery">https://cloud.tencent.com/developer/labs/gallery</a></p>
+        <h2 id="体验腾讯云-开发者实验-搭建-Git-服务器"><a href="#体验腾讯云-开发者实验-搭建-Git-服务器" class="headerlink" title="体验腾讯云-开发者实验  搭建 Git 服务器"></a>体验腾讯云-开发者实验  搭建 Git 服务器</h2><p><img src="https://share-10039692.file.myqcloud.com/lab/ac197229e6/logo/svyp4cez8d/git.svg" alt><br>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>此实验以 CentOS 7.2 x64 的系统为环境，搭建 git 服务器。</p>
+<h3 id="腾讯云-开发者实验室"><a href="#腾讯云-开发者实验室" class="headerlink" title="腾讯云-开发者实验室"></a>腾讯云-开发者实验室</h3><p><a href="https://cloud.tencent.com/developer/labs/gallery" target="_blank" rel="noopener">https://cloud.tencent.com/developer/labs/gallery</a></p>
 <h3 id="网页打链接，找到搭建Git服务器，"><a href="#网页打链接，找到搭建Git服务器，" class="headerlink" title="网页打链接，找到搭建Git服务器，"></a>网页打链接，找到搭建Git服务器，</h3><p>开始学习测试，没有帐号的可以用微信扫描登陆。可以在浏览器中内嵌的SSH工具完成所有的安装测试工作.</p>
 <pre><code># 推荐使用 passwd 修改 root 密码，记录下 vps 机器的ip，自己使用SSH登陆
   passwd    //改密码
 # 本地电脑 打开 soft\Git\git-bash.exe 开启终端
-  ssh root@139.199.167.50</code></pre>
-<h3 id="安装依赖库和编译工具"><a href="#安装依赖库和编译工具" class="headerlink" title="安装依赖库和编译工具"></a>安装依赖库和编译工具</h3><p>为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具</p>
-<pre><code>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</code></pre>
-<p>安装编译工具</p>
-<pre><code>yum install gcc perl-ExtUtils-MakeMaker</code></pre>
-<h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 /usr/local/src 目录里</p>
-<pre><code>cd /usr/local/src</code></pre>
-<p>到官网找一个新版稳定的源码包下载到 /usr/local/src 文件夹里</p>
-<pre><code>wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</code></pre>
-<h3 id="解压和编译"><a href="#解压和编译" class="headerlink" title="解压和编译"></a>解压和编译</h3><p>解压下载的源码包</p>
-<pre><code>tar -zvxf git-2.10.0.tar.gz</code></pre>
-<p>解压后进入 git-2.10.0 文件夹</p>
-<pre><code>cd git-2.10.0</code></pre>
-<p>执行编译</p>
+  ssh root@139.199.167.50
+</code></pre><h3 id="安装依赖库和编译工具"><a href="#安装依赖库和编译工具" class="headerlink" title="安装依赖库和编译工具"></a>安装依赖库和编译工具</h3><p>为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具</p>
+<pre><code>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+</code></pre><p>安装编译工具</p>
+<pre><code>yum install gcc perl-ExtUtils-MakeMaker
+</code></pre><h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 /usr/local/src 目录里</p>
+<pre><code>cd /usr/local/src
+</code></pre><p>到官网找一个新版稳定的源码包下载到 /usr/local/src 文件夹里</p>
+<pre><code>wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz
+</code></pre><h3 id="解压和编译"><a href="#解压和编译" class="headerlink" title="解压和编译"></a>解压和编译</h3><p>解压下载的源码包</p>
+<pre><code>tar -zvxf git-2.10.0.tar.gz
+</code></pre><p>解压后进入 git-2.10.0 文件夹</p>
+<pre><code>cd git-2.10.0
+</code></pre><p>执行编译</p>
 <pre><code>make all prefix=/usr/local/git
 
 # 测试的时候直接编译错误，先运行配置，再更新了安装的库
-./configure</code></pre>
-<p>编译完成后, 安装到 /usr/local/git 目录下</p>
-<pre><code>make install prefix=/usr/local/git</code></pre>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>将 git 目录加入 PATH,将原来的 PATH 指向目录修改为现在的目录</p>
-<pre><code>echo &#39;export PATH=$PATH:/usr/local/git/bin&#39; &gt;&gt; /etc/bashrc</code></pre>
-<p>生效环境变量</p>
-<pre><code>source /etc/bashrc</code></pre>
-<p>此时我们能查看 git 版本号，说明我们已经安装成功了。</p>
-<pre><code>git --version</code></pre>
-<h3 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h3><p>创建 git 账号<br>为我们刚刚搭建好的 git 创建一个账号</p>
-<pre><code>useradd -m gituser</code></pre>
-<p>然后为这个账号设置密码</p>
-<pre><code>passwd gituser</code></pre>
-<h3 id="初始化-git-仓库并配置用户权限"><a href="#初始化-git-仓库并配置用户权限" class="headerlink" title="初始化 git 仓库并配置用户权限"></a>初始化 git 仓库并配置用户权限</h3><p>创建 git 仓库并初始化<br>我们创建 /data/repositories 目录用于存放 git 仓库</p>
-<pre><code>mkdir -p /data/repositories</code></pre>
-<p>创建好后，初始化这个仓库</p>
-<pre><code>cd /data/repositories/ &amp;&amp; git init --bare test.git</code></pre>
-<h3 id="配置用户权限"><a href="#配置用户权限" class="headerlink" title="配置用户权限"></a>配置用户权限</h3><p>给 git 仓库目录设置用户和用户组并设置权限</p>
+./configure
+</code></pre><p>编译完成后, 安装到 /usr/local/git 目录下</p>
+<pre><code>make install prefix=/usr/local/git
+</code></pre><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>将 git 目录加入 PATH,将原来的 PATH 指向目录修改为现在的目录</p>
+<pre><code>echo &apos;export PATH=$PATH:/usr/local/git/bin&apos; &gt;&gt; /etc/bashrc
+</code></pre><p>生效环境变量</p>
+<pre><code>source /etc/bashrc
+</code></pre><p>此时我们能查看 git 版本号，说明我们已经安装成功了。</p>
+<pre><code>git --version
+</code></pre><h3 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h3><p>创建 git 账号<br>为我们刚刚搭建好的 git 创建一个账号</p>
+<pre><code>useradd -m gituser
+</code></pre><p>然后为这个账号设置密码</p>
+<pre><code>passwd gituser
+</code></pre><h3 id="初始化-git-仓库并配置用户权限"><a href="#初始化-git-仓库并配置用户权限" class="headerlink" title="初始化 git 仓库并配置用户权限"></a>初始化 git 仓库并配置用户权限</h3><p>创建 git 仓库并初始化<br>我们创建 /data/repositories 目录用于存放 git 仓库</p>
+<pre><code>mkdir -p /data/repositories
+</code></pre><p>创建好后，初始化这个仓库</p>
+<pre><code>cd /data/repositories/ &amp;&amp; git init --bare test.git
+</code></pre><h3 id="配置用户权限"><a href="#配置用户权限" class="headerlink" title="配置用户权限"></a>配置用户权限</h3><p>给 git 仓库目录设置用户和用户组并设置权限</p>
 <pre><code>chown -R gituser:gituser /data/repositories
-chmod 755 /data/repositories</code></pre>
-<p>查找 git-shell 所在目录<br> , 编辑 /etc/passwd 文件，将最后一行关于 gituser 的登录 shell 配置改为 git-shell 的目录</p>
+chmod 755 /data/repositories
+</code></pre><p>查找 git-shell 所在目录<br> , 编辑 /etc/passwd 文件，将最后一行关于 gituser 的登录 shell 配置改为 git-shell 的目录</p>
 <pre><code>vim /etc/passwd
-gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
-<h3 id="使用搭建好的-Git-服务"><a href="#使用搭建好的-Git-服务" class="headerlink" title="使用搭建好的 Git 服务"></a>使用搭建好的 Git 服务</h3><p>克隆 test repo 到本地，本地电脑开另一个终端</p>
+gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell
+</code></pre><h3 id="使用搭建好的-Git-服务"><a href="#使用搭建好的-Git-服务" class="headerlink" title="使用搭建好的 Git 服务"></a>使用搭建好的 Git 服务</h3><p>克隆 test repo 到本地，本地电脑开另一个终端</p>
 <pre><code>cd ~ &amp;&amp; git clone gituser@139.199.167.50:/data/repositories/test.git
-# ip 为测试云主机的ip</code></pre>
-<h3 id="实际测试-SSH-终端命令记录"><a href="#实际测试-SSH-终端命令记录" class="headerlink" title="实际测试 SSH 终端命令记录"></a>实际测试 SSH 终端命令记录</h3><p><img src="/img/git_server.png"></p>
+# ip 为测试云主机的ip
+</code></pre><h3 id="实际测试-SSH-终端命令记录"><a href="#实际测试-SSH-终端命令记录" class="headerlink" title="实际测试 SSH 终端命令记录"></a>实际测试 SSH 终端命令记录</h3><p><img src="/img/git_server.png" alt></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/03/28/git_server/" data-id="ckgyy8p1e0019lwushsmn5vgg" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/28/git_server/" data-id="ckh01kthh00179wusq05ayngb" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/">git</a></li></ul>
 
     </footer>
   </div>
@@ -164,7 +163,7 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../66/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../65/">65</a><a class="page-number" href="../66/">66</a><span class="page-number current">67</span><a class="page-number" href="../68/">68</a><a class="page-number" href="../69/">69</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../68/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../66/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../65/">65</a><a class="page-number" href="../66/">66</a><span class="page-number current">67</span><a class="page-number" href="../68/">68</a><a class="page-number" href="../69/">69</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../68/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -178,7 +177,7 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
     </div>
   </div>
 
@@ -249,19 +248,19 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
     </div>
     <nav id="mobile-nav">
   
-    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -269,17 +268,11 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
 <script src="js/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-
-  
-<script src="../../fancybox/jquery.fancybox.pack.js"></script>
-
-
+  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="../../js/script.js"></script>
-
 
 
 

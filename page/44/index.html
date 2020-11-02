@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
 
@@ -13,9 +13,10 @@
 <meta property="og:url" content="https://262235.xyz/page/44/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="hongwenjun">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
+<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
     <link rel="icon" href="/favicon.png">
@@ -23,11 +24,9 @@
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  
-<link rel="stylesheet" href="../../css/style.css">
-
-<meta name="generator" content="Hexo 5.2.0"></head>
-
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -44,19 +43,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
+          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -72,9 +71,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-frp2link" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-frp_setup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/06/04/frp2link/" class="article-date">
+    <a href="../../2018/06/04/frp_setup/" class="article-date">
   <time datetime="2018-06-04T04:00:00.000Z" itemprop="datePublished">2018-06-04</time>
 </a>
     
@@ -86,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/06/04/frp2link/">frp连接2个服务器</a>
+      <a class="article-title" href="../../2018/06/04/frp_setup/">frps配置测试</a>
     </h1>
   
 
@@ -94,35 +93,127 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h1 id="修改开机脚本"><a href="#修改开机脚本" class="headerlink" title="修改开机脚本"></a>修改开机脚本</h1><pre><code># 龙芯8089D debian版的开机脚本
-vim /etc/init.d/rc.local</code></pre>
-<p>启动2个配置脚本，连2个服务器<br>写到开机脚本里</p>
-<pre><code>sleep 3
-cd /root/frp  &amp;&amp; ./frpc -c frpc.ini &gt; /dev/null 2&gt;&amp;1 &amp;
+        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz">https://262235.xyz</a></p>
+<h3 id="frps服务端-一键安装脚本"><a href="#frps服务端-一键安装脚本" class="headerlink" title="frps服务端 一键安装脚本"></a>frps服务端 一键安装脚本</h3><p><a href="https://github.com/clangcn/onekey-install-shell" target="_blank" rel="noopener">https://github.com/clangcn/onekey-install-shell</a></p>
+<p>ssh登陆命令行输入3行命令就可以安装</p>
+<pre><code>wget --no-check-certificate https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install
+</code></pre><p>装好后，就可以用了，不过改成以下配置，为了测试方便点</p>
+<h3 id="管理器使用方法"><a href="#管理器使用方法" class="headerlink" title="管理器使用方法"></a>管理器使用方法</h3><pre><code>Usage: /etc/init.d/frps {start|stop|restart|status|config|version}
 
-sleep 3
-cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
+frps stop     # 先停止
+frps config   # 配置服务器
+frps start    # 启动服务 
+</code></pre><h3 id="服务端配置-frps-ini"><a href="#服务端配置-frps-ini" class="headerlink" title="服务端配置 frps.ini"></a>服务端配置 frps.ini</h3><hr>
+<pre><code>[common]
+bind_addr = 0.0.0.0
+bind_port = 7000
+kcp_bind_port = 7000
+bind_udp_port = 7001
+token = www.nat.ee
+vhost_http_port = 8080
+vhost_https_port = 443
+allow_ports = 10001-19999
+#subdomain_host = nat.ee
+max_pool_count = 6
+max_ports_per_client = 3
+tcp_mux=true
+heartbeat_timeout = 90
+authentication_timeout = 900
+#[admin]
+dashboard_port = 7500
+dashboard_user = admin
+dashboard_pwd = admin
+#[log]
+#log_file = ./frps.log
+log_level = info
+log_max_days = 7
+</code></pre><hr>
+<p>为了测试把把域名 <a href="http://www.srgb.xyz" target="_blank" rel="noopener">www.srgb.xyz</a> 和 s.srgb.xyz 都绑定到服务器IP</p>
+<p>使用同名CNAME 也可以，也可以直接hosts里设置，不知是否可行</p>
+<p>客户1和2  user 不能相同</p>
+<p>然后 custom_domains =  分别 <a href="http://www.srgb.xyz" target="_blank" rel="noopener">www.srgb.xyz</a>  和 s.srgb.xyz</p>
+<p>服务器本身占用80端口了<br>所以 <a href="http://www.srgb.xyz:8080" target="_blank" rel="noopener">www.srgb.xyz:8080</a>     s.srgb.xyz:8080 访问测试设备</p>
+<p><a href="http://www.srgb.xyz:7500" target="_blank" rel="noopener">www.srgb.xyz:7500</a>  查看登陆情况</p>
 <hr>
-<p>再分别 frpc.ini 和 frpc.ini.hk 两个客户端配置文件</p>
-<h3 id="这个配置用来连接到自己架设的frps服务器"><a href="#这个配置用来连接到自己架设的frps服务器" class="headerlink" title="这个配置用来连接到自己架设的frps服务器"></a>这个配置用来连接到自己架设的frps服务器</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">frpc.ini</span><br><span class="line"></span><br><span class="line"># 主配置</span><br><span class="line">[common]</span><br><span class="line">server_addr = srgb.xyz</span><br><span class="line">server_port = <span class="number">7000</span></span><br><span class="line">token = www.nat.ee</span><br><span class="line">user = srgb</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">log_file = ./frpc.<span class="built_in">log</span></span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port = <span class="number">80</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.xyz , s.srgb.xyz</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_port = <span class="number">22</span></span><br><span class="line">remote_port = <span class="number">11122</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = s.srgb.xyz</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="客户端1-配置"><a href="#客户端1-配置" class="headerlink" title="客户端1 配置"></a>客户端1 配置</h3><p>这台机器是 龙芯 8089D，下载mips 的客户端， <a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener">https://github.com/fatedier/frp/releases</a></p>
+<h3 id="frpc-ini"><a href="#frpc-ini" class="headerlink" title="frpc.ini"></a>frpc.ini</h3><pre><code># 主配置
+[common]
+server_addr = srgb.xyz
+server_port = 7000
+token = www.nat.ee
+user = srgb
 
-<h3 id="连接-免费frp香港公共服务"><a href="#连接-免费frp香港公共服务" class="headerlink" title="连接 免费frp香港公共服务"></a>连接 免费frp香港公共服务</h3><p>注意客户端版本和服务器不要相差太多</p>
-<p><a target="_blank" rel="noopener" href="https://www.nat.ee/frp/hkfrp">https://www.nat.ee/frp/hkfrp</a><br>访问服务器公告，或者配置更新</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">frpc.ini.hk</span><br><span class="line"> </span><br><span class="line"><span class="meta">#  https:<span class="comment">//www.nat.ee/frp/hkfrp</span></span></span><br><span class="line">#  免费frp香港公共服务</span><br><span class="line"></span><br><span class="line"># 主配置</span><br><span class="line">[common]</span><br><span class="line">server_addr = hk.nat.ee</span><br><span class="line">server_port = <span class="number">7000</span></span><br><span class="line">token = www.nat.ee</span><br><span class="line">user = hk</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">#log_file = ./frpc2.<span class="built_in">log</span></span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">type = http</span><br><span class="line">local_port = <span class="number">80</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.nwct.bid , hk.srgb.xyz , frp.srgb.xyz</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_port = <span class="number">22</span></span><br><span class="line">remote_port = <span class="number">11122</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.nwct.bid</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+# 日志
+#log_file = ./frpc.log
+log_level = info
+log_max_days = 7
 
-<hr>
-<p>调试配置文件的时候，可以先把log_file 注释掉。</p>
-<p>使用screen 命令，让frpc程序运行在后台</p>
-<pre><code>screen ./frpc -c frpc.ini</code></pre>
+[srgb]
+type = http
+local_port = 80
+local_ip = 127.0.0.1
+custom_domains = www.srgb.xyz
+</code></pre><hr>
+<p>客户端2 配置  ，这台机器是PC机，windows系统，</p>
+<h3 id="frpc-ini-1"><a href="#frpc-ini-1" class="headerlink" title="frpc.ini"></a>frpc.ini</h3><pre><code># 主配置
+[common]
+server_addr = srgb.xyz
+server_port = 7000
+token = www.nat.ee
+user = pc
 
+# 日志
+#log_file = ./frpc.log
+log_level = info
+log_max_days = 7
+
+[srgb]
+type = http
+local_port = 80
+local_ip = 127.0.0.1
+custom_domains = s.srgb.xyz
+</code></pre><hr>
+<p>因为一般服务器都有web服务，主机80端口都是已经占用，只能使用其他端口访问。</p>
+<pre><code># s.srgb.xyz:8080     绑定的子域名后面有跟一个端口号
+</code></pre><h3 id="使用Nginx-反代理frp，省略后缀端口口"><a href="#使用Nginx-反代理frp，省略后缀端口口" class="headerlink" title="使用Nginx 反代理frp，省略后缀端口口"></a>使用Nginx 反代理frp，省略后缀端口口</h3><pre><code>vim /etc/nginx/sites-enabled/default
+</code></pre><p>如果使用一键 lnmp 安装的配置文件，可以建立 vhost 然后再手工修改</p>
+<p>WEB主机配置文件末尾添加</p>
+<pre><code>map $http_x_forwarded_for $clientRealip {
+   &quot;&quot; $remote_addr;
+   ~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+}
+
+server {
+       listen 80;
+       server_name frp.srgb.xyz;  #为frp的控制台绑定一个域名，这样你就可以用http://frp.srgb.xyz访问你的控制台了
+       location / {
+           proxy_pass http://127.0.0.1:7500;  #此处的7500就是你安装frp时设置的dashboard_port端口
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       }
+}
+
+server {
+       listen 80;
+       server_name s.srgb.xyz;   #也可以将所有的srgb.xyz子域名都绑定，
+       location / {
+           proxy_pass http://127.0.0.1:8080; #此处的8080就是你安装frp时设置的vhost_http_port端口
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       }
+}
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/06/04/frp2link/" data-id="ckgyy8p13000ylwusaftlbzwj" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/06/04/frp_setup/" data-id="ckh01kth2000z9wus8rd5gmrc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/frp/">frp</a></li></ul>
 
     </footer>
   </div>
@@ -135,7 +226,7 @@ cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;<
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../43/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../42/">42</a><a class="page-number" href="../43/">43</a><span class="page-number current">44</span><a class="page-number" href="../45/">45</a><a class="page-number" href="../46/">46</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../45/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../43/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../42/">42</a><a class="page-number" href="../43/">43</a><span class="page-number current">44</span><a class="page-number" href="../45/">45</a><a class="page-number" href="../46/">46</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../45/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -149,7 +240,7 @@ cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;<
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
     </div>
   </div>
 
@@ -220,19 +311,19 @@ cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;<
     </div>
     <nav id="mobile-nav">
   
-    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -240,17 +331,11 @@ cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;<
 <script src="js/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-
-  
-<script src="../../fancybox/jquery.fancybox.pack.js"></script>
-
-
+  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="../../js/script.js"></script>
-
 
 
 
