@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
 
@@ -13,20 +13,21 @@
 <meta property="og:url" content="https://262235.xyz/page/29/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hongwenjun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
-<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/logo/favicon.png">
   
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="../../css/style.css">
-</head>
-</html>
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -43,19 +44,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
+          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -71,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-tmux_vim" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ffmpeg_gif2mp4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/10/09/tmux_vim/" class="article-date">
-  <time datetime="2018-10-09T04:00:00.000Z" itemprop="datePublished">2018-10-09</time>
+    <a href="../../2018/10/10/ffmpeg_gif2mp4/" class="article-date">
+  <time datetime="2018-10-10T04:00:00.000Z" itemprop="datePublished">2018-10-10</time>
 </a>
     
   </div>
@@ -85,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/10/09/tmux_vim/">Linux 终端 使用 tmux 分屏</a>
+      <a class="article-title" href="../../2018/10/10/ffmpeg_gif2mp4/">使用FFMPEG把gif转换到MP4格式方便上传</a>
     </h1>
   
 
@@ -93,54 +94,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz">https://262235.xyz</a></p>
-<p><img src="/webp/tmux.gif" alt></p>
-<h3 id="安装tmux工具"><a href="#安装tmux工具" class="headerlink" title="安装tmux工具"></a>安装tmux工具</h3><pre><code>apt-get install tmux
-</code></pre><h3 id="使用工具-tmux-分屏-每次都要先按-Ctrl-b"><a href="#使用工具-tmux-分屏-每次都要先按-Ctrl-b" class="headerlink" title="使用工具 tmux 分屏, 每次都要先按 Ctrl+b"></a>使用工具 tmux 分屏, 每次都要先按 Ctrl+b</h3><ol>
-<li>输入命令 tmux 使用工具</li>
-<li>上下分屏：Ctrl+b  再按 “</li>
-<li>左右分屏：Ctrl+b  再按 %</li>
-<li>切换屏幕：Ctrl+b  再按o</li>
-<li>关闭一个终端：Ctrl+b  再按x</li>
-<li>上下分屏与左右分屏切换： Ctrl+b  再按空格键</li>
-</ol>
-<h3 id="tmux-其他操作"><a href="#tmux-其他操作" class="headerlink" title="tmux 其他操作"></a>tmux 其他操作</h3><pre><code>可以使用 ctrl+a+d 退出 tmux 终端，这个比较通用
-tmux窗口选择：Ctrl+b 再按 ←↑→↓光标键选择
-Ctrl+b c   创建新窗口(桌面)
-Ctrl+b 0~9 选择几号窗口(桌面)
-Ctrl+b ? 显示快捷键帮助
-Ctrl+b C-o 调换窗口位置，类似与vim 里的C-w
-Ctrl+b 空格键 采用下一个内置布局
-Ctrl+b ! 把当前窗口变为新窗口
-Ctrl+b &quot; 模向分隔窗口
-Ctrl+b % 纵向分隔窗口
-Ctrl+b q 显示分隔窗口的编号
-Ctrl+b o 跳到下一个分隔窗口
-Ctrl+b 上下键 上一个及下一个分隔窗口
-Ctrl+b ALT-方向键 调整分隔窗口大小
-Ctrl+b n 选择下一个窗口
-Ctrl+b l 切换到最后使用的窗口
-Ctrl+b p 选择前一个窗口
-Ctrl+b w 以菜单方式显示及选择窗口
-Ctrl+b t 显示时钟
-Ctrl+b ; 切换到最后一个使用的面板
-Ctrl+b x 关闭面板
-Ctrl+b &amp; 关闭窗口
-Ctrl+b s 以菜单方式显示和选择会话
-Ctrl+b d 退出tumx，并保存当前会话，这时，
-      tmux仍在后台运行，可以通过
-      tmux attach进入 到指定的会话
-</code></pre><p><img src="/img/tmux.png" alt></p>
-<h3 id="tmux-conf-设定"><a href="#tmux-conf-设定" class="headerlink" title=".tmux.conf 设定"></a>.tmux.conf 设定</h3><figure class="highlight dsconfig"><table><tr><td class="code"><pre><span class="line"><span class="comment"># https://www.youtube.com/watch?v=xTplsyQaGFs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># tmux 启用鼠标操作</span></span><br><span class="line"><span class="string">setw </span>-g <span class="string">mouse</span></span><br><span class="line"><span class="string">set-</span><span class="string">option </span>-g <span class="string">history-limit </span><span class="string">20000</span></span><br><span class="line"><span class="string">set-</span><span class="string">option </span>-g <span class="string">mouse </span><span class="string">on</span></span><br><span class="line"><span class="string">bind </span>-n <span class="string">WheelUpPane </span><span class="string">select-pane </span>-t= \; <span class="string">copy-mode </span>-e \; <span class="string">send-keys </span>-M</span><br><span class="line"><span class="string">bind </span>-n <span class="string">WheelDownPane </span><span class="string">select-pane </span>-t= \; <span class="string">send-keys </span>-M</span><br></pre></td></tr></table></figure>
-<p><img src="/webp/tmux_mouse.gif" alt></p>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<p><img src="/webp/gif2mp4.webp"></p>
+<h3 id="使用FFMPEG把gif转换到MP4格式方便上传"><a href="#使用FFMPEG把gif转换到MP4格式方便上传" class="headerlink" title="使用FFMPEG把gif转换到MP4格式方便上传"></a>使用FFMPEG把gif转换到MP4格式方便上传</h3><p><a target="_blank" rel="noopener" href="https://youtu.be/EN7QLAhJrEo">https://youtu.be/EN7QLAhJrEo</a></p>
+<h3 id="gif-视频使用GifCam录制成640x360，转换后为720P-1280x720"><a href="#gif-视频使用GifCam录制成640x360，转换后为720P-1280x720" class="headerlink" title="gif 视频使用GifCam录制成640x360，转换后为720P (1280x720)"></a>gif 视频使用GifCam录制成640x360，转换后为720P (1280x720)</h3><pre><code>ffmpeg   -i  a.gif   -s 1280x720  new.mp4</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/10/09/tmux_vim/" data-id="ckh01ktja002h9wus25wrnmp1" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/10/10/ffmpeg_gif2mp4/" data-id="ckh19ps9q000wdnusb0kigzk0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/">vim</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li></ul>
 
     </footer>
   </div>
@@ -153,7 +118,7 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../28/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../27/">27</a><a class="page-number" href="../28/">28</a><span class="page-number current">29</span><a class="page-number" href="../30/">30</a><a class="page-number" href="../31/">31</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../30/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="../28/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../27/">27</a><a class="page-number" href="../28/">28</a><span class="page-number current">29</span><a class="page-number" href="../30/">30</a><a class="page-number" href="../31/">31</a><span class="space">&hellip;</span><a class="page-number" href="../76/">76</a><a class="extend next" rel="next" href="../30/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -167,7 +132,7 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -177,7 +142,7 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../tags/git/" style="font-size: 14px;">git</a> <a href="../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -199,6 +164,10 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
       <ul>
         
           <li>
+            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
@@ -212,10 +181,6 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
         
           <li>
             <a href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
-          </li>
-        
-          <li>
-            <a href="../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
           </li>
         
       </ul>
@@ -238,19 +203,19 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
     </div>
     <nav id="mobile-nav">
   
-    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -258,11 +223,17 @@ Ctrl+b d 退出tumx，并保存当前会话，这时，
 <script src="js/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="../../js/script.js"></script>
+
 
 
 

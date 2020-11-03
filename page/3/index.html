@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
 
@@ -13,20 +13,21 @@
 <meta property="og:url" content="https://262235.xyz/page/3/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hongwenjun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
-<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/logo/favicon.png">
   
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="../../css/style.css">
-</head>
-</html>
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -43,19 +44,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
+          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -71,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-2020y" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ffmpeg_x265" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2020/06/03/2020y/" class="article-date">
-  <time datetime="2020-06-03T04:00:00.000Z" itemprop="datePublished">2020-06-03</time>
+    <a href="../../2020/06/28/ffmpeg_x265/" class="article-date">
+  <time datetime="2020-06-28T04:00:00.000Z" itemprop="datePublished">2020-06-28</time>
 </a>
     
   </div>
@@ -85,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
+      <a class="article-title" href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
     </h1>
   
 
@@ -93,15 +94,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2020，注定不平凡的一年，不知明天和意外哪个先来临，但是还要充满希望，2020，你做好哪些准备了吗</p>
-<p><a href="https://wiki.hk.xileso.top/zh-cn/2020%E5%B9%B4" target="_blank" rel="noopener">https://wiki.hk.xileso.top/zh-cn/2020%E5%B9%B4</a></p>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="FFMPEG-裁剪mp4"><a href="#FFMPEG-裁剪mp4" class="headerlink" title="FFMPEG 裁剪mp4"></a>FFMPEG 裁剪mp4</h3><figure class="highlight haml"><table><tr><td class="code"><pre><span class="line">-<span class="ruby">i : source  来源,输入文件</span></span><br><span class="line"><span class="ruby">-<span class="symbol">ss:</span>start time  开始时间</span></span><br><span class="line"><span class="ruby">-t <span class="symbol">:duration</span>    持续时间</span></span><br><span class="line"><span class="ruby">-c <span class="symbol">:video</span>,audio codec   视频，音频编解码器，copy是重新编码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="行车记录仪3分钟视频，从第60秒开始剪裁120秒，剪裁2分钟保存到新文件"><a href="#行车记录仪3分钟视频，从第60秒开始剪裁120秒，剪裁2分钟保存到新文件" class="headerlink" title="行车记录仪3分钟视频，从第60秒开始剪裁120秒，剪裁2分钟保存到新文件"></a>行车记录仪3分钟视频，从第60秒开始剪裁120秒，剪裁2分钟保存到新文件</h3><pre><code>$ ffmpeg.exe -i 2020-06-21-08-53-20.MP4 -ss 60 -t 120 -c copy new.mp4</code></pre>
+<h3 id="视频个格式转-X-265-也可以使用GPU硬件加速"><a href="#视频个格式转-X-265-也可以使用GPU硬件加速" class="headerlink" title="视频个格式转 X.265  也可以使用GPU硬件加速"></a>视频个格式转 X.265  也可以使用GPU硬件加速</h3><pre><code>ffmpeg -i 01.mp4 -c:v libx265 -crf 30 -map 0:v -map 0:a:0 output.mp4 </code></pre>
+<ul>
+<li><p>libx265  使用软件CPU驱动</p>
+</li>
+<li><p>老黄显卡硬件加速  hevc_nvenc</p>
+</li>
+<li><p>AMD加硬件加速     hevc_amf</p>
+<p>ffmpeg -i 01.mp4 -c:v hevc_amf -crf 30 -map 0:v -map 0:a:0 output.mp4 </p>
+</li>
+</ul>
+<h3 id="合并多个文件-参考-https-trac-ffmpeg-org-wiki-Concatenate"><a href="#合并多个文件-参考-https-trac-ffmpeg-org-wiki-Concatenate" class="headerlink" title="合并多个文件 参考: https://trac.ffmpeg.org/wiki/Concatenate"></a>合并多个文件 参考: <a target="_blank" rel="noopener" href="https://trac.ffmpeg.org/wiki/Concatenate">https://trac.ffmpeg.org/wiki/Concatenate</a></h3><pre><code>ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.wav
+
+ffmpeg -i &quot;concat:input1.ts|input2.ts|input3.ts&quot; -c copy output.ts
+
+ffmpeg -i &quot;concat:intermediate1.ts|intermediate2.ts&quot; -c copy -bsf:a aac_adtstoasc output.mp4</code></pre>
+<h1 id="mp4box-合并-mp4"><a href="#mp4box-合并-mp4" class="headerlink" title="mp4box 合并 mp4"></a>mp4box 合并 mp4</h1><pre><code>mp4box -cat 1.mp4  -cat 2.mp4 new.mp4</code></pre>
+<h3 id="gif-视频使用GifCam录制成640x360，转换后为720P-1280x720"><a href="#gif-视频使用GifCam录制成640x360，转换后为720P-1280x720" class="headerlink" title="gif 视频使用GifCam录制成640x360，转换后为720P (1280x720)"></a>gif 视频使用GifCam录制成640x360，转换后为720P (1280x720)</h3><pre><code>ffmpeg   -i  a.gif   -s 1280x720  new.mp4</code></pre>
+<h3 id="ffmpeg-调整视频帧率-r-参数"><a href="#ffmpeg-调整视频帧率-r-参数" class="headerlink" title="ffmpeg 调整视频帧率 -r 参数"></a>ffmpeg 调整视频帧率 -r 参数</h3><pre><code>ffmpeg -i a.mp4  -r 5  new.mp4</code></pre>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"># 几条 ffmpeg 的命令</span><br><span class="line">	</span><br><span class="line"><span class="number">1</span>，获取视频的信息</span><br><span class="line">   ffmpeg -i video.avi</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>，将图片序列合成视频</span><br><span class="line">   ffmpeg -f image2 -i image%d.jpg video.mpg</span><br><span class="line">   上面的命令会把当前目录下的图片（名字如：image1.jpg, image2.jpg, 等...）合并成video.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>，将视频分解成图片序列</span><br><span class="line">   ffmpeg -i video.mpg image%d.jpg</span><br><span class="line">   上面的命令会生成image1.jpg, image2.jpg, ...</span><br><span class="line">   支持的图片格式有：PGM, PPM, PAM, PGMYUV, JPEG, GIF, PNG, TIFF, SGI</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>，为视频重新编码以适合在iPod/iPhone上播放</span><br><span class="line">   ffmpeg -i source_video.avi input -acodec aac -ab <span class="number">128</span>kb -vcodec mpeg4 -b <span class="number">1200</span>kb -mbd <span class="number">2</span> -flags +<span class="number">4</span>mv+trell -aic <span class="number">2</span> -cmp <span class="number">2</span> -subcmp <span class="number">2</span> -s <span class="number">320</span>x180 -title X final_video.mp4</span><br><span class="line">   说明：</span><br><span class="line">       * 源视频：source_video.avi</span><br><span class="line">       * 音频编码：aac</span><br><span class="line">       * 音频位率：<span class="number">128</span>kb/s</span><br><span class="line">       * 视频编码：mpeg4</span><br><span class="line">       * 视频位率：<span class="number">1200</span>kb/s</span><br><span class="line">       * 视频尺寸：<span class="number">320</span> X <span class="number">180</span></span><br><span class="line">       * 生成的视频：final_video.mp4</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>，为视频重新编码以适合在PSP上播放</span><br><span class="line">   ffmpeg -i source_video.avi -b <span class="number">300</span> -s <span class="number">320</span>x240 -vcodec xvid -ab <span class="number">32</span> -ar <span class="number">24000</span> -acodec aac final_video.mp4</span><br><span class="line">   说明：</span><br><span class="line">       * 源视频：source_video.avi</span><br><span class="line">       * 音频编码：aac</span><br><span class="line">       * 音频位率：<span class="number">32</span>kb/s</span><br><span class="line">       * 视频编码：xvid</span><br><span class="line">       * 视频位率：<span class="number">1200</span>kb/s</span><br><span class="line">       * 视频尺寸：<span class="number">320</span> X <span class="number">180</span></span><br><span class="line">       * 生成的视频：final_video.mp4</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>，从视频抽出声音，并存为Mp3</span><br><span class="line">   ffmpeg -i source_video.avi -vn -ar <span class="number">44100</span> -ac <span class="number">2</span> -ab <span class="number">192</span> -f mp3 sound.mp3</span><br><span class="line">   说明：</span><br><span class="line">       * 源视频：source_video.avi</span><br><span class="line">       * 音频位率：<span class="number">192</span>kb/s</span><br><span class="line">       * 输出格式：mp3</span><br><span class="line">       * 生成的声音：sound.mp3</span><br><span class="line"></span><br><span class="line"><span class="number">7</span>，将wav文件转成Mp3</span><br><span class="line">   ffmpeg -i son_origine.avi -vn -ar <span class="number">44100</span> -ac <span class="number">2</span> -ab <span class="number">192</span> -f mp3 son_final.mp3</span><br><span class="line"></span><br><span class="line"><span class="number">8</span>，将.avi视频转成.mpg</span><br><span class="line">   ffmpeg -i video_origine.avi video_finale.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">9</span>，将.mpg转成.avi</span><br><span class="line">   ffmpeg -i video_origine.mpg video_finale.avi</span><br><span class="line"></span><br><span class="line"><span class="number">10</span>，将.avi转成gif动画（未压缩）</span><br><span class="line">   ffmpeg -i video_origine.avi gif_anime.gif</span><br><span class="line"></span><br><span class="line"><span class="number">11</span>，合成视频和音频</span><br><span class="line">   ffmpeg -i son.wav -i video_origine.avi video_finale.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">12</span>，将.avi转成.flv</span><br><span class="line">   ffmpeg -i video_origine.avi -ab <span class="number">56</span> -ar <span class="number">44100</span> -b <span class="number">200</span> -r <span class="number">15</span> -s <span class="number">320</span>x240 -f flv video_finale.flv</span><br><span class="line"></span><br><span class="line"><span class="number">13</span>，将.avi转成dv</span><br><span class="line">   ffmpeg -i video_origine.avi -s pal -r pal -aspect <span class="number">4</span>:<span class="number">3</span> -ar <span class="number">48000</span> -ac <span class="number">2</span> video_finale.dv</span><br><span class="line">   或者：</span><br><span class="line">   ffmpeg -i video_origine.avi -target pal-dv video_finale.dv</span><br><span class="line"></span><br><span class="line"><span class="number">14</span>，将.avi压缩成divx</span><br><span class="line">   ffmpeg -i video_origine.avi -s <span class="number">320</span>x240 -vcodec msmpeg4v2 video_finale.avi</span><br><span class="line"></span><br><span class="line"><span class="number">15</span>，将Ogg Theora压缩成Mpeg dvd</span><br><span class="line">   ffmpeg -i film_sortie_cinelerra.ogm -s <span class="number">720</span>x576 -vcodec mpeg2video -acodec mp3 film_terminate.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">16</span>，将.avi压缩成SVCD mpeg2</span><br><span class="line">   NTSC格式：</span><br><span class="line">      ffmpeg -i video_origine.avi -target ntsc-svcd video_finale.mpg</span><br><span class="line">   PAL格式：</span><br><span class="line">      ffmpeg -i video_origine.avi -target pal-svcd video_finale.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">17</span>，将.avi压缩成VCD mpeg2</span><br><span class="line">   NTSC格式：</span><br><span class="line">      ffmpeg -i video_origine.avi -target ntsc-vcd video_finale.mpg</span><br><span class="line">   PAL格式：</span><br><span class="line">      ffmpeg -i video_origine.avi -target pal-vcd video_finale.mpg</span><br><span class="line"></span><br><span class="line"><span class="number">18</span>，多通道编码</span><br><span class="line">   ffmpeg -i fichierentree -pass <span class="number">2</span> -passlogfile ffmpeg2pass fichiersortie<span class="number">-2</span></span><br><span class="line"></span><br><span class="line"><span class="number">19</span>，从flv提取mp3</span><br><span class="line">   ffmpeg -i source.flv -ab <span class="number">128</span>k dest.mp3</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2020/06/03/2020y/" data-id="ckh01ktcr00009wus9gzxrw5s" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/06/28/ffmpeg_x265/" data-id="ckh19ps9t000ydnus54pd4k5x" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li></ul>
+
     </footer>
   </div>
   
@@ -113,7 +137,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../2/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../4/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="../2/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><span class="space">&hellip;</span><a class="page-number" href="../76/">76</a><a class="extend next" rel="next" href="../4/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -127,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -137,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../tags/git/" style="font-size: 14px;">git</a> <a href="../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -159,6 +183,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
@@ -172,10 +200,6 @@
         
           <li>
             <a href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
-          </li>
-        
-          <li>
-            <a href="../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
           </li>
         
       </ul>
@@ -198,19 +222,19 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -218,11 +242,17 @@
 <script src="js/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="../../js/script.js"></script>
+
 
 
 

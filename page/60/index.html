@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
 
@@ -13,20 +13,21 @@
 <meta property="og:url" content="https://262235.xyz/page/60/index.html">
 <meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
 <meta property="og:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="hongwenjun">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蘭雅sRGB 龙芯2F服务器">
-<meta name="twitter:description" content="蘭雅sRGB 龙芯2F服务器和个人博客,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/logo/favicon.png">
   
   
     <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="../../css/style.css">
-</head>
-</html>
+  
+<link rel="stylesheet" href="../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -43,19 +44,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="https://262235.xyz/">主页</a>
+          <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="http://srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
         
           <a class="main-nav-link" href="../../index.html">博客</a>
         
           <a class="main-nav-link" href="../../archives">归档</a>
         
-          <a class="main-nav-link" href="https://github.com/hongwenjun">GitHub</a>
+          <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
         
-          <a class="main-nav-link" href="https://www.youtube.com/sRGB18">YouTube频道</a>
+          <a class="main-nav-link" href="../../https:/www.youtube.com/sRGB18">YouTube频道</a>
         
-          <a class="main-nav-link" href="https://space.bilibili.com/320303690/">B站频道</a>
+          <a class="main-nav-link" href="../../https:/space.bilibili.com/320303690/">B站频道</a>
         
       </nav>
       <nav id="sub-nav">
@@ -71,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-codeblocks/kill_cb_console" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-codeblocks/hello_codeblocks" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/04/14/codeblocks/kill_cb_console/" class="article-date">
-  <time datetime="2018-04-15T01:41:00.000Z" itemprop="datePublished">2018-04-14</time>
+    <a href="../../2018/04/15/codeblocks/hello_codeblocks/" class="article-date">
+  <time datetime="2018-04-15T14:01:00.000Z" itemprop="datePublished">2018-04-15</time>
 </a>
     
   </div>
@@ -85,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/04/14/codeblocks/kill_cb_console/">CodeBlocks 突然没法编译运行的问题</a>
+      <a class="article-title" href="../../2018/04/15/codeblocks/hello_codeblocks/">Hello CodeBlocks! “正确打开方式”</a>
     </h1>
   
 
@@ -93,31 +94,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CodeBlocks-突然没法编译运行的问题"><a href="#CodeBlocks-突然没法编译运行的问题" class="headerlink" title="CodeBlocks 突然没法编译运行的问题"></a>CodeBlocks 突然没法编译运行的问题</h1><p><a href="https://github.com/hongwenjun/CodeBlocks" target="_blank" rel="noopener">https://github.com/hongwenjun/CodeBlocks</a></p>
-<p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz">https://262235.xyz</a></p>
+        <p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/CodeBlocks">https://github.com/hongwenjun/CodeBlocks</a></p>
+<p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
 <hr>
-<p>运行程序后只能关闭黑框或者按任意键结束程序,<br>如果直接点工作栏上的红色中止按钮，就会出现图上的情况。<br>生成和运行按钮全部灰掉，点运行会显示编译器还在运行中<br>直接关闭codeblocks会显示正在编译，是否结束编译关闭<br>选是的话codeblocks会无响应然后强制关闭.</p>
-<h1 id="知道了CB怎么运行用户的程序，应该知道问题的原因了"><a href="#知道了CB怎么运行用户的程序，应该知道问题的原因了" class="headerlink" title="知道了CB怎么运行用户的程序，应该知道问题的原因了"></a>知道了CB怎么运行用户的程序，应该知道问题的原因了</h1><p><img src="/img/cb_console.jpg" alt></p>
-<h2 id="先看图，我来解释，举例-编译的程序是-123-exe"><a href="#先看图，我来解释，举例-编译的程序是-123-exe" class="headerlink" title="先看图，我来解释，举例 编译的程序是 123.exe"></a>先看图，我来解释，举例 编译的程序是 123.exe</h2><p>绿色运行按钮 执行的命令</p>
-<ul>
-<li>正在执行： “cb_console_runner.exe” “123.exe”</li>
-</ul>
-<p>红色调试运行按钮 执行的命令</p>
-<ul>
-<li>启动调试器: gdb32.exe -nx -fullname -quiet -args 123.exe</li>
-</ul>
-<hr>
-<p>目前版本17.12，可能权限不够 直接点工作栏上的红色中止按钮，并不能真的关闭程序，<br>只是把窗口隐藏起来，还是可以在任务管理器查到没有停止的 123.exe 和 cb_console_runner.exe<br>所有发现不能使用 绿色运行按钮，请检测 windows 任务管理器 是否有遗留进程</p>
-<h1 id="在工具菜单里添加一个功能，就可以方便解决问题"><a href="#在工具菜单里添加一个功能，就可以方便解决问题" class="headerlink" title="在工具菜单里添加一个功能，就可以方便解决问题"></a>在工具菜单里添加一个功能，就可以方便解决问题</h1><p><img src="/webp/cb/kill_cb_console_runner.webp" alt></p>
-<p>如演示图，填入下面命令到对应位置，然后就可以使用了<br><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">工具名称: Kill_CB_Console_Runner</span><br><span class="line">执行命令: taskkill.<span class="keyword">exe</span></span><br><span class="line">参数: /<span class="keyword">im</span> $&#123;PROJECT_NAME&#125;.<span class="keyword">exe</span> /<span class="keyword">f</span> /<span class="keyword">im</span> cb_console_runner.<span class="keyword">exe</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="CodeBlocks视频-新建项目-复制代码-编译运行"><a href="#CodeBlocks视频-新建项目-复制代码-编译运行" class="headerlink" title="CodeBlocks视频_新建项目_复制代码_编译运行"></a>CodeBlocks视频_新建项目_复制代码_编译运行</h2><p>这才是“正确打开方式”，如果hello world都没法编译运行，可以分析的构建记录，知道是否编译器设置错误，<br>或者是新的操作系统WIN10(自带杀毒软件麦咖啡，导致没法编译)的权限不够，导致不能编译可执行文件。</p>
+<p><img src="/webp/cb/hello_codeblocks.webp"></p>
+<p>很多新手，不建立项目，直接编辑源文件 我的程序.c 就开始运行，然后说没法运行，什么破软件，然后。。。<br>这不是“正确打开方式”，只有建立项目，才能方便编译，调试。</p>
+<p>一个项目只能有一个 mian函数，如果你有多个小练习放一个项目了，可以进入命令行，手工编译运行</p>
+<h2 id="解决问题-下载版本没有集成GCC编译器"><a href="#解决问题-下载版本没有集成GCC编译器" class="headerlink" title="解决问题: 下载版本没有集成GCC编译器"></a>解决问题: 下载版本没有集成GCC编译器</h2><p>我们应该选择官网 <a target="_blank" rel="noopener" href="http://www.codeblocks.org/">www.codeblocks.org</a><br>找到下载页面: <a target="_blank" rel="noopener" href="http://www.codeblocks.org/downloads/binaries">http://www.codeblocks.org/downloads/binaries</a><br>选择集成GCC 编译器的版本，下载安装，可以选<br>codeblocks-17.12mingw-setup.exe  或者 codeblocks-17.12mingw-nosetup.zip</p>
+<h2 id="如果你不想重新下载，也可以单独安装下载TDM-GCC"><a href="#如果你不想重新下载，也可以单独安装下载TDM-GCC" class="headerlink" title="如果你不想重新下载，也可以单独安装下载TDM-GCC"></a>如果你不想重新下载，也可以单独安装下载TDM-GCC</h2><p><a target="_blank" rel="noopener" href="http://tdm-gcc.tdragon.net/download">tdm-gcc.tdragon.net</a><br>CodeBlocks里集成的c/c++编译器，就使用使用tdm-gcc，你可以在这里选择下载x86 或者 x64 的GCC编译器</p>
+<h2 id="如果可能以上资源被墙了，你还可以其他推荐获得帮助"><a href="#如果可能以上资源被墙了，你还可以其他推荐获得帮助" class="headerlink" title="如果可能以上资源被墙了，你还可以其他推荐获得帮助"></a>如果可能以上资源被墙了，你还可以其他推荐获得帮助</h2><p>CodeBlocks+wxWidgets QQ群号: 158607753<br>可以到群文件里下载  CodeBlocks_17.12_sRGB增强版</p>
+<h3 id="百度盘，虽然经常失效，-设置密码是为了保鲜"><a href="#百度盘，虽然经常失效，-设置密码是为了保鲜" class="headerlink" title="百度盘，虽然经常失效，(设置密码是为了保鲜)"></a>百度盘，虽然经常失效，(设置密码是为了保鲜)</h3><p>CodeBlocks_17.12_sRGB增强版<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1jbo0ra7hKc11QE1yudvplA">https://pan.baidu.com/s/1jbo0ra7hKc11QE1yudvplA</a> 密码: xgi2</p>
+<p>CodeBlocks加EasyX图形库 (集成vc2010和EasyX，你可以替换CB新版升级)<br>链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1n_VRA-LJemLMUX829FXQ-g">https://pan.baidu.com/s/1n_VRA-LJemLMUX829FXQ-g</a> 密码:11h8</p>
+<p>CodeBlocks视频教程<br><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1hqozPxM">https://pan.baidu.com/s/1hqozPxM</a></p>
+<h2 id="如果win10操作系统权限不够"><a href="#如果win10操作系统权限不够" class="headerlink" title="如果win10操作系统权限不够"></a>如果win10操作系统权限不够</h2><p>尝试删除自带杀毒软件麦咖啡，给CB程序增加权限</p>
+<h2 id="其他容易产生的问题"><a href="#其他容易产生的问题" class="headerlink" title="其他容易产生的问题"></a>其他容易产生的问题</h2><p>请不要安装中文目录下，或者带有空格等目录下<br>主要是gcc编译程序的时候，可能会莫名其妙的问题<br>推荐安装  C:\CodeBlocks 或者  D:\CodeBlocks 方便定置使用</p>
+<h2 id="新手进阶网址"><a href="#新手进阶网址" class="headerlink" title="新手进阶网址"></a>新手进阶网址</h2><p>自力更生丰衣足食，自己配置CodeBlocks!</p>
+<p><img src="/webp/cb/tips.webp"></p>
+<h2 id="使用git下载-CodeBlocks-配置目录说明和个性配置文件"><a href="#使用git下载-CodeBlocks-配置目录说明和个性配置文件" class="headerlink" title="使用git下载  CodeBlocks 配置目录说明和个性配置文件"></a>使用git下载  CodeBlocks 配置目录说明和个性配置文件</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>CodeBlocks.git  CodeBlocks</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/04/14/codeblocks/kill_cb_console/" data-id="ckh01ktoh00579wusij14rhja" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/04/15/codeblocks/hello_codeblocks/" data-id="ckh19psfw004cdnus051bhphv" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
 
     </footer>
   </div>
@@ -130,7 +132,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../59/">&laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../58/">58</a><a class="page-number" href="../59/">59</a><span class="page-number current">60</span><a class="page-number" href="../61/">61</a><a class="page-number" href="../62/">62</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="extend next" rel="next" href="../61/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="../59/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../58/">58</a><a class="page-number" href="../59/">59</a><span class="page-number current">60</span><a class="page-number" href="../61/">61</a><a class="page-number" href="../62/">62</a><span class="space">&hellip;</span><a class="page-number" href="../76/">76</a><a class="extend next" rel="next" href="../61/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -144,7 +146,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -154,7 +156,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 12px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 14px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 12px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 12px;">frp</a> <a href="../../tags/gcc/" style="font-size: 12px;">gcc</a> <a href="../../tags/git/" style="font-size: 14px;">git</a> <a href="../../tags/hexo/" style="font-size: 12px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 12px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16px;">linux</a> <a href="../../tags/moments/" style="font-size: 14px;">moments</a> <a href="../../tags/nginx/" style="font-size: 12px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 14px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -176,6 +178,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
@@ -189,10 +195,6 @@
         
           <li>
             <a href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
-          </li>
-        
-          <li>
-            <a href="../../2019/08/17/c51_pcb_vod/">海创电子 51单片机基础 视频教程，使用Altium Designer10绘制Arduino单片机</a>
           </li>
         
       </ul>
@@ -215,19 +217,19 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="https://262235.xyz/" class="mobile-nav-link">主页</a>
+    <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="http://srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
   
     <a href="../../index.html" class="mobile-nav-link">博客</a>
   
     <a href="../../archives" class="mobile-nav-link">归档</a>
   
-    <a href="https://github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+    <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
-    <a href="https://www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+    <a href="../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
   
-    <a href="https://space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+    <a href="../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
   
 </nav>
     
@@ -235,11 +237,17 @@
 <script src="js/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
-  <script src="../../fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="../../js/script.js"></script>
+
 
 
 
