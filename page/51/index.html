@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vim_tags" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vultr_vps" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/05/16/vim_tags/" class="article-date">
-  <time datetime="2018-05-16T04:00:00.000Z" itemprop="datePublished">2018-05-16</time>
+    <a href="../../2018/05/17/vultr_vps/" class="article-date">
+  <time datetime="2018-05-17T04:00:00.000Z" itemprop="datePublished">2018-05-17</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/05/16/vim_tags/">VIM代码跳转功能视频</a>
+      <a class="article-title" href="../../2018/05/17/vultr_vps/">Vultr_VPS学习折腾</a>
     </h1>
   
 
@@ -95,34 +95,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p><img src="/webp/vim_tags.webp"></p>
-<h2 id="vim中跳转到头文件"><a href="#vim中跳转到头文件" class="headerlink" title="vim中跳转到头文件"></a>vim中跳转到头文件</h2><ul>
-<li>按 gf 跳转到指定头文件</li>
-<li>按 Ctrl+o 返回原来文件</li>
-<li>无法解决: .vimrc中添加 set path==xxx(头文件所在目录)</li>
-</ul>
-<h2 id="vim窗口分割的操作"><a href="#vim窗口分割的操作" class="headerlink" title="vim窗口分割的操作"></a>vim窗口分割的操作</h2><pre><code>:split    水平窗口分割  sp
-:vsplit   垂直窗口分割  vs
-ctrl+w+w  窗口之间进行切换</code></pre>
-<h2 id="多窗口文件操作"><a href="#多窗口文件操作" class="headerlink" title="多窗口文件操作"></a>多窗口文件操作</h2><pre><code>vim -O 1.txt  2.txt 横向并排窗口打开多个文件 -o 纵向
-:sp newfile.txt     新开文件横向并排
-ctrl+w + q(quit), c(close), o(other)  窗口关闭
-ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
-<h2 id="vim之函数跳转功能"><a href="#vim之函数跳转功能" class="headerlink" title="vim之函数跳转功能"></a>vim之函数跳转功能</h2><ul>
-<li><p>需要安装 ctags</p>
-</li>
-<li><p>生成 tags 索引文件</p>
-<p>  ctags -R . 或者 ctags -R *<br>  ctrl + ] 跳转到函数定义<br>  ctrl + t 原路返回</p>
-</li>
-</ul>
+<h3 id="选择便宜的vps"><a href="#选择便宜的vps" class="headerlink" title="选择便宜的vps"></a>选择便宜的vps</h3><p>新注册Vultr用户赠送25美元，不要用使用支付宝充值，使用信用卡或者paypal<br><a target="_blank" rel="noopener" href="https://www.vultr.com/promo25b?ref=7425413">https://www.vultr.com/promo25b</a>  点进去看有没$25的英文图案。<br>如果没有活动，就看自己选择了。 昨天注册充值10美元，赠送25美元，推特发朋友圈再送3美元。<br>如果选择 迈阿密2.5美元的主机，可以玩15个月了，不过赠送的金额可能要1年用掉，所以可以5美元和2.5美元的轮换玩。<br>看视频现在试用5美元西雅图的主机还不错。</p>
+<p>帮他做个广告，点这个链接，可能有25美元赠送的。<br><a target="_blank" rel="noopener" href="https://www.vultr.com/promo25b?ref=7425413">https://www.vultr.com/promo25b?ref=7425413</a></p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><pre><code>passwd root</code></pre>
+<h3 id="一键安装ss"><a href="#一键安装ss" class="headerlink" title="一键安装ss"></a>一键安装ss</h3><pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></pre>
+<h3 id="一键安装最新内核并开启-BBR-脚本"><a href="#一键安装最新内核并开启-BBR-脚本" class="headerlink" title="一键安装最新内核并开启 BBR 脚本"></a>一键安装最新内核并开启 BBR 脚本</h3><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
+<h3 id="vim和控制台高亮"><a href="#vim和控制台高亮" class="headerlink" title="vim和控制台高亮"></a>vim和控制台高亮</h3><pre><code>wget -O .vimrc https://262235.xyz/srgb/vim/_vimrc
+wget -O .bashrc https://262235.xyz/srgb/vim/_bashrc</code></pre>
+<h3 id="安装-监控软件htop-和网页服务器-nginx"><a href="#安装-监控软件htop-和网页服务器-nginx" class="headerlink" title="安装 监控软件htop 和网页服务器 nginx"></a>安装 监控软件htop 和网页服务器 nginx</h3><pre><code>apt-get install htop
+apt-get install nginx</code></pre>
+<h3 id="默认主页根在-var-www-html-可以修改default文件"><a href="#默认主页根在-var-www-html-可以修改default文件" class="headerlink" title="默认主页根在 /var/www/html, 可以修改default文件"></a>默认主页根在 /var/www/html, 可以修改default文件</h3><pre><code>vim /etc/nginx/sites-enabled/default </code></pre>
+<h3 id="从github-迁移博客-到vps"><a href="#从github-迁移博客-到vps" class="headerlink" title="从github 迁移博客 到vps"></a>从github 迁移博客 到vps</h3><pre><code>git clone https://github.com/用户名/用户名.github.io.git www</code></pre>
+<p>可以 git pull 命令写到定时脚本里</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/05/16/vim_tags/" data-id="ckh19psdx002wdnuse9ge3sdl" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/05/17/vultr_vps/" data-id="ckh19pseh0039dnusa72856oe" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
 
     </footer>
   </div>
@@ -135,7 +129,7 @@ ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../50/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="page-number current">51</span><a class="page-number" href="../52/">52</a><a class="page-number" href="../53/">53</a><span class="space">&hellip;</span><a class="page-number" href="../76/">76</a><a class="extend next" rel="next" href="../52/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../50/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="page-number current">51</span><a class="page-number" href="../52/">52</a><a class="page-number" href="../53/">53</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../52/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -149,7 +143,7 @@ ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/pyhon-CodeBlocks/" rel="tag">pyhon CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -159,7 +153,7 @@ ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/pyhon-CodeBlocks/" style="font-size: 10px;">pyhon CodeBlocks</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -181,6 +175,10 @@ ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
       <ul>
         
           <li>
+            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日精美壁纸</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
@@ -194,10 +192,6 @@ ctrl+w + =    窗口等分、微调&lt; &gt; 水平 + - 垂直</code></pre>
         
           <li>
             <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
-          </li>
-        
-          <li>
-            <a href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
           </li>
         
       </ul>
