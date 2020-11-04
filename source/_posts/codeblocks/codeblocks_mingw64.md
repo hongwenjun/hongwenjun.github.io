@@ -7,14 +7,14 @@ tags:  CodeBlocks
 蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
 
 ## Code::Blocks 2018 增强版 By 蘭雅sRGB
-**百度盘下载**  https://pan.baidu.com/s/1osEHZZPBXh_AppKblTHD4A
+-- 编译器文件太大， 可以按需要到百度网盘下载，链接地址 http://pan.baidu.com/s/1dD6Qrap
 
 ### 官方下载的 codeblocks免安装版
 - **codeblocks-17.12mingw-nosetup.zip**
 
 ### 中文化，美化主题，CPP帮助文档，编译器设置
-- 文件 **CodeBlocks中文化美化增强包.zip**
-
+- 文件 **CodeBlocks中文化美化增强包.zip** 到 **github项目** 下载
+- **github项目**   https://github.com/hongwenjun/CodeBlocks
 
 ### Mingw-w64  GCC for Windows 64bits
 - GCC 版本 8.1 支持 最新的C++标准

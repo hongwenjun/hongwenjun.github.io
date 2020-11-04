@@ -1,21 +1,25 @@
 ---
-title: Python下载Bing每日精美壁纸
+title: Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks
 date:  2020-11-04
-tags:  pyhon CodeBlocks
+tags:  python
 ---
 
 蘭雅sRGB 龙芯2F服务器和博客 | [https://262235.xyz](https://262235.xyz)
 ---
 
 ###  普通的方法使用浏览器Chrome下载
-- 打开bing.com 按F12快捷键，然后
+- 浏览器Chrome下载精美壁纸,打开bing.com；按F12快捷键，然后点击Sources
 
-
+![](/img/2011/chrome_f12.jpg)
 
 
 ### 使用Python调试脚本,下载bing精美壁纸
 
 - 录制了一个python测试视频，放在了B站和youtube，参考使用下面脚本
+
+- https://www.bilibili.com/video/BV1Ba411c7NX/
+
+- https://youtu.be/xtYuuoDvbYI
 
 ###  正则获取图片文件名
 
@@ -81,3 +85,6 @@ with open(save_image_file, 'wb') as f:
   1 */12  *  *   *    cd /home/samba/bing  &&   python3 bing.py
 
 ```
+
+### 之前制作没有语音的视频，有时间制作重制版
+[![](/img/2011/vod_list.jpg)](https://www.youtube.com/sRGB18)
