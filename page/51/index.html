@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vultr_vps" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git_winpty" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/05/17/vultr_vps/" class="article-date">
-  <time datetime="2018-05-17T04:00:00.000Z" itemprop="datePublished">2018-05-17</time>
+    <a href="../../2018/05/18/git_winpty/" class="article-date">
+  <time datetime="2018-05-18T04:00:00.000Z" itemprop="datePublished">2018-05-18</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/05/17/vultr_vps/">Vultr_VPS学习折腾</a>
+      <a class="article-title" href="../../2018/05/18/git_winpty/">git bash 命令行有中文乱码的解决</a>
     </h1>
   
 
@@ -94,29 +94,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="选择便宜的vps"><a href="#选择便宜的vps" class="headerlink" title="选择便宜的vps"></a>选择便宜的vps</h3><p>新注册Vultr用户赠送25美元，不要用使用支付宝充值，使用信用卡或者paypal<br><a target="_blank" rel="noopener" href="https://www.vultr.com/promo25b?ref=7425413">https://www.vultr.com/promo25b</a>  点进去看有没$25的英文图案。<br>如果没有活动，就看自己选择了。 昨天注册充值10美元，赠送25美元，推特发朋友圈再送3美元。<br>如果选择 迈阿密2.5美元的主机，可以玩15个月了，不过赠送的金额可能要1年用掉，所以可以5美元和2.5美元的轮换玩。<br>看视频现在试用5美元西雅图的主机还不错。</p>
-<p>帮他做个广告，点这个链接，可能有25美元赠送的。<br><a target="_blank" rel="noopener" href="https://www.vultr.com/promo25b?ref=7425413">https://www.vultr.com/promo25b?ref=7425413</a></p>
-<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><pre><code>passwd root</code></pre>
-<h3 id="一键安装ss"><a href="#一键安装ss" class="headerlink" title="一键安装ss"></a>一键安装ss</h3><pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></pre>
-<h3 id="一键安装最新内核并开启-BBR-脚本"><a href="#一键安装最新内核并开启-BBR-脚本" class="headerlink" title="一键安装最新内核并开启 BBR 脚本"></a>一键安装最新内核并开启 BBR 脚本</h3><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
-<h3 id="vim和控制台高亮"><a href="#vim和控制台高亮" class="headerlink" title="vim和控制台高亮"></a>vim和控制台高亮</h3><pre><code>wget -O .vimrc https://262235.xyz/srgb/vim/_vimrc
-wget -O .bashrc https://262235.xyz/srgb/vim/_bashrc</code></pre>
-<h3 id="安装-监控软件htop-和网页服务器-nginx"><a href="#安装-监控软件htop-和网页服务器-nginx" class="headerlink" title="安装 监控软件htop 和网页服务器 nginx"></a>安装 监控软件htop 和网页服务器 nginx</h3><pre><code>apt-get install htop
-apt-get install nginx</code></pre>
-<h3 id="默认主页根在-var-www-html-可以修改default文件"><a href="#默认主页根在-var-www-html-可以修改default文件" class="headerlink" title="默认主页根在 /var/www/html, 可以修改default文件"></a>默认主页根在 /var/www/html, 可以修改default文件</h3><pre><code>vim /etc/nginx/sites-enabled/default </code></pre>
-<h3 id="从github-迁移博客-到vps"><a href="#从github-迁移博客-到vps" class="headerlink" title="从github 迁移博客 到vps"></a>从github 迁移博客 到vps</h3><pre><code>git clone https://github.com/用户名/用户名.github.io.git www</code></pre>
-<p>可以 git pull 命令写到定时脚本里</p>
+        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<p>网上有把MINGW64环境改成GBK的方法，但是哪样使用习惯不太好，毕竟网络世界utf-8是主宰。</p>
+<h3 id="解决方法-命令前添加-winpty"><a href="#解决方法-命令前添加-winpty" class="headerlink" title="解决方法:命令前添加 winpty"></a>解决方法:命令前添加 winpty</h3><pre><code>$   winpty ping  192.168.1.1
+$   winpty ipconfig</code></pre>
+<h3 id="编辑文件，添加"><a href="#编辑文件，添加" class="headerlink" title="编辑文件，添加"></a>编辑文件，添加</h3><pre><code>$ vim ~/.bashrc
+
+# MINGW64(git_bash) 解决 ping 和 ipconfig 乱码
+alias ping=&#39;_win_ping() &#123; winpty ping $@ ; &#125;; _win_ping&#39;
+alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipconfig&#39;</code></pre>
+<h3 id="在-git-bash-里运行-java-命令，打印出的中文显示乱码"><a href="#在-git-bash-里运行-java-命令，打印出的中文显示乱码" class="headerlink" title="在 git bash 里运行 java 命令，打印出的中文显示乱码"></a>在 git bash 里运行 java 命令，打印出的中文显示乱码</h3><p>可以在java命令行之前添加 winpty</p>
+<pre><code>$   winpty java</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/05/17/vultr_vps/" data-id="ckh19pseh0039dnusa72856oe" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/05/18/git_winpty/" data-id="ckh19psaz001ddnus0wks9hpf" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
 
     </footer>
   </div>
@@ -129,7 +125,7 @@ apt-get install nginx</code></pre>
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../50/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="page-number current">51</span><a class="page-number" href="../52/">52</a><a class="page-number" href="../53/">53</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../52/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../50/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="page-number current">51</span><a class="page-number" href="../52/">52</a><a class="page-number" href="../53/">53</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../52/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -153,7 +149,7 @@ apt-get install nginx</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -175,6 +171,10 @@ apt-get install nginx</code></pre>
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -188,10 +188,6 @@ apt-get install nginx</code></pre>
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

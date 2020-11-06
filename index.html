@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-python/py_bing" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-docker/h5_speedtest" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="2020/11/04/python/py_bing/" class="article-date">
-  <time datetime="2020-11-04T05:00:00.000Z" itemprop="datePublished">2020-11-04</time>
+    <a href="2020/11/06/docker/h5_speedtest/" class="article-date">
+  <time datetime="2020-11-06T05:00:00.000Z" itemprop="datePublished">2020-11-06</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
+      <a class="article-title" href="2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
     </h1>
   
 
@@ -94,34 +94,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="蘭雅sRGB-龙芯2F服务器和博客-https-262235-xyz"><a href="#蘭雅sRGB-龙芯2F服务器和博客-https-262235-xyz" class="headerlink" title="蘭雅sRGB 龙芯2F服务器和博客 | https://262235.xyz"></a>蘭雅sRGB 龙芯2F服务器和博客 | <a href="https://262235.xyz/">https://262235.xyz</a></h2><h3 id="普通的方法使用浏览器Chrome下载"><a href="#普通的方法使用浏览器Chrome下载" class="headerlink" title="普通的方法使用浏览器Chrome下载"></a>普通的方法使用浏览器Chrome下载</h3><ul>
-<li>浏览器Chrome下载精美壁纸,打开bing.com；按F12快捷键，然后点击Sources</li>
+        <h2 id="HTML5-Based-Speedtest-on-Docker"><a href="#HTML5-Based-Speedtest-on-Docker" class="headerlink" title="HTML5-Based Speedtest on Docker"></a>HTML5-Based Speedtest on Docker</h2><h3 id="0-特别说明"><a href="#0-特别说明" class="headerlink" title="0. 特别说明"></a>0. 特别说明</h3><ul>
+<li>由于Speedtest会尽可能使用最大的带宽，来反馈最真实的网络性能，所以，在部署完成项目后，请不要将你的测速地址分享给其他人或者公开到群/论坛/贴吧等处！ 因此导致的流量损失、超流量停机，甚至欠费，iLemonrain (以下简称镜像作者)将不负任何责任！</li>
 </ul>
-<p><img src="/img/2011/chrome_f12.jpg"></p>
-<h3 id="使用Python调试脚本-下载bing精美壁纸"><a href="#使用Python调试脚本-下载bing精美壁纸" class="headerlink" title="使用Python调试脚本,下载bing精美壁纸"></a>使用Python调试脚本,下载bing精美壁纸</h3><ul>
-<li><p>录制了一个python测试视频，放在了B站和youtube，参考使用下面脚本</p>
+<h3 id="1-镜像说明"><a href="#1-镜像说明" class="headerlink" title="1. 镜像说明"></a>1. 镜像说明</h3><p>网页版Speedtest 却测试不出来本地到目标服务器的速度？</p>
+<p>服务器上跑 Speedtest-CLI 却总感觉测试结果不靠谱？</p>
+<p>现在，有了 HTML5-Based Speedtest on Docker ，这一切都迎刃而解！</p>
+<p>(更要命的是居然还Docker化了？真正的一键部署测速环境！)</p>
+<h3 id="2-镜像Tag"><a href="#2-镜像Tag" class="headerlink" title="2. 镜像Tag"></a>2. 镜像Tag</h3><ul>
+<li><p>Docker镜像：ilemonrain/html5-speedtest</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ba411c7NX/">https://www.bilibili.com/video/BV1Ba411c7NX/</a></p>
+<li><p>html5-speedtest, html5-speedtest:latest：默认Speedtest镜像，默认为Alpine Linux内核</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://youtu.be/xtYuuoDvbYI">https://youtu.be/xtYuuoDvbYI</a></p>
+<li><p>html5-speedtest:alpine：Alpine Linux内核</p>
 </li>
 </ul>
-<h3 id="正则获取图片文件名"><a href="#正则获取图片文件名" class="headerlink" title="正则获取图片文件名"></a>正则获取图片文件名</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">name = re.search( <span class="string">r&#x27;id=(.*\.jpg)&amp;rf&#x27;</span>, image_url)</span><br></pre></td></tr></table></figure>
+<h3 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3. 使用方法"></a>3. 使用方法</h3><ul>
+<li>启动命令行：</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">docker</span> <span class="selector-tag">run</span> <span class="selector-attr">[-t/-d]</span> <span class="selector-tag">-p</span> <span class="selector-attr">[6688]</span><span class="selector-pseudo">:80</span> <span class="selector-tag">ilemonrain</span>/<span class="selector-tag">html5-speedtest</span><span class="selector-pseudo">:latest</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数详解：</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">-t：启动后显示日志，可用Ctrl+C转入后台运行</span><br><span class="line">-d：后台模式启动</span><br><span class="line">-p <span class="number">6688</span>:<span class="number">80</span>：镜像映射端口，修改<span class="number">6688</span>为任意端口即可</span><br></pre></td></tr></table></figure>
+<p>之后访问 http://你的服务器IP地址:镜像映射端口/ ，即可愉快的开始测速啦~</p>
+<ul>
+<li>示例命令：<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker</span> run -d -p <span class="number">8888</span>:<span class="number">80</span> ilemonrain/html<span class="number">5</span>-speedtest:alpine</span><br></pre></td></tr></table></figure>
 
-<p><img src="/img/python/reg_search.png"></p>
-<h3 id="bing-py-源码"><a href="#bing-py-源码" class="headerlink" title="bing.py 源码"></a>bing.py 源码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 时间戳</span></span><br><span class="line">timestamp = <span class="built_in">str</span>(<span class="built_in">int</span>(time.time() * <span class="number">1000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接请求地址</span></span><br><span class="line">url = <span class="string">&#x27;https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;nc=&#x27;</span> + timestamp + <span class="string">&#x27;&amp;pid=hp&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求头，模拟浏览器UA</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27; &#x27;</span>.join([<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 14)&#x27;</span>,</span><br><span class="line">                            <span class="string">&#x27;AppleWebKit/537.36 (KHTML, like Gecko)&#x27;</span>, <span class="string">&#x27;Chrome/70.0.3538.102&#x27;</span>, <span class="string">&#x27;Safari/537.36&#x27;</span>,</span><br><span class="line">                            <span class="string">&#x27;Edge/18.18363&#x27;</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送请求</span></span><br><span class="line">r = requests.get(url=url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将响应的字符串转化为json数据，即dict类型</span></span><br><span class="line">result = r.json()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个图片的链接</span></span><br><span class="line">image_url = result[<span class="string">&#x27;images&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;url&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图片文件名  name[1]</span></span><br><span class="line">name = re.search( <span class="string">r&#x27;id=(.*\.jpg)&amp;rf&#x27;</span>, image_url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接上bing的域名</span></span><br><span class="line">image_url = <span class="string">&#x27;https://cn.bing.com&#x27;</span> + image_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义图片保存地址</span></span><br><span class="line">save_image_file = <span class="string">&#x27;/home/samba/bing/&#x27;</span> + name[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载图片</span></span><br><span class="line">r = requests.get(url=image_url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意要以二进制只写打开文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(save_image_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># 图片的二进制数据</span></span><br><span class="line">    f.write(r.content)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Docker-Pull-Command"><a href="#Docker-Pull-Command" class="headerlink" title="Docker Pull Command"></a>Docker Pull Command</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker</span> pull ilemonrain/html<span class="number">5</span>-speedtest</span><br></pre></td></tr></table></figure>
+<h3 id="晚上8点多种，在自己的一个服务器上跑了下速度"><a href="#晚上8点多种，在自己的一个服务器上跑了下速度" class="headerlink" title="晚上8点多种，在自己的一个服务器上跑了下速度"></a>晚上8点多种，在自己的一个服务器上跑了下速度</h3><p><img src="/img/docker/h5_speedtest.png"></p>
+<hr>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">FROM alpine</span><br><span class="line"></span><br><span class="line">LABEL MAINTAINER iLemonrain &lt;ilemonrain@ilemonrain.com&gt;</span><br><span class="line"></span><br><span class="line">RUN (apk --no-cache upgrade ;\</span><br><span class="line">     apk add php7-apache2 curl php7-cli php7-json php7-phar php7-openssl php7-mbstring php7-zlib ;\</span><br><span class="line">     curl -sS https:<span class="regexp">//g</span>etcomposer.org<span class="regexp">/installer | php -- --install-dir=/u</span>sr<span class="regexp">/local/</span>bin --filename=composer ;\</span><br><span class="line">     sed -i <span class="string">&quot;s/AllowOverride none/AllowOverride All/&quot;</span> <span class="regexp">/etc/</span>apache2/httpd.conf ;\</span><br><span class="line">     rm -f <span class="regexp">/var/</span>www<span class="regexp">/localhost/</span>htdocs/* ;\</span><br><span class="line">     mkdir <span class="regexp">/run/</span>apache2/ ;\</span><br><span class="line">     rm -f <span class="regexp">/var/</span>cache<span class="regexp">/apk/</span>* )</span><br><span class="line"></span><br><span class="line">ADD entrypoint.sh /entrypoint.sh</span><br><span class="line">ADD speedtest<span class="regexp">/* /</span>var<span class="regexp">/www/</span>localhost<span class="regexp">/htdocs/</span></span><br><span class="line"></span><br><span class="line">RUN (chown -R apache:apache <span class="regexp">/var/</span>www<span class="regexp">/localhost/</span>htdocs/ ;\</span><br><span class="line">     chmod <span class="number">755</span> /entrypoint.sh )</span><br><span class="line"></span><br><span class="line">EXPOSE <span class="number">80</span></span><br><span class="line"></span><br><span class="line">ENTRYPOINT [ <span class="string">&quot;sh&quot;</span>, <span class="string">&quot;/entrypoint.sh&quot;</span> ]</span><br></pre></td></tr></table></figure>
 
-<h3 id="编辑定时任务执行-crontab-e"><a href="#编辑定时任务执行-crontab-e" class="headerlink" title="编辑定时任务执行  ** crontab -e **"></a>编辑定时任务执行  ** crontab -e **</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># m   h  dom mon dow   command  # 分 时 日 月 周</span></span><br><span class="line"></span><br><span class="line">  <span class="number">1</span> *<span class="regexp">/12  *  *   *    cd /</span>home<span class="regexp">/samba/</span>bing  &amp;&amp;   python3 bing.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="之前制作没有语音的视频，有时间制作重制版"><a href="#之前制作没有语音的视频，有时间制作重制版" class="headerlink" title="之前制作没有语音的视频，有时间制作重制版"></a>之前制作没有语音的视频，有时间制作重制版</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/sRGB18"><img src="/img/2011/vod_list.jpg"></a></p>
+<ul>
+<li>大概阅读Dockerfile，镜像好像安装了 php7和apache2，网页代码是 ** <a target="_blank" rel="noopener" href="https://getcomposer.org/installer">https://getcomposer.org/installer</a> **<br>这个脚本安装，使用 ** entrypoint.sh **启动web，主要命令是 ** httpd -D FOREGROUND **</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 使用命令进入容器查看</span></span><br><span class="line">docker exec  -<span class="keyword">it</span> exciting_hertz  sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="网页程序5个文件"><a href="#网页程序5个文件" class="headerlink" title="网页程序5个文件"></a>网页程序5个文件</h2><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">/var/www/localhost/htdocs</span><br><span class="line">-rw-r--r--    <span class="number">1</span> apache   apache         <span class="number">231</span> Apr <span class="number">16</span>  <span class="number">2018</span> empty.php</span><br><span class="line">-rw-r--r--    <span class="number">1</span> apache   apache         <span class="number">870</span> Apr <span class="number">16</span>  <span class="number">2018</span> garbage.php</span><br><span class="line">-rw-r--r--    <span class="number">1</span> apache   apache        <span class="number">2955</span> Apr <span class="number">16</span>  <span class="number">2018</span> getIP.php</span><br><span class="line">-rw-r--r--    <span class="number">1</span> apache   apache        <span class="number">7186</span> Apr <span class="number">16</span>  <span class="number">2018</span> index.html</span><br><span class="line">-rw-r--r--    <span class="number">1</span> apache   apache       <span class="number">10846</span> Apr <span class="number">16</span>  <span class="number">2018</span> speedtest_worker.min.js</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2020/11/04/python/py_bing/" data-id="ckh2yhbzt0000btus86s60y30" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/11/06/docker/h5_speedtest/" data-id="ckh6a0eln0000ziusamzhebn7" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/python/" rel="tag">python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/docker/" rel="tag">docker</a></li></ul>
 
     </footer>
   </div>
@@ -134,7 +154,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/77/">77</a><a class="extend next" rel="next" href="page/2/">下一页 &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/78/">78</a><a class="extend next" rel="next" href="page/2/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -158,7 +178,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="tags/carscam/" style="font-size: 10px;">carscam</a> <a href="tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="tags/docker/" style="font-size: 10px;">docker</a> <a href="tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="tags/frp/" style="font-size: 11.67px;">frp</a> <a href="tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="tags/git/" style="font-size: 13.33px;">git</a> <a href="tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="tags/linux/" style="font-size: 16.67px;">linux</a> <a href="tags/moments/" style="font-size: 15px;">moments</a> <a href="tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="tags/python/" style="font-size: 10px;">python</a> <a href="tags/ssh/" style="font-size: 10px;">ssh</a> <a href="tags/video/" style="font-size: 10px;">video</a> <a href="tags/vim/" style="font-size: 13.33px;">vim</a> <a href="tags/vod/" style="font-size: 10px;">vod</a> <a href="tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="tags/carscam/" style="font-size: 10px;">carscam</a> <a href="tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="tags/docker/" style="font-size: 11.67px;">docker</a> <a href="tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="tags/frp/" style="font-size: 11.67px;">frp</a> <a href="tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="tags/git/" style="font-size: 13.33px;">git</a> <a href="tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="tags/linux/" style="font-size: 16.67px;">linux</a> <a href="tags/moments/" style="font-size: 15px;">moments</a> <a href="tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="tags/python/" style="font-size: 10px;">python</a> <a href="tags/ssh/" style="font-size: 10px;">ssh</a> <a href="tags/video/" style="font-size: 10px;">video</a> <a href="tags/vim/" style="font-size: 13.33px;">vim</a> <a href="tags/vod/" style="font-size: 10px;">vod</a> <a href="tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -180,6 +200,10 @@
       <ul>
         
           <li>
+            <a href="2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -193,10 +217,6 @@
         
           <li>
             <a href="2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

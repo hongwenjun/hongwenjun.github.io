@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git_server" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-codeblocks/codeblocks_cfg" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/03/28/git_server/" class="article-date">
-  <time datetime="2018-03-28T04:00:00.000Z" itemprop="datePublished">2018-03-28</time>
+    <a href="../../2018/04/02/codeblocks/codeblocks_cfg/" class="article-date">
+  <time datetime="2018-04-02T18:41:48.000Z" itemprop="datePublished">2018-04-02</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/03/28/git_server/">体验腾讯云-开发者实验  搭建 Git 服务器</a>
+      <a class="article-title" href="../../2018/04/02/codeblocks/codeblocks_cfg/">CodeBlocks 配置目录说明和个性配置文件</a>
     </h1>
   
 
@@ -94,64 +94,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="体验腾讯云-开发者实验-搭建-Git-服务器"><a href="#体验腾讯云-开发者实验-搭建-Git-服务器" class="headerlink" title="体验腾讯云-开发者实验  搭建 Git 服务器"></a>体验腾讯云-开发者实验  搭建 Git 服务器</h2><p><img src="https://share-10039692.file.myqcloud.com/lab/ac197229e6/logo/svyp4cez8d/git.svg"><br>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>此实验以 CentOS 7.2 x64 的系统为环境，搭建 git 服务器。</p>
-<h3 id="腾讯云-开发者实验室"><a href="#腾讯云-开发者实验室" class="headerlink" title="腾讯云-开发者实验室"></a>腾讯云-开发者实验室</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/labs/gallery">https://cloud.tencent.com/developer/labs/gallery</a></p>
-<h3 id="网页打链接，找到搭建Git服务器，"><a href="#网页打链接，找到搭建Git服务器，" class="headerlink" title="网页打链接，找到搭建Git服务器，"></a>网页打链接，找到搭建Git服务器，</h3><p>开始学习测试，没有帐号的可以用微信扫描登陆。可以在浏览器中内嵌的SSH工具完成所有的安装测试工作.</p>
-<pre><code># 推荐使用 passwd 修改 root 密码，记录下 vps 机器的ip，自己使用SSH登陆
-  passwd    //改密码
-# 本地电脑 打开 soft\Git\git-bash.exe 开启终端
-  ssh root@139.199.167.50</code></pre>
-<h3 id="安装依赖库和编译工具"><a href="#安装依赖库和编译工具" class="headerlink" title="安装依赖库和编译工具"></a>安装依赖库和编译工具</h3><p>为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具</p>
-<pre><code>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</code></pre>
-<p>安装编译工具</p>
-<pre><code>yum install gcc perl-ExtUtils-MakeMaker</code></pre>
-<h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 /usr/local/src 目录里</p>
-<pre><code>cd /usr/local/src</code></pre>
-<p>到官网找一个新版稳定的源码包下载到 /usr/local/src 文件夹里</p>
-<pre><code>wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</code></pre>
-<h3 id="解压和编译"><a href="#解压和编译" class="headerlink" title="解压和编译"></a>解压和编译</h3><p>解压下载的源码包</p>
-<pre><code>tar -zvxf git-2.10.0.tar.gz</code></pre>
-<p>解压后进入 git-2.10.0 文件夹</p>
-<pre><code>cd git-2.10.0</code></pre>
-<p>执行编译</p>
-<pre><code>make all prefix=/usr/local/git
+        <h2 id="CodeBlocks-配置目录说明"><a href="#CodeBlocks-配置目录说明" class="headerlink" title="CodeBlocks  配置目录说明"></a>CodeBlocks  配置目录说明</h2><p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/CodeBlocks">https://github.com/hongwenjun/CodeBlocks</a></p>
+<p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<hr>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 使用git下载  CodeBlocks 配置目录说明和个性配置文件</span></span><br><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>CodeBlocks.git  CodeBlocks</span><br><span class="line"></span><br><span class="line"><span class="comment">## 覆盖替换 CodeBlocks 相关目录</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-# 测试的时候直接编译错误，先运行配置，再更新了安装的库
-./configure</code></pre>
-<p>编译完成后, 安装到 /usr/local/git 目录下</p>
-<pre><code>make install prefix=/usr/local/git</code></pre>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>将 git 目录加入 PATH,将原来的 PATH 指向目录修改为现在的目录</p>
-<pre><code>echo &#39;export PATH=$PATH:/usr/local/git/bin&#39; &gt;&gt; /etc/bashrc</code></pre>
-<p>生效环境变量</p>
-<pre><code>source /etc/bashrc</code></pre>
-<p>此时我们能查看 git 版本号，说明我们已经安装成功了。</p>
-<pre><code>git --version</code></pre>
-<h3 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h3><p>创建 git 账号<br>为我们刚刚搭建好的 git 创建一个账号</p>
-<pre><code>useradd -m gituser</code></pre>
-<p>然后为这个账号设置密码</p>
-<pre><code>passwd gituser</code></pre>
-<h3 id="初始化-git-仓库并配置用户权限"><a href="#初始化-git-仓库并配置用户权限" class="headerlink" title="初始化 git 仓库并配置用户权限"></a>初始化 git 仓库并配置用户权限</h3><p>创建 git 仓库并初始化<br>我们创建 /data/repositories 目录用于存放 git 仓库</p>
-<pre><code>mkdir -p /data/repositories</code></pre>
-<p>创建好后，初始化这个仓库</p>
-<pre><code>cd /data/repositories/ &amp;&amp; git init --bare test.git</code></pre>
-<h3 id="配置用户权限"><a href="#配置用户权限" class="headerlink" title="配置用户权限"></a>配置用户权限</h3><p>给 git 仓库目录设置用户和用户组并设置权限</p>
-<pre><code>chown -R gituser:gituser /data/repositories
-chmod 755 /data/repositories</code></pre>
-<p>查找 git-shell 所在目录<br> , 编辑 /etc/passwd 文件，将最后一行关于 gituser 的登录 shell 配置改为 git-shell 的目录</p>
-<pre><code>vim /etc/passwd
-gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
-<h3 id="使用搭建好的-Git-服务"><a href="#使用搭建好的-Git-服务" class="headerlink" title="使用搭建好的 Git 服务"></a>使用搭建好的 Git 服务</h3><p>克隆 test repo 到本地，本地电脑开另一个终端</p>
-<pre><code>cd ~ &amp;&amp; git clone gituser@139.199.167.50:/data/repositories/test.git
-# ip 为测试云主机的ip</code></pre>
-<h3 id="实际测试-SSH-终端命令记录"><a href="#实际测试-SSH-终端命令记录" class="headerlink" title="实际测试 SSH 终端命令记录"></a>实际测试 SSH 终端命令记录</h3><p><img src="/img/git_server.png"></p>
+
+<p>主程序请到官方下载，<a target="_blank" rel="noopener" href="http://www.codeblocks.org/">www.codeblocks.org</a></p>
+<p>编译器文件太大， 可以按需要到百度网盘下载，链接地址<br><a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1dD6Qrap">http://pan.baidu.com/s/1dD6Qrap</a></p>
+<p><a href="/webp/cb/">CodeBlocks 使用视频 </a></p>
+<hr>
+<pre><code>CHM        cplusplus-2013-8-8.chm等多本参考手册
+MinGW      TDM-GCC 4.7.1  Win32
+MinGW64    TDM-GCC 5.1.0  Win64
+MSVC       VC2010 编译器和 ATL_MFC库，只供学习使用
+
+MSVC2015   VC2015主编译器
+WindowsKits  Windows 软件开发工具包 (SDK)
+SysWOW64     VC2015编译运行用到C++ 运行时
+
+VC2015 编译器 目前设置可以编译控制台程序和WIN32 GUI for x86
+向导建立 WIN32 GUI 选择Platform SDK目录 填路径
+$(CODEBLOCKS)\WindowsKits\8.1\bin\x86
+
+SDK        wxMSW-2.8.12库分别使用TDM-GCC 4.7.1 和VC2010编译
+           Boost库 TDM-GCC 4.7.1编译
+
+tool      有些工具
+
+codeblocks.exe   CodeBlocks主程序
+default.conf     CodeBlocks便携版配置程序，已经配置好支持以上四个编译器
+                 和部分工具及 C/C++参考手册
+
+cb_share_config.exe   可以从default.conf导出配置到你已经配置好的CB中</code></pre>
+<p><img src="https://github.com/hongwenjun/CodeBlocks/raw/master/%E8%AF%B4%E6%98%8E/CodeBlocksTree.png"></p>
+<pre><code>    git checkout
+    MSVC  MSVC2015   MinGW   MinGW64   SDK   SysWOW64   WindowsKits
+
+编译器文件太大， 可以按需要到百度网盘下载，链接地址
+http://pan.baidu.com/s/1dD6Qrap
+
+VC2010 编译器是   vc2010_altmfc.7z
+VC2015 目录里有 VC2015编译器和     VC2015编译器精简版
+CodeBlocks_VC_SDK_CHM.7z  是以前配置的便携版
+
+我的CodeBlocks 是放C盘固态硬盘，编译器放机械硬盘D盘 NTFS 压缩，达到速度和空间的优化</code></pre>
+<p>以上 7个目录 你可以使用 MKLINK 建立链接，请自行恢复</p>
+<pre><code>    把MSVC2015和 WindowsKits 符号链接过来
+    cd /d c:\CodeBlocks
+    mklink /d MSVC2015 &quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC&quot;
+    mklink /d WindowsKits &quot;C:\Program Files (x86)\Windows Kits&quot;</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/03/28/git_server/" data-id="ckh19psax001adnus6l109omk" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/04/02/codeblocks/codeblocks_cfg/" data-id="ckh19psf9003qdnushx1s8ygi" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
 
     </footer>
   </div>
@@ -164,7 +164,7 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../68/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../67/">67</a><a class="page-number" href="../68/">68</a><span class="page-number current">69</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../70/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../68/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../67/">67</a><a class="page-number" href="../68/">68</a><span class="page-number current">69</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../70/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -188,7 +188,7 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -210,6 +210,10 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -223,10 +227,6 @@ gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</code></pre>
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

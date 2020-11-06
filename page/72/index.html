@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-visitor" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-srgb_github" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/03/18/visitor/" class="article-date">
-  <time datetime="2018-03-18T04:00:00.000Z" itemprop="datePublished">2018-03-18</time>
+    <a href="../../2018/03/22/srgb_github/" class="article-date">
+  <time datetime="2018-03-22T04:00:00.000Z" itemprop="datePublished">2018-03-22</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/03/18/visitor/">SSH访问兼留言簿URL入口</a>
+      <a class="article-title" href="../../2018/03/22/srgb_github/">蘭雅sRGB 个人博客 开源项目源码镜像</a>
     </h1>
   
 
@@ -94,104 +94,229 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <title>蘭雅sRGB 个人博客 | https://262235.xyz </title>  
-    <meta charset="UTF-8">
-    <meta name="description" content="蘭雅sRGB的主页,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video,">
-    <meta name="keyword" content="C, C++, Programming, Source Code, Video,编程,源代码,视频">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-<!--
-a{ color:#888888;  text-decoration:none } 
-a:hover{ color:#A9FF9D}/* 鼠标经过悬停字体颜色 */ 
-pre { white-space: pre-wrap; margin:0 auto; color: #f0f0f0; width:1024px}
-body { color: #f0f0f0; font-size:10.5pt}
-.lnr { color: #123456; }
-.Type { color: #64D2E6; font-weight: bold;}
-.Special { color: #ffd7d7; }
-.Constant { color: #ff40ff; }
-.Underlined { color: #5fd7ff; text-decoration: underline; }
-.Statement { color: #ffff00; font-weight: bold; }
-.Comment { color: #888888; font-weight: bold; }
--->
-</style>
-</head>
-<body style = "background-image:url(/img/bg.jpg); background-attachment:fixed; ">
-<pre>
-<img border="3" src="https://262235.xyz/visitor/visitor.webp"  />
-<p>
-<span class="lnr"> 1 </span><span class="Comment">// =++=   欢迎来做客，我想喜欢龙芯的人 ，应该不会乱捣乱的 ==++==</span>
-<span class="lnr"> 2 </span><span class="Comment">// =++=   SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
-<span class="lnr"> 3 </span>现在使用花生壳内网穿透，每个月有流量限制，发现有人使用SSH的scp工具下载samba目录下隐私资料，消耗了400多M流量，所以暂时把端口换了一个，想测试学习的网友，可以百度贴吧发消息给我
-<span class="lnr"> 4 </span>
-<span class="lnr"> 5 </span><span class="Statement">WEB</span>:     <span class="Underlined"><a href="https://262235.xyz/visitor">https://262235.xyz/visitor</a></span>
-<span class="lnr"> 8 </span>
-<span class="lnr"> 9 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=&lt;&lt; 以下为访客留言，做个留言页面也挺好玩的 &gt;&gt;-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">10 </span>
-<span class="lnr">11 </span>GUI性能不行，所以我只启动了控制台，没有启动桌面的。
-<span class="lnr">12 </span>都是使用 ssh 远程登陆的。
-<span class="lnr">13 </span>
-<span class="lnr">14 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">15 </span>
-<span class="lnr">16 </span>哈哈哈，我就看看，啥也不干。不过网速好像有点慢啊。搭博客的话估计有点够呛！
-<span class="lnr">17 </span>
-<span class="lnr">18 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">19 </span>
-<span class="lnr">20 </span>Hello my <span class="Statement">friend</span> !
-<span class="lnr">21 </span>
-<span class="lnr">22 </span><span class="Constant">I</span> am also <span class="Statement">using</span> <span class="Constant">a</span> cute 8089_B <span class="Type">right</span> now !
-<span class="lnr">23 </span>
-<span class="lnr">24 </span>Though <span class="Constant">I</span> bought it <span class="Constant">3</span> years ago <span class="Special">(2014?)</span>,
-<span class="lnr">25 </span>but it really eating dust only until <span class="Constant">I</span> <span class="Type">find</span> it out today !
-<span class="lnr">26 </span>
-<span class="lnr">27 </span>Wow, <span class="Constant">a</span> little sad that latest Debian stopped supporting our toy, Loongson <span class="Constant">2F</span>.
-<span class="lnr">28 </span>
-<span class="lnr">29 </span>Anyway, plan to use it from now on !
-<span class="lnr">30 </span>
-<span class="lnr">31 </span>Will check Loongson'<span class="Constant">s</span> tieba every now <span class="Statement">and</span> then.
-<span class="lnr">32 </span>
-<span class="lnr">33 </span>PS: the wifi issue is really anooying....
-<span class="lnr">34 </span>
-<span class="lnr">35 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">36 </span>
-<span class="lnr">37 </span>装上debian也挺流畅的，test用户的shell是dash，默认跟ubuntu的一样，还是喜欢用centos，哈哈。
-<span class="lnr">38 </span>mark一下，以后经常来串串门^^_^^
-<span class="lnr">39 </span>嗯，不错。和我的小本一样，8089D。我安装的系统是gnewsense，貌似比debian流畅许多。^^
-<span class="lnr">40 </span>
-<span class="lnr">41 </span>
-<span class="lnr">42 </span>想用node.js+ghost做个blog，没成功,做lnmp还算容易。
-<span class="lnr">43 </span>这本本也就做个服务器，桌面免谈，有大量时间的除外。
-<span class="lnr">44 </span>
-<span class="lnr">45 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">46 </span>
-<span class="lnr">47 </span><span class="Comment">// =++= 谢谢上面朋友的留言，做个文本留言簿的想法今天才想到，所以这个留言簿页面就当统一回复大家了！</span>
-<span class="lnr">48 </span><span class="Comment">// =++= SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
-<span class="lnr">49 </span>
-<span class="lnr">50 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">51 </span>
-<span class="lnr">52 </span>我也算是一名龙芯爱好者吧 最近看到龙芯出了龙芯派
-<span class="lnr">53 </span>真的很想买一块 但是刚换工作不久 最近十分忙 感觉买了也会落灰
-<span class="lnr">54 </span>估计得过几个月才能静下心来
-<span class="lnr">55 </span>不过能远程使用龙芯<span class="Constant">2F</span>敲下这些字我也十分开心
-<span class="lnr">56 </span>谢谢你做了这个留言簿~
-<span class="lnr">57 </span>
-<span class="lnr">58 </span><span class="Comment">// =++= 谢谢来做客，你可以经常ssh过来玩，我也会把一些想法，写在留言簿里的.</span>
-<span class="lnr">59 </span><span class="Comment">// =++= 其实这样多一些互动，使用命令行，学习vim编辑文本也挺好的。</span>
-<span class="lnr">60 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">61 </span>
-</pre>
-</body>
-</html>
+        <h3 id="蘭雅sRGB-个人博客-https-262235-xyz"><a href="#蘭雅sRGB-个人博客-https-262235-xyz" class="headerlink" title="蘭雅sRGB 个人博客 https://262235.xyz"></a>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></h3><hr>
+<p>  提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video</p>
+<h3 id="GitHub开源地址-https-github-com-hongwenjun"><a href="#GitHub开源地址-https-github-com-hongwenjun" class="headerlink" title="GitHub开源地址: https://github.com/hongwenjun"></a>GitHub开源地址: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun">https://github.com/hongwenjun</a></h3><h3 id="本地源码镜像-https-262235-xyz-srgb"><a href="#本地源码镜像-https-262235-xyz-srgb" class="headerlink" title="本地源码镜像:   https://262235.xyz/srgb/"></a>本地源码镜像:   <a href="https://262235.xyz/srgb/">https://262235.xyz/srgb/</a></h3><hr>
+<blockquote>
+<ul>
+<li>源码直达</li>
+</ul>
+</blockquote>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/AdobeThumbnail.cpp.html">AdobeThumbnail/AdobeThumbnail.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/corel_thumbnail.cpp.html">AdobeThumbnail/corel_thumbnail.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/coreldraw_riffinfo.cpp.html">AdobeThumbnail/coreldraw_riffinfo.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/deAi7Thumb.cpp.html">AdobeThumbnail/deAi7Thumb.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/otherapi.cpp.html">AdobeThumbnail/otherapi.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ConsoleApp/main.cpp.html">AdobeThumbnail/ConsoleApp/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/GuiApp/GuiMain.cpp.html">AdobeThumbnail/GuiApp/GuiMain.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/GuiApp/GuiThumbnail.cpp.html">AdobeThumbnail/GuiApp/GuiThumbnail.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/Base64/Base64.cpp.html">Base64/Base64.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/Bti-map/main.cpp.html">Bti-map/main.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/CBStudy/CBStudyApp.cpp.html">CBStudy/CBStudyApp.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CBStudy/main.cpp.html">CBStudy/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/CorelThumbnail.cpp.html">CorelThumbnail/CorelThumbnail.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/Encoding.cpp.html">CorelThumbnail/Encoding.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/corel_thumbnail.cpp.html">CorelThumbnail/corel_thumbnail.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/coreldraw_riffinfo.cpp.html">CorelThumbnail/coreldraw_riffinfo.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/main.cpp.html">CorelThumbnail/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/otherapi.cpp.html">CorelThumbnail/otherapi.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/GuiDF/GuIDF.cpp.html">GuiDF/GuIDF.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/GuiDF/main.cpp.html">GuiDF/main.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/IDFonts/helpinfo.cpp.html">IDFonts/helpinfo.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/IDFonts/idtxt.cpp.html">IDFonts/idtxt.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/IDFonts/main.cpp.html">IDFonts/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/IDFonts/psdfonts.cpp.html">IDFonts/psdfonts.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/IDFonts/psdfonts_module.cpp.html">IDFonts/psdfonts_module.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/PackageFile/main.cpp.html">PackageFile/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/PackageFile/pkfile.cpp.html">PackageFile/pkfile.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/PackageFile/about/find_path.cpp.html">PackageFile/about/find_path.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/TrajectoryCombine/CDirectoryExplorer.cpp.html">TrajectoryCombine/CDirectoryExplorer.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/TrajectoryCombine/TrajectoryCombine.cpp.html">TrajectoryCombine/TrajectoryCombine.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/TrajectoryCombine/bdgps.cpp.html">TrajectoryCombine/bdgps.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/TrajectoryCombine/bdgps_api.cpp.html">TrajectoryCombine/bdgps_api.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/book/jsjq.cpp.html">book/jsjq.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/c_string/c_string.cpp.html">c_string/c_string.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/c_string/loadfile_strid.cpp.html">c_string/loadfile_strid.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/c_string/strTrim.cpp.html">c_string/strTrim.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/cncpp/findkey_ostringstream.cpp.html">cncpp/findkey_ostringstream.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/int_pointer.cpp.html">cncpp/int_pointer.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/my_crt.cpp.html">cncpp/my_crt.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/sortData.cpp.html">cncpp/sortData.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/stringstream.cpp.html">cncpp/stringstream.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/stringtok.cpp.html">cncpp/stringtok.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/strtok.cpp.html">cncpp/strtok.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/struct_memcpy.cpp.html">cncpp/struct_memcpy.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/throw.cpp.html">cncpp/throw.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/timer.cpp.html">cncpp/timer.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cncpp/toupper_file.cpp.html">cncpp/toupper_file.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/codetool/main.cpp.html">codetool/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cpp_keyword/main.cpp.html">cpp_keyword/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/cpp_keyword/src.cpp.html">cpp_keyword/src.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/decodeAi7Thumbnail/decodeAi7Thumbnail.cpp.html">decodeAi7Thumbnail/decodeAi7Thumbnail.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/SetTimer.cpp.html">demo_code/SetTimer.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/copyfile.cpp.html">demo_code/copyfile.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/getDigital.cpp.html">demo_code/getDigital.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/iconv_utf8.cpp.html">demo_code/iconv_utf8.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/output_string.cpp.html">demo_code/output_string.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/wchar_t.cpp.html">demo_code/wchar_t.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/getwanip/getwanip.cpp.html">getwanip/getwanip.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/getwanip/srgb.x64.me.cpp.html">getwanip/srgb.x64.me.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/last_line/last_line.cpp.html">last_line/last_line.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/lec/MultiFind.cpp.html">lec/MultiFind.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/lec/lec.cpp.html">lec/lec.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/lovemp3/lovemp3.cpp.html">lovemp3/lovemp3.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/lovemp3/mymp3.cpp.html">lovemp3/mymp3.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/malloc_new/main.cpp.html">malloc_new/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/md5/md5tool.cpp.html">md5/md5tool.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/mysql-connector-c/ming.cpp.html">mysql-connector-c/ming.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/png/url.cpp.html">png/url.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/printHexString/main.cpp.html">printHexString/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/pytool/main.cpp.html">pytool/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/pytool/pytool.cpp.html">pytool/pytool.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/regex_sample/main.cpp.html">regex_sample/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/regex_sample/regex.cpp.html">regex_sample/regex.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/regex_sample/regex_replace.cpp.html">regex_sample/regex_replace.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/regex_sample/regex_search.cpp.html">regex_sample/regex_search.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/sqlite3/sqlite3_win32_mbcs_to_utf8.cpp.html">sqlite3/sqlite3_win32_mbcs_to_utf8.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/stdlib/strrchr.cpp.html">stdlib/strrchr.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/stdlib/strtol.cpp.html">stdlib/strtol.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/stl11x/Lambda.cpp.html">stl11x/Lambda.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/stl11x/StudentList.cpp.html">stl11x/StudentList.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/stl11x/sort.cpp.html">stl11x/sort.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/stl11x/unordered_map.cpp.html">stl11x/unordered_map.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/telcsv/main.cpp.html">telcsv/main.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/telcsv/old_main.cpp.html">telcsv/old_main.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/CDirectoryExplorer.cpp.html">utf-bom-utils_src/CDirectoryExplorer.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/bom_add.cpp.html">utf-bom-utils_src/bom_add.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/bom_remove.cpp.html">utf-bom-utils_src/bom_remove.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/vcard/quotedprintable.cpp.html">vcard/quotedprintable.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/vcard/txt2vcf.cpp.html">vcard/txt2vcf.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/vcard/utf8.cpp.html">vcard/utf8.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/vcard/vcf2txt.cpp.html">vcard/vcf2txt.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/word_count/word_count.cpp.html">word_count/word_count.cpp</a></li>
+<li><a href="https://262235.xyz/srgb/zlib/mygzip.cpp.html">zlib/mygzip.cpp</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/adler32.c.html">AdobeThumbnail/ZLib/adler32.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/compress.c.html">AdobeThumbnail/ZLib/compress.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/crc32.c.html">AdobeThumbnail/ZLib/crc32.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/deflate.c.html">AdobeThumbnail/ZLib/deflate.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzclose.c.html">AdobeThumbnail/ZLib/gzclose.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzlib.c.html">AdobeThumbnail/ZLib/gzlib.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzread.c.html">AdobeThumbnail/ZLib/gzread.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzwrite.c.html">AdobeThumbnail/ZLib/gzwrite.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/infback.c.html">AdobeThumbnail/ZLib/infback.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inffast.c.html">AdobeThumbnail/ZLib/inffast.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inflate.c.html">AdobeThumbnail/ZLib/inflate.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inftrees.c.html">AdobeThumbnail/ZLib/inftrees.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/ioapi.c.html">AdobeThumbnail/ZLib/ioapi.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/iowin32.c.html">AdobeThumbnail/ZLib/iowin32.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/mztools.c.html">AdobeThumbnail/ZLib/mztools.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/trees.c.html">AdobeThumbnail/ZLib/trees.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/uncompr.c.html">AdobeThumbnail/ZLib/uncompr.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/unzip.c.html">AdobeThumbnail/ZLib/unzip.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/zip.c.html">AdobeThumbnail/ZLib/zip.c</a></li>
+<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/zutil.c.html">AdobeThumbnail/ZLib/zutil.c</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/adler32.c.html">CorelThumbnail/ZLib/adler32.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/compress.c.html">CorelThumbnail/ZLib/compress.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/crc32.c.html">CorelThumbnail/ZLib/crc32.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/deflate.c.html">CorelThumbnail/ZLib/deflate.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzclose.c.html">CorelThumbnail/ZLib/gzclose.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzlib.c.html">CorelThumbnail/ZLib/gzlib.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzread.c.html">CorelThumbnail/ZLib/gzread.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzwrite.c.html">CorelThumbnail/ZLib/gzwrite.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/infback.c.html">CorelThumbnail/ZLib/infback.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inffast.c.html">CorelThumbnail/ZLib/inffast.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inflate.c.html">CorelThumbnail/ZLib/inflate.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inftrees.c.html">CorelThumbnail/ZLib/inftrees.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/ioapi.c.html">CorelThumbnail/ZLib/ioapi.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/iowin32.c.html">CorelThumbnail/ZLib/iowin32.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/mztools.c.html">CorelThumbnail/ZLib/mztools.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/trees.c.html">CorelThumbnail/ZLib/trees.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/uncompr.c.html">CorelThumbnail/ZLib/uncompr.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/unzip.c.html">CorelThumbnail/ZLib/unzip.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/zip.c.html">CorelThumbnail/ZLib/zip.c</a></li>
+<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/zutil.c.html">CorelThumbnail/ZLib/zutil.c</a></li>
+<li><a href="https://262235.xyz/srgb/ReadBitMap/bmp.c.html">ReadBitMap/bmp.c</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/book/ckeytab.c.html">book/ckeytab.c</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/curl_simple.c.html">demo_code/curl_simple.c</a></li>
+<li><a href="https://262235.xyz/srgb/demo_code/delSpace.c.html">demo_code/delSpace.c</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://262235.xyz/srgb/tohtml_style/html_share_style.cpp.html">tohtml_style/html_share_style.cpp</a></li>
+</ul>
+<blockquote>
+<ul>
+<li>源码直达</li>
+</ul>
+</blockquote>
+<hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/03/18/visitor/" data-id="ckh19psdz002xdnus1i6uaznw" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/22/srgb_github/" data-id="ckh19psde002hdnus83ua1xfm" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li></ul>
 
     </footer>
   </div>
@@ -204,7 +329,7 @@ body { color: #f0f0f0; font-size:10.5pt}
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../71/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="page-number current">72</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../73/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../71/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="page-number current">72</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../73/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -228,7 +353,7 @@ body { color: #f0f0f0; font-size:10.5pt}
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -250,6 +375,10 @@ body { color: #f0f0f0; font-size:10.5pt}
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -263,10 +392,6 @@ body { color: #f0f0f0; font-size:10.5pt}
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

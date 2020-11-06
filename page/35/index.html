@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-nginx_https" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-nginx_rewrite" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/09/01/nginx_https/" class="article-date">
-  <time datetime="2018-09-01T04:00:00.000Z" itemprop="datePublished">2018-09-01</time>
+    <a href="../../2018/09/02/nginx_rewrite/" class="article-date">
+  <time datetime="2018-09-02T04:00:00.000Z" itemprop="datePublished">2018-09-02</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/09/01/nginx_https/">Nginx网页服务器 https证书部署</a>
+      <a class="article-title" href="../../2018/09/02/nginx_rewrite/">Nginx 全站加密，http自动跳转https</a>
     </h1>
   
 
@@ -95,37 +95,30 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="腾讯云https证书申请和部署"><a href="#腾讯云https证书申请和部署" class="headerlink" title="腾讯云https证书申请和部署"></a>腾讯云https证书申请和部署</h3><p>域名型证书申请流程<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/6814">https://cloud.tencent.com/document/product/400/6814</a></p>
-<p>证书安装部署指引<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/4143">https://cloud.tencent.com/document/product/400/4143</a></p>
-<h3 id="实例本站证书部署"><a href="#实例本站证书部署" class="headerlink" title="实例本站证书部署"></a>实例本站证书部署</h3><ul>
-<li>本站Nginx网页服务器使用 apt-get install nginx 进行安装</li>
-<li>nginx.conf 配置文件存放目录是 /etc/nginx/</li>
-<li>使用 <strong>nginx -t</strong> 命令会很方便找到 nginx.conf 目录</li>
-<li>站点配置 存放 /etc/nginx/sites-enabled</li>
+<h3 id="Nginx支持rewrite-http跳转https"><a href="#Nginx支持rewrite-http跳转https" class="headerlink" title="Nginx支持rewrite, http跳转https"></a>Nginx支持rewrite, http跳转https</h3><ul>
+<li><strong>vim /etc/nginx/sites-enabled/http</strong>     建立 <strong>http</strong> 配置文件，粘贴以下代码内容</li>
 </ul>
 <hr>
-<ul>
-<li>实例 把证书文件1 和 私钥文件2 同nginx.conf放一起，本例放 /etc/nginx/</li>
-<li>cd /etc/nginx/sites-enabled  建立 https 配置文件，粘贴以下代码内容</li>
-</ul>
-<hr>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># https 配置文件，存放 /etc/nginx/sites-enabled</span></span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen <span class="number">443</span>;</span><br><span class="line">        server_name www.srgb.xyz; #填写绑定证书的域名</span><br><span class="line">        ssl on;</span><br><span class="line">        </span><br><span class="line">        # 找到存放nginx.conf文件目录  把证书文件<span class="number">1</span> 和 私钥文件<span class="number">2</span> 同nginx.conf放一起，本例放 /etc/nginx</span><br><span class="line">        ssl_certificate <span class="number">1</span>_www.srgb.xyz_bundle.crt;    </span><br><span class="line">        ssl_certificate_key <span class="number">2</span>_www.srgb.xyz.key;</span><br><span class="line">        </span><br><span class="line">        ssl_session_timeout <span class="number">5</span>m;</span><br><span class="line">        ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>; #按照这个协议配置</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;#按照这个套件配置</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /var/www;    #站点目录</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"># 使用全站加密，http自动跳转https</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span>;</span><br><span class="line">    server_name www.srgb.xyz;</span><br><span class="line"></span><br><span class="line"># Nginx是支持rewrite的（只要在编译的时候没有去掉pcre）</span><br><span class="line"># 在http的server里增加</span><br><span class="line">    rewrite ^(.*) https:<span class="comment">//$host$1 permanent;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<hr>
+<h3 id="也可以把http和https写在同一个文件里"><a href="#也可以把http和https写在同一个文件里" class="headerlink" title="也可以把http和https写在同一个文件里"></a>也可以把http和https写在同一个文件里</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># https 配置文件，存放 /etc/nginx/sites-enabled</span></span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">443</span>;</span><br><span class="line">    server_name www.srgb.xyz; #填写绑定证书的域名</span><br><span class="line">    ssl on;</span><br><span class="line"></span><br><span class="line"># 找到存放nginx.conf文件  把证书文件<span class="number">1</span> 和 私钥文件<span class="number">2</span> 同nginx.conf放一起，本例放 /etc/nginx</span><br><span class="line">    ssl_certificate <span class="number">1</span>_www.srgb.xyz_bundle.crt;</span><br><span class="line">    ssl_certificate_key <span class="number">2</span>_www.srgb.xyz.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_timeout <span class="number">5</span>m;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>; #按照这个协议配置</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; #按照这个套件配置</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /var/www;    #站点目录</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用全站加密，http自动跳转https</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span>;</span><br><span class="line">    server_name www.srgb.xyz;</span><br><span class="line"></span><br><span class="line"># Nginx是支持rewrite的（只要在编译的时候没有去掉pcre）</span><br><span class="line"># 在http的server里增加</span><br><span class="line">    rewrite ^(.*) https:<span class="comment">//$host$1 permanent;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="frps-配置文件也可以独立起来存放"><a href="#frps-配置文件也可以独立起来存放" class="headerlink" title="frps 配置文件也可以独立起来存放"></a>frps 配置文件也可以独立起来存放</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># frps 配置文件，存放 /etc/nginx/sites-enabled</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span> $http_x_forwarded_for $clientRealip &#123;</span><br><span class="line">   <span class="string">&quot;&quot;</span> $remote_addr;</span><br><span class="line">   ~^(?P&lt;firstAddr&gt;[<span class="number">0</span><span class="number">-9</span>\.]+),?.*$  $firstAddr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">       listen <span class="number">80</span>;</span><br><span class="line">       server_name frp.srgb.xyz;  #为frp的控制台绑定一个域名，这样你就可以用http:<span class="comment">//frp.srgb.xyz访问你的控制台了</span></span><br><span class="line">       location / &#123;</span><br><span class="line">           proxy_pass http:<span class="comment">//127.0.0.1:7500;  #此处的7500就是你安装frp时设置的dashboard_port端口</span></span><br><span class="line">           proxy_set_header Host $host;</span><br><span class="line">           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;</span><br><span class="line">           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">       listen <span class="number">80</span>;</span><br><span class="line">       server_name s.srgb.xyz;   #也可以将所有的srgb.xyz子域名都绑定，</span><br><span class="line">       location / &#123;</span><br><span class="line">           proxy_pass http:<span class="comment">//127.0.0.1:8080; #此处的8080就是你安装frp时设置的vhost_http_port端口</span></span><br><span class="line">           proxy_set_header Host $host;</span><br><span class="line">           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;</span><br><span class="line">           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
 <h3 id="调试测试配置文件"><a href="#调试测试配置文件" class="headerlink" title="调试测试配置文件"></a>调试测试配置文件</h3><ul>
 <li><p>配置完成后，先用 <strong>nginx –t</strong> 来测试下配置是否有误，正确无误的话，<strong>service nginx restart</strong> 重启nginx</p>
-<p>  nginx: the configuration file /etc/nginx/nginx.conf syntax is ok<br>  nginx: configuration file /etc/nginx/nginx.conf test is successful</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">root@vultr:~# nginx -t</span><br><span class="line">nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;frp.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;s.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file /etc/nginx/nginx.conf test is successful</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>使用命令 <strong>systemctl status nginx.service</strong> 查看nginx日志信息，看看443端口是否占用</p>
-<p>  Sep 01 12:59:40 vultr.guest nginx[10753]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)</p>
-</li>
-<li><p>本站由于 frps 配置使用了443端口，到时启动失败，把frps.ini里443端口改成4443才正确配置好</p>
-</li>
+<li><p>使用命令 <strong>systemctl status nginx.service</strong> 查看nginx日志信息</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">root@vultr:~# systemctl status nginx.service</span><br><span class="line">   nginx.service - A high performance web<span class="built_in"> server </span><span class="keyword">and</span> a reverse<span class="built_in"> proxy </span>server</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)</span><br><span class="line">   Active: active (running) since Sun 2018-09-02 03:22:31 UTC; 1min 14s ago</span><br><span class="line">     Docs: man:nginx(8)</span><br><span class="line">  Process: 2748 <span class="attribute">ExecStop</span>=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (<span class="attribute">code</span>=exited, statu</span><br><span class="line">  Process: 2754 <span class="attribute">ExecStart</span>=/usr/sbin/nginx -g daemon on; master_process on; (<span class="attribute">code</span>=exited, <span class="attribute">status</span>=0/SUCCESS)</span><br><span class="line">  Process: 2751 <span class="attribute">ExecStartPre</span>=/usr/sbin/nginx -t -q -g daemon on; master_process on; (<span class="attribute">code</span>=exited, <span class="attribute">status</span>=0/SUCCESS)</span><br><span class="line"> Main PID: 2756 (nginx)</span><br><span class="line">    Tasks: 2 (limit: 4915)</span><br><span class="line">   CGroup: /system.slice/nginx.service</span><br><span class="line">           ├─2756 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;</span><br><span class="line">           └─2757 nginx: worker process</span><br><span class="line"></span><br><span class="line">Sep 02 03:22:31 vultr.guest systemd[1]: Starting A high performance web<span class="built_in"> server </span><span class="keyword">and</span> a reverse<span class="built_in"> proxy </span>server<span class="built_in">..</span>.</span><br><span class="line">Sep 02 03:22:31 vultr.guest nginx[2751]: nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;frp.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">Sep 02 03:22:31 vultr.guest nginx[2751]: nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;s.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">Sep 02 03:22:31 vultr.guest nginx[2754]: nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;frp.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">Sep 02 03:22:31 vultr.guest nginx[2754]: nginx: [warn] conflicting<span class="built_in"> server </span>name <span class="string">&quot;s.srgb.xyz&quot;</span> on 0.0.0.0:80, ignored</span><br><span class="line">Sep 02 03:22:31 vultr.guest systemd[1]: nginx.service: Failed <span class="keyword">to</span> read PID <span class="keyword">from</span> file /run/nginx.pid: Invalid argument</span><br><span class="line">Sep 02 03:22:31 vultr.guest systemd[1]: Started A high performance web<span class="built_in"> server </span><span class="keyword">and</span> a reverse<span class="built_in"> proxy </span>server.</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/09/01/nginx_https/" data-id="ckh19psd6002adnusaghr16kr" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/09/02/nginx_rewrite/" data-id="ckh19psd8002cdnus2wla3t6y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li></ul>
@@ -141,7 +134,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../34/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../33/">33</a><a class="page-number" href="../34/">34</a><span class="page-number current">35</span><a class="page-number" href="../36/">36</a><a class="page-number" href="../37/">37</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../36/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../34/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../33/">33</a><a class="page-number" href="../34/">34</a><span class="page-number current">35</span><a class="page-number" href="../36/">36</a><a class="page-number" href="../37/">37</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../36/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -165,7 +158,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -187,6 +180,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -200,10 +197,6 @@
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

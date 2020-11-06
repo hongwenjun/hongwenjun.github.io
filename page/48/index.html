@@ -72,9 +72,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vps_onekey" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-frp_setup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/06/04/vps_onekey/" class="article-date">
+    <a href="../../2018/06/04/frp_setup/" class="article-date">
   <time datetime="2018-06-04T04:00:00.000Z" itemprop="datePublished">2018-06-04</time>
 </a>
     
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/06/04/vps_onekey/">VPS 一键脚本 全家桶</a>
+      <a class="article-title" href="../../2018/06/04/frp_setup/">frps配置测试</a>
     </h1>
   
 
@@ -94,35 +94,127 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本"><a href="#一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本" class="headerlink" title="一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本"></a>一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
-<p>如果上面这个脚本无法下载，尝试使用备用下载：</p>
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  Brook 一键管理脚本 [v1<span class="number">.1</span><span class="number">.10</span>]</span><br><span class="line">  ---- Toyo | doub.io/brook-jc3 ----</span><br><span class="line"></span><br><span class="line">  <span class="number">0.</span> 升级脚本</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">1.</span> 安装 Brook</span><br><span class="line">  <span class="number">2.</span> 升级 Brook</span><br><span class="line">  <span class="number">3.</span> 卸载 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">4.</span> 启动 Brook</span><br><span class="line">  <span class="number">5.</span> 停止 Brook</span><br><span class="line">  <span class="number">6.</span> 重启 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">7.</span> 设置 账号配置</span><br><span class="line">  <span class="number">8.</span> 查看 账号信息</span><br><span class="line">  <span class="number">9.</span> 查看 日志信息</span><br><span class="line"> <span class="number">10.</span> 查看 链接信息</span><br><span class="line">————————————</span><br><span class="line"></span><br><span class="line"> 当前状态: 未安装</span><br><span class="line"></span><br><span class="line"> 请输入数字 [<span class="number">0</span><span class="number">-10</span>]:</span><br></pre></td></tr></table></figure>
+        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="frps服务端-一键安装脚本"><a href="#frps服务端-一键安装脚本" class="headerlink" title="frps服务端 一键安装脚本"></a>frps服务端 一键安装脚本</h3><p><a target="_blank" rel="noopener" href="https://github.com/clangcn/onekey-install-shell">https://github.com/clangcn/onekey-install-shell</a></p>
+<p>ssh登陆命令行输入3行命令就可以安装</p>
+<pre><code>wget --no-check-certificate https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install</code></pre>
+<p>装好后，就可以用了，不过改成以下配置，为了测试方便点</p>
+<h3 id="管理器使用方法"><a href="#管理器使用方法" class="headerlink" title="管理器使用方法"></a>管理器使用方法</h3><pre><code>Usage: /etc/init.d/frps &#123;start|stop|restart|status|config|version&#125;
 
-<h3 id="ShadowsocksR-单-多端口-一键管理脚本"><a href="#ShadowsocksR-单-多端口-一键管理脚本" class="headerlink" title="ShadowsocksR 单/多端口 一键管理脚本"></a>ShadowsocksR 单/多端口 一键管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
-<p>备用下载地址（上面的链接无法下载，就用这个）：</p>
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  请输入一个数字来选择菜单选项</span><br><span class="line"> </span><br><span class="line"> <span class="number">1.</span> 安装 ShadowsocksR</span><br><span class="line"> <span class="number">2.</span> 更新 ShadowsocksR</span><br><span class="line"> <span class="number">3.</span> 卸载 ShadowsocksR</span><br><span class="line"> <span class="number">4.</span> 安装 libsodium(chacha20)</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">5.</span> 查看 账号信息</span><br><span class="line"> <span class="number">6.</span> 显示 连接信息</span><br><span class="line"> <span class="number">7.</span> 设置 用户配置</span><br><span class="line"> <span class="number">8.</span> 手动 修改配置</span><br><span class="line"> <span class="number">9.</span> 切换 端口模式</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">10.</span> 启动 ShadowsocksR</span><br><span class="line"> <span class="number">11.</span> 停止 ShadowsocksR</span><br><span class="line"> <span class="number">12.</span> 重启 ShadowsocksR</span><br><span class="line"> <span class="number">13.</span> 查看 ShadowsocksR 日志</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">14.</span> 其他功能</span><br><span class="line"> <span class="number">15.</span> 升级脚本</span><br><span class="line"> </span><br><span class="line"> 当前状态: 已安装 并 已启动</span><br><span class="line"> 当前模式: 单端口</span><br><span class="line"> </span><br><span class="line">请输入数字(<span class="number">1</span><span class="number">-15</span>)：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+frps stop     # 先停止
+frps config   # 配置服务器
+frps start    # 启动服务 </code></pre>
+<h3 id="服务端配置-frps-ini"><a href="#服务端配置-frps-ini" class="headerlink" title="服务端配置 frps.ini"></a>服务端配置 frps.ini</h3><hr>
+<pre><code>[common]
+bind_addr = 0.0.0.0
+bind_port = 7000
+kcp_bind_port = 7000
+bind_udp_port = 7001
+token = www.nat.ee
+vhost_http_port = 8080
+vhost_https_port = 443
+allow_ports = 10001-19999
+#subdomain_host = nat.ee
+max_pool_count = 6
+max_ports_per_client = 3
+tcp_mux=true
+heartbeat_timeout = 90
+authentication_timeout = 900
+#[admin]
+dashboard_port = 7500
+dashboard_user = admin
+dashboard_pwd = admin
+#[log]
+#log_file = ./frps.log
+log_level = info
+log_max_days = 7</code></pre>
+<hr>
+<p>为了测试把把域名 <a target="_blank" rel="noopener" href="http://www.srgb.xyz/">www.srgb.xyz</a> 和 s.srgb.xyz 都绑定到服务器IP</p>
+<p>使用同名CNAME 也可以，也可以直接hosts里设置，不知是否可行</p>
+<p>客户1和2  user 不能相同</p>
+<p>然后 custom_domains =  分别 <a target="_blank" rel="noopener" href="http://www.srgb.xyz/">www.srgb.xyz</a>  和 s.srgb.xyz</p>
+<p>服务器本身占用80端口了<br>所以 <a target="_blank" rel="noopener" href="http://www.srgb.xyz:8080/">www.srgb.xyz:8080</a>     s.srgb.xyz:8080 访问测试设备</p>
+<p><a target="_blank" rel="noopener" href="http://www.srgb.xyz:7500/">www.srgb.xyz:7500</a>  查看登陆情况</p>
+<hr>
+<h3 id="客户端1-配置"><a href="#客户端1-配置" class="headerlink" title="客户端1 配置"></a>客户端1 配置</h3><p>这台机器是 龙芯 8089D，下载mips 的客户端， <a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
+<h3 id="frpc-ini"><a href="#frpc-ini" class="headerlink" title="frpc.ini"></a>frpc.ini</h3><pre><code># 主配置
+[common]
+server_addr = srgb.xyz
+server_port = 7000
+token = www.nat.ee
+user = srgb
 
-<h3 id="一键安装ss"><a href="#一键安装ss" class="headerlink" title="一键安装ss"></a>一键安装ss</h3><pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></pre>
-<h3 id="一键安装最新内核并开启-BBR-脚本"><a href="#一键安装最新内核并开启-BBR-脚本" class="headerlink" title="一键安装最新内核并开启 BBR 脚本"></a>一键安装最新内核并开启 BBR 脚本</h3><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
-<h2 id="LNMP一键安装包-V1-5"><a href="#LNMP一键安装包-V1-5" class="headerlink" title="LNMP一键安装包 V1.5"></a>LNMP一键安装包 V1.5</h2><p>详细请访问 <a target="_blank" rel="noopener" href="https://lnmp.org/install.html">https://lnmp.org/install.html</a></p>
-<h3 id="登陆后运行："><a href="#登陆后运行：" class="headerlink" title="登陆后运行："></a>登陆后运行：</h3><pre><code>screen -S lnmp</code></pre>
-<h2 id="安装LNMP稳定版"><a href="#安装LNMP稳定版" class="headerlink" title="安装LNMP稳定版"></a>安装LNMP稳定版</h2><pre><code>wget -c http://soft.vpser.net/lnmp/lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; ./install.sh lnmp</code></pre>
-<h2 id="如需要无人值守安装"><a href="#如需要无人值守安装" class="headerlink" title="如需要无人值守安装"></a>如需要无人值守安装</h2><p><a target="_blank" rel="noopener" href="https://lnmp.org/auto.html">https://lnmp.org/auto.html</a></p>
-<p>点击 生成 按钮会生成对应命令，示例如下</p>
-<pre><code>wget http://soft.vpser.net/lnmp/lnmp1.5.tar.gz -cO lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;2&quot; DB_Root_Password=&quot;lnmp.org&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;5&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></pre>
+# 日志
+#log_file = ./frpc.log
+log_level = info
+log_max_days = 7
+
+[srgb]
+type = http
+local_port = 80
+local_ip = 127.0.0.1
+custom_domains = www.srgb.xyz</code></pre>
+<hr>
+<p>客户端2 配置  ，这台机器是PC机，windows系统，</p>
+<h3 id="frpc-ini-1"><a href="#frpc-ini-1" class="headerlink" title="frpc.ini"></a>frpc.ini</h3><pre><code># 主配置
+[common]
+server_addr = srgb.xyz
+server_port = 7000
+token = www.nat.ee
+user = pc
+
+# 日志
+#log_file = ./frpc.log
+log_level = info
+log_max_days = 7
+
+[srgb]
+type = http
+local_port = 80
+local_ip = 127.0.0.1
+custom_domains = s.srgb.xyz</code></pre>
+<hr>
+<p>因为一般服务器都有web服务，主机80端口都是已经占用，只能使用其他端口访问。</p>
+<pre><code># s.srgb.xyz:8080     绑定的子域名后面有跟一个端口号</code></pre>
+<h3 id="使用Nginx-反代理frp，省略后缀端口口"><a href="#使用Nginx-反代理frp，省略后缀端口口" class="headerlink" title="使用Nginx 反代理frp，省略后缀端口口"></a>使用Nginx 反代理frp，省略后缀端口口</h3><pre><code>vim /etc/nginx/sites-enabled/default</code></pre>
+<p>如果使用一键 lnmp 安装的配置文件，可以建立 vhost 然后再手工修改</p>
+<p>WEB主机配置文件末尾添加</p>
+<pre><code>map $http_x_forwarded_for $clientRealip &#123;
+   &quot;&quot; $remote_addr;
+   ~^(?P&lt;firstAddr&gt;[0-9\.]+),?.*$  $firstAddr;
+&#125;
+
+server &#123;
+       listen 80;
+       server_name frp.srgb.xyz;  #为frp的控制台绑定一个域名，这样你就可以用http://frp.srgb.xyz访问你的控制台了
+       location / &#123;
+           proxy_pass http://127.0.0.1:7500;  #此处的7500就是你安装frp时设置的dashboard_port端口
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       &#125;
+&#125;
+
+server &#123;
+       listen 80;
+       server_name s.srgb.xyz;   #也可以将所有的srgb.xyz子域名都绑定，
+       location / &#123;
+           proxy_pass http://127.0.0.1:8080; #此处的8080就是你安装frp时设置的vhost_http_port端口
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $clientRealip;  # $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       &#125;
+&#125;</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/06/04/vps_onekey/" data-id="ckh19pse80031dnus83puhra0" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/06/04/frp_setup/" data-id="ckh19psa60011dnus3v5xdu7j" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li></ul>
 
     </footer>
   </div>
@@ -135,7 +227,7 @@ chmod +x shadowsocks-all.sh
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../47/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../46/">46</a><a class="page-number" href="../47/">47</a><span class="page-number current">48</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../49/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../47/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../46/">46</a><a class="page-number" href="../47/">47</a><span class="page-number current">48</span><a class="page-number" href="../49/">49</a><a class="page-number" href="../50/">50</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../49/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -159,7 +251,7 @@ chmod +x shadowsocks-all.sh
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -181,6 +273,10 @@ chmod +x shadowsocks-all.sh
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -194,10 +290,6 @@ chmod +x shadowsocks-all.sh
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

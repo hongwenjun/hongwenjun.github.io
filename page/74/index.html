@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-alarmclock" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-html_share_style" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2017/11/11/alarmclock/" class="article-date">
-  <time datetime="2017-11-11T05:00:00.000Z" itemprop="datePublished">2017-11-11</time>
+    <a href="../../2018/03/18/html_share_style/" class="article-date">
+  <time datetime="2018-03-18T04:00:00.000Z" itemprop="datePublished">2018-03-18</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2017/11/11/alarmclock/">alarmclock 定时闹钟</a>
+      <a class="article-title" href="../../2018/03/18/html_share_style/">tohtml_style 共享样式工具</a>
     </h1>
   
 
@@ -95,20 +95,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/alarmclock">https://github.com/hongwenjun/alarmclock</a></p>
-<h1 id="alarmclock"><a href="#alarmclock" class="headerlink" title="alarmclock"></a>alarmclock</h1><p>windows 控制台定时闹钟</p>
-<p>命令行 或者 批处理 使用以下命令， 到技时 20秒后开启指定的程序</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">alarmclock.exe  <span class="number">20</span> <span class="string">&quot;C:\soft\foobar2000\foobar2000.exe&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<p>分享: 控制台写个闹钟程序 分解,解释文章<br><a target="_blank" rel="noopener" href="http://bbs.csdn.net/topics/392285253">http://bbs.csdn.net/topics/392285253</a></p>
-<p>编写和调试工具 IDE<br>CodeBlocks SVN 11112版 双11特别版<br><a target="_blank" rel="noopener" href="http://bbs.csdn.net/topics/392284220">http://bbs.csdn.net/topics/392284220</a></p>
-<p><img src="http://img.bbs.csdn.net/upload/201711/10/1510289090_391006.png"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/tohtml_style">https://github.com/hongwenjun/tohtml_style</a></p>
+<h1 id="tohtml-style"><a href="#tohtml-style" class="headerlink" title="tohtml_style"></a>tohtml_style</h1><ol>
+<li><p>先使用 VIM 的 TOhtml 把文本转换成 html</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">vim</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:TOhtml</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:wqa</span>  <span class="selector-tag">mycode</span><span class="selector-class">.cpp</span></span><br><span class="line"><span class="selector-tag">vim</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:TOhtml</span> <span class="selector-tag">-c</span> <span class="selector-pseudo">:wqa</span>  <span class="selector-tag">mydoc</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再使用本工具 html_share_style 把编辑好的样式共享给 html文件</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">Usage:</span> html_share_style  <span class="params">&lt;file.html&gt;</span>  <span class="params">&lt;from.html&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/usage.webp"></p>
+</li>
+</ol>
+<h1 id="附送-git-bash环境设置使用TDM-GCC-64"><a href="#附送-git-bash环境设置使用TDM-GCC-64" class="headerlink" title="附送  git-bash环境设置使用TDM-GCC 64"></a>附送  git-bash环境设置使用TDM-GCC 64</h1><figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">编辑 Git\etc\fstab</span><br><span class="line">添加一行<span class="comment">(填入对应GCC路径)</span></span><br><span class="line">C:/CodeBlocks/Mi<span class="symbol">nGW64</span>       /mi<span class="symbol">ngw64</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/tohtml_style/master/git-bash_gcc.png"></p>
+<h1 id="附送-vimrc"><a href="#附送-vimrc" class="headerlink" title="附送 .vimrc"></a>附送 .vimrc</h1><p>“ .vimrc   请把本文件 _vimrc 改成 .vimrc 放到 ~目录</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2017/11/11/alarmclock/" data-id="ckh19ps8f000fdnus3hnbhwuj" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/18/html_share_style/" data-id="ckh19psba001ndnus3mmgdyv4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li></ul>
@@ -124,7 +128,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../73/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../72/">72</a><a class="page-number" href="../73/">73</a><span class="page-number current">74</span><a class="page-number" href="../75/">75</a><a class="page-number" href="../76/">76</a><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../75/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../73/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../72/">72</a><a class="page-number" href="../73/">73</a><span class="page-number current">74</span><a class="page-number" href="../75/">75</a><a class="page-number" href="../76/">76</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../75/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -148,7 +152,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -170,6 +174,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -183,10 +191,6 @@
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

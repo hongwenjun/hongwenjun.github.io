@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vps_virmach" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vultr_ipv6" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/06/15/vps_virmach/" class="article-date">
-  <time datetime="2018-06-15T04:00:00.000Z" itemprop="datePublished">2018-06-15</time>
+    <a href="../../2018/07/02/vultr_ipv6/" class="article-date">
+  <time datetime="2018-07-02T04:00:00.000Z" itemprop="datePublished">2018-07-02</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/06/15/vps_virmach/">VirMach 最便宜的主机折腾</a>
+      <a class="article-title" href="../../2018/07/02/vultr_ipv6/">Vultr_IPV6 机器安装设置，添加 IPv4 教程</a>
     </h1>
   
 
@@ -95,57 +95,31 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="Virmach-低价屠夫，-0-7-月-一年7-5美元，有促销可能更加便宜"><a href="#Virmach-低价屠夫，-0-7-月-一年7-5美元，有促销可能更加便宜" class="headerlink" title="Virmach 低价屠夫，$0.7/月,一年7.5美元，有促销可能更加便宜"></a>Virmach 低价屠夫，$0.7/月,一年7.5美元，有促销可能更加便宜</h3><p>官方购买地址 <a target="_blank" rel="noopener" href="https://billing.virmach.com/cart.php?gid=1">https://billing.virmach.com/cart.php?gid=1</a></p>
-<p>也可以搜索 Virmach + 优惠码，从国内vps介绍网站入口进去</p>
-<p>选择 OpenVZ Linux VPS，</p>
-<h3 id="Micro"><a href="#Micro" class="headerlink" title="Micro+"></a>Micro+</h3><ul>
-<li>192MB RAM</li>
-<li>10GB Disk</li>
-<li>250GB Bandwith @ 1 Gbps</li>
-<li>Shared Intel HT CPU 1 Core @ 1GHz</li>
-<li>1x IPv4 Addresses</li>
+<h3 id="本地电脑开启ipv6支持，可以使用XX-Net的-enable-ipv6-bat"><a href="#本地电脑开启ipv6支持，可以使用XX-Net的-enable-ipv6-bat" class="headerlink" title="本地电脑开启ipv6支持，可以使用XX-Net的 enable_ipv6.bat"></a>本地电脑开启ipv6支持，可以使用XX-Net的 enable_ipv6.bat</h3><ul>
+<li>XX-Net\code\3.11.10\gae_proxy\local\ipv6_tunnel\enable_ipv6.bat</li>
 </ul>
-<h3 id="价格是-1-00-USD-Monthly"><a href="#价格是-1-00-USD-Monthly" class="headerlink" title="价格是 $1.00 USD Monthly"></a>价格是 $1.00 USD Monthly</h3><p>点 Order NoW 蓝色按钮就去， 看到 Billing Cycle 结算方式</p>
-<ul>
-<li><p>Order annually to get 2 months of free service ; only pay for 10 months!</p>
-</li>
-<li><p>(整年定购只需支付10个月，赠2个月免费服务!)</p>
-</li>
-<li><p>$1.00 USD Mothly</p>
-</li>
-<li><p>$2.75 USD Quarterly</p>
-</li>
-<li><p>$10.00 USD Annually  通过下拉框选择，1年，打折后是7.5美元</p>
-</li>
-<li><p>服务器选择有存货，选Los Angeles(洛杉矶)，或美西的效果会好点</p>
-</li>
-<li><p>操作系统选 Debian ，下拉选择Debian 8 X64 或者9 X64</p>
-</li>
-<li><p>特价产品要勾选 Limited Support Agreement  (有限支持协议)，不然没法加入购物车</p>
-</li>
-</ul>
-<h3 id="加入购物车后，去开启隐藏的-优惠码-填入栏"><a href="#加入购物车后，去开启隐藏的-优惠码-填入栏" class="headerlink" title="加入购物车后，去开启隐藏的 优惠码 填入栏"></a>加入购物车后，去开启隐藏的 优惠码 填入栏</h3><p>购物车页面:</p>
-<p><a target="_blank" rel="noopener" href="https://billing.virmach.com/cart.php?a=view">https://billing.virmach.com/cart.php?a=view</a></p>
-<ul>
-<li>以下以Chrome 浏览器介绍 开启隐藏的 优惠码 填入栏</li>
-<li>F12 开启调试,键盘ctrl+F 查找 couponform ，定位到一下HTML语句</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">action</span>=<span class="string">&quot;/cart.php?a=view&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-horizontal well well-sm&quot;</span> <span class="attr">id</span>=<span class="string">&quot;couponform&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display:none;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>修改样式 display:none ，改成 yes，就会出现隐藏的优惠码输入框</p>
-</li>
-<li><p>还有另一种 开启隐藏的 优惠码 填入栏 方法</p>
-<p>  键盘 上上下下左右左右BA</p>
-</li>
-</ul>
-<h3 id="支付方式可以选支付宝或者paypal"><a href="#支付方式可以选支付宝或者paypal" class="headerlink" title="支付方式可以选支付宝或者paypal"></a>支付方式可以选支付宝或者paypal</h3><p>因为是特价机型，不能退款，换IP是要钱的</p>
-<h3 id="然后就安装些-一键全家桶，先慢慢折腾了"><a href="#然后就安装些-一键全家桶，先慢慢折腾了" class="headerlink" title="然后就安装些  一键全家桶，先慢慢折腾了"></a>然后就安装些  一键全家桶，先慢慢折腾了</h3><p>安装加速后，可以看1080P</p>
-<pre><code>https://github.com/hongwenjun/srgb/tree/master/vps_setup</code></pre>
+<h3 id="参考-Vultr-2-5-美金添加-IPv4-教程"><a href="#参考-Vultr-2-5-美金添加-IPv4-教程" class="headerlink" title="参考 Vultr 2.5 美金添加 IPv4 教程"></a>参考 Vultr 2.5 美金添加 IPv4 教程</h3><p><a target="_blank" rel="noopener" href="https://www.lijingquan.net/archives/4802">https://www.lijingquan.net/archives/4802</a></p>
+<p>登陆 Vultr;  新建了一个IPv4和一个IPv6 Only Debian系统</p>
+<p>进入Server Information,选 Settings，再选IPv4， Additional IPv4 IP，先增加一个收费ipv4<br>点击  networking configuration 链接，可以看到</p>
+<p><img src="img/interfaces.png"></p>
+<p>ssh  root@[IPV6] 远程登陆，先修改密码  </p>
+<pre><code>vim /etc/network/interfaces
+service networking restart</code></pre>
+<p>修改之前的看到的网络配置，修改为静态ip，重新启动网络。<br>(这时候其实已经可以用IPv4了,外网可以ping进来了,但是不要使用IPv4连接,修改路由表过程会断IPv4.)<br>只是使用 ping  8.8.8.8 网络还是阻断的，要修改默认的路由。</p>
+<p>查看默认的路由</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">root@</span>vultr:~# route -n</span><br><span class="line">Kernel IP routing table</span><br><span class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</span><br><span class="line"><span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">100.64</span><span class="number">.0</span><span class="number">.1</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         UG    <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">10.25</span><span class="number">.96</span><span class="number">.0</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.240</span><span class="number">.0</span>   U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens7</span><br><span class="line"><span class="number">100.64</span><span class="number">.0</span><span class="number">.0</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.192</span><span class="number">.0</span><span class="number">.0</span>     U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">169.254</span><span class="number">.0</span><span class="number">.0</span>     <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.0</span><span class="number">.0</span>     U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">207.148</span><span class="number">.112</span><span class="number">.0</span>   <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.254</span><span class="number">.0</span>   U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="symbol">root@</span>vultr:~# ip route show</span><br><span class="line"><span class="keyword">default</span> via <span class="number">100.64</span><span class="number">.0</span><span class="number">.1</span> dev ens3 onlink </span><br><span class="line"><span class="number">10.25</span><span class="number">.96</span><span class="number">.0</span>/<span class="number">20</span> dev ens7 proto kernel scope link src <span class="number">10.25</span><span class="number">.96</span><span class="number">.3</span> </span><br><span class="line"><span class="number">100.64</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">10</span> dev ens3 proto kernel scope link src <span class="number">100.68</span><span class="number">.5</span><span class="number">.186</span> </span><br><span class="line"><span class="number">169.254</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">16</span> dev ens3 scope link </span><br><span class="line"><span class="number">207.148</span><span class="number">.112</span><span class="number">.0</span>/<span class="number">23</span> dev ens3 proto kernel scope link src <span class="number">207.148</span><span class="number">.113</span><span class="number">.46</span> </span><br><span class="line"><span class="symbol">root@</span>vultr:~# </span><br></pre></td></tr></table></figure>
+<p>看到走的还是运营商NAT,删掉他,并添加默认路由,要使用是刚才添加的公网IPV4和实际的网卡编号.</p>
+<pre><code>route r del default gw 100.64.0.1
+ip route add default via 207.148.113.46 dev ens3</code></pre>
+<p>具体如下:</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">root@vultr:~#<span class="built_in"> route </span>del<span class="built_in"> default </span>gw 100.64.0.1</span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span>list</span><br><span class="line">10.25.96.0/20 dev ens7 proto kernel scope link src 10.25.96.3 </span><br><span class="line">100.64.0.0/10 dev ens3 proto kernel scope link src 100.68.5.186 </span><br><span class="line">169.254.0.0/16 dev ens3 scope link </span><br><span class="line">207.148.112.0/23 dev ens3 proto kernel scope link src 207.148.113.46 </span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span><span class="builtin-name">add</span><span class="built_in"> default </span>via 207.148.113.46 dev ens3</span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span>list</span><br><span class="line">default via 207.148.113.46 dev ens3 </span><br><span class="line">10.25.96.0/20 dev ens7 proto kernel scope link src 10.25.96.3 </span><br><span class="line">100.64.0.0/10 dev ens3 proto kernel scope link src 100.68.5.186 </span><br><span class="line">169.254.0.0/16 dev ens3 scope link </span><br><span class="line">207.148.112.0/23 dev ens3 proto kernel scope link src 207.148.113.46 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>再使用 ping 8.8.8.8 如果通畅了，就表示增加的ipv4可以使用了<br>然后就可以使用 一键脚本安装服务器了，安装好软件后，可以把ipv4删除掉<br>节省一下月租费。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/06/15/vps_virmach/" data-id="ckh19psec0034dnus89pe0upi" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/07/02/vultr_ipv6/" data-id="ckh19psee0036dnus15pga4r3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
@@ -161,7 +135,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../44/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../43/">43</a><a class="page-number" href="../44/">44</a><span class="page-number current">45</span><a class="page-number" href="../46/">46</a><a class="page-number" href="../47/">47</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../46/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../44/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../43/">43</a><a class="page-number" href="../44/">44</a><span class="page-number current">45</span><a class="page-number" href="../46/">46</a><a class="page-number" href="../47/">47</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../46/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -185,7 +159,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -207,6 +181,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -220,10 +198,6 @@
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>

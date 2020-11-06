@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hexo_github" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-golang_install" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/11/21/hexo_github/" class="article-date">
-  <time datetime="2018-11-21T05:00:00.000Z" itemprop="datePublished">2018-11-21</time>
+    <a href="../../2018/12/23/golang_install/" class="article-date">
+  <time datetime="2018-12-23T05:00:00.000Z" itemprop="datePublished">2018-12-23</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/11/21/hexo_github/">Hexo 使用 github 编写个人博客</a>
+      <a class="article-title" href="../../2018/12/23/golang_install/">linux下golang环境搭建自动脚本  by 蘭雅sRGB</a>
     </h1>
   
 
@@ -94,30 +94,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<hr>
-<h2 id="Hexo-使用-github-里编写个人博客"><a href="#Hexo-使用-github-里编写个人博客" class="headerlink" title="Hexo 使用 github 里编写个人博客"></a>Hexo 使用 github 里编写个人博客</h2><p>实现方法：在Hexo仓库新建一个hexo分支存放Hexo原始文件，master分支存放hexo生成的静态页面，如果迁移环境后可以直接git clone仓库即可。</p>
-<ol>
-<li><p>将Hexo仓库用git管理起来，新建一个hexo分支用来存markdown文件</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意：不需要再编写.gitignore了，在Hexo工程已经默认有.gitignore文件了，</span></span><br><span class="line"><span class="comment"># 这是hexo默认生成的，也许是hexo本来就推荐用git管理hexo原始文件吧</span></span><br><span class="line"><span class="attr">git</span> <span class="string">init</span></span><br><span class="line"><span class="attr">git</span> <span class="string">checkout -b hexo</span></span><br><span class="line"><span class="attr">git</span> <span class="string">add .</span></span><br><span class="line"><span class="attr">git</span> <span class="string">commit -m &quot;init&quot;</span></span><br><span class="line"><span class="attr">git</span> <span class="string">remote add origin https://github.com/hongwenjun/hongwenjun.github.io.git</span></span><br><span class="line"><span class="attr">git</span> <span class="string">push origin hexo</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>ssh 登陆 vps，进入webroot目录，把博客从github上拉到vps</p>
-</li>
-</ol>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">cd <span class="regexp">/var/</span>www  &amp;&amp; rm <span class="regexp">/var/</span>www/html</span><br><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>hongwenjun.github.io.git   html</span><br><span class="line"></span><br><span class="line"><span class="comment"># 博客如果更新了，在vps上运行</span></span><br><span class="line">cd <span class="regexp">/var/</span>www/html  &amp;&amp; git pull</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://youtu.be/KF6dalUw5Eg"><img src="https://github.com/hongwenjun/hongwenjun.github.io/raw/hexo/source/img/hexo_github_1.jpg"></a>]</p>
-<ol start="3">
-<li>在新的环境克隆仓库</li>
-</ol>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>hongwenjun.github.io.git</span><br><span class="line"><span class="comment"># 切换到hexo分支即可看到hexo原始文件，此时可以编辑并提交。</span></span><br><span class="line"><span class="comment"># 一般先提交原始文件到hexo分支，然后hexo d部署生成的静态文件到master分支</span></span><br><span class="line">git checkout hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="linux下golang环境搭建自动脚本"><a href="#linux下golang环境搭建自动脚本" class="headerlink" title="linux下golang环境搭建自动脚本"></a>linux下golang环境搭建自动脚本</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># linux下golang环境搭建自动脚本  by 蘭雅sRGB</span></span><br><span class="line">wget -qO- https:<span class="regexp">//gi</span>t.io/fp4jf | bash</span><br></pre></td></tr></table></figure>
 
+<h3 id="脚本源码"><a href="#脚本源码" class="headerlink" title="脚本源码"></a>脚本源码</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env bash</span><br><span class="line"></span><br><span class="line"># linux下golang环境搭建自动脚本  <span class="keyword">by</span> 蘭雅sRGB</span><br><span class="line"></span><br><span class="line"># 下载释放go语言安装包</span><br><span class="line"></span><br><span class="line">go_tar_gz=&quot;go1.11.2.linux-amd64.tar.gz&quot;</span><br><span class="line"></span><br><span class="line">go_url=&quot;https://dl.google.com/go/$&#123;go_tar_gz&#125;&quot;</span><br><span class="line"></span><br><span class="line">wget <span class="comment">--no-check-certificate -O $&#123;go_tar_gz&#125;  $&#123;go_url&#125;</span></span><br><span class="line">tar -xvf  $&#123;go_tar_gz&#125;</span><br><span class="line">rm  $&#123;go_tar_gz&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># go语言 添加环境变量</span><br><span class="line"></span><br><span class="line">cat <span class="symbol">&lt;&lt;EOF &gt;&gt;</span> ~/.profile</span><br><span class="line">export GOROOT=/root/go</span><br><span class="line">export GOPATH=/root/go/<span class="keyword">work</span></span><br><span class="line">export <span class="type">PATH</span>=$<span class="type">PATH</span>:/root/go/bin</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">source ~/.profile</span><br><span class="line">mkdir -p /root/go/<span class="keyword">work</span></span><br><span class="line"></span><br><span class="line"># 测试go语言安装</span><br><span class="line"></span><br><span class="line">mkdir -p ~/helloworld</span><br><span class="line">cd ~/helloworld</span><br><span class="line"></span><br><span class="line">cat <span class="symbol">&lt;&lt;EOF &gt;&gt;</span> helloworld.go</span><br><span class="line"></span><br><span class="line">// Test that we can <span class="keyword">do</span> page <span class="number">1</span> <span class="keyword">of</span> the C book.</span><br><span class="line"></span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    print(&quot;hello, world\n&quot;)</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">go build</span><br><span class="line"></span><br><span class="line">./helloworld</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/11/21/hexo_github/" data-id="ckh19psb8001ldnusg54vh16j" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/12/23/golang_install/" data-id="ckh19psb1001ednus5zwq54s5" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li></ul>
 
     </footer>
   </div>
@@ -130,7 +117,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../17/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="page-number current">18</span><a class="page-number" href="../19/">19</a><a class="page-number" href="../20/">20</a><span class="space">&hellip;</span><a class="page-number" href="../77/">77</a><a class="extend next" rel="next" href="../19/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../17/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="page-number current">18</span><a class="page-number" href="../19/">19</a><a class="page-number" href="../20/">20</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../19/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -154,7 +141,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 10px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -176,6 +163,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
           </li>
         
@@ -189,10 +180,6 @@
         
           <li>
             <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
           </li>
         
       </ul>
