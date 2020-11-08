@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-CB51_code" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-2020y" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2019/08/17/CB51_code/" class="article-date">
-  <time datetime="2019-08-17T04:00:00.000Z" itemprop="datePublished">2019-08-17</time>
+    <a href="../../2020/06/03/2020y/" class="article-date">
+  <time datetime="2020-06-03T04:00:00.000Z" itemprop="datePublished">2020-06-03</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2019/08/17/CB51_code/">CodeBlocks配置C51编译器_学习单片机源码</a>
+      <a class="article-title" href="../../2020/06/03/2020y/">2020年，注定是不平凡的一年</a>
     </h1>
   
 
@@ -94,65 +94,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h1 id="stc89c52-1-我的征途是星辰大海！"><a href="#stc89c52-1-我的征途是星辰大海！" class="headerlink" title="stc89c52  :+1: 我的征途是星辰大海！"></a>stc89c52  :+1: 我的征途是星辰大海！</h1><h2 id="基础实验例程更新-gift-Keil-C51-编译源码-smile-SDCC-编译源码"><a href="#基础实验例程更新-gift-Keil-C51-编译源码-smile-SDCC-编译源码" class="headerlink" title="基础实验例程更新 :gift: Keil C51 编译源码 :smile: SDCC 编译源码"></a>基础实验例程更新 :gift: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/src">Keil C51 编译源码</a> :smile: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/src/sdcc">SDCC 编译源码</a></h2><ul>
-<li>开源项目网址  <a target="_blank" rel="noopener" href="http://git.io/CB51">http://git.io/CB51</a>    CodeBlocks 漂亮主题项目： <a target="_blank" rel="noopener" href="https://git.io/codeblocks">https://git.io/codeblocks</a></li>
-<li>CodeBlocks + Keil_C51编译器 C51单片机学习 设置视频演示网址：  <a target="_blank" rel="noopener" href="https://youtu.be/2YKXRX7Nckk">https://youtu.be/2YKXRX7Nckk</a>   B站: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av62289305">https://www.bilibili.com/video/av62289305</a></li>
-</ul>
-<h3 id="100-51单片机电路原理图-HC6800-ES-V2-0新版-pdf-1-开发板其他器件芯片中文手册"><a href="#100-51单片机电路原理图-HC6800-ES-V2-0新版-pdf-1-开发板其他器件芯片中文手册" class="headerlink" title=":100: 51单片机电路原理图_HC6800-ES_V2.0新版.pdf  :+1: 开发板其他器件芯片中文手册"></a>:100: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/Document">51单片机电路原理图_HC6800-ES_V2.0新版.pdf</a>  :+1: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/img/tree/master/c51">开发板其他器件芯片中文手册</a></h3><hr>
-<h2 id="CodeBlocks配置使用Keil-C51编译器单片机编译设置方法"><a href="#CodeBlocks配置使用Keil-C51编译器单片机编译设置方法" class="headerlink" title="CodeBlocks配置使用Keil_C51编译器单片机编译设置方法"></a>CodeBlocks配置使用Keil_C51编译器单片机编译设置方法</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.keil.com/download/product/">Keil uVision5  C51</a>编译器, 安装目录</p>
-<p>  C:\Keil</p>
-</li>
-<li><p>CodeBlocks编译器设置，选择 Keil C51 Compiler</p>
-<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">编译器目录填	        C:<span class="symbol">\K</span>eil<span class="symbol">\C</span>51</span><br><span class="line">搜索目录-编译器头文件   C:<span class="symbol">\K</span>eil<span class="symbol">\C</span>51<span class="symbol">\I</span>NC</span><br><span class="line">搜索目录-编译器库文件   C:<span class="symbol">\K</span>eil<span class="symbol">\C</span>51<span class="symbol">\L</span>IB</span><br></pre></td></tr></table></figure>
-<h3 id="转换-HEX-工具配置"><a href="#转换-HEX-工具配置" class="headerlink" title="转换 HEX 工具配置"></a>转换 HEX 工具配置</h3><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">名称: Keil_C51编译_生成HEX</span></span><br><span class="line"><span class="section">可执行程序:  OH51.EXE</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET_OUTPUT_DIR)</span><span class="variable">$(TARGET_OUTPUT_BASENAME)</span>.omf</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<hr>
-<h2 id="CodeBlocks-SDCC开源编译器-C51单片机编译设置"><a href="#CodeBlocks-SDCC开源编译器-C51单片机编译设置" class="headerlink" title="CodeBlocks + SDCC开源编译器 C51单片机编译设置"></a>CodeBlocks + <a target="_blank" rel="noopener" href="http://sdcc.sourceforge.net/">SDCC开源编译器</a> C51单片机编译设置</h2><p>:100: SDCC-小型设备C编译器,是一个可重新定位的优化标准C（ANSI C89，ISO C99，ISO C11）编译器套件，针对基于Intel MCS51的微处理器（8031,8032,8051,8052 等），<br>Maxim（以前的Dallas）DS80C390变体， Freescale（以前的摩托罗拉）基于HC08 （hc08，s08）， 基于Zilog Z80的MCU （z80，z180，gbz80，Rabbit 2000/3000，Rabbit 3000A，TLCS-90），Padauk（pdk14，pdk15）和 STMicroelectronics STM8。<br>正在开展支持 Padauk（pdk13），Microchip PIC16和PIC18 目标的工作。它可以重新定位到其他微处理器。</p>
-<ul>
-<li><p>SDCC-小型设备C编译器 下载网址: <a target="_blank" rel="noopener" href="http://sdcc.sourceforge.net/">http://sdcc.sourceforge.net</a></p>
-</li>
-<li><p>推荐安装目录  C:\sdcc</p>
-</li>
-<li><p>CodeBlocks编译器设置，选择 SDCC Compiler</p>
-<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">编译器目录填	        <span class="symbol">C:</span>\sdcc</span><br><span class="line">搜索目录-编译器头文件   <span class="symbol">C:</span>\sdcc\<span class="keyword">include</span></span><br><span class="line">搜索目录-编译器库文件   <span class="symbol">C:</span>\sdcc\<span class="class"><span class="keyword">lib</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># CodeBlocks 新建项目，选 MCS51 Project，默认选择 SDCC Compiler，模版会自动添加 转换C51使用HEX文件 的命令</span></span><br><span class="line">cmd /c <span class="string">&quot;packihx &lt;$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).ihx &gt;$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<hr>
-<h3 id="1-LED闪烁实验-和-跑马灯-源码"><a href="#1-LED闪烁实验-和-跑马灯-源码" class="headerlink" title="1. LED闪烁实验 和 跑马灯 源码"></a>1. LED闪烁实验 和 跑马灯 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/1-led">源码</a></h3><p><img src="https://raw.githubusercontent.com/hongwenjun/stc89c52/master/img/1-led.webp"></p>
-<h3 id="2-使用蜂鸣器演奏音乐-源码"><a href="#2-使用蜂鸣器演奏音乐-源码" class="headerlink" title="2. 使用蜂鸣器演奏音乐 源码"></a>2. 使用蜂鸣器演奏音乐 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/2-beep_music">源码</a></h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 音乐播放器 :  挥着翅膀的女孩  同一首歌  两只蝴蝶</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    InitialSound();</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        keypros();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// K1 按键点歌   两只蝴蝶</span></span><br><span class="line">        <span class="keyword">if</span> (key_id == <span class="number">1</span>) &#123;</span><br><span class="line">            Play(Music_Two, <span class="number">0</span>, <span class="number">3</span>, <span class="number">360</span>);</span><br><span class="line">            Delay1ms(<span class="number">500</span>);</span><br><span class="line"></span><br><span class="line">            key_id = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// K2 按键点歌   挥着翅膀的女孩</span></span><br><span class="line">        <span class="comment">// K3 按键点歌   同一首歌</span></span><br><span class="line">        <span class="comment">// K4  beep 声音</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-动态数码管显示-源码-gift-7段26字母-显示-Helloworld"><a href="#3-动态数码管显示-源码-gift-7段26字母-显示-Helloworld" class="headerlink" title="3. 动态数码管显示 源码  :gift: 7段26字母 显示 Helloworld"></a>3. 动态数码管显示 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/3-led_segment_displays">源码</a>  :gift: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/src/str_7segment/">7段26字母 显示 Helloworld</a></h3><p><img src="https://raw.githubusercontent.com/hongwenjun/stc89c52/master/img/hello_world.webp"></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sbit LSA = P2 ^ <span class="number">2</span>;</span><br><span class="line">sbit LSB = P2 ^ <span class="number">3</span>;</span><br><span class="line">sbit LSC = P2 ^ <span class="number">4</span>;  <span class="comment">//控制38译码器的Y0输出低电平</span></span><br><span class="line"></span><br><span class="line">u8 code smgduan[] = &#123;</span><br><span class="line">    <span class="number">0x3f</span>, <span class="number">0x06</span>, <span class="number">0x5b</span>, <span class="number">0x4f</span>, <span class="number">0x66</span>,   <span class="comment">// 0 1 2 3 4</span></span><br><span class="line">    <span class="number">0x6d</span>, <span class="number">0x7d</span>, <span class="number">0x07</span>, <span class="number">0x7f</span>, <span class="number">0x6f</span>,   <span class="comment">// 5 6 7 8 9</span></span><br><span class="line">    <span class="number">0x77</span>, <span class="number">0x7c</span>, <span class="number">0x39</span>, <span class="number">0x5e</span>, <span class="number">0x79</span>,   <span class="comment">// A B C D E</span></span><br><span class="line">    <span class="number">0x71</span>, <span class="number">0x00</span>                      <span class="comment">// F NULL</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>文件: * 7段数码管-26字母表.xls * 用来扩展自定义字母和符号</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/hongwenjun/stc89c52/master/img/str-7segment.png"></p>
-<h3 id="4-矩阵按键实验-源码"><a href="#4-矩阵按键实验-源码" class="headerlink" title="4. 矩阵按键实验 源码"></a>4. 矩阵按键实验 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/4-matrix_key">源码</a></h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">KeyDown</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> a=<span class="number">0</span>;</span><br><span class="line">	GPIO_KEY=<span class="number">0x0f</span>;</span><br><span class="line">	<span class="keyword">if</span>(GPIO_KEY!=<span class="number">0x0f</span>)<span class="comment">//读取按键是否按下</span></span><br><span class="line">	&#123;</span><br><span class="line">		delay(<span class="number">1000</span>);<span class="comment">//延时10ms进行消抖</span></span><br><span class="line">		<span class="keyword">if</span>(GPIO_KEY!=<span class="number">0x0f</span>)<span class="comment">//再次检测键盘是否按下</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//测试列</span></span><br><span class="line">			GPIO_KEY=<span class="number">0X0F</span>;</span><br><span class="line">			<span class="keyword">switch</span>(GPIO_KEY)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0X07</span>):	KeyValue=<span class="number">0</span>;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0X0b</span>):	KeyValue=<span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0X0d</span>): KeyValue=<span class="number">2</span>;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0X0e</span>):	KeyValue=<span class="number">3</span>;<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//测试行</span></span><br><span class="line">			GPIO_KEY=<span class="number">0XF0</span>;</span><br><span class="line">			<span class="keyword">switch</span>(GPIO_KEY)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0X70</span>):	KeyValue=KeyValue;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0Xb0</span>):	KeyValue=KeyValue+<span class="number">4</span>;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0Xd0</span>): KeyValue=KeyValue+<span class="number">8</span>;<span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">case</span>(<span class="number">0Xe0</span>):	KeyValue=KeyValue+<span class="number">12</span>;<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">while</span>((a&lt;<span class="number">50</span>)&amp;&amp;(GPIO_KEY!=<span class="number">0xf0</span>))	 <span class="comment">//检测按键松手检测</span></span><br><span class="line">			&#123;</span><br><span class="line">				delay(<span class="number">1000</span>);</span><br><span class="line">				a++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-8-8LED点阵-显示文字实验-源码"><a href="#5-8-8LED点阵-显示文字实验-源码" class="headerlink" title="5. 8*8LED点阵-显示文字实验 源码"></a>5. 8*8LED点阵-显示文字实验 <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/stc89c52/tree/master/5-matrix_8x8LED">源码</a></h3><p><img src="https://raw.githubusercontent.com/hongwenjun/stc89c52/master/img/8x8led_hong.jpg"></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hc595SendByte</span><span class="params">(u8 dat)</span>     <span class="comment">// 函数向74HC595发送一个字节的数据</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    u8 a;</span><br><span class="line">    SRCLK = <span class="number">0</span>;</span><br><span class="line">    RCLK = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (a = <span class="number">0</span>; a &lt; <span class="number">8</span>; a++) &#123;</span><br><span class="line">        SER = dat &gt;&gt; <span class="number">7</span>;  <span class="comment">// 获取最高位  0xA3 :  1010 0011  等于 1</span></span><br><span class="line">        dat &lt;&lt;= <span class="number">1</span>;      <span class="comment">//  数据移位，移除最高位1补0  0100 0110</span></span><br><span class="line"></span><br><span class="line">        SRCLK = <span class="number">1</span>;    <span class="comment">// 升沿时数据寄存器的数据移位</span></span><br><span class="line">        _nop_();</span><br><span class="line">        _nop_();      <span class="comment">// 延时</span></span><br><span class="line">        SRCLK = <span class="number">0</span>;    <span class="comment">// 下降沿移位寄存器数据不变</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    RCLK = <span class="number">1</span>;   <span class="comment">// 上升沿时移位寄存器的数据进入数据存储寄存器</span></span><br><span class="line">    _nop_();</span><br><span class="line">    _nop_();    <span class="comment">// 延时</span></span><br><span class="line">    RCLK = <span class="number">0</span>;   <span class="comment">// 下降沿时存储寄存器数据不变</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="100-HC6800-ES-V2-0光盘资料-180515"><a href="#100-HC6800-ES-V2-0光盘资料-180515" class="headerlink" title=":100: HC6800-ES V2.0光盘资料(180515)"></a>:100: HC6800-ES V2.0光盘资料(180515)</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">V2.<span class="number">0</span>链接: 链接：https:<span class="regexp">//</span>pan.baidu.com<span class="regexp">/s/</span><span class="number">1</span>nJyHVv4effJ5y5ffUJFMoQ</span><br><span class="line">提取码：quux</span><br></pre></td></tr></table></figure>
-<h3 id="百度盘下载很慢怎么办-https-pandownload-com"><a href="#百度盘下载很慢怎么办-https-pandownload-com" class="headerlink" title="百度盘下载很慢怎么办?  https://pandownload.com/"></a>百度盘下载很慢怎么办?  <a target="_blank" rel="noopener" href="https://pandownload.com/">https://pandownload.com/</a></h3><ul>
-<li>使用第三方客户端 手机扫描登陆，可以全速下载，我的20M网络，可以满速2.6M/s下载</li>
-</ul>
-<h3 id="1-普中51单片机开发版-stc89c52芯片实验板DIY套件"><a href="#1-普中51单片机开发版-stc89c52芯片实验板DIY套件" class="headerlink" title=":+1: 普中51单片机开发版 stc89c52芯片实验板DIY套件"></a>:+1: 普中51单片机开发版 stc89c52芯片实验板DIY套件</h3><p><img src="https://img.alicdn.com/imgextra/i2/222939413/TB2xOgJd67nBKNjSZLeXXbxCFXa_!!222939413.jpg"></p>
+        <p>2020，注定不平凡的一年，不知明天和意外哪个先来临，但是还要充满希望，2020，你做好哪些准备了吗</p>
+<p><a target="_blank" rel="noopener" href="https://wiki.hk.xileso.top/zh-cn/2020%E5%B9%B4">https://wiki.hk.xileso.top/zh-cn/2020%E5%B9%B4</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2019/08/17/CB51_code/" data-id="ckh19ps7m0003dnushy7ocv36" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/06/03/2020y/" data-id="ckh19ps760001dnusdp42de9l" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
-
     </footer>
   </div>
   
@@ -164,7 +114,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../6/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><span class="page-number current">7</span><a class="page-number" href="../8/">8</a><a class="page-number" href="../9/">9</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../8/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../6/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><span class="page-number current">7</span><a class="page-number" href="../8/">8</a><a class="page-number" href="../9/">9</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../8/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -210,6 +160,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
@@ -223,10 +177,6 @@
         
           <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
           </li>
         
       </ul>

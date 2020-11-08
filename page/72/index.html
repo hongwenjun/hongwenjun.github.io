@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-srgb_github" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vim_cmd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/03/22/srgb_github/" class="article-date">
-  <time datetime="2018-03-22T04:00:00.000Z" itemprop="datePublished">2018-03-22</time>
+    <a href="../../2018/03/23/vim_cmd/" class="article-date">
+  <time datetime="2018-03-23T04:00:00.000Z" itemprop="datePublished">2018-03-23</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/03/22/srgb_github/">蘭雅sRGB 个人博客 开源项目源码镜像</a>
+      <a class="article-title" href="../../2018/03/23/vim_cmd/">VIM 常用用法和linux常用命令</a>
     </h1>
   
 
@@ -94,229 +94,146 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="蘭雅sRGB-个人博客-https-262235-xyz"><a href="#蘭雅sRGB-个人博客-https-262235-xyz" class="headerlink" title="蘭雅sRGB 个人博客 https://262235.xyz"></a>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></h3><hr>
-<p>  提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video</p>
-<h3 id="GitHub开源地址-https-github-com-hongwenjun"><a href="#GitHub开源地址-https-github-com-hongwenjun" class="headerlink" title="GitHub开源地址: https://github.com/hongwenjun"></a>GitHub开源地址: <a target="_blank" rel="noopener" href="https://github.com/hongwenjun">https://github.com/hongwenjun</a></h3><h3 id="本地源码镜像-https-262235-xyz-srgb"><a href="#本地源码镜像-https-262235-xyz-srgb" class="headerlink" title="本地源码镜像:   https://262235.xyz/srgb/"></a>本地源码镜像:   <a href="https://262235.xyz/srgb/">https://262235.xyz/srgb/</a></h3><hr>
-<blockquote>
-<ul>
-<li>源码直达</li>
-</ul>
-</blockquote>
+        <h2 id="VIM-常用用法和linux常用命令"><a href="#VIM-常用用法和linux常用命令" class="headerlink" title="VIM 常用用法和linux常用命令"></a>VIM 常用用法和linux常用命令</h2><p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
 <hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/AdobeThumbnail.cpp.html">AdobeThumbnail/AdobeThumbnail.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/corel_thumbnail.cpp.html">AdobeThumbnail/corel_thumbnail.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/coreldraw_riffinfo.cpp.html">AdobeThumbnail/coreldraw_riffinfo.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/deAi7Thumb.cpp.html">AdobeThumbnail/deAi7Thumb.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/otherapi.cpp.html">AdobeThumbnail/otherapi.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ConsoleApp/main.cpp.html">AdobeThumbnail/ConsoleApp/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/GuiApp/GuiMain.cpp.html">AdobeThumbnail/GuiApp/GuiMain.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/GuiApp/GuiThumbnail.cpp.html">AdobeThumbnail/GuiApp/GuiThumbnail.cpp</a></li>
-</ul>
+<h3 id="VIM-常用用法"><a href="#VIM-常用用法" class="headerlink" title="VIM 常用用法"></a>VIM 常用用法</h3><table>
+<thead>
+<tr>
+<th>一般模式</th>
+<th align="left">编辑模式</th>
+<th align="left">指令模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h   左</td>
+<td align="left">a,i,r,o,A,I,R,O</td>
+<td align="left">:w   保存</td>
+</tr>
+<tr>
+<td>j   下</td>
+<td align="left">进入编辑模式</td>
+<td align="left">:w!   强制保存</td>
+</tr>
+<tr>
+<td>k   上</td>
+<td align="left">dd   删除光标当前行</td>
+<td align="left">:q!   不保存离开</td>
+</tr>
+<tr>
+<td>l   右</td>
+<td align="left">ndd   删除n行</td>
+<td align="left">:wq!   保存后离开</td>
+</tr>
+<tr>
+<td>0   移动到行首</td>
+<td align="left">yy   复制当前行</td>
+<td align="left">:e!   还原原始档</td>
+</tr>
+<tr>
+<td>$   移动到行尾</td>
+<td align="left">nyy   复制n行</td>
+<td align="left">:w   filename   另存为</td>
+</tr>
+<tr>
+<td>H   屏幕最上</td>
+<td align="left">p,P   粘贴</td>
+<td align="left">:set  nu   设置行号</td>
+</tr>
+<tr>
+<td>M   屏幕中央</td>
+<td align="left">u     撤消</td>
+<td align="left">:set  nonu   取消行号</td>
+</tr>
+<tr>
+<td>L   屏幕最下</td>
+<td align="left">[Ctrl]+r   重做上一个动作</td>
+<td align="left">ZZ   保存离开</td>
+</tr>
+<tr>
+<td>G   文件最后一行</td>
+<td align="left">[ctrl]+z   暂停退出</td>
+<td align="left">:set nohlsearch 永久地关闭高亮显示</td>
+</tr>
+<tr>
+<td>/work   向下搜索</td>
+<td align="left"></td>
+<td align="left">:sp   同时打开两个文档</td>
+</tr>
+<tr>
+<td>?work   向上搜索</td>
+<td align="left"></td>
+<td align="left">[Ctrl]+w   两个文档设换</td>
+</tr>
+<tr>
+<td>gg   移动到文件第一行</td>
+<td align="left"></td>
+<td align="left">:nohlsearch  暂时关闭高亮显示</td>
+</tr>
+</tbody></table>
+<h4 id="vim-格式化代码命令是等号"><a href="#vim-格式化代码命令是等号" class="headerlink" title="vim 格式化代码命令是等号 ="></a>vim 格式化代码命令是等号 =</h4><pre><code>全部格式化 : gg=G  对当前行格式化(缩进): ==
+删除所有行文字 ggdG 或者 :%d
+ctrl+p或者ctrl+n  代码自动补全功能</code></pre>
+<h4 id="表示位置的元字符"><a href="#表示位置的元字符" class="headerlink" title="表示位置的元字符"></a>表示位置的元字符</h4><pre><code>$  匹配行尾
+^  匹配行首
+\&lt; 匹配单词词首
+\&gt; 匹配单词词尾
+
+删除行尾的^M：%s/\r//g     
+删除行尾空格：%s/\s+$//g   
+删除行首多余空格：%s/^\s*//
+删除沒有內容的空行：%s/^$//</code></pre>
+<h4 id="快捷键来激活-取消-paste模式"><a href="#快捷键来激活-取消-paste模式" class="headerlink" title="快捷键来激活/取消 paste模式"></a>快捷键来激活/取消 paste模式</h4><pre><code>set pastetoggle=&lt;F11&gt;  </code></pre>
+<h4 id="实际操作组合命令"><a href="#实际操作组合命令" class="headerlink" title="实际操作组合命令"></a>实际操作组合命令</h4><p><img src="http://srgb.xyz/webp/vim_cmd.webp"></p>
+<ol>
+<li>先按i插入模式, 再键盘 F11 切换粘贴模式  </li>
+<li>shift + Insert (做视频时笔误) 从windows 把文本粘贴进去</li>
+<li>删除行首的行号：%s/^.\d//g</li>
+<li>删除行首多余空格：%s/^\s*//g</li>
+<li>gg 到文件首行, d6 删除6行</li>
+<li>gg=G 格式化代码,  ggdG 全删文字    </li>
+</ol>
 <hr>
+<h4 id="tar-命令参数和示例"><a href="#tar-命令参数和示例" class="headerlink" title="tar 命令参数和示例"></a>tar 命令参数和示例</h4><pre><code>-c: 建立压缩文件    -x：解压   -t：查看内容
+-r：向压缩归档文件末尾追加文件 -u：更新原压缩包中的文件</code></pre>
 <ul>
-<li><a href="https://262235.xyz/srgb/Base64/Base64.cpp.html">Base64/Base64.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/Bti-map/main.cpp.html">Bti-map/main.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/CBStudy/CBStudyApp.cpp.html">CBStudy/CBStudyApp.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CBStudy/main.cpp.html">CBStudy/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/CorelThumbnail.cpp.html">CorelThumbnail/CorelThumbnail.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/Encoding.cpp.html">CorelThumbnail/Encoding.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/corel_thumbnail.cpp.html">CorelThumbnail/corel_thumbnail.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/coreldraw_riffinfo.cpp.html">CorelThumbnail/coreldraw_riffinfo.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/main.cpp.html">CorelThumbnail/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/otherapi.cpp.html">CorelThumbnail/otherapi.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/GuiDF/GuIDF.cpp.html">GuiDF/GuIDF.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/GuiDF/main.cpp.html">GuiDF/main.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/IDFonts/helpinfo.cpp.html">IDFonts/helpinfo.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/IDFonts/idtxt.cpp.html">IDFonts/idtxt.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/IDFonts/main.cpp.html">IDFonts/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/IDFonts/psdfonts.cpp.html">IDFonts/psdfonts.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/IDFonts/psdfonts_module.cpp.html">IDFonts/psdfonts_module.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/PackageFile/main.cpp.html">PackageFile/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/PackageFile/pkfile.cpp.html">PackageFile/pkfile.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/PackageFile/about/find_path.cpp.html">PackageFile/about/find_path.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/TrajectoryCombine/CDirectoryExplorer.cpp.html">TrajectoryCombine/CDirectoryExplorer.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/TrajectoryCombine/TrajectoryCombine.cpp.html">TrajectoryCombine/TrajectoryCombine.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/TrajectoryCombine/bdgps.cpp.html">TrajectoryCombine/bdgps.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/TrajectoryCombine/bdgps_api.cpp.html">TrajectoryCombine/bdgps_api.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/book/jsjq.cpp.html">book/jsjq.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/c_string/c_string.cpp.html">c_string/c_string.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/c_string/loadfile_strid.cpp.html">c_string/loadfile_strid.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/c_string/strTrim.cpp.html">c_string/strTrim.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/cncpp/findkey_ostringstream.cpp.html">cncpp/findkey_ostringstream.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/int_pointer.cpp.html">cncpp/int_pointer.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/my_crt.cpp.html">cncpp/my_crt.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/sortData.cpp.html">cncpp/sortData.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/stringstream.cpp.html">cncpp/stringstream.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/stringtok.cpp.html">cncpp/stringtok.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/strtok.cpp.html">cncpp/strtok.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/struct_memcpy.cpp.html">cncpp/struct_memcpy.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/throw.cpp.html">cncpp/throw.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/timer.cpp.html">cncpp/timer.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cncpp/toupper_file.cpp.html">cncpp/toupper_file.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/codetool/main.cpp.html">codetool/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cpp_keyword/main.cpp.html">cpp_keyword/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/cpp_keyword/src.cpp.html">cpp_keyword/src.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/decodeAi7Thumbnail/decodeAi7Thumbnail.cpp.html">decodeAi7Thumbnail/decodeAi7Thumbnail.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/SetTimer.cpp.html">demo_code/SetTimer.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/copyfile.cpp.html">demo_code/copyfile.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/getDigital.cpp.html">demo_code/getDigital.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/iconv_utf8.cpp.html">demo_code/iconv_utf8.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/output_string.cpp.html">demo_code/output_string.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/wchar_t.cpp.html">demo_code/wchar_t.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/getwanip/getwanip.cpp.html">getwanip/getwanip.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/getwanip/srgb.x64.me.cpp.html">getwanip/srgb.x64.me.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/last_line/last_line.cpp.html">last_line/last_line.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/lec/MultiFind.cpp.html">lec/MultiFind.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/lec/lec.cpp.html">lec/lec.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/lovemp3/lovemp3.cpp.html">lovemp3/lovemp3.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/lovemp3/mymp3.cpp.html">lovemp3/mymp3.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/malloc_new/main.cpp.html">malloc_new/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/md5/md5tool.cpp.html">md5/md5tool.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/mysql-connector-c/ming.cpp.html">mysql-connector-c/ming.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/png/url.cpp.html">png/url.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/printHexString/main.cpp.html">printHexString/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/pytool/main.cpp.html">pytool/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/pytool/pytool.cpp.html">pytool/pytool.cpp</a></li>
+<li>tar -cvf  /home/123.tar  my.cpp  打包，不压缩</li>
+<li>tar -zcvf  /home/123.tar.gz  my.cpp  打包gz压缩</li>
+<li>tar -xvf  123.tar            解开包</li>
+<li>tar -zxvf /home/123.tar.gz   以gzip解压</li>
+<li>tar -jxvf /home/123.tar.bz2  以bzip2解压</li>
+<li>tar -ztvf /tmp/etc.tar.gz    查看tar内容</li>
 </ul>
 <hr>
+<h4 id="chmod-命令用来变更文件或目录的权限"><a href="#chmod-命令用来变更文件或目录的权限" class="headerlink" title="chmod 命令用来变更文件或目录的权限"></a>chmod 命令用来变更文件或目录的权限</h4><pre><code>Linux用户分为：拥有者、组群(Group)、其他（other）
+r=读取属性　read=4
+w=写入属性　write=2
+x=执行属性　execute=1</code></pre>
 <ul>
-<li><a href="https://262235.xyz/srgb/regex_sample/main.cpp.html">regex_sample/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/regex_sample/regex.cpp.html">regex_sample/regex.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/regex_sample/regex_replace.cpp.html">regex_sample/regex_replace.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/regex_sample/regex_search.cpp.html">regex_sample/regex_search.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/sqlite3/sqlite3_win32_mbcs_to_utf8.cpp.html">sqlite3/sqlite3_win32_mbcs_to_utf8.cpp</a></li>
+<li>chmod  755  list.sh      // 设定脚本执行权限</li>
+<li>chmod -R 755  mypath     // 递归设定目录权限 </li>
 </ul>
 <hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/stdlib/strrchr.cpp.html">stdlib/strrchr.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/stdlib/strtol.cpp.html">stdlib/strtol.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/stl11x/Lambda.cpp.html">stl11x/Lambda.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/stl11x/StudentList.cpp.html">stl11x/StudentList.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/stl11x/sort.cpp.html">stl11x/sort.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/stl11x/unordered_map.cpp.html">stl11x/unordered_map.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/telcsv/main.cpp.html">telcsv/main.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/telcsv/old_main.cpp.html">telcsv/old_main.cpp</a></li>
-</ul>
+<p>crontab 定时任务 [e]编辑,[l]显示,[r]删除任务<br>history  | grep vim  列出有关vim的编辑的历史文件</p>
 <hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/CDirectoryExplorer.cpp.html">utf-bom-utils_src/CDirectoryExplorer.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/bom_add.cpp.html">utf-bom-utils_src/bom_add.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/utf-bom-utils_src/bom_remove.cpp.html">utf-bom-utils_src/bom_remove.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/vcard/quotedprintable.cpp.html">vcard/quotedprintable.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/vcard/txt2vcf.cpp.html">vcard/txt2vcf.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/vcard/utf8.cpp.html">vcard/utf8.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/vcard/vcf2txt.cpp.html">vcard/vcf2txt.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/word_count/word_count.cpp.html">word_count/word_count.cpp</a></li>
-<li><a href="https://262235.xyz/srgb/zlib/mygzip.cpp.html">zlib/mygzip.cpp</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/adler32.c.html">AdobeThumbnail/ZLib/adler32.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/compress.c.html">AdobeThumbnail/ZLib/compress.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/crc32.c.html">AdobeThumbnail/ZLib/crc32.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/deflate.c.html">AdobeThumbnail/ZLib/deflate.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzclose.c.html">AdobeThumbnail/ZLib/gzclose.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzlib.c.html">AdobeThumbnail/ZLib/gzlib.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzread.c.html">AdobeThumbnail/ZLib/gzread.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/gzwrite.c.html">AdobeThumbnail/ZLib/gzwrite.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/infback.c.html">AdobeThumbnail/ZLib/infback.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inffast.c.html">AdobeThumbnail/ZLib/inffast.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inflate.c.html">AdobeThumbnail/ZLib/inflate.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/inftrees.c.html">AdobeThumbnail/ZLib/inftrees.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/ioapi.c.html">AdobeThumbnail/ZLib/ioapi.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/iowin32.c.html">AdobeThumbnail/ZLib/iowin32.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/mztools.c.html">AdobeThumbnail/ZLib/mztools.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/trees.c.html">AdobeThumbnail/ZLib/trees.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/uncompr.c.html">AdobeThumbnail/ZLib/uncompr.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/unzip.c.html">AdobeThumbnail/ZLib/unzip.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/zip.c.html">AdobeThumbnail/ZLib/zip.c</a></li>
-<li><a href="https://262235.xyz/srgb/AdobeThumbnail/ZLib/zutil.c.html">AdobeThumbnail/ZLib/zutil.c</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/adler32.c.html">CorelThumbnail/ZLib/adler32.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/compress.c.html">CorelThumbnail/ZLib/compress.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/crc32.c.html">CorelThumbnail/ZLib/crc32.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/deflate.c.html">CorelThumbnail/ZLib/deflate.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzclose.c.html">CorelThumbnail/ZLib/gzclose.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzlib.c.html">CorelThumbnail/ZLib/gzlib.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzread.c.html">CorelThumbnail/ZLib/gzread.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/gzwrite.c.html">CorelThumbnail/ZLib/gzwrite.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/infback.c.html">CorelThumbnail/ZLib/infback.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inffast.c.html">CorelThumbnail/ZLib/inffast.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inflate.c.html">CorelThumbnail/ZLib/inflate.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/inftrees.c.html">CorelThumbnail/ZLib/inftrees.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/ioapi.c.html">CorelThumbnail/ZLib/ioapi.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/iowin32.c.html">CorelThumbnail/ZLib/iowin32.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/mztools.c.html">CorelThumbnail/ZLib/mztools.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/trees.c.html">CorelThumbnail/ZLib/trees.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/uncompr.c.html">CorelThumbnail/ZLib/uncompr.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/unzip.c.html">CorelThumbnail/ZLib/unzip.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/zip.c.html">CorelThumbnail/ZLib/zip.c</a></li>
-<li><a href="https://262235.xyz/srgb/CorelThumbnail/ZLib/zutil.c.html">CorelThumbnail/ZLib/zutil.c</a></li>
-<li><a href="https://262235.xyz/srgb/ReadBitMap/bmp.c.html">ReadBitMap/bmp.c</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/book/ckeytab.c.html">book/ckeytab.c</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/curl_simple.c.html">demo_code/curl_simple.c</a></li>
-<li><a href="https://262235.xyz/srgb/demo_code/delSpace.c.html">demo_code/delSpace.c</a></li>
-</ul>
-<hr>
-<ul>
-<li><a href="https://262235.xyz/srgb/tohtml_style/html_share_style.cpp.html">tohtml_style/html_share_style.cpp</a></li>
-</ul>
-<blockquote>
-<ul>
-<li>源码直达</li>
-</ul>
-</blockquote>
-<hr>
+<h2 id="Hexo环境迁移"><a href="#Hexo环境迁移" class="headerlink" title="Hexo环境迁移"></a>Hexo环境迁移</h2><p>实现方法：在Hexo仓库新建一个hexo分支存放Hexo原始文件，master分支存放hexo生成的静态页面，如果迁移环境后可以直接git clone仓库即可。</p>
+<ol>
+<li>将Hexo仓库用git管理起来：<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意：不需要再编写.gitignore了，在Hexo工程已经默认有.gitignore文件了，</span></span><br><span class="line"><span class="comment"># 这是hexo默认生成的，也许是hexo本来就推荐用git管理hexo原始文件吧</span></span><br><span class="line"><span class="attr">git</span> <span class="string">init</span></span><br><span class="line"><span class="attr">git</span> <span class="string">checkout -b hexo</span></span><br><span class="line"><span class="attr">git</span> <span class="string">add .</span></span><br><span class="line"><span class="attr">git</span> <span class="string">commit -m &quot;init&quot;</span></span><br><span class="line"><span class="attr">git</span> <span class="string">remote add origin https://github.com/hongwenjun/hongwenjun.github.io.git</span></span><br><span class="line"><span class="attr">git</span> <span class="string">push origin hexo</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li>在新的环境克隆仓库</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>hongwenjun.github.io.git</span><br><span class="line"><span class="comment"># 切换到hexo分支即可看到hexo原始文件，此时可以编辑并提交。</span></span><br><span class="line"><span class="comment"># 一般先提交原始文件到hexo分支，然后hexo d部署生成的静态文件到master分支</span></span><br><span class="line">git checkout hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/03/22/srgb_github/" data-id="ckh19psde002hdnus83ua1xfm" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/23/vim_cmd/" data-id="ckh19psdt002rdnus5he66uae" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li></ul>
 
     </footer>
   </div>
@@ -329,7 +246,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../71/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="page-number current">72</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../73/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../71/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../70/">70</a><a class="page-number" href="../71/">71</a><span class="page-number current">72</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../73/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -375,6 +292,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
@@ -388,10 +309,6 @@
         
           <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
           </li>
         
       </ul>

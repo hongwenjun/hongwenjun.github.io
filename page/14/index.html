@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git_pull" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vim_keymap" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2019/03/16/git_pull/" class="article-date">
-  <time datetime="2019-03-16T04:00:00.000Z" itemprop="datePublished">2019-03-16</time>
+    <a href="../../2019/03/27/vim_keymap/" class="article-date">
+  <time datetime="2019-03-27T04:00:00.000Z" itemprop="datePublished">2019-03-27</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2019/03/16/git_pull/">Git pull 强制覆盖本地文件脚本 git_pull.sh</a>
+      <a class="article-title" href="../../2019/03/27/vim_keymap/">VIM 命令键盘全图-中文清晰</a>
     </h1>
   
 
@@ -94,48 +94,113 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Git-pull-强制覆盖本地文件脚本-git-pull-sh"><a href="#Git-pull-强制覆盖本地文件脚本-git-pull-sh" class="headerlink" title="Git pull 强制覆盖本地文件脚本 git_pull.sh"></a>Git pull 强制覆盖本地文件脚本 git_pull.sh</h3><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">mkdik -p /usr/local/bin</span><br><span class="line"></span><br><span class="line">cat <span class="tag">&lt;&lt;EOF &gt;</span>/usr/local/bin/git_pull.sh</span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="comment"># Git pull 强制覆盖本地文件</span></span><br><span class="line"></span><br><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/<span class="literal">master</span></span><br><span class="line">git pull</span><br><span class="line">git fetch origin <span class="literal">master</span></span><br><span class="line">git merge origin/<span class="literal">master</span></span><br><span class="line">git merge origin/<span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment">### git dog 命令</span></span><br><span class="line">git config --global alias.dog <span class="string">&quot;log --all --decorate --oneline --graph&quot;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="VIM-命令键盘全图-中文清晰"><a href="#VIM-命令键盘全图-中文清晰" class="headerlink" title="VIM 命令键盘全图-中文清晰"></a>VIM 命令键盘全图-中文清晰</h2><p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/img/master/VIM_KEY_CN.png"></p>
+<hr>
+<h3 id="VIM-常用用法"><a href="#VIM-常用用法" class="headerlink" title="VIM 常用用法"></a>VIM 常用用法</h3><table>
+<thead>
+<tr>
+<th>一般模式</th>
+<th align="left">编辑模式</th>
+<th align="left">指令模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h   左</td>
+<td align="left">a,i,r,o,A,I,R,O</td>
+<td align="left">:w   保存</td>
+</tr>
+<tr>
+<td>j   下</td>
+<td align="left">进入编辑模式</td>
+<td align="left">:w!   强制保存</td>
+</tr>
+<tr>
+<td>k   上</td>
+<td align="left">dd   删除光标当前行</td>
+<td align="left">:q!   不保存离开</td>
+</tr>
+<tr>
+<td>l   右</td>
+<td align="left">ndd   删除n行</td>
+<td align="left">:wq!   保存后离开</td>
+</tr>
+<tr>
+<td>0   移动到行首</td>
+<td align="left">yy   复制当前行</td>
+<td align="left">:e!   还原原始档</td>
+</tr>
+<tr>
+<td>$   移动到行尾</td>
+<td align="left">nyy   复制n行</td>
+<td align="left">:w   filename   另存为</td>
+</tr>
+<tr>
+<td>H   屏幕最上</td>
+<td align="left">p,P   粘贴</td>
+<td align="left">:set  nu   设置行号</td>
+</tr>
+<tr>
+<td>M   屏幕中央</td>
+<td align="left">u     撤消</td>
+<td align="left">:set  nonu   取消行号</td>
+</tr>
+<tr>
+<td>L   屏幕最下</td>
+<td align="left">[Ctrl]+r   重做上一个动作</td>
+<td align="left">ZZ   保存离开</td>
+</tr>
+<tr>
+<td>G   文件最后一行</td>
+<td align="left">[ctrl]+z   暂停退出</td>
+<td align="left">:set nohlsearch 永久地关闭高亮显示</td>
+</tr>
+<tr>
+<td>/work   向下搜索</td>
+<td align="left"></td>
+<td align="left">:sp   同时打开两个文档</td>
+</tr>
+<tr>
+<td>?work   向上搜索</td>
+<td align="left"></td>
+<td align="left">[Ctrl]+w   两个文档设换</td>
+</tr>
+<tr>
+<td>gg   移动到文件第一行</td>
+<td align="left"></td>
+<td align="left">:nohlsearch  暂时关闭高亮显示</td>
+</tr>
+</tbody></table>
+<h4 id="vim-格式化代码命令是等号"><a href="#vim-格式化代码命令是等号" class="headerlink" title="vim 格式化代码命令是等号 ="></a>vim 格式化代码命令是等号 =</h4><pre><code>全部格式化 : gg=G  对当前行格式化(缩进): ==
+删除所有行文字 ggdG 或者 :%d
+ctrl+p或者ctrl+n  代码自动补全功能</code></pre>
+<h4 id="表示位置的元字符"><a href="#表示位置的元字符" class="headerlink" title="表示位置的元字符"></a>表示位置的元字符</h4><pre><code>$  匹配行尾
+^  匹配行首
+\&lt; 匹配单词词首
+\&gt; 匹配单词词尾
 
-
-<h3 id="Git基本常用命令如下："><a href="#Git基本常用命令如下：" class="headerlink" title="Git基本常用命令如下："></a>Git基本常用命令如下：</h3><pre><code>mkdir： XX (创建一个空目录 XX指目录名)
-pwd： 显示当前目录的路径。
-git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
-git add XX 把xx文件添加到暂存区去。
-git commit -m &amp;ldquo;XX&amp;rdquo; 提交文件 -m 后面的是注释。
-git status 查看仓库状态
-git diff XX 查看XX文件修改了那些内容
-git log 查看历史记录
-git reset --hard HEAD^ 或者 git reset --hard HEAD~ 回退到上一个版本
-(如果想回退到100个版本，使用git reset -hard HEAD~100 )
-cat XX 查看XX文件内容
-git reflog 查看历史记录的版本号id
-git checkout -- XX 把XX文件在工作区的修改全部撤销。
-git rm XX 删除XX文件
-git remote add origin  https://github.com/tugenhua0707/test.git  关联一个远程库
-git push -u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
-git clone  https://github.com/tugenhua0707/test.git  从远程库中克隆
-git checkout -b dev 创建dev分支 并切换到dev分支上
-git branch 查看当前所有的分支
-git checkout master 切换回master分支
-git merge dev;在当前的分支上合并dev分支
-git branch -d dev 删除dev分支
-git branch name 创建分支
-git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
-git stash list 查看所有被隐藏的文件列表
-git stash apply 恢复被隐藏的文件，但是内容不删除
-git stash drop 删除文件
-git stash pop 恢复文件的同时 也删除文件
-git remote 查看远程库的信息
-git remote -v 查看远程库的详细信息
-git push origin master Git会把master分支推送到远程库对应的远程分支上</code></pre>
+删除行尾的^M：%s/\r//g     
+删除行尾空格：%s/\s+$//g   
+删除行首多余空格：%s/^\s*//
+删除沒有內容的空行：%s/^$//</code></pre>
+<h4 id="快捷键来激活-取消-paste模式"><a href="#快捷键来激活-取消-paste模式" class="headerlink" title="快捷键来激活/取消 paste模式"></a>快捷键来激活/取消 paste模式</h4><pre><code>set pastetoggle=&lt;F11&gt;  </code></pre>
+<h4 id="实际操作组合命令"><a href="#实际操作组合命令" class="headerlink" title="实际操作组合命令"></a>实际操作组合命令</h4><p><img src="http://srgb.xyz/webp/vim_cmd.webp"></p>
+<ol>
+<li>先按i插入模式, 再键盘 F11 切换粘贴模式  </li>
+<li>shift + Insert (做视频时笔误) 从windows 把文本粘贴进去</li>
+<li>删除行首的行号：%s/^.\d//g</li>
+<li>删除行首多余空格：%s/^\s*//g</li>
+<li>gg 到文件首行, d6 删除6行</li>
+<li>gg=G 格式化代码,  ggdG 全删文字    </li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2019/03/16/git_pull/" data-id="ckh19psav0019dnushvpv8w9p" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2019/03/27/vim_keymap/" data-id="ckh19psdv002tdnus5747892k" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li></ul>
 
     </footer>
   </div>
@@ -148,7 +213,7 @@ git push origin master Git会把master分支推送到远程库对应的远程分
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../13/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../12/">12</a><a class="page-number" href="../13/">13</a><span class="page-number current">14</span><a class="page-number" href="../15/">15</a><a class="page-number" href="../16/">16</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../15/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../13/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../12/">12</a><a class="page-number" href="../13/">13</a><span class="page-number current">14</span><a class="page-number" href="../15/">15</a><a class="page-number" href="../16/">16</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../15/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -194,6 +259,10 @@ git push origin master Git会把master分支推送到远程库对应的远程分
       <ul>
         
           <li>
+            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
@@ -207,10 +276,6 @@ git push origin master Git会把master分支推送到远程库对应的远程分
         
           <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
           </li>
         
       </ul>

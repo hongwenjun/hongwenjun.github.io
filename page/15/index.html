@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-k2ipv6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git_pull" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2019/02/24/k2ipv6/" class="article-date">
-  <time datetime="2019-02-24T05:00:00.000Z" itemprop="datePublished">2019-02-24</time>
+    <a href="../../2019/03/16/git_pull/" class="article-date">
+  <time datetime="2019-03-16T04:00:00.000Z" itemprop="datePublished">2019-03-16</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2019/02/24/k2ipv6/">浙江移动光纤支持IPV6了</a>
+      <a class="article-title" href="../../2019/03/16/git_pull/">Git pull 强制覆盖本地文件脚本 git_pull.sh</a>
     </h1>
   
 
@@ -94,23 +94,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="K2路由器如下设置，启用ipv6，可以获取ipv6地址"><a href="#K2路由器如下设置，启用ipv6，可以获取ipv6地址" class="headerlink" title="K2路由器如下设置，启用ipv6，可以获取ipv6地址"></a>K2路由器如下设置，启用ipv6，可以获取ipv6地址</h3><p><img src="/img/k2ipv6.png"></p>
-<h3 id="自动获取的DNS，可以手动添加到网卡设置里"><a href="#自动获取的DNS，可以手动添加到网卡设置里" class="headerlink" title="自动获取的DNS，可以手动添加到网卡设置里"></a>自动获取的DNS，可以手动添加到网卡设置里</h3><pre><code>2409:8028:2000::1111
-2409:8028:2000::2222</code></pre>
-<h3 id="google-ipv6-dns"><a href="#google-ipv6-dns" class="headerlink" title="google ipv6 dns:"></a>google ipv6 dns:</h3><pre><code>2001:4860:4860::8888
-2001:4860:4860::8844</code></pre>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ ping <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span></span><br><span class="line"></span><br><span class="line">正在 Ping <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 具有 <span class="number">32</span> 字节的数据:</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">242</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">241</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">231</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">246</span>ms</span><br><span class="line"></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的 Ping 统计信息:</span><br><span class="line">    数据包: 已发送 = <span class="number">4</span>，已接收 = <span class="number">4</span>，丢失 = <span class="number">0</span> (<span class="number">0</span>% 丢失)，</span><br><span class="line">往返行程的估计时间(以毫秒为单位):</span><br><span class="line">    最短 = <span class="number">231</span>ms，最长 = <span class="number">246</span>ms，平均 = <span class="number">240</span>ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h3 id="Git-pull-强制覆盖本地文件脚本-git-pull-sh"><a href="#Git-pull-强制覆盖本地文件脚本-git-pull-sh" class="headerlink" title="Git pull 强制覆盖本地文件脚本 git_pull.sh"></a>Git pull 强制覆盖本地文件脚本 git_pull.sh</h3><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">mkdik -p /usr/local/bin</span><br><span class="line"></span><br><span class="line">cat <span class="tag">&lt;&lt;EOF &gt;</span>/usr/local/bin/git_pull.sh</span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="comment"># Git pull 强制覆盖本地文件</span></span><br><span class="line"></span><br><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/<span class="literal">master</span></span><br><span class="line">git pull</span><br><span class="line">git fetch origin <span class="literal">master</span></span><br><span class="line">git merge origin/<span class="literal">master</span></span><br><span class="line">git merge origin/<span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment">### git dog 命令</span></span><br><span class="line">git config --global alias.dog <span class="string">&quot;log --all --decorate --oneline --graph&quot;</span></span><br></pre></td></tr></table></figure>
 
 
-<h3 id="IPV6-note-TXT"><a href="#IPV6-note-TXT" class="headerlink" title="IPV6_note.TXT"></a>IPV6_note.TXT</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="comment">#停用“ip helper”服务</span></span><br><span class="line">net stop <span class="string">&quot;ip helper&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#启用“ip helper”服务</span></span><br><span class="line">net start <span class="string">&quot;ip helper&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#显示Teredo信息</span></span><br><span class="line">netsh interface ipv6 show teredo</span><br><span class="line"></span><br><span class="line"><span class="comment">#Teredo、6to4、isatap重置</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line">netsh interface <span class="number">6</span>to4 <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line">netsh interface isatap <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#关闭和卸载Teredo、6to4、isatap</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> disable</span><br><span class="line">netsh interface <span class="number">6</span>to4 <span class="built_in">set</span> <span class="keyword">state</span> disabled</span><br><span class="line">netsh interface isatap <span class="built_in">set</span> <span class="keyword">state</span> disabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#重新启用Teredo</span></span><br><span class="line">netsh interface Teredo <span class="built_in">set</span> <span class="keyword">state</span> type=<span class="keyword">default</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置Teredo服务器</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo.remlab.net</span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo-debian.remlab.net</span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo.trex.fi</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置Teredo服务器为teredo.ipv6.microsoft.com（此teredo服务器报废）</span></span><br><span class="line">netsh interface ipv6 <span class="built_in">set</span> teredo client teredo.ipv6.microsoft.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置isatap服务器（PING不通）</span></span><br><span class="line">netsh int IPV6 isatap <span class="built_in">set</span> router isatap.scu.edu.cn</span><br><span class="line"></span><br><span class="line"><span class="comment">#手动解决Windows7对IPv6支持的瑕疵</span></span><br><span class="line">netsh interface IPV6 <span class="built_in">set</span> <span class="keyword">global</span> randomizeidentifiers=disabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#启用Teredo</span></span><br><span class="line">netsh interface ipv6 <span class="built_in">set</span> teredo enterpriseclient</span><br><span class="line">netsh int ter <span class="built_in">set</span> <span class="keyword">state</span> enterpriseclient</span><br><span class="line"></span><br><span class="line"><span class="comment">#手动换算（IPv4）并设置本地连接（IPv6）地址</span></span><br><span class="line"><span class="comment">#换算IPv4地址</span></span><br><span class="line">http://ip-lookup.net/conversion.php</span><br><span class="line"><span class="comment">#修改本地连接IPv6地址</span></span><br><span class="line"><span class="comment">#子网前缀长度 48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#google ipv6 dns:</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8844</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#opendns ipv6 dns:</span></span><br><span class="line"><span class="number">2620</span>:<span class="number">0</span>:ccc::<span class="number">2</span></span><br><span class="line"><span class="number">2620</span>:<span class="number">0</span>:ccd::<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#HE ipv6 dns:</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">470</span>:<span class="number">20</span>::<span class="number">2</span></span><br><span class="line"></span><br><span class="line">ipconfig /<span class="literal">all</span></span><br><span class="line">ipconfig /flushdns</span><br><span class="line">netsh int ipv6 show int</span><br><span class="line">netsh int ipv6 show <span class="keyword">route</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#看看teredo状态是不是qualified</span></span><br><span class="line">netsh int ipv6 show teredo</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除多余回路</span></span><br><span class="line"><span class="keyword">route</span> DELETE ::/<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加路由 (这一步重启后需要重新再做一遍)</span></span><br><span class="line">netsh int ipv6 add <span class="keyword">route</span> ::/<span class="number">0</span> <span class="string">&quot;Teredo Tunneling Pseudo-Interface&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在“start.bat”中添加下面两句，实现XX执行自启</span></span><br><span class="line">netsh int ipv6 add <span class="keyword">route</span> ::/<span class="number">0</span> <span class="string">&quot;Teredo Tunneling Pseudo-Interface&quot;</span></span><br><span class="line">SET PYTHONPATH=<span class="string">&quot;%~dp0%start.vbs&quot;</span> console</span><br><span class="line"></span><br><span class="line"><span class="comment">#优先级</span></span><br><span class="line">netsh int ipv6 show prefix</span><br><span class="line">netsh int ipv6 <span class="built_in">set</span> prefix <span class="number">2002</span>::/<span class="number">16</span> <span class="number">30</span> <span class="number">1</span></span><br><span class="line">netsh int ipv6 <span class="built_in">set</span> prefix <span class="number">2001</span>::/<span class="number">32</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看Teredo Tunneling Pseudo-Interface 接口</span></span><br><span class="line"><span class="keyword">route</span> print</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示IPv6地址</span></span><br><span class="line">netsh interface ipv6 show address</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示IPv6路由</span></span><br><span class="line">netsh interface ipv6 show <span class="keyword">route</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重启ipv6，再重启计算机</span></span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启网卡（&quot;本地连接 2&quot;换成自己要重启的网卡名）</span></span><br><span class="line">netsh interface <span class="built_in">set</span> interface <span class="string">&quot;本地连接 2&quot;</span> disabled</span><br><span class="line">netsh interface <span class="built_in">set</span> interface <span class="string">&quot;本地连接 2&quot;</span> enabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#IPV6测试网站：</span></span><br><span class="line"></span><br><span class="line">http://test-ipv6.com/</span><br><span class="line"><span class="comment">#摘要部分测试完成后，请到“测试项目”中查看结果。</span></span><br><span class="line"><span class="comment">#全是“成功”就最完美的。</span></span><br><span class="line"></span><br><span class="line">http://www.kame.net/kame-mosaic.html</span><br><span class="line"><span class="comment">#IPv6可以看到活动的乌龟，IPv4乌龟不动</span></span><br></pre></td></tr></table></figure>
+<h3 id="Git基本常用命令如下："><a href="#Git基本常用命令如下：" class="headerlink" title="Git基本常用命令如下："></a>Git基本常用命令如下：</h3><pre><code>mkdir： XX (创建一个空目录 XX指目录名)
+pwd： 显示当前目录的路径。
+git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
+git add XX 把xx文件添加到暂存区去。
+git commit -m &amp;ldquo;XX&amp;rdquo; 提交文件 -m 后面的是注释。
+git status 查看仓库状态
+git diff XX 查看XX文件修改了那些内容
+git log 查看历史记录
+git reset --hard HEAD^ 或者 git reset --hard HEAD~ 回退到上一个版本
+(如果想回退到100个版本，使用git reset -hard HEAD~100 )
+cat XX 查看XX文件内容
+git reflog 查看历史记录的版本号id
+git checkout -- XX 把XX文件在工作区的修改全部撤销。
+git rm XX 删除XX文件
+git remote add origin  https://github.com/tugenhua0707/test.git  关联一个远程库
+git push -u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
+git clone  https://github.com/tugenhua0707/test.git  从远程库中克隆
+git checkout -b dev 创建dev分支 并切换到dev分支上
+git branch 查看当前所有的分支
+git checkout master 切换回master分支
+git merge dev;在当前的分支上合并dev分支
+git branch -d dev 删除dev分支
+git branch name 创建分支
+git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+git stash list 查看所有被隐藏的文件列表
+git stash apply 恢复被隐藏的文件，但是内容不删除
+git stash drop 删除文件
+git stash pop 恢复文件的同时 也删除文件
+git remote 查看远程库的信息
+git remote -v 查看远程库的详细信息
+git push origin master Git会把master分支推送到远程库对应的远程分支上</code></pre>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2019/02/24/k2ipv6/" data-id="ckh19psbi001udnus3qlt0xtr" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2019/03/16/git_pull/" data-id="ckh19psav0019dnushvpv8w9p" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
 
     </footer>
   </div>
@@ -123,7 +148,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../14/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../13/">13</a><a class="page-number" href="../14/">14</a><span class="page-number current">15</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="space">&hellip;</span><a class="page-number" href="../78/">78</a><a class="extend next" rel="next" href="../16/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../14/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../13/">13</a><a class="page-number" href="../14/">14</a><span class="page-number current">15</span><a class="page-number" href="../16/">16</a><a class="page-number" href="../17/">17</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../16/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -169,6 +194,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
@@ -182,10 +211,6 @@
         
           <li>
             <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/06/28/ffmpeg_x265/">FFMPEG 裁剪拼接mp4和转换X.265格式</a>
           </li>
         
       </ul>
