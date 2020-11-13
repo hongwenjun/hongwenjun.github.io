@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git_winpty" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-crash_course_computer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/05/18/git_winpty/" class="article-date">
-  <time datetime="2018-05-18T04:00:00.000Z" itemprop="datePublished">2018-05-18</time>
+    <a href="../../2018/05/21/crash_course_computer/" class="article-date">
+  <time datetime="2018-05-21T04:00:00.000Z" itemprop="datePublished">2018-05-21</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/05/18/git_winpty/">git bash 命令行有中文乱码的解决</a>
+      <a class="article-title" href="../../2018/05/21/crash_course_computer/">计算机科学速成课_中文字幕</a>
     </h1>
   
 
@@ -94,25 +94,90 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p>网上有把MINGW64环境改成GBK的方法，但是哪样使用习惯不太好，毕竟网络世界utf-8是主宰。</p>
-<h3 id="解决方法-命令前添加-winpty"><a href="#解决方法-命令前添加-winpty" class="headerlink" title="解决方法:命令前添加 winpty"></a>解决方法:命令前添加 winpty</h3><pre><code>$   winpty ping  192.168.1.1
-$   winpty ipconfig</code></pre>
-<h3 id="编辑文件，添加"><a href="#编辑文件，添加" class="headerlink" title="编辑文件，添加"></a>编辑文件，添加</h3><pre><code>$ vim ~/.bashrc
-
-# MINGW64(git_bash) 解决 ping 和 ipconfig 乱码
-alias ping=&#39;_win_ping() &#123; winpty ping $@ ; &#125;; _win_ping&#39;
-alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipconfig&#39;</code></pre>
-<h3 id="在-git-bash-里运行-java-命令，打印出的中文显示乱码"><a href="#在-git-bash-里运行-java-命令，打印出的中文显示乱码" class="headerlink" title="在 git bash 里运行 java 命令，打印出的中文显示乱码"></a>在 git bash 里运行 java 命令，打印出的中文显示乱码</h3><p>可以在java命令行之前添加 winpty</p>
-<pre><code>$   winpty java</code></pre>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h2 id="计算机科学速成课-fire-40集完结撒花-转"><a href="#计算机科学速成课-fire-40集完结撒花-转" class="headerlink" title="计算机科学速成课 :fire: 40集完结撒花(转)"></a>计算机科学速成课 :fire: 40集完结撒花(转)</h2><p><a target="_blank" rel="noopener" href="https://github.com/1c7/crash-course-computer-science-chinese">原文</a></p>
+<h3 id="精校版（推荐）："><a href="#精校版（推荐）：" class="headerlink" title="精校版（推荐）："></a>精校版（推荐）：</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21376839/">https://www.bilibili.com/video/av21376839/</a><br><img src="https://github.com/1c7/crash-course-computer-science-chinese/raw/master/image/cs40.jpg" alt="bilibili">    </p>
+<h3 id="1-感谢所有翻译人员！"><a href="#1-感谢所有翻译人员！" class="headerlink" title="1. 感谢所有翻译人员！"></a>1. 感谢所有翻译人员！</h3><ul>
+<li>不想膨胀的小R - <a target="_blank" rel="noopener" href="https://github.com/coolralf">Github</a>, <a target="_blank" rel="noopener" href="https://weibo.com/u/2207493917">微博</a>, <a target="_blank" rel="noopener" href="https://space.bilibili.com/5385034#!/video">B站</a></li>
+<li>糖醋陈皮 - <a target="_blank" rel="noopener" href="https://github.com/1c7">Github</a>, <a target="_blank" rel="noopener" href="https://weibo.com/2004104451">微博</a>, <a target="_blank" rel="noopener" href="http://1c7.me/">博客</a></li>
+<li>ZireHao - <a target="_blank" rel="noopener" href="http://space.bilibili.com/27167876/">B站</a>     </li>
+<li>gilot - <a target="_blank" rel="noopener" href="https://space.bilibili.com/43595622/">B站</a></li>
+<li>晴空</li>
+<li>Crazycat</li>
+<li>Cindy</li>
+<li>出门去</li>
+<li>TMC - RN</li>
+<li>LCAR979（推特 <code>_lincr_</code>）  </li>
+</ul>
+<h3 id="第一版："><a href="#第一版：" class="headerlink" title="第一版："></a>第一版：</h3><ul>
+<li>1 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av8861057/">早期的计算 - Early Computing</a></li>
+<li>2 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av9066628/">电子计算 - Electronic Computing</a></li>
+<li>3 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av11557339/">布尔逻辑与逻辑电路 - Boolean Logic &amp; Logic Gates</a></li>
+<li>4 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av11592079/">二进制 - Representing Numbers and Letters with Binary</a></li>
+<li>5 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av12742941/">算术逻辑单元 - How Computers Calculate - the ALU</a></li>
+<li>6 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av12881796/">寄存器 &amp; 内存 - Registers and RAM</a></li>
+<li>7 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av12881976/">中央处理器 - The Central Processing Unit(CPU)</a></li>
+<li>8 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av9875360/">指令和程序 - Instructions &amp; Programs</a></li>
+<li>9 -  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av11867964/">高级 CPU 设计 - Advanced CPU Designs</a></li>
+<li>10 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av13582556/">编程史话 - Early Programming</a></li>
+<li>11 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av14228148/">编程语言 - The First Programming Languages</a></li>
+<li>12 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av14885759/">编程原理：语句和函数 - Programming Basics: Statements &amp; Functions</a></li>
+<li>13 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av15987761/">算法初步 - Intro to Algorithms</a></li>
+<li>14 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av15987774/">数据结构 - Data Structures</a></li>
+<li>15 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av16090115/">阿兰·图灵 - Alan Turing</a></li>
+<li>16 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av16751202/">软件工程 - Software Engineering</a></li>
+<li>17 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17186768">集成电路、摩尔定律 - Integrated Circuits &amp; Moore’s Law</a></li>
+<li>18 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17192468">操作系统 - Operating Systems</a></li>
+<li>19 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17192483/">内存 &amp; 储存介质 - Memory &amp; Storage</a></li>
+<li>20 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17209268/">文件系统 - Files &amp; File Systems</a></li>
+<li>21 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17192511/">压缩 - Compression</a></li>
+<li>22 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17451718/">命令行界面 - Keyboards &amp; Command Line Interfaces</a></li>
+<li>23 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av17476087/">屏幕 &amp; 2D 图形显示 - Screens &amp; 2D Graphics</a></li>
+<li>24 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av15637307/">冷战和消费主义 - The Cold War and Consumerism</a></li>
+<li>25 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av18789303/">个人计算机革命 - The Personal Computer Revolution</a></li>
+<li>26 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av19035296/">图形用户界面 - Graphical User Interfaces</a></li>
+<li>27 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av19164942/">3D 图形 - 3D Graphics</a></li>
+<li>28 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av19209394/">计算机网络 - Computer Networks</a></li>
+<li>29 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20716104/">互联网 - The Internet</a></li>
+<li>30 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20767130/">万维网 - The World Wide Web</a></li>
+<li>31 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20785456/">网络安全 - Cybersecurity</a></li>
+<li>32 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20831479/">黑客与攻击 - Hackers &amp; Cyber Attacks</a></li>
+<li>33 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20882310/">加密 - Cryptography</a></li>
+<li>34 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20922906">机器学习与人工智能 - Machine Learning &amp; Artificial Intelligence</a></li>
+<li>35 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av20974735">计算机视觉 - Computer Vision</a></li>
+<li>36 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21004070">自然语言处理 - Natural Language Processing</a></li>
+<li>37 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21043523">机器人 - Robots</a></li>
+<li>38 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21066931">计算机中的心理学 - Psychology of Computing</a></li>
+<li>39 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21103744">教育型科技 - Educational Technology</a></li>
+<li>40 - <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21126704">(完结) 奇点，天网，计算机的未来 - The Singularity, Skynet, and the Future of Computing</a>      </li>
+</ul>
+<p>精校版质量更好，建议看精校版，之所以第一版目录不删：      </p>
+<ol>
+<li>方便快速扫视，看都聊什么话题     </li>
+<li>方便翻阅之前的版本（如果有需要）        </li>
+</ol>
+<p>备注：精校负责人是 @糖醋陈皮</p>
+<h3 id="2-翻译时间"><a href="#2-翻译时间" class="headerlink" title="2. 翻译时间"></a>2. 翻译时间</h3><p>英文版：<br>第 1 集发布： 2017年2月22号<br>第 40 集发布：2017年12月21号     </p>
+<p>中文版：<br>第 1 集发布：  2017年2月27号<br>全 40 集翻译完成：2018年3月24号<br>全 40 集精校完成：2018年5月1号  </p>
+<h3 id="2-原视频"><a href="#2-原视频" class="headerlink" title="2. 原视频"></a>2. 原视频</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLME-KWdxI8dcaHSzzRsNuOLXtM2Ep_C7a">Youtube - Crash Course Computer Science Playlist</a><br><img src="https://github.com/1c7/crash-course-computer-science-chinese/raw/master/image/english.png" alt="Crash Course CS screenshoht">       </p>
+<h1 id="Thank-you-Crash-Course-amp-Carrie-Anne"><a href="#Thank-you-Crash-Course-amp-Carrie-Anne" class="headerlink" title="Thank you Crash Course &amp; Carrie Anne!"></a>Thank you Crash Course &amp; Carrie Anne!</h1><ul>
+<li>Patron support Crash Course：<a target="_blank" rel="noopener" href="https://www.patreon.com/crashcourse">https://www.patreon.com/crashcourse</a>  <br/></li>
+<li>Crash Course website：<a target="_blank" rel="noopener" href="https://thecrashcourse.com/">https://thecrashcourse.com/</a></li>
+<li>Youtube Crash Course: <a target="_blank" rel="noopener" href="https://www.youtube.com/user/crashcourse">https://www.youtube.com/user/crashcourse</a></li>
+</ul>
+<h1 id="感谢速成课！感谢-Carrie-Anne！"><a href="#感谢速成课！感谢-Carrie-Anne！" class="headerlink" title="感谢速成课！感谢 Carrie Anne！"></a>感谢速成课！感谢 Carrie Anne！</h1><ul>
+<li>Patron 支持 Crash Course：<a target="_blank" rel="noopener" href="https://www.patreon.com/crashcourse">https://www.patreon.com/crashcourse</a>  <br/></li>
+<li>Crash Course 官方网站：<a target="_blank" rel="noopener" href="https://thecrashcourse.com/">https://thecrashcourse.com/</a></li>
+<li>Youtube Crash Course: <a target="_blank" rel="noopener" href="https://www.youtube.com/user/crashcourse">https://www.youtube.com/user/crashcourse</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/05/18/git_winpty/" data-id="ckh19psaz001ddnus0wks9hpf" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/05/21/crash_course_computer/" data-id="ckh19ps9a000rdnus0r3d0fy8" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/video/" rel="tag">video</a></li></ul>
 
     </footer>
   </div>
@@ -125,7 +190,7 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../51/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../50/">50</a><a class="page-number" href="../51/">51</a><span class="page-number current">52</span><a class="page-number" href="../53/">53</a><a class="page-number" href="../54/">54</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../53/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../51/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../50/">50</a><a class="page-number" href="../51/">51</a><span class="page-number current">52</span><a class="page-number" href="../53/">53</a><a class="page-number" href="../54/">54</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../53/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -171,6 +236,10 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
       <ul>
         
           <li>
+            <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -184,10 +253,6 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
         
           <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>

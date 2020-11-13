@@ -72,9 +72,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-acme_sh" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hello_docker" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/11/05/acme_sh/" class="article-date">
+    <a href="../../2018/11/05/hello_docker/" class="article-date">
   <time datetime="2018-11-05T05:00:00.000Z" itemprop="datePublished">2018-11-05</time>
 </a>
     
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/11/05/acme_sh/">acme协议从letsencrypt生成免费的证书</a>
+      <a class="article-title" href="../../2018/11/05/hello_docker/">Hello Docker 菜鸟笔记</a>
     </h1>
   
 
@@ -94,100 +94,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="简易使用脚本"><a href="#简易使用脚本" class="headerlink" title="简易使用脚本"></a>简易使用脚本</h3><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line"># https:<span class="comment">//github.com/Neilpang/acme.sh/wiki/说明</span></span><br><span class="line"></span><br><span class="line"># 设置域名</span><br><span class="line">DOMAIN=https:<span class="comment">//262235.xyz</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 安装ssl依赖 和 acme.sh工具</span><br><span class="line">apt-get install socat netcat -y</span><br><span class="line">curl  https:<span class="comment">//get.acme.sh | sh</span></span><br><span class="line"></span><br><span class="line"># 生成域名ssl证书</span><br><span class="line">~/.acme.sh/acme.sh  --issue -d $&#123;DOMAIN&#125;  --webroot  /var/www/  --standalone -k ec<span class="number">-256</span> --force</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">####  生成的证书存放地方</span><br><span class="line">#### /root/.acme.sh/sky.srgb.xyz_ecc/sky.srgb.xyz.cer</span><br><span class="line">#### /root/.acme.sh/sky.srgb.xyz_ecc/sky.srgb.xyz.key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>acme.sh</strong> 实现了 <code>acme</code> 协议, 可以从 letsencrypt 生成免费的证书.</p>
-<p>主要步骤:</p>
-<ol>
-<li>安装 <strong>acme.sh</strong></li>
-<li>生成证书</li>
-<li>copy 证书到 nginx/apache 或者其他服务</li>
-<li>更新证书</li>
-<li>更新 <strong>acme.sh</strong></li>
-<li>出错怎么办, 如何调试</li>
-</ol>
-<p>下面详细介绍.</p>
-<h1 id="1-安装-acme-sh"><a href="#1-安装-acme-sh" class="headerlink" title="1. 安装 acme.sh"></a>1. 安装 <strong>acme.sh</strong></h1><p>安装很简单, 一个命令:</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">curl  http<span class="variable">s:</span>//<span class="built_in">get</span>.acme.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
-
-<p>普通用户和 root 用户都可以安装使用.<br>安装过程进行了以下几步:</p>
-<ol>
-<li>把 acme.sh 安装到你的 <strong>home</strong> 目录下:</li>
-</ol>
-<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">~<span class="regexp">/.acme.sh/</span></span><br></pre></td></tr></table></figure>
-<p>并创建 一个 bash 的 alias, 方便你的使用:  <code>alias acme.sh=~/.acme.sh/acme.sh</code></p>
-<p>2). 自动为你创建 cronjob,  每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书.</p>
-<p>更高级的安装选项请参考: <a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh/wiki/How-to-install">https://github.com/Neilpang/acme.sh/wiki/How-to-install</a></p>
-<p><strong>安装过程不会污染已有的系统任何功能和文件</strong>, 所有的修改都限制在安装目录中: <code>~/.acme.sh/</code></p>
-<h1 id="2-生成证书"><a href="#2-生成证书" class="headerlink" title="2. 生成证书"></a>2. 生成证书</h1><p><strong>acme.sh</strong> 实现了 <strong>acme</strong> 协议支持的所有验证协议.<br>一般有两种方式验证: http 和 dns 验证.</p>
-<h3 id="1-http-方式需要在你的网站根目录下放置一个文件-来验证你的域名所有权-完成验证-然后就可以生成证书了"><a href="#1-http-方式需要在你的网站根目录下放置一个文件-来验证你的域名所有权-完成验证-然后就可以生成证书了" class="headerlink" title="1. http 方式需要在你的网站根目录下放置一个文件, 来验证你的域名所有权,完成验证. 然后就可以生成证书了."></a>1. http 方式需要在你的网站根目录下放置一个文件, 来验证你的域名所有权,完成验证. 然后就可以生成证书了.</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">acme.sh  --issue  -d mydomain.com -d www.mydomain.com  --webroot  <span class="regexp">/home/</span>wwwroot<span class="regexp">/mydomain.com/</span></span><br></pre></td></tr></table></figure>
-
-<p>只需要指定域名, 并指定域名所在的网站根目录. <strong>acme.sh</strong> 会全自动的生成验证文件, 并放到网站的根目录, 然后自动完成验证. 最后会聪明的删除验证文件. 整个过程没有任何副作用. </p>
-<p>如果你用的 <strong>apache</strong>服务器, <strong>acme.sh</strong> 还可以智能的从 <strong>apache</strong>的配置中自动完成验证, 你不需要指定网站根目录:</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span> --<span class="comment">issue</span>  <span class="literal">-</span><span class="comment">d</span> <span class="comment">mydomain</span><span class="string">.</span><span class="comment">com</span>   --<span class="comment">apache</span></span><br></pre></td></tr></table></figure>
-
-<p>如果你用的 <strong>nginx</strong>服务器, 或者反代, <strong>acme.sh</strong> 还可以智能的从 <strong>nginx</strong>的配置中自动完成验证, 你不需要指定网站根目录:</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span> --<span class="comment">issue</span>  <span class="literal">-</span><span class="comment">d</span> <span class="comment">mydomain</span><span class="string">.</span><span class="comment">com</span>   --<span class="comment">nginx</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意, 无论是 apache 还是 nginx 模式, acme.sh在完成验证之后, 会恢复到之前的状态, 都不会私自更改你本身的配置. 好处是你不用担心配置被搞坏, 也有一个缺点, 你需要自己配置 ssl 的配置, 否则只能成功生成证书, 你的网站还是无法访问https. 但是为了安全, 你还是自己手动改配置吧.</strong></p>
-<p>如果你还没有运行任何 web 服务, <strong>80</strong> 端口是空闲的, 那么 <strong>acme.sh</strong> 还能假装自己是一个webserver, 临时听在<strong>80</strong> 端口, 完成验证:</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span>  --<span class="comment">issue</span> <span class="literal">-</span><span class="comment">d</span> <span class="comment">mydomain</span><span class="string">.</span><span class="comment">com</span>   --<span class="comment">standalone</span></span><br></pre></td></tr></table></figure>
-
-<p>更高级的用法请参考: <a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh/wiki/How-to-issue-a-cert">https://github.com/Neilpang/acme.sh/wiki/How-to-issue-a-cert</a></p>
-<h3 id="2-dns-方式-在域名上添加一条-txt-解析记录-验证域名所有权"><a href="#2-dns-方式-在域名上添加一条-txt-解析记录-验证域名所有权" class="headerlink" title="2. dns 方式, 在域名上添加一条 txt 解析记录, 验证域名所有权."></a>2. dns 方式, 在域名上添加一条 txt 解析记录, 验证域名所有权.</h3><p>这种方式的好处是, 你不需要任何服务器, 不需要任何公网 ip, 只需要 dns 的解析记录即可完成验证.<br>坏处是，如果不同时配置 Automatic DNS API，使用这种方式 acme.sh 将无法自动更新证书，每次都需要手动再次重新解析验证域名所有权。</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span>  --<span class="comment">issue</span>  --<span class="comment">dns</span>   <span class="literal">-</span><span class="comment">d</span> <span class="comment">mydomain</span><span class="string">.</span><span class="comment">com</span></span><br></pre></td></tr></table></figure>
-
-<p>然后, <strong>acme.sh</strong> 会生成相应的解析记录显示出来, 你只需要在你的域名管理面板中添加这条 txt 记录即可.</p>
-<p>等待解析完成之后, 重新生成证书:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">acme</span><span class="selector-class">.sh</span>  <span class="selector-tag">--renew</span>   <span class="selector-tag">-d</span> <span class="selector-tag">mydomain</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure>
-<p>注意第二次这里用的是 <code>--renew</code></p>
-<p>dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.</p>
-<p><strong>acme.sh</strong> 目前支持 cloudflare, dnspod, cloudxns, godaddy 以及 ovh 等数十种解析商的自动集成. </p>
-<p>以 dnspod 为例, 你需要先登录到 dnspod 账号, 生成你的 api id 和 api key, 都是免费的.<br>然后:</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">DP_Id</span>=<span class="string">&quot;1234&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">DP_Key</span>=<span class="string">&quot;sADDsdasdgdsf&quot;</span></span><br><span class="line"></span><br><span class="line">acme.sh   --issue   --dns dns_dp   -d aa.com  -d www.aa.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>证书就会自动生成了. 这里给出的 api id 和 api key 会被自动记录下来, 将来你在使用 dnspod api 的时候, 就不需要再次指定了.<br>直接生成就好了:</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span>  --<span class="comment">issue</span>   <span class="literal">-</span><span class="comment">d</span>  <span class="comment">mydomain2</span><span class="string">.</span><span class="comment">com</span>   --<span class="comment">dns</span>  <span class="comment">dns_dp</span></span><br></pre></td></tr></table></figure>
-
-<p>更详细的 api 用法: <a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh/blob/master/dnsapi/README.md">https://github.com/Neilpang/acme.sh/blob/master/dnsapi/README.md</a></p>
-<h1 id="3-copy-安装-证书"><a href="#3-copy-安装-证书" class="headerlink" title="3. copy/安装 证书"></a>3. copy/安装 证书</h1><p>前面证书生成以后, 接下来需要把证书 copy 到真正需要用它的地方.</p>
-<p>注意, 默认生成的证书都放在安装目录下: <code>~/.acme.sh/</code>,  请不要直接使用此目录下的文件, 例如: 不要直接让 nginx/apache 的配置文件使用这下面的文件. 这里面的文件都是内部使用, 而且目录结构可能会变化.</p>
-<p>正确的使用方法是使用 <code>--installcert</code> 命令,并指定目标位置, 然后证书文件会被copy到相应的位置,<br>例如:</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">acme.sh  --installcert  -d  &lt;domain&gt;.com   \</span><br><span class="line">        --key-<span class="keyword">file</span>   <span class="regexp">/etc/</span>nginx<span class="regexp">/ssl/</span>&lt;domain&gt;.key \</span><br><span class="line">        --fullchain-<span class="keyword">file</span> <span class="regexp">/etc/</span>nginx<span class="regexp">/ssl/</span>fullchain.cer \</span><br><span class="line">        --reloadcmd  <span class="string">&quot;service nginx force-reload&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>(一个小提醒, 这里用的是 <code>service nginx force-reload</code>, 不是 <code>service nginx reload</code>, 据测试, <code>reload</code> 并不会重新加载证书, 所以用的 <code>force-reload</code>)</p>
-<p>Nginx 的配置 <code>ssl_certificate</code> 使用 <code>/etc/nginx/ssl/fullchain.cer</code> ，而非 <code>/etc/nginx/ssl/&lt;domain&gt;.cer</code> ，否则 <a target="_blank" rel="noopener" href="https://www.ssllabs.com/ssltest/">SSL Labs</a> 的测试会报 <code>Chain issues Incomplete</code> 错误。</p>
-<p><code>--installcert</code>命令可以携带很多参数, 来指定目标文件.  并且可以指定 reloadcmd, 当证书更新以后, reloadcmd会被自动调用,让服务器生效.</p>
-<p>详细参数请参考: <a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh#3-install-the-issued-cert-to-apachenginx-etc">https://github.com/Neilpang/acme.sh#3-install-the-issued-cert-to-apachenginx-etc</a></p>
-<p>值得注意的是, 这里指定的所有参数都会被自动记录下来, 并在将来证书自动更新以后, 被再次自动调用.</p>
-<h1 id="4-更新证书"><a href="#4-更新证书" class="headerlink" title="4. 更新证书"></a>4. 更新证书</h1><p>目前证书在 60 天以后会自动更新, 你无需任何操作. 今后有可能会缩短这个时间, 不过都是自动的, 你不用关心.</p>
-<h1 id="5-更新-acme-sh"><a href="#5-更新-acme-sh" class="headerlink" title="5. 更新 acme.sh"></a>5. 更新 acme.sh</h1><p>目前由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步. </p>
-<p>升级 acme.sh 到最新版 :</p>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">acme.sh <span class="comment">--upgrade</span></span><br></pre></td></tr></table></figure>
-
-<p>如果你不想手动升级, 可以开启自动升级:</p>
-<figure class="highlight brainfuck"><table><tr><td class="code"><pre><span class="line"><span class="comment">acme</span><span class="string">.</span><span class="comment">sh</span>  --<span class="comment">upgrade</span>  --<span class="comment">auto</span><span class="literal">-</span><span class="comment">upgrade</span></span><br></pre></td></tr></table></figure>
-<p>之后, acme.sh 就会自动保持更新了.</p>
-<p>你也可以随时关闭自动更新:</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">acme.sh --upgrade  --<span class="built_in">auto</span>-upgrade  <span class="number">0</span></span><br></pre></td></tr></table></figure>
+        <h3 id="可以直接运行官方的安装脚本一键安装"><a href="#可以直接运行官方的安装脚本一键安装" class="headerlink" title="可以直接运行官方的安装脚本一键安装"></a>可以直接运行官方的安装脚本一键安装</h3><ul>
+<li><p>执行脚本方法如下：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.docker.<span class="keyword">com</span>/ | <span class="keyword">sh</span></span><br><span class="line"># 或者</span><br><span class="line">wget -qO- <span class="built_in">get</span>.docker.<span class="keyword">com</span> | bash </span><br></pre></td></tr></table></figure></li>
+<li><p>安装完成后，运行下面的命令，验证是否安装成功。<br>  docker version </p>
+</li>
+<li><p>启动 Docker<br>  systemctl start docker </p>
+</li>
+<li><p>查看 Docker 启动状态<br>  systemctl status docker</p>
+</li>
+<li><p>允许 Docker 开机自启<br>  systemctl enable docker </p>
+</li>
+</ul>
+<h1 id="使用DOCKER安装PORTAINER"><a href="#使用DOCKER安装PORTAINER" class="headerlink" title="使用DOCKER安装PORTAINER"></a>使用DOCKER安装PORTAINER</h1><p><a target="_blank" rel="noopener" href="https://portainer.io/install.html">https://portainer.io/install.html</a><br>Portainer在Docker引擎或Swarm集群上作为轻量级Docker容器（Docker映像权重小于4MB）运行。因此，在使用Docker的任何计算机上运行容器都是一个命令。</p>
+<h3 id="部署PORTAINER"><a href="#部署PORTAINER" class="headerlink" title="部署PORTAINER"></a>部署PORTAINER</h3><p>使用以下Docker命令部署Portainer：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">$ docker volume create portainer_data</span><br><span class="line">$ docker run -d -p <span class="number">9000</span>:<span class="number">9000</span> -v <span class="regexp">/var/</span>run<span class="regexp">/docker.sock:/</span>var<span class="regexp">/run/</span>docker.sock -v portainer_data:<span class="regexp">/data portainer/</span>portainer</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="6-出错怎么办："><a href="#6-出错怎么办：" class="headerlink" title="6. 出错怎么办："></a>6. 出错怎么办：</h1><p>如果出错, 请添加 debug log：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">acme.sh  --issue  <span class="built_in">..</span><span class="built_in">..</span>.  --<span class="builtin-name">debug</span> </span><br></pre></td></tr></table></figure>
-<p>或者：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">acme.sh  --issue  <span class="built_in">..</span><span class="built_in">..</span>.  --<span class="builtin-name">debug</span>  2</span><br></pre></td></tr></table></figure>
+<h3 id="另一个别人-app-模版的PORTAINER-镜像使用"><a href="#另一个别人-app-模版的PORTAINER-镜像使用" class="headerlink" title="另一个别人 app 模版的PORTAINER 镜像使用"></a>另一个别人 app 模版的PORTAINER 镜像使用</h3><figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="regexp">/opt/</span>portainer<span class="regexp">/local-certs /</span>opt<span class="regexp">/portainer/</span>data</span><br><span class="line"></span><br><span class="line">cd <span class="regexp">/opt/</span>portainer/local-certs</span><br><span class="line">openssl genrsa -out portainer.key <span class="number">2048</span></span><br><span class="line">openssl ecparam -genkey -name secp384r1 -out portainer.key</span><br><span class="line">openssl req -<span class="keyword">new</span> -x509 -sha256 -key portainer.key -out portainer.crt -days <span class="number">3650</span></span><br><span class="line"></span><br><span class="line">docker run -d -p <span class="number">9000</span>:<span class="number">9000</span> -v <span class="regexp">/opt/</span>portainer<span class="regexp">/data:/</span>data -v <span class="regexp">/opt/</span>portainer<span class="regexp">/local-certs:/</span>certs -v <span class="regexp">/var/</span>run                                                                                      <span class="regexp">/docker.sock:/</span>var<span class="regexp">/run/</span>docker.sock --label owner=portainer --name ui --restart=always lihaixin<span class="regexp">/portainer -l owne                                                                                      r=portainer --ssl --sslcert /</span>certs<span class="regexp">/portainer.crt --sslkey /</span>certs/portainer.key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>请参考： <a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh/wiki/How-to-debug-acme.sh">https://github.com/Neilpang/acme.sh/wiki/How-to-debug-acme.sh</a></p>
-<p>最后, 本文并非完全的使用说明, 还有很多高级的功能, 更高级的用法请参看其他 wiki 页面.</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh/wiki">https://github.com/Neilpang/acme.sh/wiki</a></p>
+<h2 id="使用-Dockerfile-定制镜像-有空学习"><a href="#使用-Dockerfile-定制镜像-有空学习" class="headerlink" title="使用 Dockerfile 定制镜像  有空学习"></a>使用 Dockerfile 定制镜像  有空学习</h2><p><a target="_blank" rel="noopener" href="https://yeasy.gitbooks.io/docker_practice/image/build.html">https://yeasy.gitbooks.io/docker_practice/image/build.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/11/05/acme_sh/" data-id="ckh19ps8c000ddnus1yrkegp7" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/11/05/hello_docker/" data-id="ckh19psb6001idnus0z95grdx" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
 
     </footer>
   </div>
@@ -200,7 +134,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../22/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../21/">21</a><a class="page-number" href="../22/">22</a><span class="page-number current">23</span><a class="page-number" href="../24/">24</a><a class="page-number" href="../25/">25</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../24/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../22/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../21/">21</a><a class="page-number" href="../22/">22</a><span class="page-number current">23</span><a class="page-number" href="../24/">24</a><a class="page-number" href="../25/">25</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../24/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -246,6 +180,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -259,10 +197,6 @@
         
           <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>

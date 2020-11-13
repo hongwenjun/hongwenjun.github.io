@@ -72,9 +72,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-besttrace" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-lnmp_org" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/11/05/besttrace/" class="article-date">
+    <a href="../../2018/11/05/lnmp_org/" class="article-date">
   <time datetime="2018-11-05T05:00:00.000Z" itemprop="datePublished">2018-11-05</time>
 </a>
     
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/11/05/besttrace/">使用BestTrace查看VPS的去程和回程</a>
+      <a class="article-title" href="../../2018/11/05/lnmp_org/">虚拟主机 VPS 一键安装LNMP教程</a>
     </h1>
   
 
@@ -94,26 +94,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="vps上可以运行一键脚本，检测到国内各大节点的路由路线"><a href="#vps上可以运行一键脚本，检测到国内各大节点的路由路线" class="headerlink" title="vps上可以运行一键脚本，检测到国内各大节点的路由路线"></a>vps上可以运行一键脚本，检测到国内各大节点的路由路线</h3><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">wget -qO- git.io/besttrace <span class="string">| bash</span></span><br></pre></td></tr></table></figure>
-<h3 id="besttrace-sh-测试效果图"><a href="#besttrace-sh-测试效果图" class="headerlink" title="besttrace.sh 测试效果图"></a>besttrace.sh 测试效果图</h3><p><img src="/webp/besttrace.webp"></p>
-<p>脚本会下载 besttrace 程序到本地<br>接下来可以 使用命令检测vps到你你的本地ip的路线 -q 1 表示测试一次</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">./besttrace  <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span></span><br><span class="line">./besttrace  -q <span class="number">1</span>  <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span></span><br></pre></td></tr></table></figure>
-<h3 id="自己从ipip-net下载其他版本，好像缺少龙芯-mips64-芯片支持"><a href="#自己从ipip-net下载其他版本，好像缺少龙芯-mips64-芯片支持" class="headerlink" title="自己从ipip.net下载其他版本，好像缺少龙芯 mips64 芯片支持"></a>自己从ipip.net下载其他版本，好像缺少龙芯 mips64 芯片支持</h3><ul>
-<li> vim  mybesttrace.sh  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#  IPv4 免费地址库 &amp; 客户端工具</span></span><br><span class="line"><span class="comment">#  包括IPv4 免费数据库及相关、IP库解析代码第三方版、BestTrace 软件下载、浏览器扩展</span></span><br><span class="line"><span class="comment">#  https://www.ipip.net/download.html#ip_trace</span></span><br><span class="line"><span class="comment">#  https://cdn.ipip.net/17mon/besttrace4linux.zip</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载安装 besttrace</span></span><br><span class="line">mkdir -p besttrace  &amp;&amp; <span class="built_in">cd</span> besttrace  &amp;&amp; \</span><br><span class="line">wget https://cdn.ipip.net/17mon/besttrace4linux.zip &amp;&amp; \</span><br><span class="line">unzip besttrace4linux.zip &amp;&amp; chmod +x besttrace </span><br><span class="line"></span><br><span class="line"><span class="comment"># 金华电信</span></span><br><span class="line">./besttrace  -q  1 115.212.100.211</span><br></pre></td></tr></table></figure>
-
+        <h3 id="远程登陆主机，可以ssh-或者-putty-xshell等"><a href="#远程登陆主机，可以ssh-或者-putty-xshell等" class="headerlink" title="远程登陆主机，可以ssh 或者 putty  xshell等"></a>远程登陆主机，可以ssh 或者 putty  xshell等</h3><pre><code>ssh root@144.202.95.95
+按提示输入密码,控制台 可以shift + insert 粘贴</code></pre>
+<h3 id="先修改密码方便自己"><a href="#先修改密码方便自己" class="headerlink" title="先修改密码方便自己"></a>先修改密码方便自己</h3><pre><code>passwd</code></pre>
+<h3 id="安装-tmux-后台服务和多窗口工具"><a href="#安装-tmux-后台服务和多窗口工具" class="headerlink" title="安装 tmux 后台服务和多窗口工具"></a>安装 tmux 后台服务和多窗口工具</h3><pre><code>apt-get  update
+apt-get install tmux</code></pre>
+<h3 id="安装-LNMP-一键安装包，登陆-lnmp-org"><a href="#安装-LNMP-一键安装包，登陆-lnmp-org" class="headerlink" title="安装 LNMP 一键安装包，登陆 lnmp.org"></a>安装 LNMP 一键安装包，登陆 lnmp.org</h3><ul>
+<li><p>或者直接到这个URL，选择配置自动安装脚本</p>
+<p>  <a target="_blank" rel="noopener" href="https://lnmp.org/auto.html">https://lnmp.org/auto.html</a></p>
 </li>
 </ul>
-<h3 id="网上也有windows的版本"><a href="#网上也有windows的版本" class="headerlink" title="网上也有windows的版本"></a>网上也有windows的版本</h3><p><a target="_blank" rel="noopener" href="https://www.bandwagonhost.net/1186.html">https://www.bandwagonhost.net/1186.html</a></p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">wget</span> http://soft.vpser.net/lnmp/lnmp<span class="number">1</span>.<span class="number">5</span>.tar.gz -cO lnmp<span class="number">1</span>.<span class="number">5</span>.tar.gz &amp;&amp; \</span><br><span class="line"><span class="attribute">tar</span> zxf lnmp<span class="number">1</span>.<span class="number">5</span>.tar.gz &amp;&amp; cd lnmp<span class="number">1</span>.<span class="number">5</span> &amp;&amp; \</span><br><span class="line"><span class="attribute">LNMP_Auto</span>=<span class="string">&quot;y&quot;</span> DBSelect=<span class="string">&quot;2&quot;</span> DB_Root_Password=<span class="string">&quot;lnmp.org&quot;</span> \</span><br><span class="line"><span class="attribute">InstallInnodb</span>=<span class="string">&quot;y&quot;</span> PHPSelect=<span class="string">&quot;5&quot;</span> SelectMalloc=<span class="string">&quot;1&quot;</span> ./install.sh lnmp</span><br></pre></td></tr></table></figure>
+
+<h3 id="后台安装方法"><a href="#后台安装方法" class="headerlink" title="后台安装方法"></a>后台安装方法</h3><ol>
+<li>先输入命令 tmux ，开启后台服务管理进程</li>
+<li>shift + insert 粘贴 把lnmp安装脚本，然后就可以默认安装了</li>
+<li>可以直接关闭远程登陆软件，vps会自己安装了</li>
+<li>安装都是下载源码编译，要不少时间，可以 tmux a 接入上去查看</li>
+</ol>
+<h3 id="安装好-lnmp-后控制台输入-lnmp管理"><a href="#安装好-lnmp-后控制台输入-lnmp管理" class="headerlink" title="安装好 lnmp 后控制台输入 lnmp管理"></a>安装好 lnmp 后控制台输入 lnmp管理</h3><figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@568315379:~/lnmp1.5#</span> lnmp</span><br><span class="line">+-------------------------------------------+</span><br><span class="line">|<span class="string">    Manager for LNMP, Written by Licess    </span>|</span><br><span class="line">+-------------------------------------------+</span><br><span class="line">|<span class="string">              https://lnmp.org             </span>|</span><br><span class="line">+-------------------------------------------+</span><br><span class="line">Usage: lnmp &#123;start|<span class="string">stop</span>|<span class="string">reload</span>|<span class="string">restart</span>|<span class="string">kill</span>|<span class="string">status&#125;</span></span><br><span class="line"><span class="string">Usage: lnmp &#123;nginx</span>|<span class="string">mysql</span>|<span class="string">mariadb</span>|<span class="string">php-fpm</span>|<span class="string">pureftpd&#125; &#123;start</span>|<span class="string">stop</span>|<span class="string">reload</span>|<span class="string">restart</span>|<span class="string">kill</span>|<span class="string">status&#125;</span></span><br><span class="line"><span class="string">Usage: lnmp vhost &#123;add</span>|<span class="string">list</span>|<span class="string">del&#125;</span></span><br><span class="line"><span class="string">Usage: lnmp database &#123;add</span>|<span class="string">list</span>|<span class="string">edit</span>|<span class="string">del&#125;</span></span><br><span class="line"><span class="string">Usage: lnmp ftp &#123;add</span>|<span class="string">list</span>|<span class="string">edit</span>|<span class="string">del</span>|<span class="string">show&#125;</span></span><br><span class="line"><span class="string">Usage: lnmp ssl add</span></span><br><span class="line"><span class="string">Usage: lnmp &#123;dnsssl</span>|<span class="string">dns&#125; &#123;cx</span>|<span class="string">ali</span>|<span class="string">cf</span>|<span class="string">dp</span>|<span class="string">he</span>|<span class="string">gd</span>|<span class="string">aws&#125;</span></span><br><span class="line"><span class="string">root@568315379:~/lnmp1.5#</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>或者网页版<br><a target="_blank" rel="noopener" href="https://www.ipip.net/">https://www.ipip.net/</a></li>
+<li><p>lnmp 安装好后，最好安装下 pureftpd 服务，lnmp 可以管理ftp帐号</p>
+<pre><code>  ./pureftpd.sh</code></pre>
+</li>
+<li><p>lnmp 可以  Usage: lnmp ftp {add|list|edit|del|show} 管理ftp帐号</p>
+</li>
 </ul>
-<h3 id="git-io-besttrace-是个短网址"><a href="#git-io-besttrace-是个短网址" class="headerlink" title="git.io/besttrace 是个短网址"></a>git.io/besttrace 是个短网址</h3><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/zq/shell/master/autoBestTrace.sh">https://raw.githubusercontent.com/zq/shell/master/autoBestTrace.sh</a></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt -y install unzip</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># install besttrace</span></span><br><span class="line"><span class="string">if</span> [ <span class="string">!</span> <span class="string">-f</span> <span class="string">&quot;besttrace&quot;</span> ]<span class="string">;</span> <span class="string">then</span></span><br><span class="line">    <span class="string">wget</span> <span class="string">https://github.com/zq/shell/raw/master/besttrace</span></span><br><span class="line">    <span class="comment"># unzip besttrace4linux.zip</span></span><br><span class="line">    <span class="string">chmod</span> <span class="string">+x</span> <span class="string">besttrace</span></span><br><span class="line"><span class="string">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## start to use besttrace</span></span><br><span class="line"></span><br><span class="line"><span class="string">next()</span> &#123;</span><br><span class="line">    <span class="string">printf</span> <span class="string">&quot;%-70s\n&quot;</span> <span class="string">&quot;-&quot;</span> <span class="string">|</span> <span class="string">sed</span> <span class="string">&#x27;s/\s/-/g&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">clear</span></span><br><span class="line"><span class="string">next</span></span><br><span class="line"></span><br><span class="line"><span class="string">ip_list=(14.215.116.1</span> <span class="number">101.95</span><span class="number">.120</span><span class="number">.109</span> <span class="number">117.28</span><span class="number">.254</span><span class="number">.129</span> <span class="number">113.207</span><span class="number">.32</span><span class="number">.65</span> <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span> <span class="number">183.192</span><span class="number">.160</span><span class="number">.3</span> <span class="number">183.221</span><span class="number">.253</span><span class="number">.100</span> <span class="number">202.112</span><span class="number">.14</span><span class="number">.151</span><span class="string">)</span></span><br><span class="line"><span class="string">ip_addr=(广州电信</span> <span class="string">上海电信</span> <span class="string">厦门电信</span> <span class="string">重庆联通</span> <span class="string">四川联通</span> <span class="string">上海移动</span> <span class="string">成都移动</span> <span class="string">成都教育网)</span></span><br><span class="line"><span class="comment"># ip_len=$&#123;#ip_list[@]&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">i</span> <span class="string">in</span> &#123;<span class="number">0</span><span class="string">..7</span>&#125;</span><br><span class="line"><span class="string">do</span></span><br><span class="line">	<span class="string">echo</span> <span class="string">$&#123;ip_addr[$i]&#125;</span></span><br><span class="line">	<span class="string">./besttrace</span> <span class="string">-q</span> <span class="number">1</span> <span class="string">$&#123;ip_list[$i]&#125;</span></span><br><span class="line">	<span class="string">next</span></span><br><span class="line"><span class="string">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="LNMP-建立虚拟主机-，管理-www-xxx-net-主页"><a href="#LNMP-建立虚拟主机-，管理-www-xxx-net-主页" class="headerlink" title="LNMP 建立虚拟主机 ，管理 www.xxx.net 主页"></a>LNMP 建立虚拟主机 ，管理 <a target="_blank" rel="noopener" href="http://www.xxx.net/">www.xxx.net</a> 主页</h3><pre><code>lnmp vhost add </code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/11/05/besttrace/" data-id="ckh19ps8w000ldnus1jni23yc" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/11/05/lnmp_org/" data-id="ckh19psbl001xdnus2lyn3kzl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
@@ -129,7 +142,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../24/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../23/">23</a><a class="page-number" href="../24/">24</a><span class="page-number current">25</span><a class="page-number" href="../26/">26</a><a class="page-number" href="../27/">27</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../26/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../24/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../23/">23</a><a class="page-number" href="../24/">24</a><span class="page-number current">25</span><a class="page-number" href="../26/">26</a><a class="page-number" href="../27/">27</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../26/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -175,6 +188,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -188,10 +205,6 @@
         
           <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>

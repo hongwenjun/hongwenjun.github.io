@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-codeblocks/cbstudy" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-codeblocks/CodeBlocks_Debian" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="2020/11/08/codeblocks/cbstudy/" class="article-date">
-  <time datetime="2020-11-09T01:55:00.000Z" itemprop="datePublished">2020-11-08</time>
+    <a href="2020/11/13/codeblocks/CodeBlocks_Debian/" class="article-date">
+  <time datetime="2020-11-13T05:00:00.000Z" itemprop="datePublished">2020-11-13</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+      <a class="article-title" href="2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
     </h1>
   
 
@@ -94,23 +94,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CodeBlocks视频教程学习代码示例"><a href="#CodeBlocks视频教程学习代码示例" class="headerlink" title="CodeBlocks视频教程学习代码示例"></a>CodeBlocks视频教程学习代码示例</h1><p>蘭雅sRGB 龙芯2F服务器和博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h2 id="Codeblocks-编程学习视频教程"><a href="#Codeblocks-编程学习视频教程" class="headerlink" title="Codeblocks 编程学习视频教程"></a>Codeblocks 编程学习视频教程</h2><ul>
-<li><p>B站频道: <a target="_blank" rel="noopener" href="https://space.bilibili.com/320303690/channel/detail?cid=156416">https://space.bilibili.com/320303690/</a></p>
-</li>
-<li><p>YouTube频道: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2FETiwhLEBQ&list=PLPidIcmhqWuTMftNgToJxQ5ssT4Ed3LgS">https://www.youtube.com/sRGB18</a></p>
-</li>
-</ul>
-<h3 id="源码和程序图片"><a href="#源码和程序图片" class="headerlink" title="源码和程序图片"></a>源码和程序图片</h3><ul>
-<li>001_ResEdit_Test<br><img src="/img/cbstudy/001_ResEdit_Test.png"></li>
-</ul>
-<hr>
-<p><strong>github项目</strong>   <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/cbstudy">https://github.com/hongwenjun/cbstudy</a></p>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h2 id="Xrdp-通过Windows-mstsc-的RDP连接Linux远程桌面"><a href="#Xrdp-通过Windows-mstsc-的RDP连接Linux远程桌面" class="headerlink" title="Xrdp - 通过Windows mstsc 的RDP连接Linux远程桌面"></a>Xrdp - 通过Windows mstsc 的RDP连接Linux远程桌面</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 Xrdp</span></span><br><span class="line"><span class="attr">apt</span> <span class="string">install xrdp</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">enable xrdp</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart xrdp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 xfce4 图形桌面，配置xrdp</span></span><br><span class="line"><span class="attr">sudo</span> <span class="string">apt-get install xfce4</span></span><br><span class="line"><span class="attr">echo</span> <span class="string">xfce4-session &gt; ~/.xsession</span></span><br><span class="line"><span class="attr">touch</span> <span class="string">.session</span></span><br><span class="line"><span class="attr">vim</span> <span class="string">/etc/xrdp/startwm.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在文件startwm.sh最前面添加</span></span><br><span class="line"><span class="attr">xfce4-session</span></span><br><span class="line"><span class="comment"># 然后重启 xrdp 服务</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart xrdp</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="debian安装最新版Code-Blocks-20-03"><a href="#debian安装最新版Code-Blocks-20-03" class="headerlink" title="debian安装最新版Code::Blocks 20.03"></a>debian安装最新版Code::Blocks 20.03</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载解压安装包</span></span><br><span class="line">wget http:<span class="regexp">//</span>sourceforge.net<span class="regexp">/projects/</span>codeblocks<span class="regexp">/files/</span>Binaries<span class="regexp">/20.03/</span>Linux<span class="regexp">/Debian%2010/</span>codeblocks_20.<span class="number">03</span>_amd64_stable.tar.xz</span><br><span class="line"></span><br><span class="line">tar xfv codeblocks_20.<span class="number">03</span>_amd64_stable.tar.xz</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装库</span></span><br><span class="line">apt install libwxgtk3.<span class="number">0</span>-dev -y</span><br><span class="line">dpkg -i *.deb</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装过程中如果 ldconfig 错误</span></span><br><span class="line">export PATH=<span class="regexp">/usr/</span>loca<span class="regexp">/sbin:/u</span>sr<span class="regexp">/sbin:/</span>sbin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#再次完成codeblocks安装</span></span><br><span class="line">dpkg -i  *.deb</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装编译器等</span></span><br><span class="line">apt install -y git gettext build-essential autoconf libtool automake</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2020/11/08/codeblocks/cbstudy/" data-id="ckh94kxw20000rrusgqtx1cmx" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/11/13/codeblocks/CodeBlocks_Debian/" data-id="ckhgcxf0200003ausexze85qh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
@@ -126,7 +118,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/79/">79</a><a class="extend next" rel="next" href="page/2/">下一页 &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/80/">80</a><a class="extend next" rel="next" href="page/2/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -172,6 +164,10 @@
       <ul>
         
           <li>
+            <a href="2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -185,10 +181,6 @@
         
           <li>
             <a href="2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>

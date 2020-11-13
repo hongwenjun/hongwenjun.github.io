@@ -72,10 +72,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-code/gui_psdda" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-nginx_https" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/08/03/code/gui_psdda/" class="article-date">
-  <time datetime="2018-08-03T04:00:00.000Z" itemprop="datePublished">2018-08-03</time>
+    <a href="../../2018/09/01/nginx_https/" class="article-date">
+  <time datetime="2018-09-01T04:00:00.000Z" itemprop="datePublished">2018-09-01</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/08/03/code/gui_psdda/">图形界面_PSD大文件垃圾数据清理工具</a>
+      <a class="article-title" href="../../2018/09/01/nginx_https/">Nginx网页服务器 https证书部署</a>
     </h1>
   
 
@@ -94,21 +94,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/hongwenjun/cmd_gui">https://github.com/hongwenjun/cmd_gui</a></p>
-<h3 id="图形界面-PSD大文件垃圾数据清理工具"><a href="#图形界面-PSD大文件垃圾数据清理工具" class="headerlink" title="图形界面_PSD大文件垃圾数据清理工具"></a>图形界面_PSD大文件垃圾数据清理工具</h3><p>使用方法见图</p>
-<p><img src="/webp/guida.webp"></p>
-<h3 id="源代码片段"><a href="#源代码片段" class="headerlink" title="源代码片段"></a>源代码片段</h3><p>窗口程序就是接收程序名和参数，组合成一行命令行<br>然后去隐藏调用</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> CALLBACK <span class="title">runBtnClick</span><span class="params">(HELE hEle, HELE hEventEle)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 文本框回写配置</span></span><br><span class="line">    edit_text();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 格式化命令行</span></span><br><span class="line">    <span class="keyword">wchar_t</span> wbuf [<span class="number">2</span> * MAX_PATH] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> cmdline[<span class="number">2</span> * MAX_PATH] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    swprintf(wbuf, <span class="string">L&quot;\&quot;%s\&quot; \&quot;%s\&quot;  %s\\&quot;</span> , appFile, docFile, fontPath);</span><br><span class="line">    WCHARTochar(cmdline, wbuf);</span><br><span class="line"></span><br><span class="line">    MessageBoxA(<span class="literal">NULL</span>, cmdline, <span class="string">&quot;注意: 确认目录存在,不能有空格&quot;</span>, MB_OKCANCEL);</span><br><span class="line">    execute_command(cmdline);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行命令行</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">execute_command</span><span class="params">(<span class="keyword">char</span>* cmdline)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    SetConsoleTitle(cmdline);</span><br><span class="line">    STARTUPINFO si;</span><br><span class="line">    PROCESS_INFORMATION pi;</span><br><span class="line">    ZeroMemory(&amp;si, <span class="keyword">sizeof</span>(si));</span><br><span class="line">    si.cb = <span class="keyword">sizeof</span>(si);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 后台隐藏</span></span><br><span class="line">    si.dwFlags   =   STARTF_USESHOWWINDOW;</span><br><span class="line">    si.wShowWindow   =   SW_HIDE;</span><br><span class="line"></span><br><span class="line">    ZeroMemory(&amp;pi, <span class="keyword">sizeof</span>(pi));</span><br><span class="line">    <span class="comment">// Start the child process.</span></span><br><span class="line">    CreateProcess(<span class="literal">NULL</span>, TEXT(cmdline), <span class="literal">NULL</span>, <span class="literal">NULL</span>, FALSE, <span class="number">0</span>,</span><br><span class="line">                  <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;si, &amp;pi);</span><br><span class="line">    <span class="comment">// Wait until child process exits.</span></span><br><span class="line">    WaitForSingleObject(pi.hProcess, INFINITE);</span><br><span class="line">    <span class="comment">// Get the return value of the child process</span></span><br><span class="line">    DWORD ret;</span><br><span class="line">    GetExitCodeProcess(pi.hProcess, &amp;ret);</span><br><span class="line">    <span class="keyword">if</span> (!ret) &#123;</span><br><span class="line">        MessageBoxA(<span class="literal">NULL</span>, <span class="string">&quot;PSD大文件垃圾清理工具执行完成!&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;(C) 版权所有 2018.08 Hongwenjun (蘭公子)&quot;</span>, MB_OKCANCEL);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Close process and thread handles.</span></span><br><span class="line">    CloseHandle(pi.hProcess);</span><br><span class="line">    CloseHandle(pi.hThread);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="腾讯云https证书申请和部署"><a href="#腾讯云https证书申请和部署" class="headerlink" title="腾讯云https证书申请和部署"></a>腾讯云https证书申请和部署</h3><p>域名型证书申请流程<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/6814">https://cloud.tencent.com/document/product/400/6814</a></p>
+<p>证书安装部署指引<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/400/4143">https://cloud.tencent.com/document/product/400/4143</a></p>
+<h3 id="实例本站证书部署"><a href="#实例本站证书部署" class="headerlink" title="实例本站证书部署"></a>实例本站证书部署</h3><ul>
+<li>本站Nginx网页服务器使用 apt-get install nginx 进行安装</li>
+<li>nginx.conf 配置文件存放目录是 /etc/nginx/</li>
+<li>使用 <strong>nginx -t</strong> 命令会很方便找到 nginx.conf 目录</li>
+<li>站点配置 存放 /etc/nginx/sites-enabled</li>
+</ul>
+<hr>
+<ul>
+<li>实例 把证书文件1 和 私钥文件2 同nginx.conf放一起，本例放 /etc/nginx/</li>
+<li>cd /etc/nginx/sites-enabled  建立 https 配置文件，粘贴以下代码内容</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># https 配置文件，存放 /etc/nginx/sites-enabled</span></span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen <span class="number">443</span>;</span><br><span class="line">        server_name www.srgb.xyz; #填写绑定证书的域名</span><br><span class="line">        ssl on;</span><br><span class="line">        </span><br><span class="line">        # 找到存放nginx.conf文件目录  把证书文件<span class="number">1</span> 和 私钥文件<span class="number">2</span> 同nginx.conf放一起，本例放 /etc/nginx</span><br><span class="line">        ssl_certificate <span class="number">1</span>_www.srgb.xyz_bundle.crt;    </span><br><span class="line">        ssl_certificate_key <span class="number">2</span>_www.srgb.xyz.key;</span><br><span class="line">        </span><br><span class="line">        ssl_session_timeout <span class="number">5</span>m;</span><br><span class="line">        ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>; #按照这个协议配置</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;#按照这个套件配置</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /var/www;    #站点目录</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="调试测试配置文件"><a href="#调试测试配置文件" class="headerlink" title="调试测试配置文件"></a>调试测试配置文件</h3><ul>
+<li><p>配置完成后，先用 <strong>nginx –t</strong> 来测试下配置是否有误，正确无误的话，<strong>service nginx restart</strong> 重启nginx</p>
+<p>  nginx: the configuration file /etc/nginx/nginx.conf syntax is ok<br>  nginx: configuration file /etc/nginx/nginx.conf test is successful</p>
+</li>
+<li><p>使用命令 <strong>systemctl status nginx.service</strong> 查看nginx日志信息，看看443端口是否占用</p>
+<p>  Sep 01 12:59:40 vultr.guest nginx[10753]: nginx: [emerg] bind() to 0.0.0.0:443 failed (98: Address already in use)</p>
+</li>
+<li><p>本站由于 frps 配置使用了443端口，到时启动失败，把frps.ini里443端口改成4443才正确配置好</p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/08/03/code/gui_psdda/" data-id="ckh19psej003bdnus2ipm91wt" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/09/01/nginx_https/" data-id="ckh19psd6002adnusaghr16kr" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li></ul>
 
     </footer>
   </div>
@@ -121,7 +141,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../37/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../36/">36</a><a class="page-number" href="../37/">37</a><span class="page-number current">38</span><a class="page-number" href="../39/">39</a><a class="page-number" href="../40/">40</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../39/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../37/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../36/">36</a><a class="page-number" href="../37/">37</a><span class="page-number current">38</span><a class="page-number" href="../39/">39</a><a class="page-number" href="../40/">40</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../39/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -167,6 +187,10 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -180,10 +204,6 @@
         
           <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>

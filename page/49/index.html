@@ -72,9 +72,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vps_onekey" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-frp2link" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/06/04/vps_onekey/" class="article-date">
+    <a href="../../2018/06/04/frp2link/" class="article-date">
   <time datetime="2018-06-04T04:00:00.000Z" itemprop="datePublished">2018-06-04</time>
 </a>
     
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/06/04/vps_onekey/">VPS 一键脚本 全家桶</a>
+      <a class="article-title" href="../../2018/06/04/frp2link/">frp连接2个服务器</a>
     </h1>
   
 
@@ -94,35 +94,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本"><a href="#一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本" class="headerlink" title="一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本"></a>一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
-<p>如果上面这个脚本无法下载，尝试使用备用下载：</p>
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  Brook 一键管理脚本 [v1<span class="number">.1</span><span class="number">.10</span>]</span><br><span class="line">  ---- Toyo | doub.io/brook-jc3 ----</span><br><span class="line"></span><br><span class="line">  <span class="number">0.</span> 升级脚本</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">1.</span> 安装 Brook</span><br><span class="line">  <span class="number">2.</span> 升级 Brook</span><br><span class="line">  <span class="number">3.</span> 卸载 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">4.</span> 启动 Brook</span><br><span class="line">  <span class="number">5.</span> 停止 Brook</span><br><span class="line">  <span class="number">6.</span> 重启 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">7.</span> 设置 账号配置</span><br><span class="line">  <span class="number">8.</span> 查看 账号信息</span><br><span class="line">  <span class="number">9.</span> 查看 日志信息</span><br><span class="line"> <span class="number">10.</span> 查看 链接信息</span><br><span class="line">————————————</span><br><span class="line"></span><br><span class="line"> 当前状态: 未安装</span><br><span class="line"></span><br><span class="line"> 请输入数字 [<span class="number">0</span><span class="number">-10</span>]:</span><br></pre></td></tr></table></figure>
+        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h1 id="修改开机脚本"><a href="#修改开机脚本" class="headerlink" title="修改开机脚本"></a>修改开机脚本</h1><pre><code># 龙芯8089D debian版的开机脚本
+vim /etc/init.d/rc.local</code></pre>
+<p>启动2个配置脚本，连2个服务器<br>写到开机脚本里</p>
+<pre><code>sleep 3
+cd /root/frp  &amp;&amp; ./frpc -c frpc.ini &gt; /dev/null 2&gt;&amp;1 &amp;
 
-<h3 id="ShadowsocksR-单-多端口-一键管理脚本"><a href="#ShadowsocksR-单-多端口-一键管理脚本" class="headerlink" title="ShadowsocksR 单/多端口 一键管理脚本"></a>ShadowsocksR 单/多端口 一键管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
-<p>备用下载地址（上面的链接无法下载，就用这个）：</p>
-<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  请输入一个数字来选择菜单选项</span><br><span class="line"> </span><br><span class="line"> <span class="number">1.</span> 安装 ShadowsocksR</span><br><span class="line"> <span class="number">2.</span> 更新 ShadowsocksR</span><br><span class="line"> <span class="number">3.</span> 卸载 ShadowsocksR</span><br><span class="line"> <span class="number">4.</span> 安装 libsodium(chacha20)</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">5.</span> 查看 账号信息</span><br><span class="line"> <span class="number">6.</span> 显示 连接信息</span><br><span class="line"> <span class="number">7.</span> 设置 用户配置</span><br><span class="line"> <span class="number">8.</span> 手动 修改配置</span><br><span class="line"> <span class="number">9.</span> 切换 端口模式</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">10.</span> 启动 ShadowsocksR</span><br><span class="line"> <span class="number">11.</span> 停止 ShadowsocksR</span><br><span class="line"> <span class="number">12.</span> 重启 ShadowsocksR</span><br><span class="line"> <span class="number">13.</span> 查看 ShadowsocksR 日志</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">14.</span> 其他功能</span><br><span class="line"> <span class="number">15.</span> 升级脚本</span><br><span class="line"> </span><br><span class="line"> 当前状态: 已安装 并 已启动</span><br><span class="line"> 当前模式: 单端口</span><br><span class="line"> </span><br><span class="line">请输入数字(<span class="number">1</span><span class="number">-15</span>)：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+sleep 3
+cd /root/frp  &amp;&amp; ./frpc -c frpc.ini.hk &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
+<hr>
+<p>再分别 frpc.ini 和 frpc.ini.hk 两个客户端配置文件</p>
+<h3 id="这个配置用来连接到自己架设的frps服务器"><a href="#这个配置用来连接到自己架设的frps服务器" class="headerlink" title="这个配置用来连接到自己架设的frps服务器"></a>这个配置用来连接到自己架设的frps服务器</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">frpc.ini</span><br><span class="line"></span><br><span class="line"># 主配置</span><br><span class="line">[common]</span><br><span class="line">server_addr = srgb.xyz</span><br><span class="line">server_port = <span class="number">7000</span></span><br><span class="line">token = www.nat.ee</span><br><span class="line">user = srgb</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">log_file = ./frpc.<span class="built_in">log</span></span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port = <span class="number">80</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.xyz , s.srgb.xyz</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_port = <span class="number">22</span></span><br><span class="line">remote_port = <span class="number">11122</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = s.srgb.xyz</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="一键安装ss"><a href="#一键安装ss" class="headerlink" title="一键安装ss"></a>一键安装ss</h3><pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></pre>
-<h3 id="一键安装最新内核并开启-BBR-脚本"><a href="#一键安装最新内核并开启-BBR-脚本" class="headerlink" title="一键安装最新内核并开启 BBR 脚本"></a>一键安装最新内核并开启 BBR 脚本</h3><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
-<h2 id="LNMP一键安装包-V1-5"><a href="#LNMP一键安装包-V1-5" class="headerlink" title="LNMP一键安装包 V1.5"></a>LNMP一键安装包 V1.5</h2><p>详细请访问 <a target="_blank" rel="noopener" href="https://lnmp.org/install.html">https://lnmp.org/install.html</a></p>
-<h3 id="登陆后运行："><a href="#登陆后运行：" class="headerlink" title="登陆后运行："></a>登陆后运行：</h3><pre><code>screen -S lnmp</code></pre>
-<h2 id="安装LNMP稳定版"><a href="#安装LNMP稳定版" class="headerlink" title="安装LNMP稳定版"></a>安装LNMP稳定版</h2><pre><code>wget -c http://soft.vpser.net/lnmp/lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; ./install.sh lnmp</code></pre>
-<h2 id="如需要无人值守安装"><a href="#如需要无人值守安装" class="headerlink" title="如需要无人值守安装"></a>如需要无人值守安装</h2><p><a target="_blank" rel="noopener" href="https://lnmp.org/auto.html">https://lnmp.org/auto.html</a></p>
-<p>点击 生成 按钮会生成对应命令，示例如下</p>
-<pre><code>wget http://soft.vpser.net/lnmp/lnmp1.5.tar.gz -cO lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;2&quot; DB_Root_Password=&quot;lnmp.org&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;5&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></pre>
+<h3 id="连接-免费frp香港公共服务"><a href="#连接-免费frp香港公共服务" class="headerlink" title="连接 免费frp香港公共服务"></a>连接 免费frp香港公共服务</h3><p>注意客户端版本和服务器不要相差太多</p>
+<p><a target="_blank" rel="noopener" href="https://www.nat.ee/frp/hkfrp">https://www.nat.ee/frp/hkfrp</a><br>访问服务器公告，或者配置更新</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">frpc.ini.hk</span><br><span class="line"> </span><br><span class="line"><span class="meta">#  https:<span class="comment">//www.nat.ee/frp/hkfrp</span></span></span><br><span class="line">#  免费frp香港公共服务</span><br><span class="line"></span><br><span class="line"># 主配置</span><br><span class="line">[common]</span><br><span class="line">server_addr = hk.nat.ee</span><br><span class="line">server_port = <span class="number">7000</span></span><br><span class="line">token = www.nat.ee</span><br><span class="line">user = hk</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">#log_file = ./frpc2.<span class="built_in">log</span></span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">type = http</span><br><span class="line">local_port = <span class="number">80</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.nwct.bid , hk.srgb.xyz , frp.srgb.xyz</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_port = <span class="number">22</span></span><br><span class="line">remote_port = <span class="number">11122</span></span><br><span class="line">local_ip = <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">custom_domains = srgb.nwct.bid</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>调试配置文件的时候，可以先把log_file 注释掉。</p>
+<p>使用screen 命令，让frpc程序运行在后台</p>
+<pre><code>screen ./frpc -c frpc.ini</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/06/04/vps_onekey/" data-id="ckh19pse80031dnus83puhra0" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/06/04/frp2link/" data-id="ckh19psa30010dnus5uweenms" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li></ul>
 
     </footer>
   </div>
@@ -135,7 +135,7 @@ chmod +x shadowsocks-all.sh
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../48/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../47/">47</a><a class="page-number" href="../48/">48</a><span class="page-number current">49</span><a class="page-number" href="../50/">50</a><a class="page-number" href="../51/">51</a><span class="space">&hellip;</span><a class="page-number" href="../79/">79</a><a class="extend next" rel="next" href="../50/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../48/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../47/">47</a><a class="page-number" href="../48/">48</a><span class="page-number current">49</span><a class="page-number" href="../50/">50</a><a class="page-number" href="../51/">51</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../50/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -181,6 +181,10 @@ chmod +x shadowsocks-all.sh
       <ul>
         
           <li>
+            <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
           </li>
         
@@ -194,10 +198,6 @@ chmod +x shadowsocks-all.sh
         
           <li>
             <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/02/new_journey/">2020年双11 买了10年xyz域名，还买个麦克风，想找一条赚钱的路子</a>
           </li>
         
       </ul>
