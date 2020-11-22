@@ -74,9 +74,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-besttrace" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hello_docker" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/11/05/besttrace/" class="article-date">
+    <a href="../../2018/11/05/hello_docker/" class="article-date">
   <time datetime="2018-11-05T05:00:00.000Z" itemprop="datePublished">2018-11-05</time>
 </a>
     
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/11/05/besttrace/">使用BestTrace查看VPS的去程和回程</a>
+      <a class="article-title" href="../../2018/11/05/hello_docker/">Hello Docker 菜鸟笔记</a>
     </h1>
   
 
@@ -96,29 +96,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="vps上可以运行一键脚本，检测到国内各大节点的路由路线"><a href="#vps上可以运行一键脚本，检测到国内各大节点的路由路线" class="headerlink" title="vps上可以运行一键脚本，检测到国内各大节点的路由路线"></a>vps上可以运行一键脚本，检测到国内各大节点的路由路线</h3><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">wget -qO- git.io/besttrace <span class="string">| bash</span></span><br></pre></td></tr></table></figure>
-<h3 id="besttrace-sh-测试效果图"><a href="#besttrace-sh-测试效果图" class="headerlink" title="besttrace.sh 测试效果图"></a>besttrace.sh 测试效果图</h3><p><img src="/webp/besttrace.webp"></p>
-<p>脚本会下载 besttrace 程序到本地<br>接下来可以 使用命令检测vps到你你的本地ip的路线 -q 1 表示测试一次</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">./besttrace  <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span></span><br><span class="line">./besttrace  -q <span class="number">1</span>  <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span></span><br></pre></td></tr></table></figure>
-<h3 id="自己从ipip-net下载其他版本，好像缺少龙芯-mips64-芯片支持"><a href="#自己从ipip-net下载其他版本，好像缺少龙芯-mips64-芯片支持" class="headerlink" title="自己从ipip.net下载其他版本，好像缺少龙芯 mips64 芯片支持"></a>自己从ipip.net下载其他版本，好像缺少龙芯 mips64 芯片支持</h3><ul>
-<li> vim  mybesttrace.sh  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#  IPv4 免费地址库 &amp; 客户端工具</span></span><br><span class="line"><span class="comment">#  包括IPv4 免费数据库及相关、IP库解析代码第三方版、BestTrace 软件下载、浏览器扩展</span></span><br><span class="line"><span class="comment">#  https://www.ipip.net/download.html#ip_trace</span></span><br><span class="line"><span class="comment">#  https://cdn.ipip.net/17mon/besttrace4linux.zip</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载安装 besttrace</span></span><br><span class="line">mkdir -p besttrace  &amp;&amp; <span class="built_in">cd</span> besttrace  &amp;&amp; \</span><br><span class="line">wget https://cdn.ipip.net/17mon/besttrace4linux.zip &amp;&amp; \</span><br><span class="line">unzip besttrace4linux.zip &amp;&amp; chmod +x besttrace </span><br><span class="line"></span><br><span class="line"><span class="comment"># 金华电信</span></span><br><span class="line">./besttrace  -q  1 115.212.100.211</span><br></pre></td></tr></table></figure>
-
+        <h3 id="可以直接运行官方的安装脚本一键安装"><a href="#可以直接运行官方的安装脚本一键安装" class="headerlink" title="可以直接运行官方的安装脚本一键安装"></a>可以直接运行官方的安装脚本一键安装</h3><ul>
+<li><p>执行脚本方法如下：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">curl -sSL http<span class="variable">s:</span>//<span class="built_in">get</span>.docker.<span class="keyword">com</span>/ | <span class="keyword">sh</span></span><br><span class="line"># 或者</span><br><span class="line">wget -qO- <span class="built_in">get</span>.docker.<span class="keyword">com</span> | bash </span><br></pre></td></tr></table></figure></li>
+<li><p>安装完成后，运行下面的命令，验证是否安装成功。<br>  docker version </p>
+</li>
+<li><p>启动 Docker<br>  systemctl start docker </p>
+</li>
+<li><p>查看 Docker 启动状态<br>  systemctl status docker</p>
+</li>
+<li><p>允许 Docker 开机自启<br>  systemctl enable docker </p>
 </li>
 </ul>
-<h3 id="网上也有windows的版本"><a href="#网上也有windows的版本" class="headerlink" title="网上也有windows的版本"></a>网上也有windows的版本</h3><p><a target="_blank" rel="noopener" href="https://www.bandwagonhost.net/1186.html">https://www.bandwagonhost.net/1186.html</a></p>
-<ul>
-<li>或者网页版<br><a target="_blank" rel="noopener" href="https://www.ipip.net/">https://www.ipip.net/</a></li>
-</ul>
-<h3 id="git-io-besttrace-是个短网址"><a href="#git-io-besttrace-是个短网址" class="headerlink" title="git.io/besttrace 是个短网址"></a>git.io/besttrace 是个短网址</h3><p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/zq/shell/master/autoBestTrace.sh">https://raw.githubusercontent.com/zq/shell/master/autoBestTrace.sh</a></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt -y install unzip</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># install besttrace</span></span><br><span class="line"><span class="string">if</span> [ <span class="string">!</span> <span class="string">-f</span> <span class="string">&quot;besttrace&quot;</span> ]<span class="string">;</span> <span class="string">then</span></span><br><span class="line">    <span class="string">wget</span> <span class="string">https://github.com/zq/shell/raw/master/besttrace</span></span><br><span class="line">    <span class="comment"># unzip besttrace4linux.zip</span></span><br><span class="line">    <span class="string">chmod</span> <span class="string">+x</span> <span class="string">besttrace</span></span><br><span class="line"><span class="string">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## start to use besttrace</span></span><br><span class="line"></span><br><span class="line"><span class="string">next()</span> &#123;</span><br><span class="line">    <span class="string">printf</span> <span class="string">&quot;%-70s\n&quot;</span> <span class="string">&quot;-&quot;</span> <span class="string">|</span> <span class="string">sed</span> <span class="string">&#x27;s/\s/-/g&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">clear</span></span><br><span class="line"><span class="string">next</span></span><br><span class="line"></span><br><span class="line"><span class="string">ip_list=(14.215.116.1</span> <span class="number">101.95</span><span class="number">.120</span><span class="number">.109</span> <span class="number">117.28</span><span class="number">.254</span><span class="number">.129</span> <span class="number">113.207</span><span class="number">.32</span><span class="number">.65</span> <span class="number">119.6</span><span class="number">.6</span><span class="number">.6</span> <span class="number">183.192</span><span class="number">.160</span><span class="number">.3</span> <span class="number">183.221</span><span class="number">.253</span><span class="number">.100</span> <span class="number">202.112</span><span class="number">.14</span><span class="number">.151</span><span class="string">)</span></span><br><span class="line"><span class="string">ip_addr=(广州电信</span> <span class="string">上海电信</span> <span class="string">厦门电信</span> <span class="string">重庆联通</span> <span class="string">四川联通</span> <span class="string">上海移动</span> <span class="string">成都移动</span> <span class="string">成都教育网)</span></span><br><span class="line"><span class="comment"># ip_len=$&#123;#ip_list[@]&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">for</span> <span class="string">i</span> <span class="string">in</span> &#123;<span class="number">0</span><span class="string">..7</span>&#125;</span><br><span class="line"><span class="string">do</span></span><br><span class="line">	<span class="string">echo</span> <span class="string">$&#123;ip_addr[$i]&#125;</span></span><br><span class="line">	<span class="string">./besttrace</span> <span class="string">-q</span> <span class="number">1</span> <span class="string">$&#123;ip_list[$i]&#125;</span></span><br><span class="line">	<span class="string">next</span></span><br><span class="line"><span class="string">done</span></span><br></pre></td></tr></table></figure>
+<h1 id="使用DOCKER安装PORTAINER"><a href="#使用DOCKER安装PORTAINER" class="headerlink" title="使用DOCKER安装PORTAINER"></a>使用DOCKER安装PORTAINER</h1><p><a target="_blank" rel="noopener" href="https://portainer.io/install.html">https://portainer.io/install.html</a><br>Portainer在Docker引擎或Swarm集群上作为轻量级Docker容器（Docker映像权重小于4MB）运行。因此，在使用Docker的任何计算机上运行容器都是一个命令。</p>
+<h3 id="部署PORTAINER"><a href="#部署PORTAINER" class="headerlink" title="部署PORTAINER"></a>部署PORTAINER</h3><p>使用以下Docker命令部署Portainer：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">$ docker volume create portainer_data</span><br><span class="line">$ docker run -d -p <span class="number">9000</span>:<span class="number">9000</span> -v <span class="regexp">/var/</span>run<span class="regexp">/docker.sock:/</span>var<span class="regexp">/run/</span>docker.sock -v portainer_data:<span class="regexp">/data portainer/</span>portainer</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="另一个别人-app-模版的PORTAINER-镜像使用"><a href="#另一个别人-app-模版的PORTAINER-镜像使用" class="headerlink" title="另一个别人 app 模版的PORTAINER 镜像使用"></a>另一个别人 app 模版的PORTAINER 镜像使用</h3><figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="regexp">/opt/</span>portainer<span class="regexp">/local-certs /</span>opt<span class="regexp">/portainer/</span>data</span><br><span class="line"></span><br><span class="line">cd <span class="regexp">/opt/</span>portainer/local-certs</span><br><span class="line">openssl genrsa -out portainer.key <span class="number">2048</span></span><br><span class="line">openssl ecparam -genkey -name secp384r1 -out portainer.key</span><br><span class="line">openssl req -<span class="keyword">new</span> -x509 -sha256 -key portainer.key -out portainer.crt -days <span class="number">3650</span></span><br><span class="line"></span><br><span class="line">docker run -d -p <span class="number">9000</span>:<span class="number">9000</span> -v <span class="regexp">/opt/</span>portainer<span class="regexp">/data:/</span>data -v <span class="regexp">/opt/</span>portainer<span class="regexp">/local-certs:/</span>certs -v <span class="regexp">/var/</span>run                                                                                      <span class="regexp">/docker.sock:/</span>var<span class="regexp">/run/</span>docker.sock --label owner=portainer --name ui --restart=always lihaixin<span class="regexp">/portainer -l owne                                                                                      r=portainer --ssl --sslcert /</span>certs<span class="regexp">/portainer.crt --sslkey /</span>certs/portainer.key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-Dockerfile-定制镜像-有空学习"><a href="#使用-Dockerfile-定制镜像-有空学习" class="headerlink" title="使用 Dockerfile 定制镜像  有空学习"></a>使用 Dockerfile 定制镜像  有空学习</h2><p><a target="_blank" rel="noopener" href="https://yeasy.gitbooks.io/docker_practice/image/build.html">https://yeasy.gitbooks.io/docker_practice/image/build.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/11/05/besttrace/" data-id="ckh19ps8w000ldnus1jni23yc" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/11/05/hello_docker/" data-id="ckh19psb6001idnus0z95grdx" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
 
     </footer>
   </div>
@@ -131,7 +136,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../25/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../24/">24</a><a class="page-number" href="../25/">25</a><span class="page-number current">26</span><a class="page-number" href="../27/">27</a><a class="page-number" href="../28/">28</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../27/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../25/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../24/">24</a><a class="page-number" href="../25/">25</a><span class="page-number current">26</span><a class="page-number" href="../27/">27</a><a class="page-number" href="../28/">28</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../27/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -145,7 +150,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -155,7 +160,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -177,6 +182,14 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -186,14 +199,6 @@
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

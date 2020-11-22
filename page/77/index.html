@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-visitor" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2017/11/11/hello-world/" class="article-date">
-  <time datetime="2017-11-11T05:00:00.000Z" itemprop="datePublished">2017-11-11</time>
+    <a href="../../2018/03/18/visitor/" class="article-date">
+  <time datetime="2018-03-18T04:00:00.000Z" itemprop="datePublished">2018-03-18</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2017/11/11/hello-world/">hexo使用简单入门</a>
+      <a class="article-title" href="../../2018/03/18/visitor/">SSH访问兼留言簿URL入口</a>
     </h1>
   
 
@@ -96,27 +96,104 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>欢迎来到<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>！ 这是你的第一篇文章。 查看<a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a>了解更多信息。 如果在使用Hexo时遇到任何问题，可以在<a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">Troubleshooting</a>中找到答案，或者您可以在<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>上询问我的问题/ hexojs/ HEXO/问题)。</p>
-<h2 id="Quick-Start-快速开始"><a href="#Quick-Start-快速开始" class="headerlink" title="Quick Start 快速开始"></a>Quick Start 快速开始</h2><h3 id="Create-a-new-post-建立一个新帖子"><a href="#Create-a-new-post-建立一个新帖子" class="headerlink" title="Create a new post 建立一个新帖子"></a>Create a new post 建立一个新帖子</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server-开启测试服务器"><a href="#Run-server-开启测试服务器" class="headerlink" title="Run server   开启测试服务器"></a>Run server   开启测试服务器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files-生成静态文件HTML"><a href="#Generate-static-files-生成静态文件HTML" class="headerlink" title="Generate static files  生成静态文件HTML"></a>Generate static files  生成静态文件HTML</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-部署到远程站点"><a href="#Deploy-to-remote-sites-部署到远程站点" class="headerlink" title="Deploy to remote sites  部署到远程站点"></a>Deploy to remote sites  部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+        <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>蘭雅sRGB 个人博客 | https://262235.xyz </title>  
+    <meta charset="UTF-8">
+    <meta name="description" content="蘭雅sRGB的主页,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video,">
+    <meta name="keyword" content="C, C++, Programming, Source Code, Video,编程,源代码,视频">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+<!--
+a{ color:#888888;  text-decoration:none } 
+a:hover{ color:#A9FF9D}/* 鼠标经过悬停字体颜色 */ 
+pre { white-space: pre-wrap; margin:0 auto; color: #f0f0f0; width:1024px}
+body { color: #f0f0f0; font-size:10.5pt}
+.lnr { color: #123456; }
+.Type { color: #64D2E6; font-weight: bold;}
+.Special { color: #ffd7d7; }
+.Constant { color: #ff40ff; }
+.Underlined { color: #5fd7ff; text-decoration: underline; }
+.Statement { color: #ffff00; font-weight: bold; }
+.Comment { color: #888888; font-weight: bold; }
+-->
+</style>
+</head>
+<body style = "background-image:url(/img/bg.jpg); background-attachment:fixed; ">
+<pre>
+<img border="3" src="https://262235.xyz/visitor/visitor.webp"  />
+<p>
+<span class="lnr"> 1 </span><span class="Comment">// =++=   欢迎来做客，我想喜欢龙芯的人 ，应该不会乱捣乱的 ==++==</span>
+<span class="lnr"> 2 </span><span class="Comment">// =++=   SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
+<span class="lnr"> 3 </span>现在使用花生壳内网穿透，每个月有流量限制，发现有人使用SSH的scp工具下载samba目录下隐私资料，消耗了400多M流量，所以暂时把端口换了一个，想测试学习的网友，可以百度贴吧发消息给我
+<span class="lnr"> 4 </span>
+<span class="lnr"> 5 </span><span class="Statement">WEB</span>:     <span class="Underlined"><a href="https://262235.xyz/visitor">https://262235.xyz/visitor</a></span>
+<span class="lnr"> 8 </span>
+<span class="lnr"> 9 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=&lt;&lt; 以下为访客留言，做个留言页面也挺好玩的 &gt;&gt;-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>GUI性能不行，所以我只启动了控制台，没有启动桌面的。
+<span class="lnr">12 </span>都是使用 ssh 远程登陆的。
+<span class="lnr">13 </span>
+<span class="lnr">14 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">15 </span>
+<span class="lnr">16 </span>哈哈哈，我就看看，啥也不干。不过网速好像有点慢啊。搭博客的话估计有点够呛！
+<span class="lnr">17 </span>
+<span class="lnr">18 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">19 </span>
+<span class="lnr">20 </span>Hello my <span class="Statement">friend</span> !
+<span class="lnr">21 </span>
+<span class="lnr">22 </span><span class="Constant">I</span> am also <span class="Statement">using</span> <span class="Constant">a</span> cute 8089_B <span class="Type">right</span> now !
+<span class="lnr">23 </span>
+<span class="lnr">24 </span>Though <span class="Constant">I</span> bought it <span class="Constant">3</span> years ago <span class="Special">(2014?)</span>,
+<span class="lnr">25 </span>but it really eating dust only until <span class="Constant">I</span> <span class="Type">find</span> it out today !
+<span class="lnr">26 </span>
+<span class="lnr">27 </span>Wow, <span class="Constant">a</span> little sad that latest Debian stopped supporting our toy, Loongson <span class="Constant">2F</span>.
+<span class="lnr">28 </span>
+<span class="lnr">29 </span>Anyway, plan to use it from now on !
+<span class="lnr">30 </span>
+<span class="lnr">31 </span>Will check Loongson'<span class="Constant">s</span> tieba every now <span class="Statement">and</span> then.
+<span class="lnr">32 </span>
+<span class="lnr">33 </span>PS: the wifi issue is really anooying....
+<span class="lnr">34 </span>
+<span class="lnr">35 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">36 </span>
+<span class="lnr">37 </span>装上debian也挺流畅的，test用户的shell是dash，默认跟ubuntu的一样，还是喜欢用centos，哈哈。
+<span class="lnr">38 </span>mark一下，以后经常来串串门^^_^^
+<span class="lnr">39 </span>嗯，不错。和我的小本一样，8089D。我安装的系统是gnewsense，貌似比debian流畅许多。^^
+<span class="lnr">40 </span>
+<span class="lnr">41 </span>
+<span class="lnr">42 </span>想用node.js+ghost做个blog，没成功,做lnmp还算容易。
+<span class="lnr">43 </span>这本本也就做个服务器，桌面免谈，有大量时间的除外。
+<span class="lnr">44 </span>
+<span class="lnr">45 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">46 </span>
+<span class="lnr">47 </span><span class="Comment">// =++= 谢谢上面朋友的留言，做个文本留言簿的想法今天才想到，所以这个留言簿页面就当统一回复大家了！</span>
+<span class="lnr">48 </span><span class="Comment">// =++= SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
+<span class="lnr">49 </span>
+<span class="lnr">50 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">51 </span>
+<span class="lnr">52 </span>我也算是一名龙芯爱好者吧 最近看到龙芯出了龙芯派
+<span class="lnr">53 </span>真的很想买一块 但是刚换工作不久 最近十分忙 感觉买了也会落灰
+<span class="lnr">54 </span>估计得过几个月才能静下心来
+<span class="lnr">55 </span>不过能远程使用龙芯<span class="Constant">2F</span>敲下这些字我也十分开心
+<span class="lnr">56 </span>谢谢你做了这个留言簿~
+<span class="lnr">57 </span>
+<span class="lnr">58 </span><span class="Comment">// =++= 谢谢来做客，你可以经常ssh过来玩，我也会把一些想法，写在留言簿里的.</span>
+<span class="lnr">59 </span><span class="Comment">// =++= 其实这样多一些互动，使用命令行，学习vim编辑文本也挺好的。</span>
+<span class="lnr">60 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
+<span class="lnr">61 </span>
+</pre>
+</body>
+</html>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2017/11/11/hello-world/" data-id="ckh19psb4001gdnus3cgw1q91" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/18/visitor/" data-id="ckh19psdz002xdnus1i6uaznw" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li></ul>
 
     </footer>
   </div>
@@ -129,7 +206,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../76/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="page-number" href="../76/">76</a><span class="page-number current">77</span><a class="page-number" href="../78/">78</a><a class="page-number" href="../79/">79</a><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../78/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../76/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../75/">75</a><a class="page-number" href="../76/">76</a><span class="page-number current">77</span><a class="page-number" href="../78/">78</a><a class="page-number" href="../79/">79</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../78/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -143,7 +220,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -153,7 +230,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -175,6 +252,14 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -184,14 +269,6 @@
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

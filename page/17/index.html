@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-k2ipv6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vim_keymap" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2019/02/24/k2ipv6/" class="article-date">
-  <time datetime="2019-02-24T05:00:00.000Z" itemprop="datePublished">2019-02-24</time>
+    <a href="../../2019/03/27/vim_keymap/" class="article-date">
+  <time datetime="2019-03-27T04:00:00.000Z" itemprop="datePublished">2019-03-27</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2019/02/24/k2ipv6/">浙江移动光纤支持IPV6了</a>
+      <a class="article-title" href="../../2019/03/27/vim_keymap/">VIM 命令键盘全图-中文清晰</a>
     </h1>
   
 
@@ -96,23 +96,113 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="K2路由器如下设置，启用ipv6，可以获取ipv6地址"><a href="#K2路由器如下设置，启用ipv6，可以获取ipv6地址" class="headerlink" title="K2路由器如下设置，启用ipv6，可以获取ipv6地址"></a>K2路由器如下设置，启用ipv6，可以获取ipv6地址</h3><p><img src="/img/k2ipv6.png"></p>
-<h3 id="自动获取的DNS，可以手动添加到网卡设置里"><a href="#自动获取的DNS，可以手动添加到网卡设置里" class="headerlink" title="自动获取的DNS，可以手动添加到网卡设置里"></a>自动获取的DNS，可以手动添加到网卡设置里</h3><pre><code>2409:8028:2000::1111
-2409:8028:2000::2222</code></pre>
-<h3 id="google-ipv6-dns"><a href="#google-ipv6-dns" class="headerlink" title="google ipv6 dns:"></a>google ipv6 dns:</h3><pre><code>2001:4860:4860::8888
-2001:4860:4860::8844</code></pre>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ ping <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span></span><br><span class="line"></span><br><span class="line">正在 Ping <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 具有 <span class="number">32</span> 字节的数据:</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">242</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">241</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">231</span>ms</span><br><span class="line">来自 <span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的回复: 时间=<span class="number">246</span>ms</span><br><span class="line"></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span> 的 Ping 统计信息:</span><br><span class="line">    数据包: 已发送 = <span class="number">4</span>，已接收 = <span class="number">4</span>，丢失 = <span class="number">0</span> (<span class="number">0</span>% 丢失)，</span><br><span class="line">往返行程的估计时间(以毫秒为单位):</span><br><span class="line">    最短 = <span class="number">231</span>ms，最长 = <span class="number">246</span>ms，平均 = <span class="number">240</span>ms</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h2 id="VIM-命令键盘全图-中文清晰"><a href="#VIM-命令键盘全图-中文清晰" class="headerlink" title="VIM 命令键盘全图-中文清晰"></a>VIM 命令键盘全图-中文清晰</h2><p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<p><img src="https://raw.githubusercontent.com/hongwenjun/img/master/VIM_KEY_CN.png"></p>
+<hr>
+<h3 id="VIM-常用用法"><a href="#VIM-常用用法" class="headerlink" title="VIM 常用用法"></a>VIM 常用用法</h3><table>
+<thead>
+<tr>
+<th>一般模式</th>
+<th align="left">编辑模式</th>
+<th align="left">指令模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h   左</td>
+<td align="left">a,i,r,o,A,I,R,O</td>
+<td align="left">:w   保存</td>
+</tr>
+<tr>
+<td>j   下</td>
+<td align="left">进入编辑模式</td>
+<td align="left">:w!   强制保存</td>
+</tr>
+<tr>
+<td>k   上</td>
+<td align="left">dd   删除光标当前行</td>
+<td align="left">:q!   不保存离开</td>
+</tr>
+<tr>
+<td>l   右</td>
+<td align="left">ndd   删除n行</td>
+<td align="left">:wq!   保存后离开</td>
+</tr>
+<tr>
+<td>0   移动到行首</td>
+<td align="left">yy   复制当前行</td>
+<td align="left">:e!   还原原始档</td>
+</tr>
+<tr>
+<td>$   移动到行尾</td>
+<td align="left">nyy   复制n行</td>
+<td align="left">:w   filename   另存为</td>
+</tr>
+<tr>
+<td>H   屏幕最上</td>
+<td align="left">p,P   粘贴</td>
+<td align="left">:set  nu   设置行号</td>
+</tr>
+<tr>
+<td>M   屏幕中央</td>
+<td align="left">u     撤消</td>
+<td align="left">:set  nonu   取消行号</td>
+</tr>
+<tr>
+<td>L   屏幕最下</td>
+<td align="left">[Ctrl]+r   重做上一个动作</td>
+<td align="left">ZZ   保存离开</td>
+</tr>
+<tr>
+<td>G   文件最后一行</td>
+<td align="left">[ctrl]+z   暂停退出</td>
+<td align="left">:set nohlsearch 永久地关闭高亮显示</td>
+</tr>
+<tr>
+<td>/work   向下搜索</td>
+<td align="left"></td>
+<td align="left">:sp   同时打开两个文档</td>
+</tr>
+<tr>
+<td>?work   向上搜索</td>
+<td align="left"></td>
+<td align="left">[Ctrl]+w   两个文档设换</td>
+</tr>
+<tr>
+<td>gg   移动到文件第一行</td>
+<td align="left"></td>
+<td align="left">:nohlsearch  暂时关闭高亮显示</td>
+</tr>
+</tbody></table>
+<h4 id="vim-格式化代码命令是等号"><a href="#vim-格式化代码命令是等号" class="headerlink" title="vim 格式化代码命令是等号 ="></a>vim 格式化代码命令是等号 =</h4><pre><code>全部格式化 : gg=G  对当前行格式化(缩进): ==
+删除所有行文字 ggdG 或者 :%d
+ctrl+p或者ctrl+n  代码自动补全功能</code></pre>
+<h4 id="表示位置的元字符"><a href="#表示位置的元字符" class="headerlink" title="表示位置的元字符"></a>表示位置的元字符</h4><pre><code>$  匹配行尾
+^  匹配行首
+\&lt; 匹配单词词首
+\&gt; 匹配单词词尾
 
+删除行尾的^M：%s/\r//g     
+删除行尾空格：%s/\s+$//g   
+删除行首多余空格：%s/^\s*//
+删除沒有內容的空行：%s/^$//</code></pre>
+<h4 id="快捷键来激活-取消-paste模式"><a href="#快捷键来激活-取消-paste模式" class="headerlink" title="快捷键来激活/取消 paste模式"></a>快捷键来激活/取消 paste模式</h4><pre><code>set pastetoggle=&lt;F11&gt;  </code></pre>
+<h4 id="实际操作组合命令"><a href="#实际操作组合命令" class="headerlink" title="实际操作组合命令"></a>实际操作组合命令</h4><p><img src="http://srgb.xyz/webp/vim_cmd.webp"></p>
+<ol>
+<li>先按i插入模式, 再键盘 F11 切换粘贴模式  </li>
+<li>shift + Insert (做视频时笔误) 从windows 把文本粘贴进去</li>
+<li>删除行首的行号：%s/^.\d//g</li>
+<li>删除行首多余空格：%s/^\s*//g</li>
+<li>gg 到文件首行, d6 删除6行</li>
+<li>gg=G 格式化代码,  ggdG 全删文字    </li>
+</ol>
 
-<h3 id="IPV6-note-TXT"><a href="#IPV6-note-TXT" class="headerlink" title="IPV6_note.TXT"></a>IPV6_note.TXT</h3><figure class="highlight pf"><table><tr><td class="code"><pre><span class="line"><span class="comment">#停用“ip helper”服务</span></span><br><span class="line">net stop <span class="string">&quot;ip helper&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#启用“ip helper”服务</span></span><br><span class="line">net start <span class="string">&quot;ip helper&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#显示Teredo信息</span></span><br><span class="line">netsh interface ipv6 show teredo</span><br><span class="line"></span><br><span class="line"><span class="comment">#Teredo、6to4、isatap重置</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line">netsh interface <span class="number">6</span>to4 <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line">netsh interface isatap <span class="built_in">set</span> <span class="keyword">state</span> <span class="keyword">default</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#关闭和卸载Teredo、6to4、isatap</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> disable</span><br><span class="line">netsh interface <span class="number">6</span>to4 <span class="built_in">set</span> <span class="keyword">state</span> disabled</span><br><span class="line">netsh interface isatap <span class="built_in">set</span> <span class="keyword">state</span> disabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#重新启用Teredo</span></span><br><span class="line">netsh interface Teredo <span class="built_in">set</span> <span class="keyword">state</span> type=<span class="keyword">default</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置Teredo服务器</span></span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo.remlab.net</span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo-debian.remlab.net</span><br><span class="line">netsh interface teredo <span class="built_in">set</span> <span class="keyword">state</span> server=teredo.trex.fi</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置Teredo服务器为teredo.ipv6.microsoft.com（此teredo服务器报废）</span></span><br><span class="line">netsh interface ipv6 <span class="built_in">set</span> teredo client teredo.ipv6.microsoft.com</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置isatap服务器（PING不通）</span></span><br><span class="line">netsh int IPV6 isatap <span class="built_in">set</span> router isatap.scu.edu.cn</span><br><span class="line"></span><br><span class="line"><span class="comment">#手动解决Windows7对IPv6支持的瑕疵</span></span><br><span class="line">netsh interface IPV6 <span class="built_in">set</span> <span class="keyword">global</span> randomizeidentifiers=disabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#启用Teredo</span></span><br><span class="line">netsh interface ipv6 <span class="built_in">set</span> teredo enterpriseclient</span><br><span class="line">netsh int ter <span class="built_in">set</span> <span class="keyword">state</span> enterpriseclient</span><br><span class="line"></span><br><span class="line"><span class="comment">#手动换算（IPv4）并设置本地连接（IPv6）地址</span></span><br><span class="line"><span class="comment">#换算IPv4地址</span></span><br><span class="line">http://ip-lookup.net/conversion.php</span><br><span class="line"><span class="comment">#修改本地连接IPv6地址</span></span><br><span class="line"><span class="comment">#子网前缀长度 48</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#google ipv6 dns:</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8888</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">4860</span>:<span class="number">4860</span>::<span class="number">8844</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#opendns ipv6 dns:</span></span><br><span class="line"><span class="number">2620</span>:<span class="number">0</span>:ccc::<span class="number">2</span></span><br><span class="line"><span class="number">2620</span>:<span class="number">0</span>:ccd::<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#HE ipv6 dns:</span></span><br><span class="line"><span class="number">2001</span>:<span class="number">470</span>:<span class="number">20</span>::<span class="number">2</span></span><br><span class="line"></span><br><span class="line">ipconfig /<span class="literal">all</span></span><br><span class="line">ipconfig /flushdns</span><br><span class="line">netsh int ipv6 show int</span><br><span class="line">netsh int ipv6 show <span class="keyword">route</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#看看teredo状态是不是qualified</span></span><br><span class="line">netsh int ipv6 show teredo</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除多余回路</span></span><br><span class="line"><span class="keyword">route</span> DELETE ::/<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加路由 (这一步重启后需要重新再做一遍)</span></span><br><span class="line">netsh int ipv6 add <span class="keyword">route</span> ::/<span class="number">0</span> <span class="string">&quot;Teredo Tunneling Pseudo-Interface&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在“start.bat”中添加下面两句，实现XX执行自启</span></span><br><span class="line">netsh int ipv6 add <span class="keyword">route</span> ::/<span class="number">0</span> <span class="string">&quot;Teredo Tunneling Pseudo-Interface&quot;</span></span><br><span class="line">SET PYTHONPATH=<span class="string">&quot;%~dp0%start.vbs&quot;</span> console</span><br><span class="line"></span><br><span class="line"><span class="comment">#优先级</span></span><br><span class="line">netsh int ipv6 show prefix</span><br><span class="line">netsh int ipv6 <span class="built_in">set</span> prefix <span class="number">2002</span>::/<span class="number">16</span> <span class="number">30</span> <span class="number">1</span></span><br><span class="line">netsh int ipv6 <span class="built_in">set</span> prefix <span class="number">2001</span>::/<span class="number">32</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看Teredo Tunneling Pseudo-Interface 接口</span></span><br><span class="line"><span class="keyword">route</span> print</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示IPv6地址</span></span><br><span class="line">netsh interface ipv6 show address</span><br><span class="line"></span><br><span class="line"><span class="comment">#显示IPv6路由</span></span><br><span class="line">netsh interface ipv6 show <span class="keyword">route</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重启ipv6，再重启计算机</span></span><br><span class="line">netsh interface ipv6 reset</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启网卡（&quot;本地连接 2&quot;换成自己要重启的网卡名）</span></span><br><span class="line">netsh interface <span class="built_in">set</span> interface <span class="string">&quot;本地连接 2&quot;</span> disabled</span><br><span class="line">netsh interface <span class="built_in">set</span> interface <span class="string">&quot;本地连接 2&quot;</span> enabled</span><br><span class="line"></span><br><span class="line"><span class="comment">#IPV6测试网站：</span></span><br><span class="line"></span><br><span class="line">http://test-ipv6.com/</span><br><span class="line"><span class="comment">#摘要部分测试完成后，请到“测试项目”中查看结果。</span></span><br><span class="line"><span class="comment">#全是“成功”就最完美的。</span></span><br><span class="line"></span><br><span class="line">http://www.kame.net/kame-mosaic.html</span><br><span class="line"><span class="comment">#IPv6可以看到活动的乌龟，IPv4乌龟不动</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2019/02/24/k2ipv6/" data-id="ckh19psbi001udnus3qlt0xtr" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2019/03/27/vim_keymap/" data-id="ckh19psdv002tdnus5747892k" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li></ul>
 
     </footer>
   </div>
@@ -125,7 +215,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../16/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../15/">15</a><a class="page-number" href="../16/">16</a><span class="page-number current">17</span><a class="page-number" href="../18/">18</a><a class="page-number" href="../19/">19</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../18/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../16/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../15/">15</a><a class="page-number" href="../16/">16</a><span class="page-number current">17</span><a class="page-number" href="../18/">18</a><a class="page-number" href="../19/">19</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../18/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -139,7 +229,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -149,7 +239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -171,6 +261,14 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -180,14 +278,6 @@
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

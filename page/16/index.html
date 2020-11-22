@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git_pull" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-iptables_mangle" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2019/03/16/git_pull/" class="article-date">
-  <time datetime="2019-03-16T04:00:00.000Z" itemprop="datePublished">2019-03-16</time>
+    <a href="../../2019/03/28/iptables_mangle/" class="article-date">
+  <time datetime="2019-03-28T04:00:00.000Z" itemprop="datePublished">2019-03-28</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2019/03/16/git_pull/">Git pull 强制覆盖本地文件脚本 git_pull.sh</a>
+      <a class="article-title" href="../../2019/03/28/iptables_mangle/">路由器使用 iptables 限制 玩客云上传数据流量</a>
     </h1>
   
 
@@ -96,48 +96,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Git-pull-强制覆盖本地文件脚本-git-pull-sh"><a href="#Git-pull-强制覆盖本地文件脚本-git-pull-sh" class="headerlink" title="Git pull 强制覆盖本地文件脚本 git_pull.sh"></a>Git pull 强制覆盖本地文件脚本 git_pull.sh</h3><figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">mkdik -p /usr/local/bin</span><br><span class="line"></span><br><span class="line">cat <span class="tag">&lt;&lt;EOF &gt;</span>/usr/local/bin/git_pull.sh</span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="comment"># Git pull 强制覆盖本地文件</span></span><br><span class="line"></span><br><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/<span class="literal">master</span></span><br><span class="line">git pull</span><br><span class="line">git fetch origin <span class="literal">master</span></span><br><span class="line">git merge origin/<span class="literal">master</span></span><br><span class="line">git merge origin/<span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment">### git dog 命令</span></span><br><span class="line">git config --global alias.dog <span class="string">&quot;log --all --decorate --oneline --graph&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Git基本常用命令如下："><a href="#Git基本常用命令如下：" class="headerlink" title="Git基本常用命令如下："></a>Git基本常用命令如下：</h3><pre><code>mkdir： XX (创建一个空目录 XX指目录名)
-pwd： 显示当前目录的路径。
-git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
-git add XX 把xx文件添加到暂存区去。
-git commit -m &amp;ldquo;XX&amp;rdquo; 提交文件 -m 后面的是注释。
-git status 查看仓库状态
-git diff XX 查看XX文件修改了那些内容
-git log 查看历史记录
-git reset --hard HEAD^ 或者 git reset --hard HEAD~ 回退到上一个版本
-(如果想回退到100个版本，使用git reset -hard HEAD~100 )
-cat XX 查看XX文件内容
-git reflog 查看历史记录的版本号id
-git checkout -- XX 把XX文件在工作区的修改全部撤销。
-git rm XX 删除XX文件
-git remote add origin  https://github.com/tugenhua0707/test.git  关联一个远程库
-git push -u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
-git clone  https://github.com/tugenhua0707/test.git  从远程库中克隆
-git checkout -b dev 创建dev分支 并切换到dev分支上
-git branch 查看当前所有的分支
-git checkout master 切换回master分支
-git merge dev;在当前的分支上合并dev分支
-git branch -d dev 删除dev分支
-git branch name 创建分支
-git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
-git stash list 查看所有被隐藏的文件列表
-git stash apply 恢复被隐藏的文件，但是内容不删除
-git stash drop 删除文件
-git stash pop 恢复文件的同时 也删除文件
-git remote 查看远程库的信息
-git remote -v 查看远程库的详细信息
-git push origin master Git会把master分支推送到远程库对应的远程分支上</code></pre>
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="路由器使用-iptables-限制-玩客云上传数据流量"><a href="#路由器使用-iptables-限制-玩客云上传数据流量" class="headerlink" title="路由器使用 iptables 限制 玩客云上传数据流量"></a>路由器使用 iptables 限制 玩客云上传数据流量</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment">### 限制玩客云设备  192.168.1.90 每秒钟通过 200×1.5=300K ；超过的流量都丢弃 (设置的太少，会导致无法开机)</span></span><br><span class="line">iptables -t<span class="built_in"> mangle </span>-I FORWARD 1 -s 192.168.1.90  -m limit --limit 200/s --limit-burst 1000 -j ACCEPT</span><br><span class="line">iptables -t<span class="built_in"> mangle </span>-A FORWARD -s 192.168.1.90 -j DROP</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询限速命令是否生效</span></span><br><span class="line">iptables -t<span class="built_in"> mangle </span> -nvL  FORWARD</span><br></pre></td></tr></table></figure>
+<h3 id="查询-iptables-t-mangle-结果"><a href="#查询-iptables-t-mangle-结果" class="headerlink" title="查询 iptables -t mangle 结果"></a>查询 iptables -t mangle 结果</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">/home/root # iptables -t mangle  -nvL  FORWARD</span><br><span class="line">Chain FORWARD (policy ACCEPT <span class="number">6460</span> packets, <span class="number">2683</span>K bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     <span class="keyword">out</span>     source               destination</span><br><span class="line"> <span class="number">3381</span>  <span class="number">408</span>K ACCEPT     all  --  *      *       <span class="number">192.168</span><span class="number">.1</span><span class="number">.90</span>         <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">0</span>            limit: avg <span class="number">20</span>/sec burst <span class="number">100</span></span><br><span class="line">  <span class="number">379</span> <span class="number">54868</span> DROP       all  --  *      *       <span class="number">192.168</span><span class="number">.1</span><span class="number">.90</span>         <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="路由器里开机脚本设置"><a href="#路由器里开机脚本设置" class="headerlink" title="路由器里开机脚本设置"></a>路由器里开机脚本设置</h3><p><img src="/img/iptables_mangle.png"></p>
+<h3 id="原理说明："><a href="#原理说明：" class="headerlink" title="原理说明："></a>原理说明：</h3><ul>
+<li>参考文章 <a target="_blank" rel="noopener" href="http://bbs.xiaomi.cn/t-32602219">http://bbs.xiaomi.cn/t-32602219</a></li>
+</ul>
+<p><img src="/img/FORWARD.jpg"></p>
+<p>iptables本身并没有限速指令，但可以通过limit指令匹配包速率，溢出部分使用DROP指令丢弃，从而变相实现限速功能，需要注意规则的顺序。</p>
+<p>正常都是内网主机接路由器访问外网，根据iptables数据包的流程图来看，数据包是路过路由器，只需要转发数据，</p>
+<p>所以我们需要在FORWARD链上执行限速。 而FORWARD链在mangle表和filter表里。根据我测试结果来看，路由器pro需要在mangle表上做限速设置，下面给出具体限速指令</p>
+<p>比如我给局域网的一台主机 IP地址为 192.168.31.23的限速 1.5MB。</p>
+<p>iptables -t mangle -I FORWARD 1 -s 192.168.31.23 -m limit –limit 1000/s –limit-burst 1500 -j ACCEPT</p>
+<p>iptables -t mangle -A FORWARD -s 192.168.31.23 -j DROP</p>
+<p>–limit 1000/s ：这个是说每秒种只允许通过1000个IP包，一个IP包大约在1.5KB， 1000个也就是1.5M，具体限速多少，可以根据这个来计算，比如我想限速4.5MB/S, 那就是设置 –limit 3000/S</p>
+<p>–limit-burst 1500： 这个是初始值，开始有1500包可以直接通过，后续就每秒1000个包。</p>
+<p>执行命令后，可以查询一下是否正常写入了。</p>
+<p>iptables -t mangle  -n -v -L  FORWARD</p>
+<p>限速是时实生效的，命令执行成功后，限速就生效了，这个限速策略是保存在内存里的，重启会消失的，需要保存指令。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2019/03/16/git_pull/" data-id="ckh19psav0019dnushvpv8w9p" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2019/03/28/iptables_mangle/" data-id="ckh19psbf001rdnus6syq8b7h" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li></ul>
 
     </footer>
   </div>
@@ -150,7 +135,7 @@ git push origin master Git会把master分支推送到远程库对应的远程分
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../15/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../14/">14</a><a class="page-number" href="../15/">15</a><span class="page-number current">16</span><a class="page-number" href="../17/">17</a><a class="page-number" href="../18/">18</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../17/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../15/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../14/">14</a><a class="page-number" href="../15/">15</a><span class="page-number current">16</span><a class="page-number" href="../17/">17</a><a class="page-number" href="../18/">18</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../17/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -164,7 +149,7 @@ git push origin master Git会把master分支推送到远程库对应的远程分
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -174,7 +159,7 @@ git push origin master Git会把master分支推送到远程库对应的远程分
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -196,6 +181,14 @@ git push origin master Git会把master分支推送到远程库对应的远程分
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -205,14 +198,6 @@ git push origin master Git会把master分支推送到远程库对应的远程分
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-visitor" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vim_cmd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/03/18/visitor/" class="article-date">
-  <time datetime="2018-03-18T04:00:00.000Z" itemprop="datePublished">2018-03-18</time>
+    <a href="../../2018/03/23/vim_cmd/" class="article-date">
+  <time datetime="2018-03-23T04:00:00.000Z" itemprop="datePublished">2018-03-23</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/03/18/visitor/">SSH访问兼留言簿URL入口</a>
+      <a class="article-title" href="../../2018/03/23/vim_cmd/">VIM 常用用法和linux常用命令</a>
     </h1>
   
 
@@ -96,104 +96,146 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <title>蘭雅sRGB 个人博客 | https://262235.xyz </title>  
-    <meta charset="UTF-8">
-    <meta name="description" content="蘭雅sRGB的主页,提供编程和电脑应用视频教程，工具和源代码 ,C, C++, Programming, Source Code, Video,">
-    <meta name="keyword" content="C, C++, Programming, Source Code, Video,编程,源代码,视频">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-<!--
-a{ color:#888888;  text-decoration:none } 
-a:hover{ color:#A9FF9D}/* 鼠标经过悬停字体颜色 */ 
-pre { white-space: pre-wrap; margin:0 auto; color: #f0f0f0; width:1024px}
-body { color: #f0f0f0; font-size:10.5pt}
-.lnr { color: #123456; }
-.Type { color: #64D2E6; font-weight: bold;}
-.Special { color: #ffd7d7; }
-.Constant { color: #ff40ff; }
-.Underlined { color: #5fd7ff; text-decoration: underline; }
-.Statement { color: #ffff00; font-weight: bold; }
-.Comment { color: #888888; font-weight: bold; }
--->
-</style>
-</head>
-<body style = "background-image:url(/img/bg.jpg); background-attachment:fixed; ">
-<pre>
-<img border="3" src="https://262235.xyz/visitor/visitor.webp"  />
-<p>
-<span class="lnr"> 1 </span><span class="Comment">// =++=   欢迎来做客，我想喜欢龙芯的人 ，应该不会乱捣乱的 ==++==</span>
-<span class="lnr"> 2 </span><span class="Comment">// =++=   SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
-<span class="lnr"> 3 </span>现在使用花生壳内网穿透，每个月有流量限制，发现有人使用SSH的scp工具下载samba目录下隐私资料，消耗了400多M流量，所以暂时把端口换了一个，想测试学习的网友，可以百度贴吧发消息给我
-<span class="lnr"> 4 </span>
-<span class="lnr"> 5 </span><span class="Statement">WEB</span>:     <span class="Underlined"><a href="https://262235.xyz/visitor">https://262235.xyz/visitor</a></span>
-<span class="lnr"> 8 </span>
-<span class="lnr"> 9 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=&lt;&lt; 以下为访客留言，做个留言页面也挺好玩的 &gt;&gt;-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">10 </span>
-<span class="lnr">11 </span>GUI性能不行，所以我只启动了控制台，没有启动桌面的。
-<span class="lnr">12 </span>都是使用 ssh 远程登陆的。
-<span class="lnr">13 </span>
-<span class="lnr">14 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">15 </span>
-<span class="lnr">16 </span>哈哈哈，我就看看，啥也不干。不过网速好像有点慢啊。搭博客的话估计有点够呛！
-<span class="lnr">17 </span>
-<span class="lnr">18 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">19 </span>
-<span class="lnr">20 </span>Hello my <span class="Statement">friend</span> !
-<span class="lnr">21 </span>
-<span class="lnr">22 </span><span class="Constant">I</span> am also <span class="Statement">using</span> <span class="Constant">a</span> cute 8089_B <span class="Type">right</span> now !
-<span class="lnr">23 </span>
-<span class="lnr">24 </span>Though <span class="Constant">I</span> bought it <span class="Constant">3</span> years ago <span class="Special">(2014?)</span>,
-<span class="lnr">25 </span>but it really eating dust only until <span class="Constant">I</span> <span class="Type">find</span> it out today !
-<span class="lnr">26 </span>
-<span class="lnr">27 </span>Wow, <span class="Constant">a</span> little sad that latest Debian stopped supporting our toy, Loongson <span class="Constant">2F</span>.
-<span class="lnr">28 </span>
-<span class="lnr">29 </span>Anyway, plan to use it from now on !
-<span class="lnr">30 </span>
-<span class="lnr">31 </span>Will check Loongson'<span class="Constant">s</span> tieba every now <span class="Statement">and</span> then.
-<span class="lnr">32 </span>
-<span class="lnr">33 </span>PS: the wifi issue is really anooying....
-<span class="lnr">34 </span>
-<span class="lnr">35 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">36 </span>
-<span class="lnr">37 </span>装上debian也挺流畅的，test用户的shell是dash，默认跟ubuntu的一样，还是喜欢用centos，哈哈。
-<span class="lnr">38 </span>mark一下，以后经常来串串门^^_^^
-<span class="lnr">39 </span>嗯，不错。和我的小本一样，8089D。我安装的系统是gnewsense，貌似比debian流畅许多。^^
-<span class="lnr">40 </span>
-<span class="lnr">41 </span>
-<span class="lnr">42 </span>想用node.js+ghost做个blog，没成功,做lnmp还算容易。
-<span class="lnr">43 </span>这本本也就做个服务器，桌面免谈，有大量时间的除外。
-<span class="lnr">44 </span>
-<span class="lnr">45 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">46 </span>
-<span class="lnr">47 </span><span class="Comment">// =++= 谢谢上面朋友的留言，做个文本留言簿的想法今天才想到，所以这个留言簿页面就当统一回复大家了！</span>
-<span class="lnr">48 </span><span class="Comment">// =++= SSH访问兼留言簿URL入口  <a href="https://262235.xyz/visitor/">https://262235.xyz/visitor/</a>  </span>
-<span class="lnr">49 </span>
-<span class="lnr">50 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">51 </span>
-<span class="lnr">52 </span>我也算是一名龙芯爱好者吧 最近看到龙芯出了龙芯派
-<span class="lnr">53 </span>真的很想买一块 但是刚换工作不久 最近十分忙 感觉买了也会落灰
-<span class="lnr">54 </span>估计得过几个月才能静下心来
-<span class="lnr">55 </span>不过能远程使用龙芯<span class="Constant">2F</span>敲下这些字我也十分开心
-<span class="lnr">56 </span>谢谢你做了这个留言簿~
-<span class="lnr">57 </span>
-<span class="lnr">58 </span><span class="Comment">// =++= 谢谢来做客，你可以经常ssh过来玩，我也会把一些想法，写在留言簿里的.</span>
-<span class="lnr">59 </span><span class="Comment">// =++= 其实这样多一些互动，使用命令行，学习vim编辑文本也挺好的。</span>
-<span class="lnr">60 </span><span class="Comment">// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</span>
-<span class="lnr">61 </span>
-</pre>
-</body>
-</html>
+        <h2 id="VIM-常用用法和linux常用命令"><a href="#VIM-常用用法和linux常用命令" class="headerlink" title="VIM 常用用法和linux常用命令"></a>VIM 常用用法和linux常用命令</h2><p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<hr>
+<h3 id="VIM-常用用法"><a href="#VIM-常用用法" class="headerlink" title="VIM 常用用法"></a>VIM 常用用法</h3><table>
+<thead>
+<tr>
+<th>一般模式</th>
+<th align="left">编辑模式</th>
+<th align="left">指令模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h   左</td>
+<td align="left">a,i,r,o,A,I,R,O</td>
+<td align="left">:w   保存</td>
+</tr>
+<tr>
+<td>j   下</td>
+<td align="left">进入编辑模式</td>
+<td align="left">:w!   强制保存</td>
+</tr>
+<tr>
+<td>k   上</td>
+<td align="left">dd   删除光标当前行</td>
+<td align="left">:q!   不保存离开</td>
+</tr>
+<tr>
+<td>l   右</td>
+<td align="left">ndd   删除n行</td>
+<td align="left">:wq!   保存后离开</td>
+</tr>
+<tr>
+<td>0   移动到行首</td>
+<td align="left">yy   复制当前行</td>
+<td align="left">:e!   还原原始档</td>
+</tr>
+<tr>
+<td>$   移动到行尾</td>
+<td align="left">nyy   复制n行</td>
+<td align="left">:w   filename   另存为</td>
+</tr>
+<tr>
+<td>H   屏幕最上</td>
+<td align="left">p,P   粘贴</td>
+<td align="left">:set  nu   设置行号</td>
+</tr>
+<tr>
+<td>M   屏幕中央</td>
+<td align="left">u     撤消</td>
+<td align="left">:set  nonu   取消行号</td>
+</tr>
+<tr>
+<td>L   屏幕最下</td>
+<td align="left">[Ctrl]+r   重做上一个动作</td>
+<td align="left">ZZ   保存离开</td>
+</tr>
+<tr>
+<td>G   文件最后一行</td>
+<td align="left">[ctrl]+z   暂停退出</td>
+<td align="left">:set nohlsearch 永久地关闭高亮显示</td>
+</tr>
+<tr>
+<td>/work   向下搜索</td>
+<td align="left"></td>
+<td align="left">:sp   同时打开两个文档</td>
+</tr>
+<tr>
+<td>?work   向上搜索</td>
+<td align="left"></td>
+<td align="left">[Ctrl]+w   两个文档设换</td>
+</tr>
+<tr>
+<td>gg   移动到文件第一行</td>
+<td align="left"></td>
+<td align="left">:nohlsearch  暂时关闭高亮显示</td>
+</tr>
+</tbody></table>
+<h4 id="vim-格式化代码命令是等号"><a href="#vim-格式化代码命令是等号" class="headerlink" title="vim 格式化代码命令是等号 ="></a>vim 格式化代码命令是等号 =</h4><pre><code>全部格式化 : gg=G  对当前行格式化(缩进): ==
+删除所有行文字 ggdG 或者 :%d
+ctrl+p或者ctrl+n  代码自动补全功能</code></pre>
+<h4 id="表示位置的元字符"><a href="#表示位置的元字符" class="headerlink" title="表示位置的元字符"></a>表示位置的元字符</h4><pre><code>$  匹配行尾
+^  匹配行首
+\&lt; 匹配单词词首
+\&gt; 匹配单词词尾
+
+删除行尾的^M：%s/\r//g     
+删除行尾空格：%s/\s+$//g   
+删除行首多余空格：%s/^\s*//
+删除沒有內容的空行：%s/^$//</code></pre>
+<h4 id="快捷键来激活-取消-paste模式"><a href="#快捷键来激活-取消-paste模式" class="headerlink" title="快捷键来激活/取消 paste模式"></a>快捷键来激活/取消 paste模式</h4><pre><code>set pastetoggle=&lt;F11&gt;  </code></pre>
+<h4 id="实际操作组合命令"><a href="#实际操作组合命令" class="headerlink" title="实际操作组合命令"></a>实际操作组合命令</h4><p><img src="http://srgb.xyz/webp/vim_cmd.webp"></p>
+<ol>
+<li>先按i插入模式, 再键盘 F11 切换粘贴模式  </li>
+<li>shift + Insert (做视频时笔误) 从windows 把文本粘贴进去</li>
+<li>删除行首的行号：%s/^.\d//g</li>
+<li>删除行首多余空格：%s/^\s*//g</li>
+<li>gg 到文件首行, d6 删除6行</li>
+<li>gg=G 格式化代码,  ggdG 全删文字    </li>
+</ol>
+<hr>
+<h4 id="tar-命令参数和示例"><a href="#tar-命令参数和示例" class="headerlink" title="tar 命令参数和示例"></a>tar 命令参数和示例</h4><pre><code>-c: 建立压缩文件    -x：解压   -t：查看内容
+-r：向压缩归档文件末尾追加文件 -u：更新原压缩包中的文件</code></pre>
+<ul>
+<li>tar -cvf  /home/123.tar  my.cpp  打包，不压缩</li>
+<li>tar -zcvf  /home/123.tar.gz  my.cpp  打包gz压缩</li>
+<li>tar -xvf  123.tar            解开包</li>
+<li>tar -zxvf /home/123.tar.gz   以gzip解压</li>
+<li>tar -jxvf /home/123.tar.bz2  以bzip2解压</li>
+<li>tar -ztvf /tmp/etc.tar.gz    查看tar内容</li>
+</ul>
+<hr>
+<h4 id="chmod-命令用来变更文件或目录的权限"><a href="#chmod-命令用来变更文件或目录的权限" class="headerlink" title="chmod 命令用来变更文件或目录的权限"></a>chmod 命令用来变更文件或目录的权限</h4><pre><code>Linux用户分为：拥有者、组群(Group)、其他（other）
+r=读取属性　read=4
+w=写入属性　write=2
+x=执行属性　execute=1</code></pre>
+<ul>
+<li>chmod  755  list.sh      // 设定脚本执行权限</li>
+<li>chmod -R 755  mypath     // 递归设定目录权限 </li>
+</ul>
+<hr>
+<p>crontab 定时任务 [e]编辑,[l]显示,[r]删除任务<br>history  | grep vim  列出有关vim的编辑的历史文件</p>
+<hr>
+<h2 id="Hexo环境迁移"><a href="#Hexo环境迁移" class="headerlink" title="Hexo环境迁移"></a>Hexo环境迁移</h2><p>实现方法：在Hexo仓库新建一个hexo分支存放Hexo原始文件，master分支存放hexo生成的静态页面，如果迁移环境后可以直接git clone仓库即可。</p>
+<ol>
+<li>将Hexo仓库用git管理起来：<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意：不需要再编写.gitignore了，在Hexo工程已经默认有.gitignore文件了，</span></span><br><span class="line"><span class="comment"># 这是hexo默认生成的，也许是hexo本来就推荐用git管理hexo原始文件吧</span></span><br><span class="line"><span class="attr">git</span> <span class="string">init</span></span><br><span class="line"><span class="attr">git</span> <span class="string">checkout -b hexo</span></span><br><span class="line"><span class="attr">git</span> <span class="string">add .</span></span><br><span class="line"><span class="attr">git</span> <span class="string">commit -m &quot;init&quot;</span></span><br><span class="line"><span class="attr">git</span> <span class="string">remote add origin https://github.com/hongwenjun/hongwenjun.github.io.git</span></span><br><span class="line"><span class="attr">git</span> <span class="string">push origin hexo</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li>在新的环境克隆仓库</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/hongwenjun/</span>hongwenjun.github.io.git</span><br><span class="line"><span class="comment"># 切换到hexo分支即可看到hexo原始文件，此时可以编辑并提交。</span></span><br><span class="line"><span class="comment"># 一般先提交原始文件到hexo分支，然后hexo d部署生成的静态文件到master分支</span></span><br><span class="line">git checkout hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/03/18/visitor/" data-id="ckh19psdz002xdnus1i6uaznw" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/03/23/vim_cmd/" data-id="ckh19psdt002rdnus5he66uae" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li></ul>
 
     </footer>
   </div>
@@ -206,7 +248,7 @@ body { color: #f0f0f0; font-size:10.5pt}
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../74/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="page-number current">75</span><a class="page-number" href="../76/">76</a><a class="page-number" href="../77/">77</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../76/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../74/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../73/">73</a><a class="page-number" href="../74/">74</a><span class="page-number current">75</span><a class="page-number" href="../76/">76</a><a class="page-number" href="../77/">77</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../76/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -220,7 +262,7 @@ body { color: #f0f0f0; font-size:10.5pt}
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -230,7 +272,7 @@ body { color: #f0f0f0; font-size:10.5pt}
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -252,6 +294,14 @@ body { color: #f0f0f0; font-size:10.5pt}
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -261,14 +311,6 @@ body { color: #f0f0f0; font-size:10.5pt}
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

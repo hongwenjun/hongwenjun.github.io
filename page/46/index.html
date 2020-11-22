@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-vultr_ipv6" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-baobao" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/07/02/vultr_ipv6/" class="article-date">
-  <time datetime="2018-07-02T04:00:00.000Z" itemprop="datePublished">2018-07-02</time>
+    <a href="../../2018/07/07/baobao/" class="article-date">
+  <time datetime="2018-07-07T04:00:00.000Z" itemprop="datePublished">2018-07-07</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/07/02/vultr_ipv6/">Vultr_IPV6 机器安装设置，添加 IPv4 教程</a>
+      <a class="article-title" href="../../2018/07/07/baobao/">宝宝获得荣誉证书好多张</a>
     </h1>
   
 
@@ -96,35 +96,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h3 id="本地电脑开启ipv6支持，可以使用XX-Net的-enable-ipv6-bat"><a href="#本地电脑开启ipv6支持，可以使用XX-Net的-enable-ipv6-bat" class="headerlink" title="本地电脑开启ipv6支持，可以使用XX-Net的 enable_ipv6.bat"></a>本地电脑开启ipv6支持，可以使用XX-Net的 enable_ipv6.bat</h3><ul>
-<li>XX-Net\code\3.11.10\gae_proxy\local\ipv6_tunnel\enable_ipv6.bat</li>
-</ul>
-<h3 id="参考-Vultr-2-5-美金添加-IPv4-教程"><a href="#参考-Vultr-2-5-美金添加-IPv4-教程" class="headerlink" title="参考 Vultr 2.5 美金添加 IPv4 教程"></a>参考 Vultr 2.5 美金添加 IPv4 教程</h3><p><a target="_blank" rel="noopener" href="https://www.lijingquan.net/archives/4802">https://www.lijingquan.net/archives/4802</a></p>
-<p>登陆 Vultr;  新建了一个IPv4和一个IPv6 Only Debian系统</p>
-<p>进入Server Information,选 Settings，再选IPv4， Additional IPv4 IP，先增加一个收费ipv4<br>点击  networking configuration 链接，可以看到</p>
-<p><img src="img/interfaces.png"></p>
-<p>ssh  root@[IPV6] 远程登陆，先修改密码  </p>
-<pre><code>vim /etc/network/interfaces
-service networking restart</code></pre>
-<p>修改之前的看到的网络配置，修改为静态ip，重新启动网络。<br>(这时候其实已经可以用IPv4了,外网可以ping进来了,但是不要使用IPv4连接,修改路由表过程会断IPv4.)<br>只是使用 ping  8.8.8.8 网络还是阻断的，要修改默认的路由。</p>
-<p>查看默认的路由</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">root@</span>vultr:~# route -n</span><br><span class="line">Kernel IP routing table</span><br><span class="line">Destination     Gateway         Genmask         Flags Metric Ref    Use Iface</span><br><span class="line"><span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">100.64</span><span class="number">.0</span><span class="number">.1</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         UG    <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">10.25</span><span class="number">.96</span><span class="number">.0</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.240</span><span class="number">.0</span>   U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens7</span><br><span class="line"><span class="number">100.64</span><span class="number">.0</span><span class="number">.0</span>      <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.192</span><span class="number">.0</span><span class="number">.0</span>     U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">169.254</span><span class="number">.0</span><span class="number">.0</span>     <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.0</span><span class="number">.0</span>     U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="number">207.148</span><span class="number">.112</span><span class="number">.0</span>   <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>         <span class="number">255.255</span><span class="number">.254</span><span class="number">.0</span>   U     <span class="number">0</span>      <span class="number">0</span>        <span class="number">0</span> ens3</span><br><span class="line"><span class="symbol">root@</span>vultr:~# ip route show</span><br><span class="line"><span class="keyword">default</span> via <span class="number">100.64</span><span class="number">.0</span><span class="number">.1</span> dev ens3 onlink </span><br><span class="line"><span class="number">10.25</span><span class="number">.96</span><span class="number">.0</span>/<span class="number">20</span> dev ens7 proto kernel scope link src <span class="number">10.25</span><span class="number">.96</span><span class="number">.3</span> </span><br><span class="line"><span class="number">100.64</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">10</span> dev ens3 proto kernel scope link src <span class="number">100.68</span><span class="number">.5</span><span class="number">.186</span> </span><br><span class="line"><span class="number">169.254</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">16</span> dev ens3 scope link </span><br><span class="line"><span class="number">207.148</span><span class="number">.112</span><span class="number">.0</span>/<span class="number">23</span> dev ens3 proto kernel scope link src <span class="number">207.148</span><span class="number">.113</span><span class="number">.46</span> </span><br><span class="line"><span class="symbol">root@</span>vultr:~# </span><br></pre></td></tr></table></figure>
-<p>看到走的还是运营商NAT,删掉他,并添加默认路由,要使用是刚才添加的公网IPV4和实际的网卡编号.</p>
-<pre><code>route r del default gw 100.64.0.1
-ip route add default via 207.148.113.46 dev ens3</code></pre>
-<p>具体如下:</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">root@vultr:~#<span class="built_in"> route </span>del<span class="built_in"> default </span>gw 100.64.0.1</span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span>list</span><br><span class="line">10.25.96.0/20 dev ens7 proto kernel scope link src 10.25.96.3 </span><br><span class="line">100.64.0.0/10 dev ens3 proto kernel scope link src 100.68.5.186 </span><br><span class="line">169.254.0.0/16 dev ens3 scope link </span><br><span class="line">207.148.112.0/23 dev ens3 proto kernel scope link src 207.148.113.46 </span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span><span class="builtin-name">add</span><span class="built_in"> default </span>via 207.148.113.46 dev ens3</span><br><span class="line">root@vultr:~#<span class="built_in"> ip route </span>list</span><br><span class="line">default via 207.148.113.46 dev ens3 </span><br><span class="line">10.25.96.0/20 dev ens7 proto kernel scope link src 10.25.96.3 </span><br><span class="line">100.64.0.0/10 dev ens3 proto kernel scope link src 100.68.5.186 </span><br><span class="line">169.254.0.0/16 dev ens3 scope link </span><br><span class="line">207.148.112.0/23 dev ens3 proto kernel scope link src 207.148.113.46 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>再使用 ping 8.8.8.8 如果通畅了，就表示增加的ipv4可以使用了<br>然后就可以使用 一键脚本安装服务器了，安装好软件后，可以把ipv4删除掉<br>节省一下月租费。</p>
+        <h3 id="家里小宝今年期末考试拿了个全班第一"><a href="#家里小宝今年期末考试拿了个全班第一" class="headerlink" title="家里小宝今年期末考试拿了个全班第一"></a>家里小宝今年期末考试拿了个全班第一</h3><h3 id="获得荣誉证书好多张"><a href="#获得荣誉证书好多张" class="headerlink" title="获得荣誉证书好多张"></a>获得荣誉证书好多张</h3><p><img src="/img/ryzs5.jpg"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/07/02/vultr_ipv6/" data-id="ckh19psee0036dnus15pga4r3" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/07/07/baobao/" data-id="ckh19ps8r000jdnus9hor00g9" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li></ul>
 
     </footer>
   </div>
@@ -137,7 +117,7 @@ ip route add default via 207.148.113.46 dev ens3</code></pre>
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../45/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../44/">44</a><a class="page-number" href="../45/">45</a><span class="page-number current">46</span><a class="page-number" href="../47/">47</a><a class="page-number" href="../48/">48</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../47/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../45/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../44/">44</a><a class="page-number" href="../45/">45</a><span class="page-number current">46</span><a class="page-number" href="../47/">47</a><a class="page-number" href="../48/">48</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../47/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -151,7 +131,7 @@ ip route add default via 207.148.113.46 dev ens3</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -161,7 +141,7 @@ ip route add default via 207.148.113.46 dev ens3</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -183,6 +163,14 @@ ip route add default via 207.148.113.46 dev ens3</code></pre>
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -192,14 +180,6 @@ ip route add default via 207.148.113.46 dev ens3</code></pre>
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

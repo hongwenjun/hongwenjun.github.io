@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-python/py_bing" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-codeblocks/cbstudy" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2020/11/04/python/py_bing/" class="article-date">
-  <time datetime="2020-11-04T05:00:00.000Z" itemprop="datePublished">2020-11-04</time>
+    <a href="../../2020/11/08/codeblocks/cbstudy/" class="article-date">
+  <time datetime="2020-11-09T01:55:00.000Z" itemprop="datePublished">2020-11-08</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
+      <a class="article-title" href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
     </h1>
   
 
@@ -96,34 +96,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="蘭雅sRGB-龙芯2F服务器和博客-https-262235-xyz"><a href="#蘭雅sRGB-龙芯2F服务器和博客-https-262235-xyz" class="headerlink" title="蘭雅sRGB 龙芯2F服务器和博客 | https://262235.xyz"></a>蘭雅sRGB 龙芯2F服务器和博客 | <a href="https://262235.xyz/">https://262235.xyz</a></h2><h3 id="普通的方法使用浏览器Chrome下载"><a href="#普通的方法使用浏览器Chrome下载" class="headerlink" title="普通的方法使用浏览器Chrome下载"></a>普通的方法使用浏览器Chrome下载</h3><ul>
-<li>浏览器Chrome下载精美壁纸,打开bing.com；按F12快捷键，然后点击Sources</li>
-</ul>
-<p><img src="/img/2011/chrome_f12.jpg"></p>
-<h3 id="使用Python调试脚本-下载bing精美壁纸"><a href="#使用Python调试脚本-下载bing精美壁纸" class="headerlink" title="使用Python调试脚本,下载bing精美壁纸"></a>使用Python调试脚本,下载bing精美壁纸</h3><ul>
-<li><p>录制了一个python测试视频，放在了B站和youtube，参考使用下面脚本</p>
+        <h1 id="CodeBlocks视频教程学习代码示例"><a href="#CodeBlocks视频教程学习代码示例" class="headerlink" title="CodeBlocks视频教程学习代码示例"></a>CodeBlocks视频教程学习代码示例</h1><p>蘭雅sRGB 龙芯2F服务器和博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h2 id="Codeblocks-编程学习视频教程"><a href="#Codeblocks-编程学习视频教程" class="headerlink" title="Codeblocks 编程学习视频教程"></a>Codeblocks 编程学习视频教程</h2><ul>
+<li><p>B站频道: <a target="_blank" rel="noopener" href="https://space.bilibili.com/320303690/channel/detail?cid=156416">https://space.bilibili.com/320303690/</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ba411c7NX/">https://www.bilibili.com/video/BV1Ba411c7NX/</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://youtu.be/xtYuuoDvbYI">https://youtu.be/xtYuuoDvbYI</a></p>
+<li><p>YouTube频道: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2FETiwhLEBQ&list=PLPidIcmhqWuTMftNgToJxQ5ssT4Ed3LgS">https://www.youtube.com/sRGB18</a></p>
 </li>
 </ul>
-<h3 id="正则获取图片文件名"><a href="#正则获取图片文件名" class="headerlink" title="正则获取图片文件名"></a>正则获取图片文件名</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">name = re.search( <span class="string">r&#x27;id=(.*\.jpg)&amp;rf&#x27;</span>, image_url)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/img/python/reg_search.png"></p>
-<h3 id="bing-py-源码"><a href="#bing-py-源码" class="headerlink" title="bing.py 源码"></a>bing.py 源码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 时间戳</span></span><br><span class="line">timestamp = <span class="built_in">str</span>(<span class="built_in">int</span>(time.time() * <span class="number">1000</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接请求地址</span></span><br><span class="line">url = <span class="string">&#x27;https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;nc=&#x27;</span> + timestamp + <span class="string">&#x27;&amp;pid=hp&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求头，模拟浏览器UA</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27; &#x27;</span>.join([<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 14)&#x27;</span>,</span><br><span class="line">                            <span class="string">&#x27;AppleWebKit/537.36 (KHTML, like Gecko)&#x27;</span>, <span class="string">&#x27;Chrome/70.0.3538.102&#x27;</span>, <span class="string">&#x27;Safari/537.36&#x27;</span>,</span><br><span class="line">                            <span class="string">&#x27;Edge/18.18363&#x27;</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送请求</span></span><br><span class="line">r = requests.get(url=url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将响应的字符串转化为json数据，即dict类型</span></span><br><span class="line">result = r.json()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取第一个图片的链接</span></span><br><span class="line">image_url = result[<span class="string">&#x27;images&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;url&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图片文件名  name[1]</span></span><br><span class="line">name = re.search( <span class="string">r&#x27;id=(.*\.jpg)&amp;rf&#x27;</span>, image_url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接上bing的域名</span></span><br><span class="line">image_url = <span class="string">&#x27;https://cn.bing.com&#x27;</span> + image_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义图片保存地址</span></span><br><span class="line">save_image_file = <span class="string">&#x27;/home/samba/bing/&#x27;</span> + name[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载图片</span></span><br><span class="line">r = requests.get(url=image_url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意要以二进制只写打开文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(save_image_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="comment"># 图片的二进制数据</span></span><br><span class="line">    f.write(r.content)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="编辑定时任务执行-crontab-e"><a href="#编辑定时任务执行-crontab-e" class="headerlink" title="编辑定时任务执行  ** crontab -e **"></a>编辑定时任务执行  ** crontab -e **</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># m   h  dom mon dow   command  # 分 时 日 月 周</span></span><br><span class="line"></span><br><span class="line">  <span class="number">1</span> *<span class="regexp">/12  *  *   *    cd /</span>home<span class="regexp">/samba/</span>bing  &amp;&amp;   python3 bing.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="之前制作没有语音的视频，有时间制作重制版"><a href="#之前制作没有语音的视频，有时间制作重制版" class="headerlink" title="之前制作没有语音的视频，有时间制作重制版"></a>之前制作没有语音的视频，有时间制作重制版</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/sRGB18"><img src="/img/2011/vod_list.jpg"></a></p>
+<h3 id="源码和程序图片"><a href="#源码和程序图片" class="headerlink" title="源码和程序图片"></a>源码和程序图片</h3><ul>
+<li>001_ResEdit_Test<br><img src="/img/cbstudy/001_ResEdit_Test.png"></li>
+</ul>
+<hr>
+<p><strong>github项目</strong>   <a target="_blank" rel="noopener" href="https://github.com/hongwenjun/cbstudy">https://github.com/hongwenjun/cbstudy</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2020/11/04/python/py_bing/" data-id="ckh2yhbzt0000btus86s60y30" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/11/08/codeblocks/cbstudy/" data-id="ckh94kxw20000rrusgqtx1cmx" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/python/" rel="tag">python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
 
     </footer>
   </div>
@@ -136,7 +128,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../3/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><a class="page-number" href="../3/">3</a><span class="page-number current">4</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><span class="space">&hellip;</span><a class="page-number" href="../80/">80</a><a class="extend next" rel="next" href="../5/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../3/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><a class="page-number" href="../3/">3</a><span class="page-number current">4</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../5/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -150,7 +142,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -160,7 +152,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -182,6 +174,14 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
           </li>
         
@@ -191,14 +191,6 @@
         
           <li>
             <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/04/python/py_bing/">Python下载Bing每日壁纸，代码编辑器使用 CodeBlocks</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/03/262235.xyz/">给自己的博客添加网站图标，Hexo博客设置网站图标</a>
           </li>
         
       </ul>

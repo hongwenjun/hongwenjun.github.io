@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机 | 蘭雅sRGB 龙芯2F服务器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz 另外一种Arch Linux 安装: 使用gdisk建立EFI分区和Linux分区gdisk &#x2F;dev&#x2F;sda  直接打o，意味着create a new empty GUID partition table (GPT)，回车  接下来，打n，新建分区,EFI分区用来储存引导文件,分区代码 EF00 表示efi分区  再建立Linu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机">
+<meta property="og:url" content="https://262235.xyz/2020/11/22/linux/arch_efi/index.html">
+<meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:description" content="蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz 另外一种Arch Linux 安装: 使用gdisk建立EFI分区和Linux分区gdisk &#x2F;dev&#x2F;sda  直接打o，意味着create a new empty GUID partition table (GPT)，回车  接下来，打n，新建分区,EFI分区用来储存引导文件,分区代码 EF00 表示efi分区  再建立Linu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-22T05:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-22T12:46:47.957Z">
+<meta property="article:author" content="hongwenjun">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="Arch">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/logo/favicon.png">
+  
+  
+    <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../../../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../../index.html" id="logo">蘭雅sRGB 龙芯2F服务器</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../../https:/262235.xyz/">主页</a>
+        
+          <a class="main-nav-link" href="../../../../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+        
+          <a class="main-nav-link" href="../../../../../index.html">博客</a>
+        
+          <a class="main-nav-link" href="../../../../../archives">归档</a>
+        
+          <a class="main-nav-link" href="../../../../../sitemap.xml">站点地图</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/github.com/hongwenjun">GitHub</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/space.bilibili.com/320303690/">B站频道</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://262235.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux/arch_efi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2020-11-22T05:00:00.000Z" itemprop="datePublished">2020-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h2 id="另外一种Arch-Linux-安装-使用gdisk建立EFI分区和Linux分区"><a href="#另外一种Arch-Linux-安装-使用gdisk建立EFI分区和Linux分区" class="headerlink" title="另外一种Arch Linux 安装: 使用gdisk建立EFI分区和Linux分区"></a>另外一种Arch Linux 安装: 使用gdisk建立EFI分区和Linux分区</h2><pre><code>gdisk /dev/sda</code></pre>
+<ul>
+<li><p>直接打o，意味着create a new empty GUID partition table (GPT)，回车</p>
+</li>
+<li><p>接下来，打n，新建分区,EFI分区用来储存引导文件,分区代码 EF00 表示efi分区</p>
+</li>
+<li><p>再建立Linux分区，直到Hex code这行，打8300，8300是linux的文件系统。</p>
+</li>
+<li><p>检查,看到文件系统 GPT，2个分区分别是EFI system partition 和 Linux filesystem</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="comment"># gdisk -l /dev/sda</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">Found</span> valid GPT with protective MBR; using GPT.</span><br><span class="line"><span class="attribute">Disk</span> /dev/sda: <span class="number">16777216</span> sectors, <span class="number">8</span>.<span class="number">0</span> GiB</span><br><span class="line"><span class="attribute">Disk</span> identifier (GUID): B<span class="number">60</span>E<span class="number">27</span>F<span class="number">0</span>-F<span class="number">574</span>-<span class="number">4</span>AAB-B<span class="number">0</span>C<span class="number">1</span>-BAEC<span class="number">5377</span>DDFD</span><br><span class="line"><span class="attribute">Number</span>  Start (sector)    End (sector)  Size       Code  Name</span><br><span class="line">   <span class="attribute">1</span>            <span class="number">2048</span>         <span class="number">1050623</span>   <span class="number">512</span>.<span class="number">0</span> MiB   EF<span class="number">00</span>  EFI system partition  # EFI分区主要放引导文件其实<span class="number">128</span>M够用了</span><br><span class="line">   <span class="attribute">2</span>         <span class="number">1050624</span>        <span class="number">16777182</span>   <span class="number">7</span>.<span class="number">5</span> GiB     <span class="number">8300</span>  Linux filesystem</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="格式化分区和挂载分区有相应修改，再按上面安装Arch系统"><a href="#格式化分区和挂载分区有相应修改，再按上面安装Arch系统" class="headerlink" title="格式化分区和挂载分区有相应修改，再按上面安装Arch系统"></a>格式化分区和挂载分区有相应修改，再按上面安装Arch系统</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mkfs.vfat -F <span class="number">32</span>  <span class="regexp">/dev/</span>sda1</span><br><span class="line">mkfs.ext4 <span class="regexp">/dev/</span>sda2</span><br><span class="line">mount <span class="regexp">/dev/</span>sda2 /mnt</span><br><span class="line">mkdir -p  <span class="regexp">/mnt/</span>boot</span><br><span class="line">mount <span class="regexp">/dev/</span>sda1 <span class="regexp">/mnt/</span>boot</span><br></pre></td></tr></table></figure>
+
+<h3 id="中间安装步骤，参考arch-安装命令中文文档"><a href="#中间安装步骤，参考arch-安装命令中文文档" class="headerlink" title="中间安装步骤，参考arch 安装命令中文文档"></a>中间安装步骤，参考arch 安装命令中文文档</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li>
+</ul>
+<h2 id="不装GRUB，使用系统自带的systemd-bootctl"><a href="#不装GRUB，使用系统自带的systemd-bootctl" class="headerlink" title="不装GRUB，使用系统自带的systemd bootctl"></a>不装GRUB，使用系统自带的systemd bootctl</h2><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">bootctl <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim /boot/loader/loader.conf</span></span><br><span class="line"></span><br><span class="line">default arch</span><br><span class="line">timeout 1</span><br><span class="line"></span><br><span class="line"><span class="comment">#console-mode keep</span></span><br><span class="line">default 75ece990f54f40eba924862b4f752aa6-*</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vim</span> /boot/loader/entries/arch.conf</span><br><span class="line"></span><br><span class="line"><span class="attribute">title</span>   Arch Linux</span><br><span class="line"><span class="attribute">linux</span>   /vmlinuz-linux</span><br><span class="line"><span class="attribute">initrd</span>  /initramfs-linux.img</span><br><span class="line"><span class="attribute"><span class="nomarkup">options</span></span> root=PARTUUID=<span class="number">470</span>b<span class="number">42</span>a<span class="number">8</span>-<span class="number">69</span>bf-<span class="number">4822</span>-ad<span class="number">1</span>a-<span class="number">8164</span>c<span class="number">741</span>b<span class="number">17</span>c rw</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看磁盘分区UUID号"><a href="#查看磁盘分区UUID号" class="headerlink" title="查看磁盘分区UUID号"></a>查看磁盘分区UUID号</h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">partx</span> /dev/sda</span><br><span class="line"><span class="attribute">NR</span>   START      END  SECTORS SIZE NAME                 UUID</span><br><span class="line"> <span class="attribute">1</span>    <span class="number">2048</span>  <span class="number">1050623</span>  <span class="number">1048576</span> <span class="number">512</span>M EFI system partition <span class="number">0</span>d<span class="number">180520</span>-<span class="number">7</span>c<span class="number">33</span>-<span class="number">4899</span>-<span class="number">9</span>e<span class="number">8</span>e-<span class="number">30272</span>e<span class="number">072</span>fb<span class="number">4</span></span><br><span class="line"> <span class="attribute">2</span> <span class="number">1050624</span> <span class="number">16777182</span> <span class="number">15726559</span> <span class="number">7</span>.<span class="number">5</span>G Linux filesystem     <span class="number">470</span>b<span class="number">42</span>a<span class="number">8</span>-<span class="number">69</span>bf-<span class="number">4822</span>-ad<span class="number">1</span>a-<span class="number">8164</span>c<span class="number">741</span>b<span class="number">17</span>c</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://262235.xyz/2020/11/22/linux/arch_efi/" data-id="ckht48tpb0000qyusdo1xe7ae" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/Arch/" rel="tag">Arch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="../arch_vbo1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arch Linux 安装简易版 For VirtualBox 安装虚拟机
+        
+      </div>
+    </a>
+  
+  
+    <a href="../../../13/codeblocks/CodeBlocks_Debian/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="../../../../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../../../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../../../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../../../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../../../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../../../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../../../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../../../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../../../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../../../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../../../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../../../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../../../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../../../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../../../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../../../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../../../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../../../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../../../../tags/python/" style="font-size: 10px;">python</a> <a href="../../../../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../../../../tags/video/" style="font-size: 10px;">video</a> <a href="../../../../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../../../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../../../../tags/vps/" style="font-size: 18.33px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2017/">2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="../arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../../13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
+            <a href="../../../08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
+            <a href="../../../06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hongwenjun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+  
+    <a href="../../../../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+  
+    <a href="../../../../../index.html" class="mobile-nav-link">博客</a>
+  
+    <a href="../../../../../archives" class="mobile-nav-link">归档</a>
+  
+    <a href="../../../../../sitemap.xml" class="mobile-nav-link">站点地图</a>
+  
+    <a href="../../../../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+  
+    <a href="../../../../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+  
+    <a href="../../../../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+  
+</nav>
+    
+
+<script src="js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="../../../../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="../../../../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

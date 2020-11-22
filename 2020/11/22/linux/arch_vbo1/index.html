@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arch Linux 安装简易版 For VirtualBox 安装虚拟机 | 蘭雅sRGB 龙芯2F服务器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz 启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统systemctl restart sshdip addrpasswd  硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区fdisk &#x2F;dev&#x2F;sdamkfs.ext4 &#x2F;dev&#x2F;sda1mount &#x2F;dev&#x2F;sda1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arch Linux 安装简易版 For VirtualBox 安装虚拟机">
+<meta property="og:url" content="https://262235.xyz/2020/11/22/linux/arch_vbo1/index.html">
+<meta property="og:site_name" content="蘭雅sRGB 龙芯2F服务器">
+<meta property="og:description" content="蘭雅sRGB 个人博客 | https:&#x2F;&#x2F;262235.xyz 启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统systemctl restart sshdip addrpasswd  硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区fdisk &#x2F;dev&#x2F;sdamkfs.ext4 &#x2F;dev&#x2F;sda1mount &#x2F;dev&#x2F;sda1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-22T05:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-22T12:46:47.957Z">
+<meta property="article:author" content="hongwenjun">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="Arch">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/logo/favicon.png">
+  
+  
+    <link href="css/fonts_googleapis_com_source_code_pro.css" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="../../../../../css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../../index.html" id="logo">蘭雅sRGB 龙芯2F服务器</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../../https:/262235.xyz/">主页</a>
+        
+          <a class="main-nav-link" href="../../../../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+        
+          <a class="main-nav-link" href="../../../../../index.html">博客</a>
+        
+          <a class="main-nav-link" href="../../../../../archives">归档</a>
+        
+          <a class="main-nav-link" href="../../../../../sitemap.xml">站点地图</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/github.com/hongwenjun">GitHub</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/www.youtube.com/sRGB18">YouTube频道</a>
+        
+          <a class="main-nav-link" href="../../../../../https:/space.bilibili.com/320303690/">B站频道</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://262235.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux/arch_vbo1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2020-11-22T05:00:00.000Z" itemprop="datePublished">2020-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arch Linux 安装简易版 For VirtualBox 安装虚拟机
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统"><a href="#启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统" class="headerlink" title="启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统"></a>启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">ip addr</span><br><span class="line">passwd</span><br></pre></td></tr></table></figure>
+
+<h3 id="硬盘分区，一个区-linux分区-命令选o，建立dos硬盘，命令n，默认建立linux主分区"><a href="#硬盘分区，一个区-linux分区-命令选o，建立dos硬盘，命令n，默认建立linux主分区" class="headerlink" title="硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区"></a>硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">fdisk <span class="regexp">/dev/</span>sda</span><br><span class="line">mkfs.ext4 <span class="regexp">/dev/</span>sda1</span><br><span class="line">mount <span class="regexp">/dev/</span>sda1 /mnt</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果是国内-选择镜像推荐清华中科大，"><a href="#如果是国内-选择镜像推荐清华中科大，" class="headerlink" title="如果是国内,选择镜像推荐清华中科大，"></a>如果是国内,选择镜像推荐清华中科大，</h3><ul>
+<li>vim编辑找到China源  [  9yyggp <Esc>:wq  ]<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">vim <span class="regexp">/etc/</span>pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="安装必须的软件包到硬盘中，如果虚拟机-linux-firmware-可以不装"><a href="#安装必须的软件包到硬盘中，如果虚拟机-linux-firmware-可以不装" class="headerlink" title="安装必须的软件包到硬盘中，如果虚拟机 linux-firmware 可以不装"></a>安装必须的软件包到硬盘中，如果虚拟机 linux-firmware 可以不装</h3><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">pacstrap /mnt  <span class="keyword">base</span> linux linux-firmware</span><br></pre></td></tr></table></figure>
+
+<h3 id="把硬盘UUID写到fstab里，下次重启能自动找到"><a href="#把硬盘UUID写到fstab里，下次重启能自动找到" class="headerlink" title="把硬盘UUID写到fstab里，下次重启能自动找到"></a>把硬盘UUID写到fstab里，下次重启能自动找到</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">genfstab -U <span class="regexp">/mnt &gt;&gt; /m</span>nt<span class="regexp">/etc/</span>fstab</span><br></pre></td></tr></table></figure>
+
+<h3 id="把根目录-切换到硬盘-dev-sda1，接下来的都在硬盘系统操作"><a href="#把根目录-切换到硬盘-dev-sda1，接下来的都在硬盘系统操作" class="headerlink" title="把根目录/  切换到硬盘/dev/sda1，接下来的都在硬盘系统操作"></a>把根目录/  切换到硬盘/dev/sda1，接下来的都在硬盘系统操作</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">arch-chroot <span class="string">/mnt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="软件包更新源，安装必要软件"><a href="#软件包更新源，安装必要软件" class="headerlink" title="软件包更新源，安装必要软件"></a>软件包更新源，安装必要软件</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">pacman <span class="literal">-Syy</span></span><br><span class="line">pacman <span class="literal">-S</span>  dhcpcd  openssh  grub  vim htop <span class="built_in">wget</span> <span class="built_in">curl</span> tmux  fish  ca<span class="literal">-certificates</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="Arch配置同其他linux不同，用傻瓜dhcpcd-启用ssh服务"><a href="#Arch配置同其他linux不同，用傻瓜dhcpcd-启用ssh服务" class="headerlink" title="Arch配置同其他linux不同，用傻瓜dhcpcd; 启用ssh服务"></a>Arch配置同其他linux不同，用傻瓜dhcpcd; 启用ssh服务</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl <span class="builtin-name">enable</span> dhcpcd</span><br><span class="line">systemctl <span class="builtin-name">enable</span> sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装grub引导信息到硬盘，自动建立grub-cfg"><a href="#安装grub引导信息到硬盘，自动建立grub-cfg" class="headerlink" title="安装grub引导信息到硬盘，自动建立grub.cfg"></a>安装grub引导信息到硬盘，自动建立grub.cfg</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">grub-install --target=i386-pc <span class="regexp">/dev/</span>sda</span><br><span class="line">grub-mkconfig -o <span class="regexp">/boot/g</span>rub/grub.cfg</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改系统root密码，建立一个vip，临时ssh远程用"><a href="#修改系统root密码，建立一个vip，临时ssh远程用" class="headerlink" title="修改系统root密码，建立一个vip，临时ssh远程用"></a>修改系统root密码，建立一个vip，临时ssh远程用</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">passwd</span></span><br><span class="line"><span class="attr">useradd</span> <span class="string">vip</span></span><br><span class="line"><span class="attr">passwd</span>  <span class="string">vip</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="重启系统，然后ssh-登陆，su-切换管理员"><a href="#重启系统，然后ssh-登陆，su-切换管理员" class="headerlink" title="重启系统，然后ssh 登陆，su 切换管理员"></a>重启系统，然后ssh 登陆，su 切换管理员</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">ssh <span class="symbol">vip@</span><span class="number">192.168</span><span class="number">.1</span><span class="number">.110</span></span><br><span class="line"># 建立 /root/.ssh/authorized_keys 密钥文件后就可以root登陆了</span><br><span class="line">ssh <span class="symbol">root@</span><span class="number">192.168</span><span class="number">.1</span><span class="number">.110</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="arch-安装命令参考中文文档"><a href="#arch-安装命令参考中文文档" class="headerlink" title="arch 安装命令参考中文文档"></a>arch 安装命令参考中文文档</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li>
+</ul>
+<h3 id="start-VM-Headless-简易-VirtualBox-Headless-模式启动器"><a href="#start-VM-Headless-简易-VirtualBox-Headless-模式启动器" class="headerlink" title="start_VM_Headless 简易 VirtualBox Headless 模式启动器"></a>start_VM_Headless 简易 VirtualBox Headless 模式启动器</h3><ul>
+<li>VBoxManage.exe 建立2个快捷方式，分别启动和关闭 ArchLinux<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line"># Oracle VM VirtualBox 默认安装目录   C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox\</span><br><span class="line"></span><br><span class="line">&quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox<span class="symbol">\V</span>BoxManage.exe&quot;  startvm   ArchLinux  --type headless</span><br><span class="line"></span><br><span class="line">&quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox<span class="symbol">\V</span>BoxManage.exe&quot;  controlvm  ArchLinux  acpipowerbutton</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://262235.xyz/2020/11/22/linux/arch_vbo1/" data-id="ckht48tpq0001qyusg2t59n40" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/Arch/" rel="tag">Arch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../arch_efi/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../../tags/vps/" rel="tag">vps</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="../../../../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../../../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../../../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../../../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../../../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../../../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../../../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../../../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../../../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../../../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../../../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../../../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../../../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../../../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../../../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../../../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../../../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../../../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../../../../tags/python/" style="font-size: 10px;">python</a> <a href="../../../../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../../../../tags/video/" style="font-size: 10px;">video</a> <a href="../../../../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../../../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../../../../tags/vps/" style="font-size: 18.33px;">vps</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2020/">2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2019/">2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2018/">2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../archives/2017/">2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+          </li>
+        
+          <li>
+            <a href="../../../13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+          </li>
+        
+          <li>
+            <a href="../../../08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
+          </li>
+        
+          <li>
+            <a href="../../../06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 hongwenjun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
+  
+    <a href="../../../../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+  
+    <a href="../../../../../index.html" class="mobile-nav-link">博客</a>
+  
+    <a href="../../../../../archives" class="mobile-nav-link">归档</a>
+  
+    <a href="../../../../../sitemap.xml" class="mobile-nav-link">站点地图</a>
+  
+    <a href="../../../../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
+  
+    <a href="../../../../../https:/www.youtube.com/sRGB18" class="mobile-nav-link">YouTube频道</a>
+  
+    <a href="../../../../../https:/space.bilibili.com/320303690/" class="mobile-nav-link">B站频道</a>
+  
+</nav>
+    
+
+<script src="js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="../../../../../fancybox/jquery.fancybox.css">
+
+  
+<script src="../../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="../../../../../js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
