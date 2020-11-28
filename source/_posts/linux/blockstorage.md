@@ -1,7 +1,7 @@
 ---
-title: Linux快速入门示例: Vutrl管理和挂载块存储
+title: Linux快速入门示例 Vutrl管理和挂载块存储
 date:  2020-11-28
-tags:  linux
+tags:  [linux]
 ---
 
 蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)

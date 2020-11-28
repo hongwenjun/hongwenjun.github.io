@@ -1,7 +1,7 @@
 ---
 title: Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机
 date:  2020/11/22
-tags:  [ 'linux', 'Arch', 'Python' ]
+tags:  [ 'linux', 'Arch']
 ---
 
 蘭雅sRGB 个人博客 | [https://262235.xyz](https://262235.xyz)
