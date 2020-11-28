@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git_winpty" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vps_onekey" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/05/18/git_winpty/" class="article-date">
-  <time datetime="2018-05-18T04:00:00.000Z" itemprop="datePublished">2018-05-18</time>
+    <a href="../../2018/06/04/vps_onekey/" class="article-date">
+  <time datetime="2018-06-04T04:00:00.000Z" itemprop="datePublished">2018-06-04</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/05/18/git_winpty/">git bash 命令行有中文乱码的解决</a>
+      <a class="article-title" href="../../2018/06/04/vps_onekey/">VPS 一键脚本 全家桶</a>
     </h1>
   
 
@@ -96,25 +96,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蘭雅sRGB 个人博客 <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p>网上有把MINGW64环境改成GBK的方法，但是哪样使用习惯不太好，毕竟网络世界utf-8是主宰。</p>
-<h3 id="解决方法-命令前添加-winpty"><a href="#解决方法-命令前添加-winpty" class="headerlink" title="解决方法:命令前添加 winpty"></a>解决方法:命令前添加 winpty</h3><pre><code>$   winpty ping  192.168.1.1
-$   winpty ipconfig</code></pre>
-<h3 id="编辑文件，添加"><a href="#编辑文件，添加" class="headerlink" title="编辑文件，添加"></a>编辑文件，添加</h3><pre><code>$ vim ~/.bashrc
+        <p>蘭雅sRGB 个人博客  <a href="https://262235.xyz/">https://262235.xyz</a></p>
+<h3 id="一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本"><a href="#一个优秀的跨平台-Socks5代理软件-——-Brook-一键安装管理脚本" class="headerlink" title="一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本"></a>一个优秀的跨平台 Socks5代理软件 —— Brook 一键安装管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
+<p>如果上面这个脚本无法下载，尝试使用备用下载：</p>
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/brook.sh &amp;&amp; chmod +x brook.sh &amp;&amp; bash brook.sh</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  Brook 一键管理脚本 [v1<span class="number">.1</span><span class="number">.10</span>]</span><br><span class="line">  ---- Toyo | doub.io/brook-jc3 ----</span><br><span class="line"></span><br><span class="line">  <span class="number">0.</span> 升级脚本</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">1.</span> 安装 Brook</span><br><span class="line">  <span class="number">2.</span> 升级 Brook</span><br><span class="line">  <span class="number">3.</span> 卸载 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">4.</span> 启动 Brook</span><br><span class="line">  <span class="number">5.</span> 停止 Brook</span><br><span class="line">  <span class="number">6.</span> 重启 Brook</span><br><span class="line">————————————</span><br><span class="line">  <span class="number">7.</span> 设置 账号配置</span><br><span class="line">  <span class="number">8.</span> 查看 账号信息</span><br><span class="line">  <span class="number">9.</span> 查看 日志信息</span><br><span class="line"> <span class="number">10.</span> 查看 链接信息</span><br><span class="line">————————————</span><br><span class="line"></span><br><span class="line"> 当前状态: 未安装</span><br><span class="line"></span><br><span class="line"> 请输入数字 [<span class="number">0</span><span class="number">-10</span>]:</span><br></pre></td></tr></table></figure>
 
-# MINGW64(git_bash) 解决 ping 和 ipconfig 乱码
-alias ping=&#39;_win_ping() &#123; winpty ping $@ ; &#125;; _win_ping&#39;
-alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipconfig&#39;</code></pre>
-<h3 id="在-git-bash-里运行-java-命令，打印出的中文显示乱码"><a href="#在-git-bash-里运行-java-命令，打印出的中文显示乱码" class="headerlink" title="在 git bash 里运行 java 命令，打印出的中文显示乱码"></a>在 git bash 里运行 java 命令，打印出的中文显示乱码</h3><p>可以在java命令行之前添加 winpty</p>
-<pre><code>$   winpty java</code></pre>
+<h3 id="ShadowsocksR-单-多端口-一键管理脚本"><a href="#ShadowsocksR-单-多端口-一键管理脚本" class="headerlink" title="ShadowsocksR 单/多端口 一键管理脚本"></a>ShadowsocksR 单/多端口 一键管理脚本</h3><pre><code>wget -N --no-check-certificate https://softs.loan/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
+<p>备用下载地址（上面的链接无法下载，就用这个）：</p>
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">  请输入一个数字来选择菜单选项</span><br><span class="line"> </span><br><span class="line"> <span class="number">1.</span> 安装 ShadowsocksR</span><br><span class="line"> <span class="number">2.</span> 更新 ShadowsocksR</span><br><span class="line"> <span class="number">3.</span> 卸载 ShadowsocksR</span><br><span class="line"> <span class="number">4.</span> 安装 libsodium(chacha20)</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">5.</span> 查看 账号信息</span><br><span class="line"> <span class="number">6.</span> 显示 连接信息</span><br><span class="line"> <span class="number">7.</span> 设置 用户配置</span><br><span class="line"> <span class="number">8.</span> 手动 修改配置</span><br><span class="line"> <span class="number">9.</span> 切换 端口模式</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">10.</span> 启动 ShadowsocksR</span><br><span class="line"> <span class="number">11.</span> 停止 ShadowsocksR</span><br><span class="line"> <span class="number">12.</span> 重启 ShadowsocksR</span><br><span class="line"> <span class="number">13.</span> 查看 ShadowsocksR 日志</span><br><span class="line">————————————</span><br><span class="line"> <span class="number">14.</span> 其他功能</span><br><span class="line"> <span class="number">15.</span> 升级脚本</span><br><span class="line"> </span><br><span class="line"> 当前状态: 已安装 并 已启动</span><br><span class="line"> 当前模式: 单端口</span><br><span class="line"> </span><br><span class="line">请输入数字(<span class="number">1</span><span class="number">-15</span>)：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="一键安装ss"><a href="#一键安装ss" class="headerlink" title="一键安装ss"></a>一键安装ss</h3><pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></pre>
+<h3 id="一键安装最新内核并开启-BBR-脚本"><a href="#一键安装最新内核并开启-BBR-脚本" class="headerlink" title="一键安装最新内核并开启 BBR 脚本"></a>一键安装最新内核并开启 BBR 脚本</h3><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></pre>
+<h2 id="LNMP一键安装包-V1-5"><a href="#LNMP一键安装包-V1-5" class="headerlink" title="LNMP一键安装包 V1.5"></a>LNMP一键安装包 V1.5</h2><p>详细请访问 <a target="_blank" rel="noopener" href="https://lnmp.org/install.html">https://lnmp.org/install.html</a></p>
+<h3 id="登陆后运行："><a href="#登陆后运行：" class="headerlink" title="登陆后运行："></a>登陆后运行：</h3><pre><code>screen -S lnmp</code></pre>
+<h2 id="安装LNMP稳定版"><a href="#安装LNMP稳定版" class="headerlink" title="安装LNMP稳定版"></a>安装LNMP稳定版</h2><pre><code>wget -c http://soft.vpser.net/lnmp/lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; ./install.sh lnmp</code></pre>
+<h2 id="如需要无人值守安装"><a href="#如需要无人值守安装" class="headerlink" title="如需要无人值守安装"></a>如需要无人值守安装</h2><p><a target="_blank" rel="noopener" href="https://lnmp.org/auto.html">https://lnmp.org/auto.html</a></p>
+<p>点击 生成 按钮会生成对应命令，示例如下</p>
+<pre><code>wget http://soft.vpser.net/lnmp/lnmp1.5.tar.gz -cO lnmp1.5.tar.gz &amp;&amp; tar zxf lnmp1.5.tar.gz &amp;&amp; cd lnmp1.5 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;2&quot; DB_Root_Password=&quot;lnmp.org&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;5&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2018/05/18/git_winpty/" data-id="ckh19psaz001ddnus0wks9hpf" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2018/06/04/vps_onekey/" data-id="ckh19pse80031dnus83puhra0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/git/" rel="tag">git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
 
     </footer>
   </div>
@@ -127,7 +137,7 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../54/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../53/">53</a><a class="page-number" href="../54/">54</a><span class="page-number current">55</span><a class="page-number" href="../56/">56</a><a class="page-number" href="../57/">57</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../56/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../54/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../53/">53</a><a class="page-number" href="../54/">54</a><span class="page-number current">55</span><a class="page-number" href="../56/">56</a><a class="page-number" href="../57/">57</a><span class="space">&hellip;</span><a class="page-number" href="../84/">84</a><a class="extend next" rel="next" href="../56/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -141,7 +151,7 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/msys2/" rel="tag">msys2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -151,7 +161,7 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/msys2/" style="font-size: 10px;">msys2</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -173,6 +183,14 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
       <ul>
         
           <li>
+            <a href="../../2020/11/28/linux/blockstorage/">Linux快速入门示例 Vutrl管理和挂载块存储</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/25/msys2_fish/">MSYS2 中国镜像使用帮助</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
           </li>
         
@@ -182,14 +200,6 @@ alias ipconfig=&#39;_win_ipconfig() &#123; winpty ipconfig $@ ; &#125;; _win_ipc
         
           <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
       </ul>

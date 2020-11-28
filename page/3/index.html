@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-codeblocks/CodeBlocks_Debian" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-linux/arch_vbo1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/" class="article-date">
-  <time datetime="2020-11-13T05:00:00.000Z" itemprop="datePublished">2020-11-13</time>
+    <a href="../../2020/11/22/linux/arch_vbo1/" class="article-date">
+  <time datetime="2020-11-22T05:00:00.000Z" itemprop="datePublished">2020-11-22</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
+      <a class="article-title" href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
     </h1>
   
 
@@ -97,17 +97,46 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<h2 id="Xrdp-通过Windows-mstsc-的RDP连接Linux远程桌面"><a href="#Xrdp-通过Windows-mstsc-的RDP连接Linux远程桌面" class="headerlink" title="Xrdp - 通过Windows mstsc 的RDP连接Linux远程桌面"></a>Xrdp - 通过Windows mstsc 的RDP连接Linux远程桌面</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 Xrdp</span></span><br><span class="line"><span class="attr">apt</span> <span class="string">install xrdp</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">enable xrdp</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart xrdp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 xfce4 图形桌面，配置xrdp</span></span><br><span class="line"><span class="attr">sudo</span> <span class="string">apt-get install xfce4</span></span><br><span class="line"><span class="attr">echo</span> <span class="string">xfce4-session &gt; ~/.xsession</span></span><br><span class="line"><span class="attr">touch</span> <span class="string">.session</span></span><br><span class="line"><span class="attr">vim</span> <span class="string">/etc/xrdp/startwm.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在文件startwm.sh最前面添加</span></span><br><span class="line"><span class="attr">xfce4-session</span></span><br><span class="line"><span class="comment"># 然后重启 xrdp 服务</span></span><br><span class="line"><span class="attr">systemctl</span> <span class="string">restart xrdp</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统"><a href="#启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统" class="headerlink" title="启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统"></a>启动ssh服务，临时修改光盘系统密码，方便ssh客户端远程登陆安装系统</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">ip addr</span><br><span class="line">passwd</span><br></pre></td></tr></table></figure>
 
-<h2 id="debian安装最新版Code-Blocks-20-03"><a href="#debian安装最新版Code-Blocks-20-03" class="headerlink" title="debian安装最新版Code::Blocks 20.03"></a>debian安装最新版Code::Blocks 20.03</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载解压安装包</span></span><br><span class="line">wget http:<span class="regexp">//</span>sourceforge.net<span class="regexp">/projects/</span>codeblocks<span class="regexp">/files/</span>Binaries<span class="regexp">/20.03/</span>Linux<span class="regexp">/Debian%2010/</span>codeblocks_20.<span class="number">03</span>_amd64_stable.tar.xz</span><br><span class="line"></span><br><span class="line">tar xfv codeblocks_20.<span class="number">03</span>_amd64_stable.tar.xz</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装库</span></span><br><span class="line">apt install libwxgtk3.<span class="number">0</span>-dev -y</span><br><span class="line">dpkg -i *.deb</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装过程中如果 ldconfig 错误</span></span><br><span class="line">export PATH=<span class="regexp">/usr/</span>loca<span class="regexp">/sbin:/u</span>sr<span class="regexp">/sbin:/</span>sbin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#再次完成codeblocks安装</span></span><br><span class="line">dpkg -i  *.deb</span><br><span class="line"></span><br><span class="line"><span class="comment">#安装编译器等</span></span><br><span class="line">apt install -y git gettext build-essential autoconf libtool automake</span><br></pre></td></tr></table></figure>
+<h3 id="硬盘分区，一个区-linux分区-命令选o，建立dos硬盘，命令n，默认建立linux主分区"><a href="#硬盘分区，一个区-linux分区-命令选o，建立dos硬盘，命令n，默认建立linux主分区" class="headerlink" title="硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区"></a>硬盘分区，一个区 linux分区 命令选o，建立dos硬盘，命令n，默认建立linux主分区</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">fdisk <span class="regexp">/dev/</span>sda</span><br><span class="line">mkfs.ext4 <span class="regexp">/dev/</span>sda1</span><br><span class="line">mount <span class="regexp">/dev/</span>sda1 /mnt</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果是国内-选择镜像推荐清华中科大，"><a href="#如果是国内-选择镜像推荐清华中科大，" class="headerlink" title="如果是国内,选择镜像推荐清华中科大，"></a>如果是国内,选择镜像推荐清华中科大，</h3><ul>
+<li>vim编辑找到China源  [  9yyggp <Esc>:wq  ]<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">vim <span class="regexp">/etc/</span>pacman.d/mirrorlist</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="安装必须的软件包到硬盘中，如果虚拟机-linux-firmware-可以不装"><a href="#安装必须的软件包到硬盘中，如果虚拟机-linux-firmware-可以不装" class="headerlink" title="安装必须的软件包到硬盘中，如果虚拟机 linux-firmware 可以不装"></a>安装必须的软件包到硬盘中，如果虚拟机 linux-firmware 可以不装</h3><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">pacstrap /mnt  <span class="keyword">base</span> linux linux-firmware</span><br></pre></td></tr></table></figure>
+
+<h3 id="把硬盘UUID写到fstab里，下次重启能自动找到"><a href="#把硬盘UUID写到fstab里，下次重启能自动找到" class="headerlink" title="把硬盘UUID写到fstab里，下次重启能自动找到"></a>把硬盘UUID写到fstab里，下次重启能自动找到</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">genfstab -U <span class="regexp">/mnt &gt;&gt; /m</span>nt<span class="regexp">/etc/</span>fstab</span><br></pre></td></tr></table></figure>
+
+<h3 id="把根目录-切换到硬盘-dev-sda1，接下来的都在硬盘系统操作"><a href="#把根目录-切换到硬盘-dev-sda1，接下来的都在硬盘系统操作" class="headerlink" title="把根目录/  切换到硬盘/dev/sda1，接下来的都在硬盘系统操作"></a>把根目录/  切换到硬盘/dev/sda1，接下来的都在硬盘系统操作</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">arch-chroot <span class="string">/mnt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="软件包更新源，安装必要软件"><a href="#软件包更新源，安装必要软件" class="headerlink" title="软件包更新源，安装必要软件"></a>软件包更新源，安装必要软件</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">pacman <span class="literal">-Syy</span></span><br><span class="line">pacman <span class="literal">-S</span>  dhcpcd  openssh  grub  vim htop <span class="built_in">wget</span> <span class="built_in">curl</span> tmux  fish  ca<span class="literal">-certificates</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="Arch配置同其他linux不同，用傻瓜dhcpcd-启用ssh服务"><a href="#Arch配置同其他linux不同，用傻瓜dhcpcd-启用ssh服务" class="headerlink" title="Arch配置同其他linux不同，用傻瓜dhcpcd; 启用ssh服务"></a>Arch配置同其他linux不同，用傻瓜dhcpcd; 启用ssh服务</h3><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">systemctl <span class="builtin-name">enable</span> dhcpcd</span><br><span class="line">systemctl <span class="builtin-name">enable</span> sshd</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装grub引导信息到硬盘，自动建立grub-cfg"><a href="#安装grub引导信息到硬盘，自动建立grub-cfg" class="headerlink" title="安装grub引导信息到硬盘，自动建立grub.cfg"></a>安装grub引导信息到硬盘，自动建立grub.cfg</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">grub-install --target=i386-pc <span class="regexp">/dev/</span>sda</span><br><span class="line">grub-mkconfig -o <span class="regexp">/boot/g</span>rub/grub.cfg</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改系统root密码，建立一个vip，临时ssh远程用"><a href="#修改系统root密码，建立一个vip，临时ssh远程用" class="headerlink" title="修改系统root密码，建立一个vip，临时ssh远程用"></a>修改系统root密码，建立一个vip，临时ssh远程用</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">passwd</span></span><br><span class="line"><span class="attr">useradd</span> <span class="string">vip</span></span><br><span class="line"><span class="attr">passwd</span>  <span class="string">vip</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="重启系统，然后ssh-登陆，su-切换管理员"><a href="#重启系统，然后ssh-登陆，su-切换管理员" class="headerlink" title="重启系统，然后ssh 登陆，su 切换管理员"></a>重启系统，然后ssh 登陆，su 切换管理员</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">ssh <span class="symbol">vip@</span><span class="number">192.168</span><span class="number">.1</span><span class="number">.110</span></span><br><span class="line"># 建立 /root/.ssh/authorized_keys 密钥文件后就可以root登陆了</span><br><span class="line">ssh <span class="symbol">root@</span><span class="number">192.168</span><span class="number">.1</span><span class="number">.110</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="arch-安装命令参考中文文档"><a href="#arch-安装命令参考中文文档" class="headerlink" title="arch 安装命令参考中文文档"></a>arch 安装命令参考中文文档</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li>
+</ul>
+<h3 id="start-VM-Headless-简易-VirtualBox-Headless-模式启动器"><a href="#start-VM-Headless-简易-VirtualBox-Headless-模式启动器" class="headerlink" title="start_VM_Headless 简易 VirtualBox Headless 模式启动器"></a>start_VM_Headless 简易 VirtualBox Headless 模式启动器</h3><ul>
+<li>VBoxManage.exe 建立2个快捷方式，分别启动和关闭 ArchLinux<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line"># Oracle VM VirtualBox 默认安装目录   C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox\</span><br><span class="line"></span><br><span class="line">&quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox<span class="symbol">\V</span>BoxManage.exe&quot;  startvm   ArchLinux  --type headless</span><br><span class="line"></span><br><span class="line">&quot;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\O</span>racle<span class="symbol">\V</span>irtualBox<span class="symbol">\V</span>BoxManage.exe&quot;  controlvm  ArchLinux  acpipowerbutton</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/2020/11/13/codeblocks/CodeBlocks_Debian/" data-id="ckhgcxf0200003ausexze85qh" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/2020/11/22/linux/arch_vbo1/" data-id="ckht48tpq0001qyusg2t59n40" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li></ul>
 
     </footer>
   </div>
@@ -120,7 +149,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="../2/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><span class="space">&hellip;</span><a class="page-number" href="../82/">82</a><a class="extend next" rel="next" href="../4/">下一页 &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="../2/">&amp;laquo; 上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><span class="space">&hellip;</span><a class="page-number" href="../84/">84</a><a class="extend next" rel="next" href="../4/">下一页 &amp;raquo;</a>
   </nav>
 
 </section>
@@ -134,7 +163,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Arch/" rel="tag">Arch</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/CodeBlocks/" rel="tag">CodeBlocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/carscam/" rel="tag">carscam</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ffmpeg/" rel="tag">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/frp/" rel="tag">frp</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/iptables/" rel="tag">iptables</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ipv6/" rel="tag">ipv6</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/moments/" rel="tag">moments</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/msys2/" rel="tag">msys2</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/ssh/" rel="tag">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vod/" rel="tag">vod</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../tags/vps/" rel="tag">vps</a></li></ul>
     </div>
   </div>
 
@@ -144,7 +173,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/Python/" style="font-size: 10px;">Python</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
+      <a href="../../tags/Arch/" style="font-size: 11.67px;">Arch</a> <a href="../../tags/CodeBlocks/" style="font-size: 20px;">CodeBlocks</a> <a href="../../tags/Markdown/" style="font-size: 11.67px;">Markdown</a> <a href="../../tags/carscam/" style="font-size: 10px;">carscam</a> <a href="../../tags/cpp/" style="font-size: 13.33px;">cpp</a> <a href="../../tags/docker/" style="font-size: 11.67px;">docker</a> <a href="../../tags/ffmpeg/" style="font-size: 11.67px;">ffmpeg</a> <a href="../../tags/frp/" style="font-size: 11.67px;">frp</a> <a href="../../tags/gcc/" style="font-size: 11.67px;">gcc</a> <a href="../../tags/git/" style="font-size: 13.33px;">git</a> <a href="../../tags/hexo/" style="font-size: 11.67px;">hexo</a> <a href="../../tags/iptables/" style="font-size: 11.67px;">iptables</a> <a href="../../tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="../../tags/linux/" style="font-size: 16.67px;">linux</a> <a href="../../tags/moments/" style="font-size: 15px;">moments</a> <a href="../../tags/msys2/" style="font-size: 10px;">msys2</a> <a href="../../tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="../../tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="../../tags/python/" style="font-size: 10px;">python</a> <a href="../../tags/ssh/" style="font-size: 10px;">ssh</a> <a href="../../tags/video/" style="font-size: 10px;">video</a> <a href="../../tags/vim/" style="font-size: 13.33px;">vim</a> <a href="../../tags/vod/" style="font-size: 10px;">vod</a> <a href="../../tags/vps/" style="font-size: 18.33px;">vps</a>
     </div>
   </div>
 
@@ -166,6 +195,14 @@
       <ul>
         
           <li>
+            <a href="../../2020/11/28/linux/blockstorage/">Linux快速入门示例 Vutrl管理和挂载块存储</a>
+          </li>
+        
+          <li>
+            <a href="../../2020/11/25/msys2_fish/">MSYS2 中国镜像使用帮助</a>
+          </li>
+        
+          <li>
             <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
           </li>
         
@@ -175,14 +212,6 @@
         
           <li>
             <a href="../../2020/11/13/codeblocks/CodeBlocks_Debian/">Debian10安装远程桌面和最新Code::Blocks 20.03 For linux版本</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/08/codeblocks/cbstudy/">CodeBlocks视频教程学习代码示例</a>
-          </li>
-        
-          <li>
-            <a href="../../2020/11/06/docker/h5_speedtest/">使用Docker安装HTML5-Based Speedtest,测试下网络高峰访问自己网站的速度</a>
           </li>
         
       </ul>
