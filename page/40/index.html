@@ -46,13 +46,11 @@
         
           <a class="main-nav-link" href="../../https:/262235.xyz/">主页</a>
         
-          <a class="main-nav-link" href="../../http:/srgb.vicp.net/">龙芯2F镜像</a>
+          <a class="main-nav-link" href="../../hexo">博客</a>
         
-          <a class="main-nav-link" href="../../index.html">博客</a>
+          <a class="main-nav-link" href="../../hexo/archives">归档</a>
         
-          <a class="main-nav-link" href="../../archives">归档</a>
-        
-          <a class="main-nav-link" href="../../sitemap.xml">站点地图</a>
+          <a class="main-nav-link" href="../../hexo/sitemap.xml">站点地图</a>
         
           <a class="main-nav-link" href="../../https:/github.com/hongwenjun">GitHub</a>
         
@@ -74,9 +72,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-mingw64_pk" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-gcc_mcf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="../../2018/10/08/mingw64_pk/" class="article-date">
+    <a href="../../2018/10/08/gcc_mcf/" class="article-date">
   <time datetime="2018-10-08T04:00:00.000Z" itemprop="datePublished">2018-10-08</time>
 </a>
     
@@ -88,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2018/10/08/mingw64_pk/">MinGW-w64 GCC编译器离线安装包下载</a>
+      <a class="article-title" href="../../2018/10/08/gcc_mcf/">国人编译的GCC,支持中文帮助信息</a>
     </h1>
   
 
@@ -97,22 +95,29 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>蘭雅sRGB 个人博客 | <a href="https://262235.xyz/">https://262235.xyz</a></p>
-<p><img src="/webp/mingw64_pk.webp"></p>
-<h3 id="默认下载的是在线安装包"><a href="#默认下载的是在线安装包" class="headerlink" title="默认下载的是在线安装包"></a>默认下载的是在线安装包</h3><p><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/">https://sourceforge.net/projects/mingw-w64/</a></p>
-<h3 id="离线安装包下载页面"><a href="#离线安装包下载页面" class="headerlink" title="离线安装包下载页面"></a>离线安装包下载页面</h3><p><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/">https://sourceforge.net/projects/mingw-w64/files/</a></p>
-<h3 id="其他GCC编译器版本下载"><a href="#其他GCC编译器版本下载" class="headerlink" title="其他GCC编译器版本下载"></a>其他GCC编译器版本下载</h3><ul>
-<li>TDM GCC  MinGW-w64 下载地址</li>
+<p><img src="/webp/gcc-mcf.webp"></p>
+<h3 id="国人编译的GCC支持中文信息-主页"><a href="#国人编译的GCC支持中文信息-主页" class="headerlink" title="国人编译的GCC支持中文信息 主页"></a>国人编译的GCC支持中文信息 主页</h3><p><a target="_blank" rel="noopener" href="https://gcc-mcf.lhmouse.com/">https://gcc-mcf.lhmouse.com/</a>   </p>
+<h3 id="作者-github"><a href="#作者-github" class="headerlink" title="作者 github"></a>作者 github</h3><p><a target="_blank" rel="noopener" href="https://github.lhmouse.com/">https://github.lhmouse.com/</a></p>
+<h3 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h3><ul>
+<li><p>下载最新的把版本，解压到对应目录</p>
+<p>  C:\CodeBlocks\</p>
+</li>
+<li><p>环境变量 用户 PATH 添加</p>
+<p>  C:\CodeBlocks\MinGW64\bin;</p>
+</li>
+<li><p>运行 CMD 开启窗口，输入 gcc -v 就可以使用</p>
+</li>
+<li><p>也可以在 CodeBlocks 设置对应的编译器</p>
+</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="http://tdm-gcc.tdragon.net/download">http://tdm-gcc.tdragon.net/download</a></p>
-<ul>
-<li>GCC with the MCF thread model</li>
+<h3 id="不添加path变量使用"><a href="#不添加path变量使用" class="headerlink" title="不添加path变量使用"></a>不添加path变量使用</h3><ul>
+<li>建立文件 C:\CodeBlocks\MinGW6\mingwvars.bat<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@echo</span>.</span><br><span class="line"><span class="variable">@echo</span> Setting up environment for using GCC with the MCF thread model from %~dp0.</span><br><span class="line"><span class="variable">@set</span> PATH=%~dp0bin;%<span class="selector-tag">PATH%</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://gcc-mcf.lhmouse.com/">https://gcc-mcf.lhmouse.com/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://262235.xyz/hexo/2018/10/08/mingw64_pk/" data-id="ckh19pscq0025dnusd8n09dze" class="article-share-link">Share</a>
+      <a data-url="https://262235.xyz/hexo/2018/10/08/gcc_mcf/" data-id="ckrunbzps0014pdusd2o1aa09" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/gcc/" rel="tag">gcc</a></li></ul>
@@ -182,11 +187,11 @@
           </li>
         
           <li>
-            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
+            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
           </li>
         
           <li>
-            <a href="../../2020/11/22/linux/arch_efi/">Arch Linux 安装:使用gdisk建立EFI分区和Linux分区 For VirtualBox 安装虚拟机</a>
+            <a href="../../2020/11/22/linux/arch_vbo1/">Arch Linux 安装简易版 For VirtualBox 安装虚拟机</a>
           </li>
         
           <li>
@@ -215,13 +220,11 @@
   
     <a href="../../https:/262235.xyz/" class="mobile-nav-link">主页</a>
   
-    <a href="../../http:/srgb.vicp.net/" class="mobile-nav-link">龙芯2F镜像</a>
+    <a href="../../hexo" class="mobile-nav-link">博客</a>
   
-    <a href="../../index.html" class="mobile-nav-link">博客</a>
+    <a href="../../hexo/archives" class="mobile-nav-link">归档</a>
   
-    <a href="../../archives" class="mobile-nav-link">归档</a>
-  
-    <a href="../../sitemap.xml" class="mobile-nav-link">站点地图</a>
+    <a href="../../hexo/sitemap.xml" class="mobile-nav-link">站点地图</a>
   
     <a href="../../https:/github.com/hongwenjun" class="mobile-nav-link">GitHub</a>
   
